@@ -3,9 +3,9 @@ using WebApplication2.Model;
 
 namespace WebApplication2.Context
 {
-    public class AppContext: DbContext
+    public class AplicacionContext: DbContext
     {
-        public AppContext (DbContextOptions options): base(options)
+        public AplicacionContext (DbContextOptions options): base(options)
         {
             
         }
