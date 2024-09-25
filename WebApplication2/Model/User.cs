@@ -4,7 +4,7 @@ namespace WebApplication2.Model
 {
     public class User
     {
-        [Key]
+        [Key]// jasdfikaji
         public int Id { get; set; }
         public required string Name { get; set; }
         public required string Email { get; set; }
