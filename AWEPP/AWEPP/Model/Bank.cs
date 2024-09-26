@@ -6,7 +6,7 @@ namespace AWEPP.Modelo
     {
         [Key]
         public int Id { get; set; }
-        public required string Banks { get; set; } // this is mineee
+        public required string Banks { get; set; } 
 
     }
 }
