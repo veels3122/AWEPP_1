@@ -17,3 +17,5 @@
 /AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.AssemblyInfo.cs
 /.gitignore
 /AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.AssemblyInfoInputs.cache
+*.bin
+/.gitignore
