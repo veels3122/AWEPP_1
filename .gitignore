@@ -13,3 +13,7 @@
 *.vsidx
 /AWEPP/.vs/AWEPP/FileContentIndex/7ae13854-0471-4d49-b7cf-07ada02d8bc5.vsidx
 /AWEPP/.vs/AWEPP/FileContentIndex/bded205c-6406-4b55-8099-1d8110c560d9.vsidx
+/AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.AssemblyInfo.cs
+/AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.AssemblyInfo.cs
+/.gitignore
+/AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.AssemblyInfoInputs.cache
