@@ -9,3 +9,7 @@
 *.bin
 /.gitignore
 /.gitignore
+/AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.assets.cache
+/AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.csproj.AssemblyReference.cache
+/AWEPP/AWEPP/obj/Debug/net8.0/AWEPP.GeneratedMSBuildEditorConfig.editorconfig
+/.gitignore
