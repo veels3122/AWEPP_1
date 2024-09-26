@@ -3,3 +3,7 @@
 ################################################################################
 
 /AWEPP/.vs/AWEPP/FileContentIndex
+*.wsuo
+*.json
+*.bin
+/.gitignore
