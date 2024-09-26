@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AWEPP_1/FileContentIndex/76088d51-1607-40f9-8f0a-aa2f70c37850.vsidx
+/.vs/AWEPP_1/v17/.wsuo
+/.vs/AWEPP_1/v17/DocumentLayout.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/AWEPP/.vs/AWEPP/FileContentIndex/265f0006-cc40-4fce-9d1d-ca30eff04623.vsidx
+/AWEPP/.vs/AWEPP/FileContentIndex/2c04d639-4fc1-4dec-9075-d91f0cf0edc6.vsidx
+/AWEPP/.vs/AWEPP/FileContentIndex/2fe9af38-d95c-46b9-b696-79a8e36fbe3a.vsidx
+*.vsidx
+/AWEPP/.vs/AWEPP/FileContentIndex/7ae13854-0471-4d49-b7cf-07ada02d8bc5.vsidx
+/AWEPP/.vs/AWEPP/FileContentIndex/bded205c-6406-4b55-8099-1d8110c560d9.vsidx
