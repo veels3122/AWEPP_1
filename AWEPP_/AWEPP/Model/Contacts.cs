@@ -7,6 +7,6 @@ namespace AWEPP.Model
         [Key]
         public int Id { get; set; }
         public required string Contact { get; set; }
-           
+        public bool IsDeleted { get; internal set; }
     }
 }
