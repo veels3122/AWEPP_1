@@ -1,4 +1,4 @@
-﻿################################################################################
+﻿﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -38,3 +38,4 @@
 /AWEPP_/AWEPP/obj/Release/net8.0/AWEPP.GeneratedMSBuildEditorConfig.editorconfig
 /AWEPP_/AWEPP/obj/Release/net8.0/AWEPP.assets.cache
 /AWEPP_/AWEPP/obj/Release/net8.0/AWEPP.csproj.AssemblyReference.cache
+/AWEPP_/AWEPP/obj/Release/net8.0/AWEPP.GeneratedMSBuildEditorConfig.editorconfig
