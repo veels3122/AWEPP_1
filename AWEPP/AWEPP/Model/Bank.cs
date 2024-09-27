@@ -6,7 +6,7 @@ namespace AWEPP.Modelo
     {
         [Key]
         public int Id { get; set; }
-        public required string Banks { get; set; } 
-
+        public required string Banks { get; set; }
+        public bool IsDeleted { get; internal set; }
     }
 }

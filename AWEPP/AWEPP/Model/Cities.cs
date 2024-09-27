@@ -7,5 +7,6 @@ namespace AWEPP.Modelo
         [Key]
         public int Id { get; set; }
         public required string City { get; set; }
+        public bool IsDeleted { get; internal set; }
     }
 }

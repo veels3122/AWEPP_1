@@ -18,8 +18,8 @@ namespace AWEPP.Context
         public DbSet<TypeAcces> TypeAccesses { get; set; }
         public DbSet<TypeAccesUser> TypeAccessUsers { get; set; }
         public DbSet<Bank> Banks { get; set; }
-        public DbSet<Cities> Cities { get; set; }
-        public DbSet<Contacts> Contacts { get; set; }
+        public DbSet<Cities> City { get; set; }
+        public DbSet<Contacts> Contact { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Expenses> Expenses { get; set; }
         public DbSet<Products> Products { get; set; }
