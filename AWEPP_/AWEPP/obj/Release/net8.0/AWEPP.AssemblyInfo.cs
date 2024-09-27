@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWEPP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e86d9f297a1712f3474f50a3500660f139779245")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWEPP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWEPP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
