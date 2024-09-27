@@ -1,6 +1,0 @@
-@AWEPP_HostAddress = http://localhost:5041
-
-GET {{AWEPP_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
