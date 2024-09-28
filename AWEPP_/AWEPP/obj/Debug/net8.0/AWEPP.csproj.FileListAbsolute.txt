@@ -134,14 +134,3 @@ C:\Users\amari\source\repos\AWEPP\AWEPP\obj\Debug\net8.0\refint\AWEPP.dll
 C:\Users\amari\source\repos\AWEPP\AWEPP\obj\Debug\net8.0\AWEPP.pdb
 C:\Users\amari\source\repos\AWEPP\AWEPP\obj\Debug\net8.0\AWEPP.genruntimeconfig.cache
 C:\Users\amari\source\repos\AWEPP\AWEPP\obj\Debug\net8.0\ref\AWEPP.dll
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.csproj.AssemblyReference.cache
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.AssemblyInfoInputs.cache
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.AssemblyInfo.cs
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.csproj.CoreCompileInputs.cache
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.sourcelink.json
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.dll
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\refint\AWEPP.dll
-C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\obj\Debug\net8.0\AWEPP.pdb
