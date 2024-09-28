@@ -7,7 +7,7 @@ namespace AWEPP.Model
         
         [Key]
         public int Id { get; set; }
-        public required string Typeacces { get; set; }
+        public required string TypeAccesses { get; set; }
 
     }
 }
