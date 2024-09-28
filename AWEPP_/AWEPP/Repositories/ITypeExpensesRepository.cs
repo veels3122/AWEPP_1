@@ -52,9 +52,7 @@ namespace AWEPP.Repositories
             var typeExpense = await _context.TypeExpenses.FindAsync(id);
             if (typeExpense != null)
             {
-                // Implement soft delete logic here (e.g., set a flag)
-                // typeExpense.IsDeleted = true;
-                // await _context.SaveChangesAsync();
+                
             }
         }
     }
