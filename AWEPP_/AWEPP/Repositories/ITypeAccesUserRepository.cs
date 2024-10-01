@@ -8,25 +8,25 @@ namespace AWEPP.Repositories
 {
     public interface ITypeAccesUserRepository
     {
-        Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync();
-        Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id);
-        Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
-        Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
+        Task<IEnumerable<UserRepository>> GetAllTypeAccesUsersAsync();
+        Task<UserRepository> GetTypeAccesUserByIdAsync(int id);
+        Task<UserRepository> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
+        Task<UserRepository> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
         Task SoftDeleteTypeAccesUserAsync(int id);
     }
     public class TypeAccesUserRepository : ITypeAccesUserRepository
     {
-        public Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        public Task<UserRepository> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync()
+        public Task<IEnumerable<UserRepository>> GetAllTypeAccesUsersAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id)
+        public Task<UserRepository> GetTypeAccesUserByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
@@ -36,7 +36,7 @@ namespace AWEPP.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        public Task<UserRepository> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
             throw new NotImplementedException();
         }
