@@ -1,27 +1,24 @@
-﻿using AWEPP.Context;
-using AWEPP.Model;
-using AWEPP.Modelo;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+﻿using AWEPP.Model;
+using AWEPP.Services;
 
-namespace AWEPP.Repositories
+namespace AWEPP.Controllers
 {
-    public interface ITypeAccesUserRepository
+    public interface ITypeAccesUserControllers
     {
-        Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync();
+        Task<IEnumerable<TypeAccesUserControllers>> GetAllTypeAccesUsersAsync();
         Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id);
         Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
         Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
         Task SoftDeleteTypeAccesUserAsync(int id);
     }
-    public class TypeAccesUserRepository : ITypeAccesUserRepository
+    public class TypeAccesUserControllers : ITypeAccesUserControllers
     {
         public Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync()
+        public Task<IEnumerable<TypeAccesUserControllers>> GetAllTypeAccesUsersAsync()
         {
             throw new NotImplementedException();
         }
