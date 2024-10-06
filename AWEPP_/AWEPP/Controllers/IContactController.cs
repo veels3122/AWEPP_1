@@ -7,52 +7,50 @@ namespace AWEPP.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CustomersController : ControllerBase
+    public class ContactController : ControllerBase
     {
-        private readonly ICustomerServices _customerService;
+        private readonly IContactServices _contactServices;
 
-        public CustomersController(ICustomerServices customerService)
+        public ContactController(IContactServices contactServices)
         {
-            _customerService = customerService;
+            _contactServices = contactServices;
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<Customer>>> GetAllCustomers()
+        public async Task<ActionResult<IEnumerable<Contact>>> GetAllContacts()
         {
-            var customers = await _customerService.GetAllCustomersAsync();
-            return Ok(customers);
+            var contacts = await _contactServices.GetAllContactsAsync();
+            return Ok(contacts);
         }
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Customer>> GetCustomerById(int id)
+        public async Task<ActionResult<Contact>> GetContactById(int id)
         {
-            var customer = await _customerService.GetCustomerByIdAsync(id);
-            if (customer == null)
+            var contact = await _contactServices.GetContactByIdAsync(id);
+            if (contact == null)
             {
                 return NotFound();
             }
-            return Ok(customer);
+            return Ok(contact);
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-        public async Task<ActionResult<Customer>> CreateCustomer([FromBody] Customer customer)
+        public async Task<ActionResult<Contact>> CreateContact([FromBody] Contact contacts)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-
             }
 
             try
             {
-                var newCustomer = await _customerService.CreateCustomerAsync(customer);
-                return CreatedAtAction(nameof(GetCustomerById), new { id = newCustomer.Id }, newCustomer);
+                var newContact = await _contactServices.CreateContactAsync(contacts);
+                return CreatedAtAction(nameof(GetContactById), new { id = newContact.Id }, newContact);
             }
             catch (ArgumentException ex)
             {
@@ -64,36 +62,41 @@ namespace AWEPP.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> UpdateCustomer(int id, [FromBody] Customer customer)
+
+        public async Task<IActionResult> UpdateContact(int id, [FromBody] Contact contacts)
         {
-           
+            if (id != contacts.Id)
+            {
+                return BadRequest("El ID en la URL y en el cuerpo de la solicitud no coinciden.");
+            }
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-
             }
-            var updatecustomer = await _customerService.UpdateCustomerAsync(customer);
 
-            if (updatecustomer == null)
+            var updatecity = await _contactServices.UpdateContactAsync(contacts);
+
+            if (updatecity == null)
             {
                 return NotFound();
             }
 
             return NoContent();
-        }
-    
+        
+    }
 
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> SoftDeleteCustomer(int id)
+
+        public async Task<IActionResult> SoftDeleteContact(int id)
         {
             if (id <= 0)
             {
                 return NotFound("el numero debe ser un numero positivo");
             }
-            await _customerService.SoftDeleteCustomerAsync(id);
+            await _contactServices.SoftDeleteContactAsync(id);
             return NoContent();
         }
     }

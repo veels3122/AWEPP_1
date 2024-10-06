@@ -1,6 +1,7 @@
 ﻿using AWEPP.Context;
 using AWEPP.Model;
 using AWEPP.Modelo;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System.Security.AccessControl;
 
@@ -13,8 +14,7 @@ namespace AWEPP.Repositories
         Task<Bank> CreateBankAsync(Bank bank);
         Task<Bank> UpdateBankAsync(Bank bank);
         Task SoftDeleteBankAsync(int id);
-
-
+       
     }
     public class BankRepository : IBankRepository
     {
@@ -28,7 +28,6 @@ namespace AWEPP.Repositories
         public async Task<IEnumerable<Bank>> GetAllBanksAsync()
         {
             return await _context.Banks
-                .Where(b => !b.IsDeleted)
                 .ToListAsync();
         }
 
@@ -36,16 +35,11 @@ namespace AWEPP.Repositories
         {
 #pragma warning disable CS8603 // Possible null reference return.
             return await _context.Banks
-               .FirstOrDefaultAsync(b => b.Id == id && !b.IsDeleted);
+               .FirstOrDefaultAsync(b => b.Id == id );
 #pragma warning restore CS8603 // Possible null reference return.
         }
 
-        public async Task<Bank> UpdateBankAsync(Bank bank)
-        {
-            _context.Entry(bank).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return bank;
-        }
+        
 
 
         public async Task<Bank> CreateBankAsync(Bank bank)
@@ -54,15 +48,23 @@ namespace AWEPP.Repositories
             await _context.SaveChangesAsync();
             return bank;
         }
+        public async Task<Bank> UpdateBankAsync(Bank bank)
+        {
+            _context.Entry(bank).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return bank;
+        }
 
         public async Task SoftDeleteBankAsync(int id)
         {
             var bank = await _context.Banks.FindAsync(id);
+            
             if (bank != null)
             {
-                bank.IsDeleted = true;
+               _context.Banks.Remove(bank);
                 await _context.SaveChangesAsync();
             }
+            
         }
     }
 }

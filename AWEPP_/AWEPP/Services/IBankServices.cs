@@ -11,10 +11,10 @@ namespace AWEPP.Services
         Task<IEnumerable<Bank>> GetAllBanksAsync();
         Task<Bank> GetBankByIdAsync(int id);
         Task<Bank> CreateBankAsync(Bank bank);
-        Task<Bank> UpdateBankAsync(Bank bank);
+        Task<Bank> UpdateBankAsync( Bank bank);
         Task SoftDeleteBankAsync(int id);
     }
-    public class BankServices : IBankServices
+    public class BankServices : IBankServices 
     {
         private readonly IBankRepository _bankRepository;
 
@@ -49,23 +49,17 @@ namespace AWEPP.Services
         public async Task<Bank> UpdateBankAsync(Bank bank)
         {
 
-            if (bank.Id <= 0)
-            {
-                throw new ArgumentException("El ID del banco es inválido.");
-            }
+           
 
-
-            if (string.IsNullOrEmpty(bank.Banks))
-            {
-                throw new ArgumentException("El nombre del banco es obligatorio.");
-            }
-
-            return await _bankRepository.UpdateBankAsync(bank);
+              return await _bankRepository.UpdateBankAsync(bank);
         }
 
         public async Task SoftDeleteBankAsync(int id)
         {
-            await _bankRepository.SoftDeleteBankAsync(id);
+           
+             await _bankRepository.SoftDeleteBankAsync(id);
         }
+
+        
     }
 }
