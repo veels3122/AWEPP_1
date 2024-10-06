@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Reflection.Emit;
 using AWEPP.Model;
 using AWEPP.Modelo;
@@ -18,8 +18,8 @@ namespace AWEPP.Context
         public DbSet<TypeAcces> TypeAccesses { get; set; }
         public DbSet<TypeAccesUser> TypeAccessUsers { get; set; }
         public DbSet<Bank> Banks { get; set; }
-        public DbSet<Cities> City { get; set; }
-        public DbSet<Contacts> Contact { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Expenses> Expenses { get; set; }
         public DbSet<Products> Products { get; set; }
@@ -39,8 +39,8 @@ namespace AWEPP.Context
             modelBuilder.Entity<TypeAcces>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeAccesUser>().HasKey(u => u.Id);
             modelBuilder.Entity<Bank>().HasKey(u => u.Id);
-            modelBuilder.Entity<Cities>().HasKey(u => u.Id);
-            modelBuilder.Entity<Contacts>().HasKey(u => u.Id);
+            modelBuilder.Entity<City>().HasKey(u => u.Id);
+            modelBuilder.Entity<Contact>().HasKey(u => u.Id);
             modelBuilder.Entity<Customer>().HasKey(u => u.Id);
             modelBuilder.Entity<Expenses>().HasKey(u => u.Id);
             modelBuilder.Entity<Products>().HasKey(u => u.Id);
