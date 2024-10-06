@@ -41,18 +41,23 @@ namespace AWEPP.Services
             {
                 throw new ArgumentException("Ya existe un cliente con ese número de identificación.");
             }
-
+            if (string.IsNullOrEmpty(customer.Name))
+            {
+                throw new ArgumentException("El nombre del cliente es obligatorio.");
+            }
             return await _customerRepository.CreateCustomerAsync(customer);
         }
 
         public async Task<Customer> UpdateCustomerAsync(Customer customer)
         {
-            var existingCustomer = await _customerRepository.GetCustomerByIdAsync(customer.Id);
-            if (existingCustomer == null)
+            
+            if (string.IsNullOrEmpty(customer.Name))
             {
-                throw new ArgumentException("No se encontró el cliente.");
+                throw new ArgumentException("El nombre delc liente es obligatorio.");
             }
-            return await _customerRepository.UpdateCustomerAsync(customer);
+            var existingCustomer = await _customerRepository.GetCustomerByIdAsync(customer.Id);
+            customer = await _customerRepository.UpdateCustomerAsync(customer);
+            return customer;
         }
 
         public async Task SoftDeleteCustomerAsync(int id)

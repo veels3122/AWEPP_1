@@ -1,12 +1,14 @@
 ﻿using AWEPP.Modelo;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("api/[controller]")]
 public class BanksController : ControllerBase
 {
-    private readonly IBankServices _bankService;
+    public readonly IBankServices _bankService;
 
 
     public BanksController(IBankServices bankService)
@@ -17,7 +19,7 @@ public class BanksController : ControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<IEnumerable<Bank>>> GetAllBanks()
-    {
+    { 
         var banks = await _bankService.GetAllBanksAsync();
         return Ok(banks);
     }
@@ -25,8 +27,7 @@ public class BanksController : ControllerBase
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<Bank>>
- GetBankById(int id)
+    public async Task<ActionResult<Bank>>GetBankById(int id)
     {
         var bank = await _bankService.GetBankByIdAsync(id);
         if (bank == null)
@@ -61,13 +62,13 @@ public class BanksController : ControllerBase
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+
     public async Task<IActionResult> UpdateBank(int id, [FromBody] Bank bank)
     {
         if (id != bank.Id)
         {
-            return BadRequest();
+            return BadRequest("El ID en la URL y en el cuerpo de la solicitud no coinciden.");
         }
 
         if (!ModelState.IsValid)
@@ -75,36 +76,36 @@ public class BanksController : ControllerBase
             return BadRequest(ModelState);
         }
 
-        try
-        {
-            var existingBank = await _bankService.GetBankByIdAsync(id);
-            if (existingBank == null)
-            {
-                return NotFound();
-            }
+        var updatedBank = await _bankService.UpdateBankAsync( bank);
 
-            await _bankService.UpdateBankAsync(bank);
-            return NoContent();
-        }
-        catch (ArgumentException ex)
+        if (updatedBank == null)
         {
-            return BadRequest(ex.Message);
+            return NotFound();
         }
+
+        return NoContent();
     }
+
+
+
+
 
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public
- async Task<IActionResult> SoftDeleteBank(int id)
-    {
-        var bank = await _bankService.GetBankByIdAsync(id);
-        if (bank == null)
-        {
-            return NotFound();
-        }
 
+    public
+     async Task<IActionResult> SoftDeleteBank(int id)
+    {
+       if(id <= 0  )
+        {
+            return NotFound("el numero debe ser un numero positivo");
+        }
+        if(_bankService.SoftDeleteBankAsync == null)
+        {
+            return NotFound("el dato del banco no existe");
+        }
         await _bankService.SoftDeleteBankAsync(id);
         return NoContent();
     }
