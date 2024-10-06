@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -56,8 +56,24 @@
 /AWEPP_/AWEPP/obj/AWEPP.csproj.nuget.g.props
 /AWEPP_/AWEPP/obj/project.assets.json
 /AWEPP_/AWEPP/obj/project.nuget.cache
-/AWEPP_/.vs/AWEPP/v17/DocumentLayout.backup.json
-/AWEPP_/.vs/AWEPP/v17/DocumentLayout.backup.json
-/AWEPP_/.vs/ProjectEvaluation/awepp.metadata.v9.bin
-/AWEPP_/.vs/ProjectEvaluation/awepp.projects.v9.bin
-/AWEPP_/.vs/ProjectEvaluation/awepp.strings.v9.bin
+/AWEPP_/AWEPP/obj/Release/net8.0
+/AWEPP_/AWEPP/Properties
+/AWEPP_/AWEPP/obj/Debug/net8.0
+/AWEPP_/AWEPP/bin/Debug/net8.0/AWEPP.deps.json
+/AWEPP_/.vs/AWEPP/config/applicationhost.config
+/AWEPP_/AWEPP/bin/Release/net8.0
+/AWEPP_/AWEPP/bin/Debug/net8.0/AWEPP.dll
+/AWEPP_/AWEPP/bin/Debug/net8.0/AWEPP.exe
+/AWEPP_/AWEPP/bin/Debug/net8.0/AWEPP.pdb
+/AWEPP_/AWEPP/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/AWEPP_/AWEPP/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/AWEPP_/AWEPP/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/AWEPP_/AWEPP/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/AWEPP_/AWEPP/obj/Debug/net8.0/ref/AWEPP.dll
+/AWEPP_/AWEPP/obj/Debug/net8.0/refint/AWEPP.dll
+/AWEPP_/AWEPP/obj/Debug/net8.0/apphost.exe
+/AWEPP_/AWEPP/obj/Debug/net8.0/AWEPP.csproj.CoreCompileInputs.cache
+/AWEPP_/AWEPP/obj/Debug/net8.0/AWEPP.csproj.FileListAbsolute.txt
+/AWEPP_/AWEPP/obj/Debug/net8.0/AWEPP.dll
+/AWEPP_/AWEPP/obj/Debug/net8.0/AWEPP.genruntimeconfig.cache
+/AWEPP_/AWEPP/obj/Debug/net8.0/AWEPP.pdb
