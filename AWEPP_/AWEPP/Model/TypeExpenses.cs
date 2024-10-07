@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AWEPP.Modelo
+namespace AWEPP.Model
 {
-    public class City
+    public class TypeExpenses
     {
         [Key]
         public int Id { get; set; }
-        public required string Cities { get; set; }
+        public required string Expenses { get; set; }
+
     }
 }

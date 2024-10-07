@@ -7,7 +7,7 @@ namespace AWEPP.Model
     {
         [Key]
         public int Id { get; set; }
-        public virtual required int UserId { get; set; }
+        public virtual required User User { get; set; }
         public required string Datecreate { get; set; }
         public required string Modifed { get; set; }
         public required string ModifedBy { get; set; }

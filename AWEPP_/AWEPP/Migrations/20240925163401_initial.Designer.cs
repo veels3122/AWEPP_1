@@ -12,7 +12,7 @@ namespace AWEPP.Migrations
 {
     [DbContext(typeof(Aweppcontext))]
     [Migration("20240925163401_initial")]
-    partial class Initial
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

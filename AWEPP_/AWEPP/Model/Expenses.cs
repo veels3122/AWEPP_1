@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AWEPP.Model
 {
-    public class Expense
+    public class Expenses
     {
         [Key]
         public int Id { get; set; }
@@ -14,10 +14,10 @@ namespace AWEPP.Model
         public required string DateStart { get; set; }
         public required string DateEnd { get; set; }
         public required string BalanceFee { get; set; }
-        public virtual required int TypeExpensesId { get; set; }
-        public virtual required int TypeAccountsId { get; set; }
-        public virtual required int TypeProductsId { get; set; }
-        public virtual required int CustomerId { get; set; }
+        public virtual required TypeExpenses TypeExpenses { get; set; }
+        public virtual required TypeAccounts TypeAccounts { get; set; }
+        public virtual required TypeProducts TypeProducts { get; set; }
+        public virtual required Customer Customer { get; set; }
 
     }
 }

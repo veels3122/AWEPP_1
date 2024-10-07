@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AWEPP.Model
 {
-    public class TypeAccount
+    public class TypeAccounts
     {
         [Key]
         public int Id { get; set; }
-        public required string TypeAccounts { get; set; }
-        public virtual required int TypeProductsId { get; set; }
+        public required string Accounts { get; set; }
+        public virtual required TypeProducts Typeproducts { get; set; }
         
     }
 }

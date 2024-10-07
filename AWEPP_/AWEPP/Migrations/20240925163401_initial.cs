@@ -5,7 +5,7 @@
 namespace AWEPP.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,7 +29,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Cities = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,7 +42,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Contacts = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Contact = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,7 +55,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeAccesses = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Typeacces = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,7 +68,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeExpenses = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Expenses = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -76,12 +76,12 @@ namespace AWEPP.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TypeIdentys",
+                name: "TypeIdentities",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeIdentys = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    TipoIdenty = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -94,7 +94,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeProducts = table.Column<int>(type: "int", nullable: false),
+                    Product = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -108,7 +108,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserTypes = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,14 +121,14 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeAccessUsers = table.Column<int>(type: "int", nullable: false)
+                    TypeAccesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TypeAccessUsers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TypeAccessUsers_TypeAccesses_TypeAccessUsers",
-                        column: x => x.TypeAccessUsers,
+                        name: "FK_TypeAccessUsers_TypeAccesses_TypeAccesId",
+                        column: x => x.TypeAccesId,
                         principalTable: "TypeAccesses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -140,14 +140,14 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeAccounts = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Accounts = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TypeproductsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TypeAccounts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TypeAccounts_TypeProducts_TypeAccounts",
+                        name: "FK_TypeAccounts_TypeProducts_TypeproductsId",
                         column: x => x.TypeproductsId,
                         principalTable: "TypeProducts",
                         principalColumn: "Id",

@@ -12,9 +12,10 @@ namespace AWEPP.Model
         public required string LastName { get; set; }
         public required string Adress { get; set; }
         public required string Contact { get; set; }
-        public virtual required int UserId { get; set; }
-        public virtual required int TypeIdentyId { get; set; }
-        public virtual required int ContactsId { get; set; }
-        public virtual required int CitiesId { get; set; }
+        public virtual required User User { get; set; }
+        public virtual required TypeIdenty TypeIdenty { get; set; }
+        public virtual required Contacts Contacts { get; set; }
+        public virtual required Cities Cities { get; set; }
+
     }
 }

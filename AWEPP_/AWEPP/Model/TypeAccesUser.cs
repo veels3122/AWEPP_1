@@ -8,6 +8,6 @@ namespace AWEPP.Model
         
     [Key]
         public int Id { get; set; }
-        public virtual required int TypeAccessUsers { get; set; }
+        public virtual required TypeAcces TypeAcces { get; set; }
     }
 }

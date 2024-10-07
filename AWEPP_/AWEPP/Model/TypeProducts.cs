@@ -2,11 +2,11 @@
 
 namespace AWEPP.Model
 {
-    public class TypeProduct
+    public class TypeProducts
     {
         [Key]
         public int Id { get; set; }
-        public required int TypeProducts { get; set; }
+        public required int Product { get; set; }
         public required string Description { get; set; }
 
     }
