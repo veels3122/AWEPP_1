@@ -7,69 +7,31 @@ namespace AWEPP.Repositories
 {
     public class ProductsRepository : IProductsRepository
     {
-        private readonly Aweppcontext _context;
-
-        public ProductsRepository(Aweppcontext context)
+        public Task CreateProductsAsync(Products products)
         {
-            _context = context;
+            throw new NotImplementedException();
         }
 
-        public async Task CreateProductsAsync(Products products)
+        public Task<IEnumerable<Products>> GetAllProductsAsync()
         {
-            await _context.Products.AddAsync(products); // Añadir nuevo registro
-            await _context.SaveChangesAsync(); // Guardar cambios
+            throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Products>> GetAllProductsAsync()
+        public Task<Products> GetProductsByIdAsync(int Id)
         {
-            return await _context.Products
-                .Where(s => !s.IsDeleted) // Excluir los eliminados
-                .ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<Products> GetProductsByIdAsync(int Id)
+        public Task SoftDeleteProductsAsync(int Id)
         {
-            return await _context.Products
-                 .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
+            throw new NotImplementedException();
         }
 
-        public async Task SoftDeleteProductsAsync(int Id)
+        public Task UpdateProductsAsync(Products products)
         {
-            var expenses = await _context.Saving.FindAsync(Id);
-            if (expenses != null)
-            {
-                expenses.IsDeleted = true; // Marcar como eliminado
-                await _context.SaveChangesAsync(); // Guardar cambios
-            }
-        }
-
-        public async Task UpdateProductsAsync(Products products)
-        {
-            var existingProduct = await _context.Products.FindAsync(products.Id);
-            if (existingProduct != null)
-            {
-                // Actualizar los campos necesarios
-                existingProduct.TypeAccounts = products.TypeAccounts;
-                existingProduct.TypeProducts = products.TypeProducts;
-                existingProduct.Bank = products.Bank;
-                existingProduct.Account = products.Account;
-                existingProduct.NumberAcount = products.NumberAcount;
-                existingProduct.TotalBalance = products.TotalBalance;
-                existingProduct.PartialBalance = products.PartialBalance;
-                existingProduct.Debt = products.Debt;
-                existingProduct.DatePayment = products.DatePayment;
-                existingProduct.Description = products.Description;
-                existingProduct.Customer = products.Customer;
-
-                // Guardar cambios en la base de datos
-                await _context.SaveChangesAsync();
-            }
+            throw new NotImplementedException();
         }
     }
-
 }
-
-
-
-
-     
+        
+    

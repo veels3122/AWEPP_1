@@ -7,62 +7,30 @@ namespace AWEPP.Repositories
 {
     public class SavingRepository : ISavingRepository
     {
-        private readonly Aweppcontext _context;
-
-        public SavingRepository(Aweppcontext context)
+        public Task CreateSavingAsync(Saving saving)
         {
-            _context = context;
+            throw new NotImplementedException();
         }
 
-        public async Task CreateSavingAsync(Saving saving)
+        public Task<IEnumerable<Saving>> GetAllSavingAsync()
         {
-            await _context.Savings.AddAsync(saving); // Añadir nuevo registro
-            await _context.SaveChangesAsync(); // Guardar cambios
+            throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Saving>> GetAllSavingAsync()
+        public Task<Saving> GetSavingByIdAsync(int Id)
         {
-            return await _context.Savings
-                .Where(s => !s.IsDeleted) // Excluir los eliminados
-                .ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<Saving> GetSavingByIdAsync(int Id)
+        public Task SoftDeleteSavingAsync(int Id)
         {
-            return await _context.Savings
-                .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
+            throw new NotImplementedException();
         }
 
-        public async Task SoftDeleteSavingAsync(int Id)
+        public Task UpdateSavingAsync(Saving saving)
         {
-            var Saving = await _context.Savings.FindAsync(Id);
-            if (Saving != null)
-            {
-                Saving.IsDeleted = true; // Marcar como eliminado
-                await _context.SaveChangesAsync(); // Guardar cambios
-            }
-        }
-
-        public async Task UpdateSavingAsync(Saving saving)
-        {
-            var existingSaving = await _context.Savings.FindAsync(saving.Id); // Usar Savings (plural)
-            if (existingSaving != null)
-            {
-                // Actualizar los campos necesarios
-                existingSaving.dateStar = saving.dateStar;
-                existingSaving.dateEnd = saving.dateEnd;
-                existingSaving.SavingAmount = saving.SavingAmount;
-                existingSaving.paymentAmount = saving.paymentAmount;
-                existingSaving.Description = saving.Description;
-                existingSaving.TypeProducts = saving.TypeProducts;
-                existingSaving.TypeAccounts = saving.TypeAccounts;
-                existingSaving.Products = saving.Products;
-                existingSaving.Bank = saving.Bank;
-                existingSaving.Customer = saving.Customer;
-
-                // Guardar cambios en la base de datos
-                await _context.SaveChangesAsync();
-            }
+            throw new NotImplementedException();
         }
     }
 }
+    
