@@ -2,11 +2,10 @@
 
 namespace AWEPP.Model
 {
-    public class Contacts
+    public class Contact
     {
         [Key]
         public int Id { get; set; }
-        public required string Contact { get; set; }
-           
+        public required string Contacts { get; set; }
     }
 }
