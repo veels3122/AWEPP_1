@@ -5,9 +5,9 @@ namespace AWEPP.Services
 {
     public class ProductsService : IProductsService
     {
-        private readonly IProductsRepository _productsRepository;
+        private readonly IProductRepository _productsRepository;
 
-        public ProductsService(IProductsRepository productsRepository)
+        public ProductsService(IProductRepository productsRepository)
         {
             _productsRepository = productsRepository;
         }

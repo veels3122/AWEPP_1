@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AWEPP.Repositories
 {
-    public interface ITypeExpensesRepository
+    public interface ITypeExpenseRepository
     {
         Task<IEnumerable<TypeExpense>> GetAllTypeExpensesAsync();
         Task<TypeExpense> GetTypeExpensesByIdAsync(int id);
@@ -14,7 +14,7 @@ namespace AWEPP.Repositories
         Task SoftDeleteTypeExpensesAsync(int id);
     }
 
-    public class TypeExpensesRepository : ITypeExpensesRepository
+    public class TypeExpensesRepository : ITypeExpenseRepository
     {
         private readonly Aweppcontext _context;
 

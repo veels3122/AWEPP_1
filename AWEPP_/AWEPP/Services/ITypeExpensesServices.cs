@@ -15,9 +15,9 @@ namespace AWEPP.Services
 
     public class TypeExpensesServices : ITypeExpensesServices
     {
-        private readonly ITypeExpensesRepository _typeExpensesRepository;
+        private readonly ITypeExpenseRepository _typeExpensesRepository;
 
-        public TypeExpensesServices(ITypeExpensesRepository typeExpensesRepository)
+        public TypeExpensesServices(ITypeExpenseRepository typeExpensesRepository)
         {
             _typeExpensesRepository = typeExpensesRepository;
         }

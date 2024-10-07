@@ -5,9 +5,9 @@ namespace AWEPP.Services
 {
     public class ExpensesService : IExpensesService
     {
-        private readonly IExpensesRepository _expensesRepository;
+        private readonly IExpenseRepository _expensesRepository;
 
-        public ExpensesService(IExpensesRepository expensesRepository)
+        public ExpensesService(IExpenseRepository expensesRepository)
         {
             _expensesRepository = expensesRepository;
         }

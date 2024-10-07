@@ -5,9 +5,9 @@ namespace AWEPP.Services
 {
     public class TypeAccountsService : ITypeAccountsService
     {
-        private readonly ITypeAccountsRepository _typeAccountsRepository;
+        private readonly ITypeAccountRepository _typeAccountsRepository;
 
-        public TypeAccountsService(ITypeAccountsRepository typeAccountsRepository)
+        public TypeAccountsService(ITypeAccountRepository typeAccountsRepository)
         {
             _typeAccountsRepository = typeAccountsRepository;
         }
