@@ -25,9 +25,9 @@ namespace AWEPP.Context
         public DbSet<Products> Products { get; set; }
         public DbSet<Saving> Savings { get; set; }
         public DbSet<TypeAccounts> TypeAccounts { get; set; }
-        public DbSet<TypeExpenses> TypeExpenses { get; set; }
-        public DbSet<TypeIdenty> TypeIdentities { get; set; }
-        public DbSet<TypeProducts> TypeProducts { get; set; }
+        public DbSet<TypeExpense> TypeExpenses { get; set; }
+        public DbSet<TypeIdenty> TypeIdentys { get; set; }
+        public DbSet<TypeProduct> TypeProducts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,9 +46,9 @@ namespace AWEPP.Context
             modelBuilder.Entity<Products>().HasKey(u => u.Id);
             modelBuilder.Entity<Saving>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeAccounts>().HasKey(u => u.Id);
-            modelBuilder.Entity<TypeExpenses>().HasKey(u => u.Id);
+            modelBuilder.Entity<TypeExpense>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeIdenty>().HasKey(u => u.Id);
-            modelBuilder.Entity<TypeProducts>().HasKey(u => u.Id);
+            modelBuilder.Entity<TypeProduct>().HasKey(u => u.Id);
         }
     }
 }

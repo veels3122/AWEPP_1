@@ -8,7 +8,7 @@ namespace AWEPP.Model
         [Key]
         public int Id { get; set; }
         public required string Accounts { get; set; }
-        public virtual required TypeProducts Typeproducts { get; set; }
+        public virtual required TypeProduct Typeproducts { get; set; }
         
     }
 }
