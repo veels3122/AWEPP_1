@@ -660,9 +660,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpenseController",
+    "ContainingType": "AWEPP.Controllers.ExpensesController",
     "Method": "GetAllExpenses",
-    "RelativePath": "api/Expense",
+    "RelativePath": "api/Expenses",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -680,23 +680,27 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpenseController",
-    "Method": "CreateExpenses",
-    "RelativePath": "api/Expense",
+    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "Method": "CreateExpense",
+    "RelativePath": "api/Expenses",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "expenses",
+        "Name": "expense",
         "Type": "AWEPP.Model.Expense",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "AWEPP.Model.Expense",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 201
       },
       {
@@ -711,15 +715,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpenseController",
+    "ContainingType": "AWEPP.Controllers.ExpensesController",
     "Method": "GetExpenseById",
-    "RelativePath": "api/Expense/{Id}",
+    "RelativePath": "api/Expenses/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -746,20 +750,20 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpenseController",
-    "Method": "UpdateExpenses",
-    "RelativePath": "api/Expense/{Id}",
+    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "Method": "UpdateExpense",
+    "RelativePath": "api/Expenses/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "expenses",
+        "Name": "expense",
         "Type": "AWEPP.Model.Expense",
         "IsRequired": true
       }
@@ -791,15 +795,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpenseController",
-    "Method": "SoftDeleteExpenses",
-    "RelativePath": "api/Expense/{Id}",
+    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "Method": "SoftDeleteExpense",
+    "RelativePath": "api/Expenses/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -817,14 +821,14 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 400
+        "StatusCode": 404
       }
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductController",
+    "ContainingType": "AWEPP.Controllers.ProductsController",
     "Method": "GetAllProducts",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -842,23 +846,27 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductController",
-    "Method": "CreateProducts",
-    "RelativePath": "api/Product",
+    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Products",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "products",
+        "Name": "product",
         "Type": "AWEPP.Model.Product",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "AWEPP.Model.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 201
       },
       {
@@ -873,15 +881,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductController",
-    "Method": "GetProductsById",
-    "RelativePath": "api/Product/{Id}",
+    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "Method": "GetProductById",
+    "RelativePath": "api/Products/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -908,20 +916,20 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductController",
-    "Method": "UpdateProducts",
-    "RelativePath": "api/Product/{Id}",
+    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Products/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "products",
+        "Name": "product",
         "Type": "AWEPP.Model.Product",
         "IsRequired": true
       }
@@ -953,15 +961,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductController",
-    "Method": "SoftDeleteProducts",
-    "RelativePath": "api/Product/{Id}",
+    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "Method": "SoftDeleteProduct",
+    "RelativePath": "api/Products/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -979,14 +987,14 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 400
+        "StatusCode": 404
       }
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.SavingController",
-    "Method": "GetAllSaving",
-    "RelativePath": "api/Saving",
+    "ContainingType": "AWEPP.Controllers.SavingsController",
+    "Method": "GetAllSavings",
+    "RelativePath": "api/Savings",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1004,9 +1012,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.SavingController",
+    "ContainingType": "AWEPP.Controllers.SavingsController",
     "Method": "CreateSaving",
-    "RelativePath": "api/Saving",
+    "RelativePath": "api/Savings",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -1019,8 +1027,12 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "AWEPP.Modelo.Saving",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 201
       },
       {
@@ -1035,15 +1047,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.SavingController",
+    "ContainingType": "AWEPP.Controllers.SavingsController",
     "Method": "GetSavingById",
-    "RelativePath": "api/Saving/{Id}",
+    "RelativePath": "api/Savings/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1070,15 +1082,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.SavingController",
+    "ContainingType": "AWEPP.Controllers.SavingsController",
     "Method": "UpdateSaving",
-    "RelativePath": "api/Saving/{Id}",
+    "RelativePath": "api/Savings/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
@@ -1115,15 +1127,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.SavingController",
+    "ContainingType": "AWEPP.Controllers.SavingsController",
     "Method": "SoftDeleteSaving",
-    "RelativePath": "api/Saving/{Id}",
+    "RelativePath": "api/Savings/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1141,7 +1153,7 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 400
+        "StatusCode": 404
       }
     ]
   },
@@ -1308,9 +1320,175 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountController",
+    "ContainingType": "AWEPP.Controllers.TypeAccesUsersController",
+    "Method": "GetAllTypeAccesUsers",
+    "RelativePath": "api/TypeAccesUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeAccesUser, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.TypeAccesUsersController",
+    "Method": "CreateTypeAccesUser",
+    "RelativePath": "api/TypeAccesUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "typeAccesUser",
+        "Type": "AWEPP.Model.TypeAccesUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Model.TypeAccesUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.TypeAccesUsersController",
+    "Method": "GetTypeAccesUserById",
+    "RelativePath": "api/TypeAccesUsers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Model.TypeAccesUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.TypeAccesUsersController",
+    "Method": "UpdateTypeAccesUser",
+    "RelativePath": "api/TypeAccesUsers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "typeAccesUser",
+        "Type": "AWEPP.Model.TypeAccesUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.TypeAccesUsersController",
+    "Method": "SoftDeleteTypeAccesUser",
+    "RelativePath": "api/TypeAccesUsers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
     "Method": "GetAllTypeAccounts",
-    "RelativePath": "api/TypeAccount",
+    "RelativePath": "api/TypeAccounts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1328,23 +1506,27 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountController",
-    "Method": "CreateTypeAccounts",
-    "RelativePath": "api/TypeAccount",
+    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "Method": "CreateTypeAccount",
+    "RelativePath": "api/TypeAccounts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "typeAccounts",
+        "Name": "typeAccount",
         "Type": "AWEPP.Model.TypeAccount",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "AWEPP.Model.TypeAccount",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 201
       },
       {
@@ -1359,15 +1541,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountController",
-    "Method": "GetTypeAccountsById",
-    "RelativePath": "api/TypeAccount/{Id}",
+    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "Method": "GetTypeAccountById",
+    "RelativePath": "api/TypeAccounts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1394,20 +1576,20 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountController",
-    "Method": "UpdateTypeAccounts",
-    "RelativePath": "api/TypeAccount/{Id}",
+    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "Method": "UpdateTypeAccount",
+    "RelativePath": "api/TypeAccounts/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "typeAccounts",
+        "Name": "typeAccount",
         "Type": "AWEPP.Model.TypeAccount",
         "IsRequired": true
       }
@@ -1439,15 +1621,15 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountController",
-    "Method": "SoftDeleteTypeAccounts",
-    "RelativePath": "api/TypeAccount/{Id}",
+    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "Method": "SoftDeleteTypeAccount",
+    "RelativePath": "api/TypeAccounts/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1465,7 +1647,7 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 400
+        "StatusCode": 404
       }
     ]
   },
@@ -1928,6 +2110,500 @@
     "ContainingType": "AWEPP.Controllers.TypeProductsController",
     "Method": "SoftDeleteTypeProducts",
     "RelativePath": "api/TypeProducts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UserHistoriesController",
+    "Method": "GetAllUserHistories",
+    "RelativePath": "api/UserHistories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.UserHistory, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UserHistoriesController",
+    "Method": "CreateUserHistory",
+    "RelativePath": "api/UserHistories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userHistory",
+        "Type": "AWEPP.Model.UserHistory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Model.UserHistory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UserHistoriesController",
+    "Method": "GetUserHistoryById",
+    "RelativePath": "api/UserHistories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Model.UserHistory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UserHistoriesController",
+    "Method": "UpdateUserHistory",
+    "RelativePath": "api/UserHistories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userHistory",
+        "Type": "AWEPP.Model.UserHistory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UserHistoriesController",
+    "Method": "SoftDeleteUserHistory",
+    "RelativePath": "api/UserHistories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsersController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Modelo.User, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "AWEPP.Modelo.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Modelo.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsersController",
+    "Method": "GetUserById",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Modelo.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsersController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "AWEPP.Modelo.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsersController",
+    "Method": "SoftDeleteUser",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsertypesController",
+    "Method": "GetAllUsertypes",
+    "RelativePath": "api/Usertypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Modelo.Usertype, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsertypesController",
+    "Method": "CreateUsertype",
+    "RelativePath": "api/Usertypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usertype",
+        "Type": "AWEPP.Modelo.Usertype",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsertypesController",
+    "Method": "GetUsertypeById",
+    "RelativePath": "api/Usertypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AWEPP.Modelo.Usertype",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsertypesController",
+    "Method": "UpdateUsertype",
+    "RelativePath": "api/Usertypes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usertype",
+        "Type": "AWEPP.Modelo.Usertype",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWEPP.Controllers.UsertypesController",
+    "Method": "SoftDeleteUsertype",
+    "RelativePath": "api/Usertypes/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

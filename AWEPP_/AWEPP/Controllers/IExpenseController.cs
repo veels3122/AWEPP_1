@@ -6,63 +6,63 @@ namespace AWEPP.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserHistoriesController : ControllerBase
+    public class ExpensesController : ControllerBase
     {
-        private readonly IUserHistoryServices _userHistoryService;
+        private readonly IExpenseServices _expenseService;
 
-        public UserHistoriesController(IUserHistoryServices userHistoryService)
+        public ExpensesController(IExpenseServices expenseService)
         {
-            _userHistoryService = userHistoryService;
+            _expenseService = expenseService;
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<UserHistory>>> GetAllUserHistories()
+        public async Task<ActionResult<IEnumerable<Expense>>> GetAllExpenses()
         {
-            var userHistories = await _userHistoryService.GetAllUserHistoriesAsync();
-            return Ok(userHistories);
+            var expenses = await _expenseService.GetAllExpensesAsync();
+            return Ok(expenses);
         }
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<UserHistory>> GetUserHistoryById(int id)
+        public async Task<ActionResult<Expense>> GetExpenseById(int id)
         {
-            var userHistory = await _userHistoryService.GetUserHistoryByIdAsync(id);
-            if (userHistory == null)
+            var expense = await _expenseService.GetExpenseByIdAsync(id);
+            if (expense == null)
             {
                 return NotFound();
             }
-            return Ok(userHistory);
+            return Ok(expense);
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<UserHistory>> CreateUserHistory([FromBody] UserHistory userHistory)
+        public async Task<ActionResult<Expense>> CreateExpense([FromBody] Expense expense)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var newUserHistory = await _userHistoryService.CreateUserHistoryAsync(userHistory);
-            return CreatedAtAction(nameof(GetUserHistoryById), new { id = newUserHistory.Id }, newUserHistory);
+            var newExpense = await _expenseService.CreateExpenseAsync(expense);
+            return CreatedAtAction(nameof(GetExpenseById), new { id = newExpense.Id }, newExpense);
         }
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> UpdateUserHistory(int id, [FromBody] UserHistory userHistory)
+        public async Task<IActionResult> UpdateExpense(int id, [FromBody] Expense expense)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var updatedUserHistory = await _userHistoryService.UpdateUserHistoryAsync(userHistory);
-            if (updatedUserHistory == null)
+            var updatedExpense = await _expenseService.UpdateExpenseAsync(expense);
+            if (updatedExpense == null)
             {
                 return NotFound();
             }
@@ -72,9 +72,9 @@ namespace AWEPP.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> SoftDeleteUserHistory(int id)
+        public async Task<IActionResult> SoftDeleteExpense(int id)
         {
-            await _userHistoryService.SoftDeleteUserHistoryAsync(id);
+            await _expenseService.SoftDeleteExpenseAsync(id);
             return NoContent();
         }
     }

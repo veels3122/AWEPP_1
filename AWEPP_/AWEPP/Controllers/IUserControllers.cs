@@ -1,42 +1,82 @@
-﻿using AWEPP.Modelo;
+﻿using AWEPP.Model;
+using AWEPP.Modelo;
 using AWEPP.Services;
-using AWEPP.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AWEPP.Controllers
 {
-    public interface IUserControllers
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsersController : ControllerBase
     {
-        Task<IEnumerable<Usertype>> GetAllUserAsync();
-        Task<User> GetUserByIdAsync(int id);
-        Task<User> CreateUserAsync(Usertype User);
-        Task<User> UpdateUserAsync(Usertype User);
-        Task SoftDeleteUserAsync(int id);
-    }
-    public class UserControllers : IUserControllers
-    {
-        public Task<User> CreateUserAsync(Usertype User)
+        private readonly IUserServices _userService;
+
+        public UsersController(IUserServices userService)
         {
-            throw new NotImplementedException();
+            _userService = userService;
         }
 
-        public Task<IEnumerable<Usertype>> GetAllUserAsync()
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<User>>> GetAllUsers()
         {
-            throw new NotImplementedException();
+            var users = await _userService.GetAllUsersAsync();
+            return Ok(users);
         }
 
-        public Task<User> GetUserByIdAsync(int id)
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<User>> GetUserById(int id)
         {
-            throw new NotImplementedException();
+            var user = await _userService.GetUserByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
         }
 
-        public Task SoftDeleteUserAsync(int id)
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<User>> CreateUser([FromBody] User user)
         {
-            throw new NotImplementedException();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var newUser = await _userService.CreateUserAsync(user);
+            return CreatedAtAction(nameof(GetUserById), new { id = newUser.Id }, newUser);
         }
 
-        public Task<User> UpdateUserAsync(Usertype User)
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
         {
-            throw new NotImplementedException();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var updatedUser = await _userService.UpdateUserAsync(user);
+            if (updatedUser == null)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> SoftDeleteUser(int id)
+        {
+            await _userService.SoftDeleteUserAsync(id);
+            return NoContent();
         }
     }
 }

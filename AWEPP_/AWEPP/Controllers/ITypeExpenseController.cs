@@ -9,9 +9,9 @@ namespace AWEPP.Controllers
     [Route("api/[controller]")]
     public class TypeExpensesController : ControllerBase
     {
-        private readonly ITypeExpensesServices _typeExpensesService;
+        private readonly ITypeExpenseServices _typeExpensesService;
 
-        public TypeExpensesController(ITypeExpensesServices typeExpensesService)
+        public TypeExpensesController(ITypeExpenseServices typeExpensesService)
         {
             _typeExpensesService = typeExpensesService;
         }

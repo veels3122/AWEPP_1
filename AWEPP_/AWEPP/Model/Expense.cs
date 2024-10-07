@@ -14,10 +14,10 @@ namespace AWEPP.Model
         public required string DateStart { get; set; }
         public required string DateEnd { get; set; }
         public required string BalanceFee { get; set; }
-        public virtual required int TypeExpenses { get; set; }
-        public virtual required int TypeAccounts { get; set; }
-        public virtual required int TypeProducts { get; set; }
-        public virtual required int Customer { get; set; }
+        public virtual required int TypeExpensesId { get; set; }
+        public virtual required int TypeAccountsId { get; set; }
+        public virtual required int TypeProductsId { get; set; }
+        public virtual required int CustomerId { get; set; }
 
     }
 }

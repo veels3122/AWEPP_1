@@ -12,11 +12,11 @@ namespace AWEPP.Modelo
         public required string SavingAmount { get; set; }
         public required string paymentAmount { get; set; }
         public required string Description { get; set; }
-        public virtual required int TypeProducts { get; set; }
-        public virtual required int TypeAccounts { get; set; }
-        public virtual required int Products { get; set; }
-        public virtual required int Bank { get; set; }
-        public virtual required int Customer { get; set; }
+        public virtual required int TypeProductsId { get; set; }
+        public virtual required int TypeAccountsId { get; set; }
+        public virtual required int ProductsId { get; set; }
+        public virtual required int BankId { get; set; }
+        public virtual required int CustomerId { get; set; }
 
     }
 }

@@ -1,41 +1,52 @@
 ﻿using AWEPP.Model;
 using AWEPP.Repositories;
+using System.Threading.Tasks;
 
 namespace AWEPP.Services
 {
     public interface IUserHistoryServices
     {
-        Task<IEnumerable<UserHistory>> GetAllUsersHistoryAsync();
+        Task<IEnumerable<UserHistory>> GetAllUserHistoriesAsync();
         Task<UserHistory> GetUserHistoryByIdAsync(int id);
         Task<UserHistory> CreateUserHistoryAsync(UserHistory userHistory);
         Task<UserHistory> UpdateUserHistoryAsync(UserHistory userHistory);
         Task SoftDeleteUserHistoryAsync(int id);
     }
+
     public class UserHistoryServices : IUserHistoryServices
     {
-        public Task<UserHistory> CreateUserHistoryAsync(UserHistory userHistory)
+        private readonly IUserHistoryRepository _userHistoryRepository;
+
+        public UserHistoryServices(IUserHistoryRepository userHistoryRepository)
         {
-            throw new NotImplementedException();
+            _userHistoryRepository = userHistoryRepository;
         }
 
-        public Task<IEnumerable<UserHistory>> GetAllUsersHistoryAsync()
+        public async Task<IEnumerable<UserHistory>> GetAllUserHistoriesAsync()
         {
-            throw new NotImplementedException();
+            return await _userHistoryRepository.GetAllUserHistoriesAsync();
         }
 
-        public Task<UserHistory> GetUserHistoryByIdAsync(int id)
+        public async Task<UserHistory> GetUserHistoryByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _userHistoryRepository.GetUserHistoryByIdAsync(id);
         }
 
-        public Task SoftDeleteUserHistoryAsync(int id)
+        public async Task<UserHistory> CreateUserHistoryAsync(UserHistory userHistory)
         {
-            throw new NotImplementedException();
+            // Aquí puedes agregar validaciones adicionales si es necesario
+            return await _userHistoryRepository.CreateUserHistoryAsync(userHistory);
         }
 
-        public Task<UserHistory> UpdateUserHistoryAsync(UserHistory userHistory)
+        public async Task<UserHistory> UpdateUserHistoryAsync(UserHistory userHistory)
         {
-            throw new NotImplementedException();
+            // Aquí puedes agregar validaciones adicionales si es necesario
+            return await _userHistoryRepository.UpdateUserHistoryAsync(userHistory);
+        }
+
+        public async Task SoftDeleteUserHistoryAsync(int id)
+        {
+            await _userHistoryRepository.SoftDeleteUserHistoryAsync(id);
         }
     }
 }

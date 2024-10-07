@@ -1,5 +1,7 @@
-﻿using AWEPP.Modelo;
+﻿using AWEPP.Model;
+using AWEPP.Modelo;
 using AWEPP.Repositories;
+using System.Threading.Tasks;
 
 namespace AWEPP.Services
 {
@@ -11,32 +13,41 @@ namespace AWEPP.Services
         Task<User> UpdateUserAsync(User user);
         Task SoftDeleteUserAsync(int id);
     }
+
     public class UserServices : IUserServices
     {
-        public Task<User> CreateUserAsync(User user)
+        private readonly IUserRepository _userRepository;
+
+        public UserServices(IUserRepository userRepository)
         {
-            throw new NotImplementedException();
+            _userRepository = userRepository;
         }
 
-        public Task<IEnumerable<User>> GetAllUsersAsync()
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
-            throw new NotImplementedException();
+            return await _userRepository.GetAllUsersAsync();
         }
 
-        public Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _userRepository.GetUserByIdAsync(id);
         }
 
-        public Task SoftDeleteUserAsync(int id)
+        public async Task<User> CreateUserAsync(User user)
         {
-            throw new NotImplementedException();
+            // Aquí puedes agregar validaciones adicionales si es necesario
+            return await _userRepository.CreateUserAsync(user);
         }
 
-        public Task<User> UpdateUserAsync(User user)
+        public async Task<User> UpdateUserAsync(User user)
         {
-            throw new NotImplementedException();
+            // Aquí puedes agregar validaciones adicionales si es necesario
+            return await _userRepository.UpdateUserAsync(user);
+        }
+
+        public async Task SoftDeleteUserAsync(int id)
+        {
+            await _userRepository.SoftDeleteUserAsync(id);
         }
     }
 }
-

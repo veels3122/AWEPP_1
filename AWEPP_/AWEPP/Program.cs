@@ -21,7 +21,7 @@ builder.Services.AddScoped<ICustomerServices, CustomerService>();
 builder.Services.AddScoped<ITypeAccesRepository, TypeAccesRepository>();
 builder.Services.AddScoped<ITypeAccesServices, TypeAccesServices>();
 builder.Services.AddScoped<ITypeExpenseRepository, TypeExpensesRepository>();
-builder.Services.AddScoped<ITypeExpensesServices, TypeExpensesServices>();
+builder.Services.AddScoped<ITypeExpenseServices, TypeExpensesServices>();
 builder.Services.AddScoped<ITypeIdentyRepository, TypeIdentyRepository>();
 builder.Services.AddScoped<ITypeIdentyServices, TypeIdentyServices>();
 builder.Services.AddScoped<ITypeProductsRepository, TypeProductsRepository>();
@@ -29,16 +29,16 @@ builder.Services.AddScoped<ITypeProductsServices, TypeProductsServices>();
 
 // Registrar los servicios y repositorios en el contenedor
 builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
-builder.Services.AddScoped<IExpensesService, ExpensesService>();
+builder.Services.AddScoped<IExpenseServices, ExpenseServices>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IProductsService, ProductsService>();
+builder.Services.AddScoped<IProductServices, ProductServices>();
 
 builder.Services.AddScoped<ISavingRepository, SavingRepository>();
-builder.Services.AddScoped<ISavingService, SavingService>();
+builder.Services.AddScoped<ISavingServices, SavingServices>();
 
 builder.Services.AddScoped<ITypeAccountRepository, TypeAccountRepository>();
-builder.Services.AddScoped<ITypeAccountsService, TypeAccountsService>();
+builder.Services.AddScoped<ITypeAccountServices, TypeAccountServices>();
 
 builder.Services.AddScoped<IUsertypeRepository, UsertypeRepository>();
 builder.Services.AddScoped<IUsertypeServices, UsertypeServices>();

@@ -1,41 +1,52 @@
 ﻿using AWEPP.Model;
 using AWEPP.Repositories;
+using System.Threading.Tasks;
 
 namespace AWEPP.Services
 {
     public interface ITypeAccesUserServices
     {
-        Task<IEnumerable<TypeAccesUserServices>> GetAllTypeAccesUsersAsync();
+        Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync();
         Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id);
         Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
         Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
         Task SoftDeleteTypeAccesUserAsync(int id);
     }
+
     public class TypeAccesUserServices : ITypeAccesUserServices
     {
-        public Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        private readonly ITypeAccesUserRepository _typeAccesUserRepository;
+
+        public TypeAccesUserServices(ITypeAccesUserRepository typeAccesUserRepository)
         {
-            throw new NotImplementedException();
+            _typeAccesUserRepository = typeAccesUserRepository;
         }
 
-        public Task<IEnumerable<TypeAccesUserServices>> GetAllTypeAccesUsersAsync()
+        public async Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync()
         {
-            throw new NotImplementedException();
+            return await _typeAccesUserRepository.GetAllTypeAccesUsersAsync();
         }
 
-        public Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id)
+        public async Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _typeAccesUserRepository.GetTypeAccesUserByIdAsync(id);
         }
 
-        public Task SoftDeleteTypeAccesUserAsync(int id)
+        public async Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
-            throw new NotImplementedException();
+            // Aquí puedes agregar validaciones adicionales si es necesario
+            return await _typeAccesUserRepository.CreateTypeAccesUserAsync(typeAccesUser);
         }
 
-        public Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        public async Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
-            throw new NotImplementedException();
+            // Aquí puedes agregar validaciones adicionales si es necesario
+            return await _typeAccesUserRepository.UpdateTypeAccesUserAsync(typeAccesUser);
+        }
+
+        public async Task SoftDeleteTypeAccesUserAsync(int id)
+        {
+            await _typeAccesUserRepository.SoftDeleteTypeAccesUserAsync(id);
         }
     }
 }

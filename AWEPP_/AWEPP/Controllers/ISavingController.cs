@@ -1,4 +1,5 @@
 ﻿using AWEPP.Model;
+using AWEPP.Modelo;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,63 +7,63 @@ namespace AWEPP.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserHistoriesController : ControllerBase
+    public class SavingsController : ControllerBase
     {
-        private readonly IUserHistoryServices _userHistoryService;
+        private readonly ISavingServices _savingService;
 
-        public UserHistoriesController(IUserHistoryServices userHistoryService)
+        public SavingsController(ISavingServices savingService)
         {
-            _userHistoryService = userHistoryService;
+            _savingService = savingService;
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<UserHistory>>> GetAllUserHistories()
+        public async Task<ActionResult<IEnumerable<Saving>>> GetAllSavings()
         {
-            var userHistories = await _userHistoryService.GetAllUserHistoriesAsync();
-            return Ok(userHistories);
+            var savings = await _savingService.GetAllSavingsAsync();
+            return Ok(savings);
         }
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<UserHistory>> GetUserHistoryById(int id)
+        public async Task<ActionResult<Saving>> GetSavingById(int id)
         {
-            var userHistory = await _userHistoryService.GetUserHistoryByIdAsync(id);
-            if (userHistory == null)
+            var saving = await _savingService.GetSavingByIdAsync(id);
+            if (saving == null)
             {
                 return NotFound();
             }
-            return Ok(userHistory);
+            return Ok(saving);
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<UserHistory>> CreateUserHistory([FromBody] UserHistory userHistory)
+        public async Task<ActionResult<Saving>> CreateSaving([FromBody] Saving saving)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var newUserHistory = await _userHistoryService.CreateUserHistoryAsync(userHistory);
-            return CreatedAtAction(nameof(GetUserHistoryById), new { id = newUserHistory.Id }, newUserHistory);
+            var newSaving = await _savingService.CreateSavingAsync(saving);
+            return CreatedAtAction(nameof(GetSavingById), new { id = newSaving.Id }, newSaving);
         }
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> UpdateUserHistory(int id, [FromBody] UserHistory userHistory)
+        public async Task<IActionResult> UpdateSaving(int id, [FromBody] Saving saving)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var updatedUserHistory = await _userHistoryService.UpdateUserHistoryAsync(userHistory);
-            if (updatedUserHistory == null)
+            var updatedSaving = await _savingService.UpdateSavingAsync(saving);
+            if (updatedSaving == null)
             {
                 return NotFound();
             }
@@ -72,9 +73,9 @@ namespace AWEPP.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> SoftDeleteUserHistory(int id)
+        public async Task<IActionResult> SoftDeleteSaving(int id)
         {
-            await _userHistoryService.SoftDeleteUserHistoryAsync(id);
+            await _savingService.SoftDeleteSavingAsync(id);
             return NoContent();
         }
     }

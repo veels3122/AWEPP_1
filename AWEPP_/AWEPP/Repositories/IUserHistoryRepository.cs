@@ -1,41 +1,79 @@
-﻿using AWEPP.Model;
+﻿using AWEPP.Context;
+using AWEPP.Model;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace AWEPP.Repositories
 {
     public interface IUserHistoryRepository
     {
-
-        Task<IEnumerable<UserHistory>> GetAllUsersHistoryAsync();
+        Task<IEnumerable<UserHistory>> GetAllUserHistoriesAsync();
         Task<UserHistory> GetUserHistoryByIdAsync(int id);
         Task<UserHistory> CreateUserHistoryAsync(UserHistory userHistory);
         Task<UserHistory> UpdateUserHistoryAsync(UserHistory userHistory);
         Task SoftDeleteUserHistoryAsync(int id);
     }
+
     public class UserHistoryRepository : IUserHistoryRepository
     {
-        public Task<UserHistory> CreateUserHistoryAsync(UserHistory userHistory)
+        private readonly Aweppcontext _context;
+
+        public UserHistoryRepository(Aweppcontext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<IEnumerable<UserHistory>> GetAllUsersHistoryAsync()
+        public async Task<IEnumerable<UserHistory>> GetAllUserHistoriesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.UserHistories
+                .ToListAsync();
         }
 
-        public Task<UserHistory> GetUserHistoryByIdAsync(int id)
+        public async Task<UserHistory> GetUserHistoryByIdAsync(int id)
         {
-            throw new NotImplementedException();
+#pragma warning disable CS8603
+            return await _context.UserHistories
+                .FirstOrDefaultAsync(c => c.Id == id);
+#pragma warning disable CS8603
         }
 
-        public Task SoftDeleteUserHistoryAsync(int id)
+        public async Task<UserHistory> CreateUserHistoryAsync(UserHistory userHistory)
         {
-            throw new NotImplementedException();
+            _context.UserHistories.Add(userHistory);
+            await _context.SaveChangesAsync();
+            return userHistory;
         }
 
-        public Task<UserHistory> UpdateUserHistoryAsync(UserHistory userHistory)
+        public async Task<UserHistory> UpdateUserHistoryAsync(UserHistory userHistory)
         {
-            throw new NotImplementedException();
+            var existingUserHistory = await _context.UserHistories.FindAsync(userHistory.Id);
+
+            if (existingUserHistory == null)
+            {
+                throw new NotFoundException("UserHistory not found");
+            }
+
+            // Actualiza las propiedades según sea necesario
+            existingUserHistory.UserId = userHistory.UserId;
+            existingUserHistory.Datecreate = userHistory.Datecreate;
+            existingUserHistory.Modifed = userHistory.Modifed;
+            existingUserHistory.ModifedBy = userHistory.ModifedBy;
+            existingUserHistory.datemodified = userHistory.datemodified;
+
+            _context.Entry(existingUserHistory).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return existingUserHistory;
+        }
+
+        public async Task SoftDeleteUserHistoryAsync(int id)
+        {
+            var userHistory = await _context.UserHistories.FindAsync(id);
+            if (userHistory != null)
+            {
+                _context.UserHistories.Remove(userHistory);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

@@ -1,41 +1,81 @@
 ﻿using AWEPP.Model;
 using AWEPP.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AWEPP.Controllers
 {
-    public interface ITypeAccesUserControllers
+    [ApiController]
+    [Route("api/[controller]")]
+    public class TypeAccesUsersController : ControllerBase
     {
-        Task<IEnumerable<TypeAccesUserControllers>> GetAllTypeAccesUsersAsync();
-        Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id);
-        Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
-        Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
-        Task SoftDeleteTypeAccesUserAsync(int id);
-    }
-    public class TypeAccesUserControllers : ITypeAccesUserControllers
-    {
-        public Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        private readonly ITypeAccesUserServices _typeAccesUserService;
+
+        public TypeAccesUsersController(ITypeAccesUserServices typeAccesUserService)
         {
-            throw new NotImplementedException();
+            _typeAccesUserService = typeAccesUserService;
         }
 
-        public Task<IEnumerable<TypeAccesUserControllers>> GetAllTypeAccesUsersAsync()
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<TypeAccesUser>>> GetAllTypeAccesUsers()
         {
-            throw new NotImplementedException();
+            var typeAccesUsers = await _typeAccesUserService.GetAllTypeAccesUsersAsync();
+            return Ok(typeAccesUsers);
         }
 
-        public Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id)
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<TypeAccesUser>> GetTypeAccesUserById(int id)
         {
-            throw new NotImplementedException();
+            var typeAccesUser = await _typeAccesUserService.GetTypeAccesUserByIdAsync(id);
+            if (typeAccesUser == null)
+            {
+                return NotFound();
+            }
+            return Ok(typeAccesUser);
         }
 
-        public Task SoftDeleteTypeAccesUserAsync(int id)
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<TypeAccesUser>> CreateTypeAccesUser([FromBody] TypeAccesUser typeAccesUser)
         {
-            throw new NotImplementedException();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var newTypeAccesUser = await _typeAccesUserService.CreateTypeAccesUserAsync(typeAccesUser);
+            return CreatedAtAction(nameof(GetTypeAccesUserById), new { id = newTypeAccesUser.Id }, newTypeAccesUser);
         }
 
-        public Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateTypeAccesUser(int id, [FromBody] TypeAccesUser typeAccesUser)
         {
-            throw new NotImplementedException();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var updatedTypeAccesUser = await _typeAccesUserService.UpdateTypeAccesUserAsync(typeAccesUser);
+            if (updatedTypeAccesUser == null)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> SoftDeleteTypeAccesUser(int id)
+        {
+            await _typeAccesUserService.SoftDeleteTypeAccesUserAsync(id);
+            return NoContent();
         }
     }
 }

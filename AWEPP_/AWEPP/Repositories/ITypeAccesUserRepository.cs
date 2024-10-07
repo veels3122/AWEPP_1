@@ -1,6 +1,5 @@
 ﻿using AWEPP.Context;
 using AWEPP.Model;
-using AWEPP.Modelo;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
@@ -14,31 +13,53 @@ namespace AWEPP.Repositories
         Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser);
         Task SoftDeleteTypeAccesUserAsync(int id);
     }
+
     public class TypeAccesUserRepository : ITypeAccesUserRepository
     {
-        public Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        private readonly Aweppcontext _context;
+
+        public TypeAccesUserRepository(Aweppcontext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync()
+        public async Task<IEnumerable<TypeAccesUser>> GetAllTypeAccesUsersAsync()
         {
-            throw new NotImplementedException();
+            return await _context.TypeAccessUsers
+              .ToListAsync();
         }
 
-        public Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id)
+        public async Task<TypeAccesUser> GetTypeAccesUserByIdAsync(int id)
         {
-            throw new NotImplementedException();
+#pragma warning disable CS8603
+            return await _context.TypeAccessUsers
+              .FirstOrDefaultAsync(tau => tau.Id == id);
+#pragma warning disable CS8603
         }
 
-        public Task SoftDeleteTypeAccesUserAsync(int id)
+        public async Task<TypeAccesUser> CreateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
-            throw new NotImplementedException();
+            _context.TypeAccessUsers.Add(typeAccesUser);
+            await _context.SaveChangesAsync();
+            return typeAccesUser;
         }
 
-        public Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
+        public async Task<TypeAccesUser> UpdateTypeAccesUserAsync(TypeAccesUser typeAccesUser)
         {
-            throw new NotImplementedException();
+            _context.Entry(typeAccesUser).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return typeAccesUser;
+        }
+
+        public async Task SoftDeleteTypeAccesUserAsync(int id)
+        {
+            var typeAccesUser = await _context.TypeAccessUsers.FindAsync(id);
+
+            if (typeAccesUser != null)
+            {
+                _context.TypeAccessUsers.Remove(typeAccesUser);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

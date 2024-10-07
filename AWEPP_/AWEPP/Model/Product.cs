@@ -7,9 +7,9 @@ namespace AWEPP.Model
     {
         [Key]
         public int Id { get; set; }
-        public virtual required int TypeAccounts { get; set; }
-        public virtual required int TypeProducts { get; set; }
-        public virtual required int Bank { get; set; }
+        public virtual required int TypeAccountsId { get; set; }
+        public virtual required int TypeProductsId { get; set; }
+        public virtual required int BankId { get; set; }
         public required string Account { get; set; }
         public required string NumberAcount { get; set; }
         public required string TotalBalance { get; set; }
@@ -17,7 +17,7 @@ namespace AWEPP.Model
         public required string Debt { get; set; }
         public required string DatePayment { get; set; }
         public required string Description { get; set; }
-        public virtual required int Customer { get; set; }
+        public virtual required int CustomerId { get; set; }
 
     }
 }
