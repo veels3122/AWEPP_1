@@ -15,8 +15,8 @@ namespace AWEPP.Modelo
         public required string date { get; set; }
         public required string Modified { get; set; }
         public required string ModifiedBy { get; set; }
-        public virtual required Usertype Usertype { get; set; }
-        public virtual required TypeAcces TypeAcces { get; set; }
-        public virtual required UserHistory TypeAccesUser { get; set; }
+        public virtual required int Usertype { get; set; }
+        public virtual required int TypeAcces { get; set; }
+        public virtual required int TypeAccesUser { get; set; }
     }
 }

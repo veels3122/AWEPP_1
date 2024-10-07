@@ -12,17 +12,17 @@ namespace AWEPP.Services
             _expensesRepository = expensesRepository;
         }
 
-        public async Task CreateExpensesAsync(Expenses expenses)
+        public async Task CreateExpensesAsync(Expense expenses)
         {
             await _expensesRepository.CreateExpensesAsync(expenses);
         }
 
-        public async Task<IEnumerable<Expenses>> GetAllExpensesAsync()
+        public async Task<IEnumerable<Expense>> GetAllExpensesAsync()
         {
             return await _expensesRepository.GetAllExpensesAsync();
         }
 
-        public async Task<Expenses> GetExpensesByIdAsync(int Id)
+        public async Task<Expense> GetExpensesByIdAsync(int Id)
         {
             return await _expensesRepository.GetExpensesByIdAsync(Id);
         }
@@ -32,7 +32,7 @@ namespace AWEPP.Services
             await _expensesRepository.SoftDeleteExpensesAsync(Id);
         }
 
-        public async Task UpdateExpensesAsync(Expenses expenses)
+        public async Task UpdateExpensesAsync(Expense expenses)
         {
             await _expensesRepository.UpdateExpensesAsync(expenses);
         }

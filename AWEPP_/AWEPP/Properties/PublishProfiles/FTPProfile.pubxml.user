@@ -6,7 +6,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl2p0o0Id0kWcaLIfobOsHAAAAAACAAAAAAAQZgAAAAEAACAAAACbeeKbsyfEXnn/uhiX9RWaRVOk52rMWaZEwcsIt2Do8gAAAAAOgAAAAAIAACAAAAAzzspqegEEw+pnpcNVSdv1/IG4mB4gigUMZ9BAUth0QCAAAACIFO+TZgzc+LpWyNlYhvcYjeJ+BPFVO8PBrVvqmDosPUAAAAB+bXbngck5mYYpS3+NQnKArvypoqTPa5nTrU2q94y82yaOTI7z4W3oqACOlom6FUv/OPJKoEbWzksutOrchijW</EncryptedPassword>
-    <History>True|2024-10-07T05:47:33.4280151Z;False|2024-10-07T00:46:56.9976034-05:00;True|2024-10-06T23:56:23.5421270-05:00;False|2024-10-06T23:51:18.9113111-05:00;</History>
+    <History>True|2024-10-07T06:56:25.7785544Z;False|2024-10-07T01:53:55.9259399-05:00;True|2024-10-07T00:47:33.4280151-05:00;False|2024-10-07T00:46:56.9976034-05:00;True|2024-10-06T23:56:23.5421270-05:00;False|2024-10-06T23:51:18.9113111-05:00;</History>
     <LastFailureDetails />
     <_PublishTargetUrl>ftp://155.254.246.25/www.AWEPP.somee.com</_PublishTargetUrl>
   </PropertyGroup>
@@ -18,19 +18,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/06/2024 21:24:57</publishTime>
     </File>
     <File Include="AWEPP.deps.json">
-      <publishTime>10/07/2024 00:47:16</publishTime>
+      <publishTime>10/07/2024 01:53:38</publishTime>
     </File>
     <File Include="AWEPP.dll">
       <publishTime>10/07/2024 00:47:13</publishTime>
     </File>
     <File Include="AWEPP.exe">
-      <publishTime>10/07/2024 00:47:13</publishTime>
+      <publishTime>10/07/2024 01:53:34</publishTime>
     </File>
     <File Include="AWEPP.pdb">
       <publishTime>10/07/2024 00:47:13</publishTime>
     </File>
     <File Include="AWEPP.runtimeconfig.json">
-      <publishTime>10/07/2024 00:31:58</publishTime>
+      <publishTime>10/07/2024 01:53:35</publishTime>
     </File>
     <File Include="Azure.Core.dll">
       <publishTime>09/07/2023 12:50:30</publishTime>
@@ -159,7 +159,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2021 18:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>10/07/2024 00:47:17</publishTime>
+      <publishTime>10/07/2024 01:53:38</publishTime>
     </File>
   </ItemGroup>
 </Project>

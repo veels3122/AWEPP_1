@@ -18,7 +18,7 @@ namespace AWEPP.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<Expenses>>> GetAllExpenses()
+        public async Task<ActionResult<IEnumerable<Expense>>> GetAllExpenses()
         {
             var Expenses = await _expensesService.GetAllExpensesAsync();
             return Ok(Expenses);
@@ -28,7 +28,7 @@ namespace AWEPP.Controllers
         [HttpGet("{Id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Expenses>> GetExpenseById(int Id)
+        public async Task<ActionResult<Expense>> GetExpenseById(int Id)
         {
             var Expenses = await _expensesService.GetExpensesByIdAsync(Id);
             if (Expenses == null)
@@ -41,7 +41,7 @@ namespace AWEPP.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> CreateExpenses([FromBody] Expenses expenses)
+        public async Task<ActionResult> CreateExpenses([FromBody] Expense expenses)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -55,7 +55,7 @@ namespace AWEPP.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> UpdateExpenses(int Id, [FromBody] Expenses expenses)
+        public async Task<ActionResult> UpdateExpenses(int Id, [FromBody] Expense expenses)
         {
             if(Id != expenses.Id)
                 return BadRequest();

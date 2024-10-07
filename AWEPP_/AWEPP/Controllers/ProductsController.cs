@@ -18,7 +18,7 @@ namespace AWEPP.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<Products>>> GetAllProducts()
+        public async Task<ActionResult<IEnumerable<Product>>> GetAllProducts()
         {
             var Products = await _productsService.GetAllProductsAsync();
             return Ok(Products);
@@ -27,7 +27,7 @@ namespace AWEPP.Controllers
         [HttpGet("{Id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Products>> GetProductsById(int Id)
+        public async Task<ActionResult<Product>> GetProductsById(int Id)
         {
             var Products = await _productsService.GetProductsByIdAsync(Id);
             if (Products == null)
@@ -39,7 +39,7 @@ namespace AWEPP.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> CreateProducts([FromBody] Products products)
+        public async Task<ActionResult> CreateProducts([FromBody] Product products)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -53,7 +53,7 @@ namespace AWEPP.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> UpdateProducts(int Id, [FromBody] Products products)
+        public async Task<ActionResult> UpdateProducts(int Id, [FromBody] Product products)
         {
             if (Id != products.Id)
                 return BadRequest();

@@ -4,10 +4,10 @@ namespace AWEPP.Repositories
 {
     public interface ITypeAccountsRepository
     {
-        Task<IEnumerable<TypeAccounts>> GetAllTypeAccountsAsync();
-        Task<TypeAccounts> GetTypeAccountsByIdAsync(int Id);
-        Task CreateTypeAccountsAsync(TypeAccounts typeAccounts);
-        Task UpdateTypeAccountsAsync(TypeAccounts typeAccounts);
+        Task<IEnumerable<TypeAccount>> GetAllTypeAccountsAsync();
+        Task<TypeAccount> GetTypeAccountsByIdAsync(int Id);
+        Task CreateTypeAccountsAsync(TypeAccount typeAccounts);
+        Task UpdateTypeAccountsAsync(TypeAccount typeAccounts);
         Task SoftDeleteTypeAccountsAsync(int Id);
     }
 }

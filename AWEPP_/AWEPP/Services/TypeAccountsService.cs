@@ -11,17 +11,17 @@ namespace AWEPP.Services
         {
             _typeAccountsRepository = typeAccountsRepository;
         }
-        public async Task CreateTypeAccountsAsync(TypeAccounts typeAccounts)
+        public async Task CreateTypeAccountsAsync(TypeAccount typeAccounts)
         {
             await _typeAccountsRepository.UpdateTypeAccountsAsync(typeAccounts);
         }
 
-        public async Task<IEnumerable<TypeAccounts>> GetAllTypeAccountsAsync()
+        public async Task<IEnumerable<TypeAccount>> GetAllTypeAccountsAsync()
         {
             return await _typeAccountsRepository.GetAllTypeAccountsAsync();
         }
 
-        public async Task<TypeAccounts> GetTypeAccountsByIdAsync(int Id)
+        public async Task<TypeAccount> GetTypeAccountsByIdAsync(int Id)
         {
             return await _typeAccountsRepository.GetTypeAccountsByIdAsync(Id);
         }
@@ -31,7 +31,7 @@ namespace AWEPP.Services
            await _typeAccountsRepository.SoftDeleteTypeAccountsAsync(Id);
         }
 
-        public async Task UpdateTypeAccountsAsync(TypeAccounts typeAccounts)
+        public async Task UpdateTypeAccountsAsync(TypeAccount typeAccounts)
         {
             await _typeAccountsRepository.UpdateTypeAccountsAsync(typeAccounts);
         }

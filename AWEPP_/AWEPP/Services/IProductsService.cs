@@ -4,10 +4,10 @@ namespace AWEPP.Services
 {
     public interface IProductsService
     {
-        Task<IEnumerable<Products>> GetAllProductsAsync();
-        Task<Products> GetProductsByIdAsync(int Id);
-        Task CreateProductsAsync(Products products);
-        Task UpdateProductsAsync(Products products);
+        Task<IEnumerable<Product>> GetAllProductsAsync();
+        Task<Product> GetProductsByIdAsync(int Id);
+        Task CreateProductsAsync(Product products);
+        Task UpdateProductsAsync(Product products);
         Task SoftDeleteProductsAsync(int Id);
     }
 }

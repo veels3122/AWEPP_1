@@ -7,17 +7,17 @@ namespace AWEPP.Repositories
 {
     public class TypeAccountsRepository : ITypeAccountsRepository
     {
-        public Task CreateTypeAccountsAsync(TypeAccounts typeAccounts)
+        public Task CreateTypeAccountsAsync(TypeAccount typeAccounts)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TypeAccounts>> GetAllTypeAccountsAsync()
+        public Task<IEnumerable<TypeAccount>> GetAllTypeAccountsAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<TypeAccounts> GetTypeAccountsByIdAsync(int Id)
+        public Task<TypeAccount> GetTypeAccountsByIdAsync(int Id)
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace AWEPP.Repositories
             throw new NotImplementedException();
         }
 
-        public Task UpdateTypeAccountsAsync(TypeAccounts typeAccounts)
+        public Task UpdateTypeAccountsAsync(TypeAccount typeAccounts)
         {
             throw new NotImplementedException();
         }

@@ -7,17 +7,17 @@ namespace AWEPP.Repositories
 {
     public class ProductsRepository : IProductsRepository
     {
-        public Task CreateProductsAsync(Products products)
+        public Task CreateProductsAsync(Product products)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Products>> GetAllProductsAsync()
+        public Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Products> GetProductsByIdAsync(int Id)
+        public Task<Product> GetProductsByIdAsync(int Id)
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace AWEPP.Repositories
             throw new NotImplementedException();
         }
 
-        public Task UpdateProductsAsync(Products products)
+        public Task UpdateProductsAsync(Product products)
         {
             throw new NotImplementedException();
         }

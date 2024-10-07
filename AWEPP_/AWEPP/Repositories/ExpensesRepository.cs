@@ -7,17 +7,17 @@ namespace AWEPP.Repositories
 {
     public class ExpensesRepository : IExpensesRepository
     {
-        public Task CreateExpensesAsync(Expenses expenses)
+        public Task CreateExpensesAsync(Expense expenses)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Expenses>> GetAllExpensesAsync()
+        public Task<IEnumerable<Expense>> GetAllExpensesAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Expenses> GetExpensesByIdAsync(int Id)
+        public Task<Expense> GetExpensesByIdAsync(int Id)
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace AWEPP.Repositories
             throw new NotImplementedException();
         }
 
-        public Task UpdateExpensesAsync(Expenses expenses)
+        public Task UpdateExpensesAsync(Expense expenses)
         {
             throw new NotImplementedException();
         }

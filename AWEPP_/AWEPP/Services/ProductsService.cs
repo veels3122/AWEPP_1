@@ -11,17 +11,17 @@ namespace AWEPP.Services
         {
             _productsRepository = productsRepository;
         }
-        public async Task CreateProductsAsync(Products products)
+        public async Task CreateProductsAsync(Product products)
         {
             await _productsRepository.CreateProductsAsync(products);
         }
 
-        public async Task<IEnumerable<Products>> GetAllProductsAsync()
+        public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             return await _productsRepository.GetAllProductsAsync();
         }
 
-        public async Task<Products> GetProductsByIdAsync(int Id)
+        public async Task<Product> GetProductsByIdAsync(int Id)
         {
             return await _productsRepository.GetProductsByIdAsync(Id);
         }
@@ -31,7 +31,7 @@ namespace AWEPP.Services
             await _productsRepository.SoftDeleteProductsAsync(Id);
         }
 
-        public async Task UpdateProductsAsync(Products products)
+        public async Task UpdateProductsAsync(Product products)
         {
            await _productsRepository.UpdateProductsAsync(products);
         }

@@ -19,7 +19,7 @@ namespace AWEPP.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<TypeAccounts>>> GetAllTypeAccounts()
+        public async Task<ActionResult<IEnumerable<TypeAccount>>> GetAllTypeAccounts()
         {
             var TypeAccounts = await _typeAccountsService.GetAllTypeAccountsAsync();
             return Ok(TypeAccounts);
@@ -28,7 +28,7 @@ namespace AWEPP.Controllers
         [HttpGet("{Id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<TypeAccounts>> GetTypeAccountsById(int Id)
+        public async Task<ActionResult<TypeAccount>> GetTypeAccountsById(int Id)
         {
             var TypeAccounts = await _typeAccountsService.GetTypeAccountsByIdAsync(Id);
             if (TypeAccounts == null)
@@ -40,7 +40,7 @@ namespace AWEPP.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> CreateTypeAccounts([FromBody] TypeAccounts typeAccounts)
+        public async Task<ActionResult> CreateTypeAccounts([FromBody] TypeAccount typeAccounts)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -54,7 +54,7 @@ namespace AWEPP.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> UpdateTypeAccounts(int Id, [FromBody] TypeAccounts typeAccounts)
+        public async Task<ActionResult> UpdateTypeAccounts(int Id, [FromBody] TypeAccount typeAccounts)
         {
             if (Id != typeAccounts.Id)
                 return BadRequest();
