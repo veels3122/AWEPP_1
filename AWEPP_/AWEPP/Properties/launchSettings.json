@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "AWEPP": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:39336;http://localhost:39337"
+    }
+  }
+}

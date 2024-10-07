@@ -53,7 +53,6 @@
 /AWEPP_/AWEPP/obj/project.assets.json
 /AWEPP_/AWEPP/obj/project.nuget.cache
 /AWEPP_/AWEPP/obj/Release/net8.0
-/AWEPP_/AWEPP/Properties
 /AWEPP_/.vs/AWEPP/config/applicationhost.config
 /AWEPP_/AWEPP/bin/Release/net8.0
 /AWEPP_/AWEPP/obj/Debug/net8.0/AWEPP.csproj.AssemblyReference.cache
@@ -64,3 +63,5 @@
 /AWEPP_/AWEPP/.vs/AWEPP /v17
 /AWEPP_/AWEPP/bin/Debug/net8.0
 /AWEPP_/obj/Debug/.AssemblyReference.cache
+/AWEPP_/.vs/ProjectEvaluation/awepp.metadata.v7.bin
+/AWEPP_/.vs/ProjectEvaluation/awepp.projects.v7.bin
