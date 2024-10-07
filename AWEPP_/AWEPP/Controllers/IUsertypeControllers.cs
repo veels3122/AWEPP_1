@@ -1,43 +1,110 @@
 ﻿using AWEPP.Modelo;
+using AWEPP.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace AWEPP.Controllers
 {
-    public interface IUsertypeControllers
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsertypesController : ControllerBase
     {
-        public interface IUsertypeControllers
+        private readonly IUsertypeServices _usertypeService;
+
+        public UsertypesController(IUsertypeServices usertypeService)
         {
-            Task<IEnumerable<Usertype>> GetAllUserstypesAsync();
-            Task<Usertype> GetUsertypesByIdAsync(int id);
-            Task<Usertype> CreateUsertypesAsync(Usertype Usertypes);
-            Task<Usertype> UpdateUsertypesAsync(Usertype Usertypes);
-            Task SoftDeleteUsertypesAsync(int id);
+            _usertypeService = usertypeService;
         }
-        public class UserTypeControllers : IUsertypeControllers
+
+        // Obtener todos los tipos de usuario
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<Usertype>>> GetAllUsertypes()
         {
-            public Task<Usertype> CreateUsertypesAsync(Usertype Usertypes)
+            var usertypes = await _usertypeService.GetAllUsertypesAsync();
+            return Ok(usertypes);
+        }
+
+        // Obtener un tipo de usuario por ID
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async
+ Task<ActionResult<Usertype>> GetUsertypeById(int id)
+        {
+            var usertype = await _usertypeService.GetUsertypeByIdAsync(id);
+            if (usertype == null)
             {
-                throw new NotImplementedException();
+                return NotFound();
+            }
+            return Ok(usertype);
+        }
+
+        // Crear un nuevo tipo de usuario
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult>
+ CreateUsertype([FromBody] Usertype usertype)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
             }
 
-            public Task<IEnumerable<Usertype>> GetAllUserstypesAsync()
+            try
             {
-                throw new NotImplementedException();
+                await _usertypeService.CreateUsertypeAsync(usertype);
+                return CreatedAtAction(nameof(GetUsertypeById), new { id = usertype.Id }, usertype);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // Actualizar un tipo de usuario
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<IActionResult> UpdateUsertype(int id, [FromBody] Usertype usertype)
+        {
+            if (id != usertype.Id)
+            {
+                return BadRequest("El ID en la URL y en el cuerpo de la solicitud no coinciden.");
             }
 
-            public Task<Usertype> GetUsertypesByIdAsync(int id)
+            if (!ModelState.IsValid)
             {
-                throw new NotImplementedException();
+                return BadRequest(ModelState);
             }
 
-            public Task SoftDeleteUsertypesAsync(int id)
+            var updatedUsertype = await _usertypeService.UpdateUsertypeAsync(usertype);
+
+            if (updatedUsertype == null)
             {
-                throw new NotImplementedException();
+                return NotFound();
             }
 
-            public Task<Usertype> UpdateUsertypesAsync(Usertype Usertypes)
+            return NoContent();
+        }
+
+        // Eliminar (soft delete) un tipo de usuario
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public
+ async Task<IActionResult> SoftDeleteUsertype(int id)
+        {
+            if (id <= 0)
             {
-                throw new NotImplementedException();
+                return NotFound("El ID debe ser un número positivo.");
             }
+
+            await _usertypeService.SoftDeleteUsertypeAsync(id);
+            return NoContent();
         }
     }
 }

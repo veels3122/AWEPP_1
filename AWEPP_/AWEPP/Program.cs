@@ -40,6 +40,15 @@ builder.Services.AddScoped<ISavingService, SavingService>();
 builder.Services.AddScoped<ITypeAccountRepository, TypeAccountRepository>();
 builder.Services.AddScoped<ITypeAccountsService, TypeAccountsService>();
 
+builder.Services.AddScoped<IUsertypeRepository, UsertypeRepository>();
+builder.Services.AddScoped<IUsertypeServices, UsertypeServices>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserServices, UserServices>();
+builder.Services.AddScoped<IUserHistoryRepository, UserHistoryRepository>();
+builder.Services.AddScoped<IUserHistoryServices, UserHistoryServices>();
+builder.Services.AddScoped<ITypeAccesUserRepository, TypeAccesUserRepository>();
+builder.Services.AddScoped<ITypeAccesUserServices, TypeAccesUserServices>();
+
 // Agregar los controladores al contenedor
 builder.Services.AddControllers();
 

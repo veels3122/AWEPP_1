@@ -1,42 +1,55 @@
 ﻿using AWEPP.Modelo;
 using AWEPP.Repositories;
+using System.Threading.Tasks;
 
 namespace AWEPP.Services
 {
     public interface IUsertypeServices
     {
-        Task<IEnumerable<Usertype>> GetAllUserstypesAsync();
-        Task<Usertype> GetUsertypesByIdAsync(int id);
-        Task<Usertype> CreateUsertypesAsync(Usertype Usertypes);
-        Task<Usertype> UpdateUsertypesAsync(Usertype Usertypes);
-        Task SoftDeleteUsertypesAsync(int id);
+        Task<IEnumerable<Usertype>> GetAllUsertypesAsync();
+        Task<Usertype> GetUsertypeByIdAsync(int id);
+        Task<Usertype> CreateUsertypeAsync(Usertype usertype);
+        Task<Usertype> UpdateUsertypeAsync(Usertype usertype);
+        Task SoftDeleteUsertypeAsync(int id);
     }
-    public class UserTypeServices : IUsertypeServices
+
+    public class UsertypeServices : IUsertypeServices
     {
-        public Task<Usertype> CreateUsertypesAsync(Usertype Usertypes)
+        private readonly IUsertypeRepository _usertypeRepository;
+
+        public UsertypeServices(IUsertypeRepository usertypeRepository)
         {
-            throw new NotImplementedException();
+            _usertypeRepository = usertypeRepository;
         }
 
-        public Task<IEnumerable<Usertype>> GetAllUserstypesAsync()
+        public async Task<IEnumerable<Usertype>> GetAllUsertypesAsync()
         {
-            throw new NotImplementedException();
+            return await _usertypeRepository.GetAllUsertypesAsync();
         }
 
-        public Task<Usertype> GetUsertypesByIdAsync(int id)
+        public async Task<Usertype> GetUsertypeByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _usertypeRepository.GetUsertypeByIdAsync(id);
         }
 
-        public Task SoftDeleteUsertypesAsync(int id)
+        public async Task<Usertype> CreateUsertypeAsync(Usertype usertype)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(usertype.UserTypes))
+            {
+                throw new ArgumentException("El nombre del tipo de usuario es obligatorio.");
+            }
+
+            return await _usertypeRepository.CreateUsertypeAsync(usertype);
         }
 
-        public Task<Usertype> UpdateUsertypesAsync(Usertype Usertypes)
+        public async Task<Usertype> UpdateUsertypeAsync(Usertype usertype)
         {
-            throw new NotImplementedException();
+            return await _usertypeRepository.UpdateUsertypeAsync(usertype);
+        }
+
+        public async Task SoftDeleteUsertypeAsync(int id)
+        {
+            await _usertypeRepository.SoftDeleteUsertypeAsync(id);
         }
     }
 }
-

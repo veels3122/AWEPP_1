@@ -660,16 +660,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "ContainingType": "AWEPP.Controllers.ExpenseController",
     "Method": "GetAllExpenses",
-    "RelativePath": "api/Expenses",
+    "RelativePath": "api/Expense",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Expenses, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Expense, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -680,16 +680,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "ContainingType": "AWEPP.Controllers.ExpenseController",
     "Method": "CreateExpenses",
-    "RelativePath": "api/Expenses",
+    "RelativePath": "api/Expense",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "expenses",
-        "Type": "AWEPP.Model.Expenses",
+        "Type": "AWEPP.Model.Expense",
         "IsRequired": true
       }
     ],
@@ -711,9 +711,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "ContainingType": "AWEPP.Controllers.ExpenseController",
     "Method": "GetExpenseById",
-    "RelativePath": "api/Expenses/{Id}",
+    "RelativePath": "api/Expense/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -726,7 +726,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Expenses",
+        "Type": "AWEPP.Model.Expense",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -746,9 +746,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "ContainingType": "AWEPP.Controllers.ExpenseController",
     "Method": "UpdateExpenses",
-    "RelativePath": "api/Expenses/{Id}",
+    "RelativePath": "api/Expense/{Id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -760,7 +760,7 @@
       },
       {
         "Name": "expenses",
-        "Type": "AWEPP.Model.Expenses",
+        "Type": "AWEPP.Model.Expense",
         "IsRequired": true
       }
     ],
@@ -791,9 +791,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ExpensesController",
+    "ContainingType": "AWEPP.Controllers.ExpenseController",
     "Method": "SoftDeleteExpenses",
-    "RelativePath": "api/Expenses/{Id}",
+    "RelativePath": "api/Expense/{Id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -822,16 +822,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "ContainingType": "AWEPP.Controllers.ProductController",
     "Method": "GetAllProducts",
-    "RelativePath": "api/Products",
+    "RelativePath": "api/Product",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Products, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Product, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -842,16 +842,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "ContainingType": "AWEPP.Controllers.ProductController",
     "Method": "CreateProducts",
-    "RelativePath": "api/Products",
+    "RelativePath": "api/Product",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "products",
-        "Type": "AWEPP.Model.Products",
+        "Type": "AWEPP.Model.Product",
         "IsRequired": true
       }
     ],
@@ -873,9 +873,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "ContainingType": "AWEPP.Controllers.ProductController",
     "Method": "GetProductsById",
-    "RelativePath": "api/Products/{Id}",
+    "RelativePath": "api/Product/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -888,7 +888,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Products",
+        "Type": "AWEPP.Model.Product",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -908,9 +908,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "ContainingType": "AWEPP.Controllers.ProductController",
     "Method": "UpdateProducts",
-    "RelativePath": "api/Products/{Id}",
+    "RelativePath": "api/Product/{Id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -922,7 +922,7 @@
       },
       {
         "Name": "products",
-        "Type": "AWEPP.Model.Products",
+        "Type": "AWEPP.Model.Product",
         "IsRequired": true
       }
     ],
@@ -953,9 +953,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ProductsController",
+    "ContainingType": "AWEPP.Controllers.ProductController",
     "Method": "SoftDeleteProducts",
-    "RelativePath": "api/Products/{Id}",
+    "RelativePath": "api/Product/{Id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -1308,16 +1308,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "ContainingType": "AWEPP.Controllers.TypeAccountController",
     "Method": "GetAllTypeAccounts",
-    "RelativePath": "api/TypeAccounts",
+    "RelativePath": "api/TypeAccount",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeAccounts, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeAccount, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1328,16 +1328,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "ContainingType": "AWEPP.Controllers.TypeAccountController",
     "Method": "CreateTypeAccounts",
-    "RelativePath": "api/TypeAccounts",
+    "RelativePath": "api/TypeAccount",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "typeAccounts",
-        "Type": "AWEPP.Model.TypeAccounts",
+        "Type": "AWEPP.Model.TypeAccount",
         "IsRequired": true
       }
     ],
@@ -1359,9 +1359,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "ContainingType": "AWEPP.Controllers.TypeAccountController",
     "Method": "GetTypeAccountsById",
-    "RelativePath": "api/TypeAccounts/{Id}",
+    "RelativePath": "api/TypeAccount/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1374,7 +1374,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.TypeAccounts",
+        "Type": "AWEPP.Model.TypeAccount",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1394,9 +1394,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "ContainingType": "AWEPP.Controllers.TypeAccountController",
     "Method": "UpdateTypeAccounts",
-    "RelativePath": "api/TypeAccounts/{Id}",
+    "RelativePath": "api/TypeAccount/{Id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -1408,7 +1408,7 @@
       },
       {
         "Name": "typeAccounts",
-        "Type": "AWEPP.Model.TypeAccounts",
+        "Type": "AWEPP.Model.TypeAccount",
         "IsRequired": true
       }
     ],
@@ -1439,9 +1439,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.TypeAccountsController",
+    "ContainingType": "AWEPP.Controllers.TypeAccountController",
     "Method": "SoftDeleteTypeAccounts",
-    "RelativePath": "api/TypeAccounts/{Id}",
+    "RelativePath": "api/TypeAccount/{Id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

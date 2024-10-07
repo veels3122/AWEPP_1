@@ -1,42 +1,67 @@
-﻿using AWEPP.Model;
+﻿using AWEPP.Context;
 using AWEPP.Modelo;
-using AWEPP.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace AWEPP.Repositories
 {
     public interface IUsertypeRepository
     {
-        Task<IEnumerable<Usertype>> GetAllUserstypesAsync();
-        Task<Usertype> GetUsertypesByIdAsync(int id);
-        Task<Usertype> CreateUsertypesAsync(Usertype Usertypes);
-        Task<Usertype> UpdateUsertypesAsync(Usertype Usertypes);
-        Task SoftDeleteUsertypesAsync(int id);
+        Task<IEnumerable<Usertype>> GetAllUsertypesAsync();
+        Task<Usertype> GetUsertypeByIdAsync(int id);
+        Task<Usertype> CreateUsertypeAsync(Usertype usertype);
+        Task<Usertype> UpdateUsertypeAsync(Usertype usertype);
+        Task SoftDeleteUsertypeAsync(int id);
     }
-    public class UserTypeRepository : IUsertypeRepository
+
+    public class UsertypeRepository : IUsertypeRepository
     {
-        public Task<Usertype> CreateUsertypesAsync(Usertype Usertypes)
+        private readonly Aweppcontext _context;
+
+        public UsertypeRepository(Aweppcontext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<IEnumerable<Usertype>> GetAllUserstypesAsync()
+        public async Task<IEnumerable<Usertype>> GetAllUsertypesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.UserTypes
+              .ToListAsync();
         }
 
-        public Task<Usertype> GetUsertypesByIdAsync(int id)
+        public async Task<Usertype> GetUsertypeByIdAsync(int id)
         {
-            throw new NotImplementedException();
+#pragma warning disable CS8603
+            return await _context.UserTypes
+              .FirstOrDefaultAsync(ut => ut.Id == id);
+#pragma warning disable CS8603
         }
 
-        public Task SoftDeleteUsertypesAsync(int id)
+        public async Task<Usertype> CreateUsertypeAsync(Usertype usertype)
         {
-            throw new NotImplementedException();
+            _context.UserTypes.Add(usertype);
+            await _context.SaveChangesAsync();
+            return usertype;
         }
 
-        public Task<Usertype> UpdateUsertypesAsync(Usertype Usertypes)
+        public async Task<Usertype> UpdateUsertypeAsync(Usertype
+     usertype)
         {
-            throw new NotImplementedException();
+            _context.Entry(usertype).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return usertype;
+        }
+
+        public async Task SoftDeleteUsertypeAsync(int id)
+        {
+            var usertype = await _context.UserTypes.FindAsync(id);
+
+            if (usertype != null)
+            {
+                _context.UserTypes.Remove(usertype);
+                await _context.SaveChangesAsync();
+
+            }
         }
     }
 }
