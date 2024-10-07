@@ -31,13 +31,14 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configuración del pipeline de solicitudes HTTP
+// Configure the HTTP request pipeline.
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();
+
 app.UseAuthorization();
 
 app.MapControllers();
