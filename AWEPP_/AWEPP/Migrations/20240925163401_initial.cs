@@ -108,7 +108,7 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    UserTypes = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,14 +121,14 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TypeAccesId = table.Column<int>(type: "int", nullable: false)
+                    TypeAccessUsers = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TypeAccessUsers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TypeAccessUsers_TypeAccesses_TypeAccesId",
-                        column: x => x.TypeAccesId,
+                        name: "FK_TypeAccessUsers_TypeAccesses_TypeAccessUsers",
+                        column: x => x.TypeAccessUsers,
                         principalTable: "TypeAccesses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -140,14 +140,14 @@ namespace AWEPP.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Accounts = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TypeAccounts = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TypeproductsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TypeAccounts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TypeAccounts_TypeProducts_TypeproductsId",
+                        name: "FK_TypeAccounts_TypeProducts_TypeAccounts",
                         column: x => x.TypeproductsId,
                         principalTable: "TypeProducts",
                         principalColumn: "Id",
