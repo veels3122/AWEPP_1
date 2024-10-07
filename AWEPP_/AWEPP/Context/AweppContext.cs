@@ -16,7 +16,7 @@ namespace AWEPP.Context
         public DbSet<Usertype> UserTypes { get; set; }
         public DbSet<UserHistory> UserHistories { get; set; }
         public DbSet<TypeAcces> TypeAccesses { get; set; }
-        public DbSet<TypeAccesUser> TypeAccessUsers { get; set; }
+        public DbSet<UserHistory> TypeAccessUsers { get; set; }
         public DbSet<Bank> Banks { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Contact> Contacts { get; set; }
@@ -37,7 +37,6 @@ namespace AWEPP.Context
             modelBuilder.Entity<Usertype>().HasKey(u => u.Id);
             modelBuilder.Entity<UserHistory>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeAcces>().HasKey(u => u.Id);
-            modelBuilder.Entity<TypeAccesUser>().HasKey(u => u.Id);
             modelBuilder.Entity<Bank>().HasKey(u => u.Id);
             modelBuilder.Entity<City>().HasKey(u => u.Id);
             modelBuilder.Entity<Contact>().HasKey(u => u.Id);
