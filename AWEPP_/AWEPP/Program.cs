@@ -10,35 +10,35 @@ var conString = builder.Configuration.GetConnectionString("Connection");
 builder.Services.AddDbContext<Aweppcontext>(options => options.UseSqlServer(conString));
 builder.Services.AddScoped<IBankRepository, BankRepository>();
 builder.Services.AddScoped<IBankServices, BankServices>();
-builder.Services.AddScoped<ICityRepository, CityRepository>();
-builder.Services.AddScoped<ICityServices, CitiesServices>();
-builder.Services.AddScoped<IContactRepository, ContactRepository>();
-builder.Services.AddScoped<IContactServices, ContactServices>();
+builder.Services.AddScoped<ICitiesRepository, CitiesRepository>();
+builder.Services.AddScoped<ICitiesServices, CitiesServices>();
+builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
+builder.Services.AddScoped<IContactsServices, ContactServices>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerServices, CustomerService>();
 
 
 builder.Services.AddScoped<ITypeAccesRepository, TypeAccesRepository>();
 builder.Services.AddScoped<ITypeAccesServices, TypeAccesServices>();
-builder.Services.AddScoped<ITypeExpenseRepository, TypeExpensesRepository>();
-builder.Services.AddScoped<ITypeExpenseServices, TypeExpensesServices>();
+builder.Services.AddScoped<ITypeExpensesRepository, TypeExpensesRepository>();
+builder.Services.AddScoped<ITypeExpensesServices, TypeExpensesServices>();
 builder.Services.AddScoped<ITypeIdentyRepository, TypeIdentyRepository>();
 builder.Services.AddScoped<ITypeIdentyServices, TypeIdentyServices>();
 builder.Services.AddScoped<ITypeProductsRepository, TypeProductsRepository>();
 builder.Services.AddScoped<ITypeProductsServices, TypeProductsServices>();
 
 // Registrar los servicios y repositorios en el contenedor
-builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
-builder.Services.AddScoped<IExpenseServices, ExpenseServices>();
+builder.Services.AddScoped<IExpensesRepository, ExpensesRepository>();
+builder.Services.AddScoped<IExpensesServices, ExpenseServices>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IProductServices, ProductServices>();
+builder.Services.AddScoped<IProductsServices, ProductServices>();
 
 builder.Services.AddScoped<ISavingRepository, SavingRepository>();
 builder.Services.AddScoped<ISavingServices, SavingServices>();
 
-builder.Services.AddScoped<ITypeAccountRepository, TypeAccountRepository>();
-builder.Services.AddScoped<ITypeAccountServices, TypeAccountServices>();
+builder.Services.AddScoped<ITypeAccountsRepository, TypeAccountsRepository>();
+builder.Services.AddScoped<ITypeAccountsServices, TypeAccountServices>();
 
 builder.Services.AddScoped<IUsertypeRepository, UsertypeRepository>();
 builder.Services.AddScoped<IUsertypeServices, UsertypeServices>();
