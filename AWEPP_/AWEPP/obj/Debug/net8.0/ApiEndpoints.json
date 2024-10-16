@@ -162,16 +162,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.CityController",
+    "ContainingType": "AWEPP.Controllers.CitiesController",
     "Method": "GetAllCities",
-    "RelativePath": "api/City",
+    "RelativePath": "api/Cities",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Modelo.City, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Modelo.Cities, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -182,22 +182,22 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.CityController",
+    "ContainingType": "AWEPP.Controllers.CitiesController",
     "Method": "CreateCity",
-    "RelativePath": "api/City",
+    "RelativePath": "api/Cities",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "city",
-        "Type": "AWEPP.Modelo.City",
+        "Name": "cities",
+        "Type": "AWEPP.Modelo.Cities",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Modelo.City",
+        "Type": "AWEPP.Modelo.Cities",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -217,9 +217,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.CityController",
+    "ContainingType": "AWEPP.Controllers.CitiesController",
     "Method": "GetCityById",
-    "RelativePath": "api/City/{id}",
+    "RelativePath": "api/Cities/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -232,7 +232,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Modelo.City",
+        "Type": "AWEPP.Modelo.Cities",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -252,9 +252,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.CityController",
+    "ContainingType": "AWEPP.Controllers.CitiesController",
     "Method": "UpdateCities",
-    "RelativePath": "api/City/{id}",
+    "RelativePath": "api/Cities/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -265,8 +265,8 @@
         "IsRequired": true
       },
       {
-        "Name": "city",
-        "Type": "AWEPP.Modelo.City",
+        "Name": "cities",
+        "Type": "AWEPP.Modelo.Cities",
         "IsRequired": true
       }
     ],
@@ -297,9 +297,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.CityController",
+    "ContainingType": "AWEPP.Controllers.CitiesController",
     "Method": "SoftDeleteCities",
-    "RelativePath": "api/City/{id}",
+    "RelativePath": "api/Cities/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -328,16 +328,16 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ContactController",
+    "ContainingType": "AWEPP.Controllers.ContactsController",
     "Method": "GetAllContacts",
-    "RelativePath": "api/Contact",
+    "RelativePath": "api/Contacts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Contact, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Contacts, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -348,22 +348,22 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ContactController",
+    "ContainingType": "AWEPP.Controllers.ContactsController",
     "Method": "CreateContact",
-    "RelativePath": "api/Contact",
+    "RelativePath": "api/Contacts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "contacts",
-        "Type": "AWEPP.Model.Contact",
+        "Type": "AWEPP.Model.Contacts",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Contact",
+        "Type": "AWEPP.Model.Contacts",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -383,9 +383,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ContactController",
+    "ContainingType": "AWEPP.Controllers.ContactsController",
     "Method": "GetContactById",
-    "RelativePath": "api/Contact/{id}",
+    "RelativePath": "api/Contacts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -398,7 +398,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Contact",
+        "Type": "AWEPP.Model.Contacts",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -418,9 +418,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ContactController",
+    "ContainingType": "AWEPP.Controllers.ContactsController",
     "Method": "UpdateContact",
-    "RelativePath": "api/Contact/{id}",
+    "RelativePath": "api/Contacts/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -432,7 +432,7 @@
       },
       {
         "Name": "contacts",
-        "Type": "AWEPP.Model.Contact",
+        "Type": "AWEPP.Model.Contacts",
         "IsRequired": true
       }
     ],
@@ -463,9 +463,9 @@
     ]
   },
   {
-    "ContainingType": "AWEPP.Controllers.ContactController",
+    "ContainingType": "AWEPP.Controllers.ContactsController",
     "Method": "SoftDeleteContact",
-    "RelativePath": "api/Contact/{id}",
+    "RelativePath": "api/Contacts/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -669,7 +669,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Expense, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Expenses, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -688,14 +688,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "expense",
-        "Type": "AWEPP.Model.Expense",
+        "Name": "expenses",
+        "Type": "AWEPP.Model.Expenses",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Expense",
+        "Type": "AWEPP.Model.Expenses",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -730,7 +730,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Expense",
+        "Type": "AWEPP.Model.Expenses",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -763,8 +763,8 @@
         "IsRequired": true
       },
       {
-        "Name": "expense",
-        "Type": "AWEPP.Model.Expense",
+        "Name": "expenses",
+        "Type": "AWEPP.Model.Expenses",
         "IsRequired": true
       }
     ],
@@ -835,7 +835,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Product, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.Products, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -854,14 +854,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "product",
-        "Type": "AWEPP.Model.Product",
+        "Name": "products",
+        "Type": "AWEPP.Model.Products",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Product",
+        "Type": "AWEPP.Model.Products",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -896,7 +896,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.Product",
+        "Type": "AWEPP.Model.Products",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -929,8 +929,8 @@
         "IsRequired": true
       },
       {
-        "Name": "product",
-        "Type": "AWEPP.Model.Product",
+        "Name": "products",
+        "Type": "AWEPP.Model.Products",
         "IsRequired": true
       }
     ],
@@ -1495,7 +1495,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeAccount, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeAccounts, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1514,14 +1514,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "typeAccount",
-        "Type": "AWEPP.Model.TypeAccount",
+        "Name": "typeAccounts",
+        "Type": "AWEPP.Model.TypeAccounts",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.TypeAccount",
+        "Type": "AWEPP.Model.TypeAccounts",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1556,7 +1556,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.TypeAccount",
+        "Type": "AWEPP.Model.TypeAccounts",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1589,8 +1589,8 @@
         "IsRequired": true
       },
       {
-        "Name": "typeAccount",
-        "Type": "AWEPP.Model.TypeAccount",
+        "Name": "typeAccounts",
+        "Type": "AWEPP.Model.TypeAccounts",
         "IsRequired": true
       }
     ],
@@ -1661,7 +1661,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeExpense, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeExpenses, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1681,7 +1681,7 @@
     "Parameters": [
       {
         "Name": "typeExpenses",
-        "Type": "AWEPP.Model.TypeExpense",
+        "Type": "AWEPP.Model.TypeExpenses",
         "IsRequired": true
       }
     ],
@@ -1718,7 +1718,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.TypeExpense",
+        "Type": "AWEPP.Model.TypeExpenses",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1752,7 +1752,7 @@
       },
       {
         "Name": "typeExpenses",
-        "Type": "AWEPP.Model.TypeExpense",
+        "Type": "AWEPP.Model.TypeExpenses",
         "IsRequired": true
       }
     ],
@@ -1985,7 +1985,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeProduct, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AWEPP.Model.TypeProducts, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2005,7 +2005,7 @@
     "Parameters": [
       {
         "Name": "typeProducts",
-        "Type": "AWEPP.Model.TypeProduct",
+        "Type": "AWEPP.Model.TypeProducts",
         "IsRequired": true
       }
     ],
@@ -2042,7 +2042,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AWEPP.Model.TypeProduct",
+        "Type": "AWEPP.Model.TypeProducts",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2076,7 +2076,7 @@
       },
       {
         "Name": "typeProducts",
-        "Type": "AWEPP.Model.TypeProduct",
+        "Type": "AWEPP.Model.TypeProducts",
         "IsRequired": true
       }
     ],
