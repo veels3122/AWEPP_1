@@ -1,9 +1,11 @@
 import React, { useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { useForm } from "react-hook-form";
 
 const LoginForm = () => {
+    const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -21,8 +23,7 @@ const LoginForm = () => {
     } else if (!isChecked) {
       localStorage.clear();
     }
-
-    // here call the API to signup/login
+    navigate("/principal");
     reset();
   };
 
@@ -48,7 +49,7 @@ const LoginForm = () => {
       <form autoComplete="off" onSubmit={handleSubmit(loginSubmit)}>
         <div className="p-fluid p-formgrid p-grid">
           <div className="p-4">
-            <h2> AWEPP</h2>
+            <h2> Awepp</h2>
           </div>
           <div className="p-field p-col-12 p-md-12">
             <span className="p-float-label">
@@ -86,7 +87,7 @@ const LoginForm = () => {
                 autoComplete="new-password"
                 type="password"
                 className={errors?.password ? "p-invalid" : ""}
-                placeholder="introduzca su contrasena"
+                  placeholder="introduzca su contrasena"
                 {...register("password", {
                   required: {
                     value: true,

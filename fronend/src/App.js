@@ -1,20 +1,20 @@
 import "./App.css";
+import LoginPage from "./pages/Login.page";
+import InicioForm from "./components/Inicio.form";
 import "primereact/resources/themes/fluent-light/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/LoginPage'; 
-import Inicio from './pages/Inicio';   
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-  return (
+    return (
         <Router>
             <Routes>
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/inicio" element={<Inicio />} />
+                <Route path="/" element={<LoginPage />} />
+                <Route path="/principal" element={<InicioForm />} /> 
             </Routes>
         </Router>
-  );
+    );
 }
 
 export default App;
