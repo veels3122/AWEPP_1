@@ -1,0 +1,23 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login-button, .register-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #7b5cf1;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover, .register-button:hover {
+  background-color: #6b4bd7;
+}
+
+.register-button {
+  background-color: #f1a951; /* Color distinto para el botón de registrarse */
+}

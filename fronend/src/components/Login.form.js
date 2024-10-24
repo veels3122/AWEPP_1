@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { useForm } from "react-hook-form";
+import './LoginForm.css';
 
 const LoginForm = () => {
     const navigate = useNavigate();
@@ -117,11 +118,20 @@ const LoginForm = () => {
             </label>
           </div>
           <div className="p-field p-col-12 p-md-12">
-            <Button
-              type="submit"
-              label="Ingresar"
-              disabled={!isValid || !isDirty}
-            />
+            <div className="button-container">
+              <Button
+                type="submit"
+                label="Ingresar"
+                className="btn-ingresar"
+                disabled={!isValid || !isDirty}
+              />
+              <Button
+                type="button"
+                label="Registrarse"
+                className="btn-registrarse"
+                onClick={() => navigate("/register")}
+              />
+            </div>
           </div>
         </div>
       </form>
