@@ -107,15 +107,8 @@ const LoginForm = () => {
             </span>
           </div>
           <div className="p-field p-col-12 p-md-12 p-2">
-            <input
-              type="checkbox"
-              id="remenberMe"
-              name="remenberMe"
-              {...register("isChecked")}
-            />
-            <label htmlFor="rememberMe" className="p-checkbox-label p-2">
-              Recuerdame
-            </label>
+          <input type="checkbox"id="remenberMe"name="remenberMe"{...register("isChecked")}/>
+          <label htmlFor="rememberMe" className="p-checkbox-label p-2">Recuerdame</label>
           </div>
           <div className="p-field p-col-12 p-md-12">
             <div className="button-container">
