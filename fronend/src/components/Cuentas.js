@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
-import './Cuentas.css'; // Añadir CSS para el estilo específico de esta página
+import './Cuentas.css'; // Asegúrate de que este archivo exista y esté en la carpeta correcta
+import { Dialog } from 'primereact/dialog';
 
 const Cuentas = () => {
-  const [cuentas, setCuentas] = useState([
+  const [cuentas] = useState([
     { nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000 },
   ]);
+
+  const [mostrarModal, setMostrarModal] = useState(false);
+
+  const abrirModal = () => {
+    setMostrarModal(true);
+  };
+
+  const cerrarModal = () => {
+    setMostrarModal(false);
+  };
 
   return (
     <div className="cuentas-container">
       <header className="cuentas-header">
         <h2>Cuentas</h2>
-        <button className="btn-agregar">+ Agregar</button>
+        <button className="btn-agregar" onClick={abrirModal}>+ Agregar</button>
       </header>
 
       <div className="cuentas-sidebar">
@@ -34,6 +45,32 @@ const Cuentas = () => {
           </div>
         ))}
       </div>
+
+      {/* Modal para añadir una nueva cuenta */}
+      <Dialog
+        header="Añadir Cuenta"
+        visible={mostrarModal}
+        style={{ width: '50vw' }}
+        onHide={cerrarModal}
+      >
+        <div className="opciones-agregar">
+          <div className="opcion">
+            <div className="opcion-icono">🏦</div>
+            <h3>Sincronización Bancaria</h3>
+            <p>Conéctese a su cuenta bancaria. Sincronice sus transacciones automáticamente.</p>
+          </div>
+          <div className="opcion">
+            <div className="opcion-icono">✏️</div>
+            <h3>Ingreso Manual</h3>
+            <p>Actualiza tu cuenta manualmente. Puedes conectar tu banco o importar más tarde.</p>
+          </div>
+          <div className="opcion">
+            <div className="opcion-icono">📄</div>
+            <h3>Importaciones</h3>
+            <p>Sube tu historial de transacciones importando CSV, Excel, OFX u otros archivos.</p>
+          </div>
+        </div>
+      </Dialog>
     </div>
   );
 };
