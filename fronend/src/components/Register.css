@@ -55,3 +55,12 @@ input:focus {
   text-align: center;
   margin-bottom: 15px;
 }
+.input-field {
+  margin-bottom: 1rem; 
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem; 
+  justify-content: center; 
+}

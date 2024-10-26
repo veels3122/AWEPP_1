@@ -1,39 +1,31 @@
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+/* Estilo de contenedor similar al de registro */
+.form-container {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
-.login-button, .register-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #7b5cf1;
-  border: none;
+/* Estilo para los inputs */
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Botones de inicio de sesión */
+button {
+  width: 100%;
+  padding: 10px;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.login-button:hover, .register-button:hover {
-  background-color: #6b4bd7;
-}
-
-.register-button {
-  background-color: #f1a951; /* Color distinto para el botón de registrarse */
-}
-/* Agregar margen entre los botones */
-.btn-registrarse {
-  background-color: #4CAF50; /* Color verde para registrarse */
+  background-color: #007bff;
   border: none;
-  padding: 0.75rem 1.5rem;
-  color: white;
-  font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  margin-left: 3rem; /* Espacio entre los botones */
 }
-
-.btn-registrarse:hover {
-  background-color: #388E3C; /* Cambiar el color al pasar el mouse */
-}
-
