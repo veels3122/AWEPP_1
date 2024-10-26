@@ -10,7 +10,9 @@ import { useNavigate } from 'react-router-dom';
 import './CuentaDetalle.css';
 
 const CuentaDetalle = () => {
+  const navigate = useNavigate();
   const { cuentaId } = useParams(); // Obtener ID de la cuenta desde la URL
+
   const [cuenta, setCuenta] = useState({
     nombre: 'Efectivo',
     tipo: 'Efectivo',
@@ -19,6 +21,7 @@ const CuentaDetalle = () => {
   });
 
   const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
+  const [activeTab, setActiveTab] = useState('saldo'); // Controla la pestaña activa
 
   const saldoData = {
     labels: ['27/09', '30/09', '04/10', '08/10', '12/10'],
@@ -45,6 +48,13 @@ const CuentaDetalle = () => {
     setCuenta((prevCuenta) => ({ ...prevCuenta, [name]: value }));
   };
 
+  const handleEliminar = () => {
+    // Aquí puedes agregar la lógica para eliminar la cuenta.
+    // Por ejemplo, podrías hacer una llamada a la API o navegar a una página específica.
+    console.log('Cuenta eliminada:', cuentaId);
+    navigate('/cuentas'); // Redirigir a la lista de cuentas tras eliminar.
+  };
+
   return (
     <div className="cuenta-detalle-container">
       <header className="cuenta-detalle-header">
@@ -52,7 +62,7 @@ const CuentaDetalle = () => {
         <h2>Detalles de Cuenta</h2>
         <div className="btn-actions">
           <button className="btn-editar" onClick={abrirModalEdicion}>Editar</button>
-          <button className="btn-eliminar">Eliminar</button>
+          <button className="btn-eliminar" onClick={handleEliminar}>Eliminar</button>
         </div>
       </header>
 
@@ -66,19 +76,44 @@ const CuentaDetalle = () => {
       </div>
 
       <div className="tabs">
-        <button className="tab-button active">Saldo</button>
-        <button className="tab-button">Registros</button>
+        <button 
+          className={`tab-button ${activeTab === 'saldo' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('saldo')}
+        >
+          Saldo
+        </button>
+        <button 
+          className={`tab-button ${activeTab === 'registros' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('registros')}
+        >
+          Registros
+        </button>
       </div>
 
-      <div className="cuenta-saldo">
-        <h2>Hoy</h2>
-        <h1>{cuenta.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h1>
-        <p>VS PERIODO ANTERIOR: 0%</p>
-      </div>
+      {activeTab === 'saldo' && (
+        <div>
+          <div className="cuenta-saldo">
+            <h2>Hoy</h2>
+            <h1>{cuenta.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h1>
+            <p>VS PERIODO ANTERIOR: 0%</p>
+          </div>
+          <div className="saldo-chart">
+            <Chart type="line" data={saldoData} />
+          </div>
+        </div>
+      )}
 
-      <div className="saldo-chart">
-        <Chart type="line" data={saldoData} />
-      </div>
+      {activeTab === 'registros' && (
+        <div className="cuenta-registros">
+          <h2>Registros</h2>
+          <div className="no-registros">
+            <p>Añadir transacciones al contacto</p>
+            <p>Añadir nuevas transacciones y mantener esta cuenta actualizada.</p>
+            <p>Comienza con (+ Agregar) para crear el primero.</p>
+            <button className="btn-agregar-registro">+ Agregar</button>
+          </div>
+        </div>
+      )}
 
       {/* Modal de edición */}
       <Dialog header="Editar Cuenta" visible={mostrarModalEdicion} style={{ width: '50vw' }} onHide={cerrarModalEdicion}>

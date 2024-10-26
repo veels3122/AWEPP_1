@@ -33,10 +33,6 @@
   background-color: #eee;
 }
 
-.balance {
-  background-color: yellow;
-  padding: 10px;
-}
 
 .balance-info h2 {
   margin: 0;
@@ -114,4 +110,11 @@ p {
 .nav-link.active {
   background-color: #007bff; /* Fondo azul para el enlace activo */
   color: #fff; /* Texto blanco para el enlace activo */
+}
+.balance-info {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #080808; /* Usando el color actualizado desde la edición */
+  color: black;
+  text-align: center;
 }

@@ -5,11 +5,10 @@ import LoginPage from "./pages/Login.page";
 import InicioForm from "./components/Inicio.form";
 import RegistroExitoso from "./components/RegistroExitoso";
 import Cuentas from "./components/Cuentas";
-import Ahorros from "./components/Ahorros";
-import Gastos from "./components/Gastos";
-import Aportes from "./components/Aportes";
-import Estadisticas from "./components/Estadisticas";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+//import Ahorros from "./components/Ahorros";
+//import Gastos from "./components/Gastos";
+//import Aportes from "./components/Aportes";
+import { BrowserRouter as Router, Route, Routes, Navigate  } from "react-router-dom";
 import CuentaDetalle from "./components/CuentaDetalle";
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
@@ -29,7 +28,7 @@ function App() {
         <Route path="/ahorros" element={<Layout><div>Ahorros Page</div></Layout>} />
         <Route path="/gastos" element={<Layout><div>Gastos Page</div></Layout>} />
         <Route path="/aportes" element={<Layout><div>Aportes Page</div></Layout>} />
-        <Route path="/estadisticas" element={<Layout><div>Estadísticas Page</div></Layout>} />
+        <Route path="/estadisticas" element={<Navigate to="/principal" />} /> 
         <Route path="/cuentas/:cuentaId" element={<Layout><CuentaDetalle /></Layout>} />
       </Routes>
     </Router>

@@ -1,12 +1,23 @@
 import { Chart } from 'primereact/chart';
 import './InicioForm.css';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-
+import { Dialog } from 'primereact/dialog';
+import { InputText } from 'primereact/inputtext';
+import { Dropdown } from 'primereact/dropdown';
+import { InputNumber } from 'primereact/inputnumber';
+import { ToggleButton } from 'primereact/togglebutton';
 
 const InicioForm = () => {
-  const navigate = useNavigate();
+  const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
+
+  // Datos de la cuenta
+  const [cuenta, setCuenta] = useState({
+    nombre: 'Efectivo',
+    tipo: 'Efectivo',
+    balance: 10000,
+    color: '#d4af37'
+  });
 
   const saldoData = {
     labels: ['Mes 1', 'Mes 2', 'Mes 3', 'Mes 4', 'Mes 5'],
@@ -30,6 +41,24 @@ const InicioForm = () => {
     ]
   };
 
+  const abrirModalEdicion = () => {
+    setMostrarModalEdicion(true);
+  };
+
+  const cerrarModalEdicion = () => {
+    setMostrarModalEdicion(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setCuenta((prevCuenta) => ({ ...prevCuenta, [name]: value }));
+  };
+
+  const handleGuardarCambios = () => {
+    // Guardar los cambios y cerrar el modal
+    setMostrarModalEdicion(false);
+  };
+
   return (
     <div className="container">
       <header className="header">
@@ -41,22 +70,40 @@ const InicioForm = () => {
           <span>User</span>
         </div>
         <div className="balance">
-          <div className="balance-info">
-            <p>Efectivo</p>
-            <h2>$100.000</h2>
+          <div
+            className="balance-info"
+            onClick={abrirModalEdicion}
+            style={{ cursor: 'pointer', backgroundColor: cuenta.color }}
+          >
+            <p>{cuenta.nombre}</p>
+            <h2>
+              {cuenta.balance.toLocaleString('es-CO', {
+                style: 'currency',
+                currency: 'COP'
+              })}
+            </h2>
           </div>
         </div>
       </header>
 
       {/* Botones de navegación */}
       <nav className="nav-buttons">
-        <NavLink to="/cuentas" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>CUENTAS</NavLink>
-        <NavLink to="/ahorros" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>AHORROS</NavLink>
-        <NavLink to="/gastos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>GASTOS</NavLink>
-        <NavLink to="/aportes" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>APORTES</NavLink>
-        <NavLink to="/estadisticas" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Estadísticas</NavLink>
+        <NavLink to="/cuentas" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+          CUENTAS
+        </NavLink>
+        <NavLink to="/ahorros" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+          AHORROS
+        </NavLink>
+        <NavLink to="/gastos" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+          GASTOS
+        </NavLink>
+        <NavLink to="/aportes" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+          APORTES
+        </NavLink>
+        <NavLink to="/estadisticas" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+          Estadísticas
+        </NavLink>
       </nav>
-
 
       {/* Gráficos y datos */}
       <div className="main-content">
@@ -90,6 +137,68 @@ const InicioForm = () => {
           <p>Otros: $150k</p>
         </div>
       </div>
+
+      {/* Modal de edición */}
+      <Dialog
+        header="Editar Cuenta"
+        visible={mostrarModalEdicion}
+        style={{ width: '50vw' }}
+        onHide={cerrarModalEdicion}
+      >
+        <div className="editar-cuenta-form">
+          <div className="form-field">
+            <label>Nombre</label>
+            <InputText name="nombre" value={cuenta.nombre} onChange={handleInputChange} />
+          </div>
+          <div className="form-field">
+            <label>Color</label>
+            <input type="color" name="color" value={cuenta.color} onChange={handleInputChange} />
+          </div>
+          <div className="form-field">
+            <label>Tipo de cuenta</label>
+            <Dropdown
+              name="tipo"
+              value={cuenta.tipo}
+              options={[{ label: 'Efectivo', value: 'Efectivo' }, { label: 'Bancaria', value: 'Bancaria' }]}
+              onChange={(e) => setCuenta({ ...cuenta, tipo: e.value })}
+              placeholder="Seleccione un tipo"
+            />
+          </div>
+          <div className="form-field">
+            <label>Monto inicial</label>
+            <InputNumber
+              name="balance"
+              value={cuenta.balance}
+              onValueChange={(e) => setCuenta({ ...cuenta, balance: e.value })}
+              mode="currency"
+              currency="COP"
+            />
+          </div>
+          <div className="form-field">
+            <label>Excluir de las estadísticas</label>
+            <ToggleButton
+              onLabel="Sí"
+              offLabel="No"
+              checked={cuenta.excluir || false}
+              onChange={(e) => setCuenta({ ...cuenta, excluir: e.value })}
+            />
+          </div>
+          <div className="form-field">
+            <label>Archivar</label>
+            <ToggleButton
+              onLabel="Sí"
+              offLabel="No"
+              checked={cuenta.archivar || false}
+              onChange={(e) => setCuenta({ ...cuenta, archivar: e.value })}
+            />
+          </div>
+          <div className="form-actions">
+            <button className="btn-guardar" onClick={handleGuardarCambios}>
+              Guardar
+            </button>
+          </div>
+        </div>
+      </Dialog>
     </div>
   );
 };
