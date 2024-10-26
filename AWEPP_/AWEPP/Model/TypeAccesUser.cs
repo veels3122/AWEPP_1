@@ -9,5 +9,6 @@ namespace AWEPP.Model
     [Key]
         public int Id { get; set; }
         public virtual required TypeAcces TypeAcces { get; set; }
+        public required bool IsDeleted { get; set; }
     }
 }

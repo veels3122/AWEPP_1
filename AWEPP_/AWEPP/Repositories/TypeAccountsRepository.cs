@@ -27,9 +27,12 @@ namespace AWEPP.Repositories
                 .ToListAsync();
         }
 
-        public Task<TypeAccounts> GetTypeAccountsByIdAsync(int Id)
+        public async Task<TypeAccounts> GetTypeAccountsByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            
+           return await _context.TypeAccounts
+           .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
+            
         }
 
         public async Task SoftDeleteTypeAccountsAsync(int Id)

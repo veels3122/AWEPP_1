@@ -17,14 +17,14 @@ namespace AWEPP.Repositories
         // Método para crear un nuevo gasto
         public async Task CreateExpensesAsync(Expenses expenses)
         {
-            await _context.Saving.AddAsync(expenses); // Añadir nuevo registro
+            await _context.Expenses.AddAsync(expenses); // Añadir nuevo registro
             await _context.SaveChangesAsync(); // Guardar cambios
         }
 
         // Obtener todos los gastos que no están eliminados
         public async Task<IEnumerable<Expenses>> GetAllExpensesAsync()
         {
-            return await _context.Saving
+            return await _context.Expenses
                 .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
@@ -32,14 +32,14 @@ namespace AWEPP.Repositories
         // Obtener gasto por su Id, excluyendo eliminados
         public async Task<Expenses> GetExpensesByIdAsync(int Id)
         {
-            return await _context.Saving
+            return await _context.Expenses
                 .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
         }
 
         // Eliminar gasto de manera lógica (Soft Delete)
         public async Task SoftDeleteExpensesAsync(int Id)
         {
-            var expenses = await _context.Saving.FindAsync(Id);
+            var expenses = await _context.Expenses.FindAsync(Id);
             if (expenses != null)
             {
                 expenses.IsDeleted = true; // Marcar como eliminado
@@ -50,7 +50,7 @@ namespace AWEPP.Repositories
         // Actualizar un gasto existente
         public async Task UpdateExpensesAsync(Expenses expenses)
         {
-            var existingExpenses = await _context.Saving.FindAsync(expenses.Id);
+            var existingExpenses = await _context.Expenses.FindAsync(expenses.Id);
             if (existingExpenses != null)
             {
                 // Actualizar campos

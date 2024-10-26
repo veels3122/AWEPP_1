@@ -16,6 +16,7 @@ namespace AWEPP.Model
         public virtual required TypeIdenty TypeIdenty { get; set; }
         public virtual required Contacts Contacts { get; set; }
         public virtual required Cities Cities { get; set; }
+        public required bool IsDeleted { get; set; }
 
     }
 }

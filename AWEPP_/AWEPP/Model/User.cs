@@ -18,5 +18,6 @@ namespace AWEPP.Modelo
         public virtual required Usertype Usertype { get; set; }
         public virtual required TypeAcces TypeAcces { get; set; }
         public virtual required TypeAccesUser TypeAccesUser { get; set; }
+        public required bool IsDeleted { get; set; }
     }
 }

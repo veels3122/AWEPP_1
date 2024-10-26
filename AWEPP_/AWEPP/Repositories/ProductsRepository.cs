@@ -35,7 +35,7 @@ namespace AWEPP.Repositories
 
         public async Task SoftDeleteProductsAsync(int Id)
         {
-            var expenses = await _context.Saving.FindAsync(Id);
+            var expenses = await _context.Products.FindAsync(Id);
             if (expenses != null)
             {
                 expenses.IsDeleted = true; // Marcar como eliminado
@@ -53,7 +53,7 @@ namespace AWEPP.Repositories
                 existingProduct.TypeProducts = products.TypeProducts;
                 existingProduct.Bank = products.Bank;
                 existingProduct.Account = products.Account;
-                existingProduct.NumberAcount = products.NumberAcount;
+                existingProduct.NumberAccount = products.NumberAccount;
                 existingProduct.TotalBalance = products.TotalBalance;
                 existingProduct.PartialBalance = products.PartialBalance;
                 existingProduct.Debt = products.Debt;
