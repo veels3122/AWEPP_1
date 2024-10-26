@@ -10,6 +10,7 @@ import Gastos from "./components/Gastos";
 import Aportes from "./components/Aportes";
 import Estadisticas from "./components/Estadisticas";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CuentaDetalle from "./components/CuentaDetalle";
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/gastos" element={<Layout><div>Gastos Page</div></Layout>} />
         <Route path="/aportes" element={<Layout><div>Aportes Page</div></Layout>} />
         <Route path="/estadisticas" element={<Layout><div>Estadísticas Page</div></Layout>} />
+        <Route path="/cuentas/:cuentaId" element={<Layout><CuentaDetalle /></Layout>} />
       </Routes>
     </Router>
   );

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
-import './Cuentas.css'; 
+import { useNavigate } from 'react-router-dom';
 import { Dialog } from 'primereact/dialog';
+import './Cuentas.css'; 
 
 const Cuentas = () => {
+  const navigate = useNavigate();
   const [cuentas] = useState([
-    { nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000 },
+    { id: 1, nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000 },
+    // Aquí podrías añadir más cuentas si es necesario
   ]);
-
   const [mostrarModal, setMostrarModal] = useState(false);
 
   const abrirModal = () => {
@@ -36,7 +37,12 @@ const Cuentas = () => {
 
       <div className="cuentas-lista">
         {cuentas.map((cuenta, index) => (
-          <div key={index} className="cuenta-item">
+          <div 
+            key={index} 
+            className="cuenta-item"
+            onClick={() => navigate(`/cuentas/${cuenta.id}`)} // Navegar a la página de detalles
+            style={{ cursor: 'pointer' }} // Añadir estilo para mostrar que es clicable
+          >
             <div className="cuenta-icono">💰</div>
             <div className="cuenta-info">
               <h3>{cuenta.nombre}</h3>
