@@ -1,29 +1,77 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Dialog } from 'primereact/dialog';
-import './Cuentas.css'; 
+import { InputText } from 'primereact/inputtext';
+import { Dropdown } from 'primereact/dropdown';
+import { InputNumber } from 'primereact/inputnumber';
+import { ToggleButton } from 'primereact/togglebutton';
+import './Cuentas.css';
 
 const Cuentas = () => {
   const navigate = useNavigate();
-  const [cuentas] = useState([
-    { id: 1, nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000 },
-    // Aquí podrías añadir más cuentas si es necesario
+  const [cuentas, setCuentas] = useState([
+    { id: 1, nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000, color: '#ffffff' },
   ]);
-  const [mostrarModal, setMostrarModal] = useState(false);
 
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [nuevaCuenta, setNuevaCuenta] = useState({
+    id: null,
+    nombre: '',
+    tipo: 'General',
+    balance: 0,
+    color: '#ffffff',
+    excluirEstadisticas: false,
+  });
+
+  // Abre el modal de agregar cuenta
   const abrirModal = () => {
+    setNuevaCuenta({
+      id: cuentas.length + 1,
+      nombre: '',
+      tipo: 'General',
+      balance: 0,
+      color: '#ffffff',
+      excluirEstadisticas: false,
+    });
     setMostrarModal(true);
   };
 
+  // Cierra el modal de agregar cuenta
   const cerrarModal = () => {
     setMostrarModal(false);
   };
+
+  // Maneja los cambios en los inputs del formulario
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNuevaCuenta((prevCuenta) => ({
+      ...prevCuenta,
+      [name]: value,
+    }));
+  };
+
+  // Guarda la nueva cuenta en el estado de cuentas
+  const handleGuardarCuenta = () => {
+    setCuentas((prevCuentas) => [...prevCuentas, nuevaCuenta]);
+    cerrarModal();
+  };
+
+  const tiposDeCuenta = [
+    { label: 'General', value: 'General' },
+    { label: 'Efectivo', value: 'Efectivo' },
+    { label: 'Cuenta Actual', value: 'Cuenta Actual' },
+    { label: 'Tarjeta de Crédito', value: 'Tarjeta de Crédito' },
+    { label: 'Cuenta con sobregiro', value: 'Cuenta con sobregiro' },
+    { label: 'Cuenta de Ahorros', value: 'Cuenta de Ahorros' },
+  ];
 
   return (
     <div className="cuentas-container">
       <header className="cuentas-header">
         <h2>Cuentas</h2>
-        <button className="btn-agregar" onClick={abrirModal}>+ Agregar</button>
+        <button className="btn-agregar" onClick={abrirModal}>
+          + Agregar
+        </button>
       </header>
 
       <div className="cuentas-sidebar">
@@ -36,18 +84,23 @@ const Cuentas = () => {
       </div>
 
       <div className="cuentas-lista">
-        {cuentas.map((cuenta, index) => (
-          <div 
-            key={index} 
+        {cuentas.map((cuenta) => (
+          <div
+            key={cuenta.id}
             className="cuenta-item"
-            onClick={() => navigate(`/cuentas/${cuenta.id}`)} // Navegar a la página de detalles
-            style={{ cursor: 'pointer' }} // Añadir estilo para mostrar que es clicable
+            onClick={() => navigate(`/cuentas/${cuenta.id}`)}
+            style={{ cursor: 'pointer' }}
           >
             <div className="cuenta-icono">💰</div>
-            <div className="cuenta-info">
+            <div className="cuenta-info" style={{ backgroundColor: cuenta.color }}>
               <h3>{cuenta.nombre}</h3>
               <p>{cuenta.tipo}</p>
-              <h4>{cuenta.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h4>
+              <h4>
+                {cuenta.balance.toLocaleString('es-CO', {
+                  style: 'currency',
+                  currency: 'COP',
+                })}
+              </h4>
             </div>
           </div>
         ))}
@@ -55,26 +108,68 @@ const Cuentas = () => {
 
       {/* Modal para añadir una nueva cuenta */}
       <Dialog
-        header="Añadir Cuenta"
+        header="Añadir Cuenta Manual"
         visible={mostrarModal}
         style={{ width: '50vw' }}
         onHide={cerrarModal}
       >
-        <div className="opciones-agregar">
-          <div className="opcion">
-            <div className="opcion-icono">🏦</div>
-            <h3>Sincronización Bancaria</h3>
-            <p>Conéctese a su cuenta bancaria. Sincronice sus transacciones automáticamente.</p>
+        <div className="editar-cuenta-form">
+          <div className="form-field">
+            <label>Nombre</label>
+            <InputText
+              name="nombre"
+              value={nuevaCuenta.nombre}
+              onChange={handleInputChange}
+              placeholder="Nombre de la cuenta"
+            />
           </div>
-          <div className="opcion">
-            <div className="opcion-icono">✏️</div>
-            <h3>Ingreso Manual</h3>
-            <p>Actualiza tu cuenta manualmente. Puedes conectar tu banco o importar más tarde.</p>
+          <div className="form-field">
+            <label>Color</label>
+            <input
+              type="color"
+              name="color"
+              value={nuevaCuenta.color}
+              onChange={handleInputChange}
+            />
           </div>
-          <div className="opcion">
-            <div className="opcion-icono">📄</div>
-            <h3>Importaciones</h3>
-            <p>Sube tu historial de transacciones importando CSV, Excel, OFX u otros archivos.</p>
+          <div className="form-field">
+            <label>Tipo de cuenta</label>
+            <Dropdown
+              name="tipo"
+              value={nuevaCuenta.tipo}
+              options={tiposDeCuenta}
+              onChange={(e) => setNuevaCuenta({ ...nuevaCuenta, tipo: e.value })}
+              placeholder="Seleccione un tipo"
+            />
+          </div>
+          <div className="form-field">
+            <label>Monto inicial</label>
+            <InputNumber
+              name="balance"
+              value={nuevaCuenta.balance}
+              onValueChange={(e) =>
+                setNuevaCuenta({ ...nuevaCuenta, balance: e.value })
+              }
+              mode="currency"
+              currency="COP"
+              min={0}
+            />
+          </div>
+          <div className="form-field">
+            <label>Excluir de las estadísticas</label>
+            <ToggleButton
+              onLabel="Sí"
+              offLabel="No"
+              checked={nuevaCuenta.excluirEstadisticas}
+              onChange={(e) =>
+                setNuevaCuenta({ ...nuevaCuenta, excluirEstadisticas: e.value })
+              }
+            />
+          </div>
+          <div className="form-actions">
+            <button className="btn-guardar" onClick={handleGuardarCuenta}>
+              Guardar
+            </button>
           </div>
         </div>
       </Dialog>
