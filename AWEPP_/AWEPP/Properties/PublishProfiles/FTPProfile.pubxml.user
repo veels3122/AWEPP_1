@@ -6,31 +6,31 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl2p0o0Id0kWcaLIfobOsHAAAAAACAAAAAAAQZgAAAAEAACAAAACbeeKbsyfEXnn/uhiX9RWaRVOk52rMWaZEwcsIt2Do8gAAAAAOgAAAAAIAACAAAAAzzspqegEEw+pnpcNVSdv1/IG4mB4gigUMZ9BAUth0QCAAAACIFO+TZgzc+LpWyNlYhvcYjeJ+BPFVO8PBrVvqmDosPUAAAAB+bXbngck5mYYpS3+NQnKArvypoqTPa5nTrU2q94y82yaOTI7z4W3oqACOlom6FUv/OPJKoEbWzksutOrchijW</EncryptedPassword>
-    <History>False|2024-10-26T03:08:39.5639965Z||;True|2024-10-25T22:02:44.9308811-05:00||;False|2024-10-25T21:57:27.2175679-05:00||;False|2024-10-25T21:57:22.5531283-05:00||;True|2024-10-07T12:13:17.2129275-05:00||;True|2024-10-07T01:56:25.7785544-05:00||;False|2024-10-07T01:53:55.9259399-05:00||;True|2024-10-07T00:47:33.4280151-05:00||;False|2024-10-07T00:46:56.9976034-05:00||;True|2024-10-06T23:56:23.5421270-05:00||;False|2024-10-06T23:51:18.9113111-05:00||;</History>
+    <History>True|2024-10-26T06:38:30.3766729Z;False|2024-10-26T01:38:03.3910465-05:00;True|2024-10-26T01:20:07.5405038-05:00;False|2024-10-25T22:08:39.5639965-05:00;True|2024-10-25T22:02:44.9308811-05:00;False|2024-10-25T21:57:27.2175679-05:00;False|2024-10-25T21:57:22.5531283-05:00;True|2024-10-07T12:13:17.2129275-05:00;True|2024-10-07T01:56:25.7785544-05:00;False|2024-10-07T01:53:55.9259399-05:00;True|2024-10-07T00:47:33.4280151-05:00;False|2024-10-07T00:46:56.9976034-05:00;True|2024-10-06T23:56:23.5421270-05:00;False|2024-10-06T23:51:18.9113111-05:00;</History>
     <LastFailureDetails />
     <_PublishTargetUrl>ftp://155.254.246.25/www.AWEPP.somee.com</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
-      <publishTime>10/15/2024 19:06:37</publishTime>
+      <publishTime>10/25/2024 23:06:08</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>10/25/2024 19:41:52</publishTime>
+      <publishTime>10/26/2024 01:36:37</publishTime>
     </File>
     <File Include="AWEPP.deps.json">
-      <publishTime>10/25/2024 22:06:21</publishTime>
+      <publishTime>10/26/2024 01:37:44</publishTime>
     </File>
     <File Include="AWEPP.dll">
-      <publishTime>10/25/2024 22:06:21</publishTime>
+      <publishTime>10/26/2024 01:19:31</publishTime>
     </File>
     <File Include="AWEPP.exe">
-      <publishTime>10/25/2024 22:06:21</publishTime>
+      <publishTime>10/26/2024 01:37:41</publishTime>
     </File>
     <File Include="AWEPP.pdb">
-      <publishTime>10/25/2024 22:06:21</publishTime>
+      <publishTime>10/26/2024 01:19:31</publishTime>
     </File>
     <File Include="AWEPP.runtimeconfig.json">
-      <publishTime>10/25/2024 21:58:53</publishTime>
+      <publishTime>10/26/2024 01:37:41</publishTime>
     </File>
     <File Include="Azure.Core.dll">
       <publishTime>09/07/2023 12:50:30</publishTime>
@@ -48,10 +48,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/17/2024 16:12:16</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/17/2024 16:12:52</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/17/2024 16:13:10</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
       <publishTime>07/17/2024 16:13:16</publishTime>
@@ -81,7 +81,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/30/2023 23:41:50</publishTime>
     </File>
     <File Include="Microsoft.OpenApi.dll">
-      <publishTime>03/06/2024 11:00:56</publishTime>
+      <publishTime>08/29/2020 15:14:12</publishTime>
     </File>
     <File Include="Microsoft.SqlServer.Server.dll">
       <publishTime>01/27/2022 12:19:08</publishTime>
@@ -126,13 +126,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2021 18:49:58</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.Swagger.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2022 10:21:22</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2022 10:21:38</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2022 10:21:48</publishTime>
     </File>
     <File Include="System.Configuration.ConfigurationManager.dll">
       <publishTime>08/19/2022 14:58:02</publishTime>
@@ -159,7 +159,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2021 18:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>10/25/2024 22:06:21</publishTime>
+      <publishTime>10/26/2024 01:37:44</publishTime>
     </File>
   </ItemGroup>
 </Project>
