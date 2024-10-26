@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Cuentas.css'; // Asegúrate de que este archivo exista y esté en la carpeta correcta
+import Navbar from './Navbar';
+import './Cuentas.css'; 
 import { Dialog } from 'primereact/dialog';
 
 const Cuentas = () => {

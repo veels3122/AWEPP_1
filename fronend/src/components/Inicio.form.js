@@ -2,6 +2,8 @@ import { Chart } from 'primereact/chart';
 import './InicioForm.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 const InicioForm = () => {
   const navigate = useNavigate();
@@ -48,12 +50,13 @@ const InicioForm = () => {
 
       {/* Botones de navegación */}
       <nav className="nav-buttons">
-        <button onClick={() => navigate('/cuentas')}>CUENTAS</button>
-        <button onClick={() => navigate('/ahorros')}>AHORROS</button>
-        <button onClick={() => navigate('/gastos')}>GASTOS</button>
-        <button onClick={() => navigate('/aportes')}>APORTES</button>
-        <button onClick={() => navigate('/estadisticas')}>Estadísticas</button>
+        <NavLink to="/cuentas" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>CUENTAS</NavLink>
+        <NavLink to="/ahorros" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>AHORROS</NavLink>
+        <NavLink to="/gastos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>GASTOS</NavLink>
+        <NavLink to="/aportes" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>APORTES</NavLink>
+        <NavLink to="/estadisticas" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Estadísticas</NavLink>
       </nav>
+
 
       {/* Gráficos y datos */}
       <div className="main-content">

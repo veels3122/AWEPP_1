@@ -13,20 +13,22 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/principal" element={<InicioForm />} />
         <Route path="/register" element={<Register />} />
         <Route path="/registro-exitoso" element={<RegistroExitoso />} /> 
-        <Route path="/cuentas" element={<Cuentas />} />
-        <Route path="/ahorros" element={<Ahorros />} />
-        <Route path="/gastos" element={<Gastos />} />
-        <Route path="/aportes" element={<Aportes />} />
-        <Route path="/estadisticas" element={<Estadisticas />} />
+        
+        <Route path="/principal" element={<Layout><InicioForm /></Layout>} />
+        <Route path="/cuentas" element={<Layout><Cuentas /></Layout>} />
+        <Route path="/ahorros" element={<Layout><div>Ahorros Page</div></Layout>} />
+        <Route path="/gastos" element={<Layout><div>Gastos Page</div></Layout>} />
+        <Route path="/aportes" element={<Layout><div>Aportes Page</div></Layout>} />
+        <Route path="/estadisticas" element={<Layout><div>Estadísticas Page</div></Layout>} />
       </Routes>
     </Router>
   );

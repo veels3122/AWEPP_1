@@ -95,3 +95,23 @@ h2, h3 {
 p {
   margin: 5px 0;
 }
+/* Estilo para los enlaces de navegación */
+.nav-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cuando el enlace está activo */
+.nav-link.active {
+  background-color: #007bff; /* Fondo azul para el enlace activo */
+  color: #fff; /* Texto blanco para el enlace activo */
+}
