@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -10,6 +11,7 @@ const Register = () => {
   });
 
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate(); // Hook para navegar entre rutas
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +22,7 @@ const Register = () => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
 
+    // Validaciones básicas
     if (!name || !email || !password || !confirmPassword) {
       setErrorMessage('Por favor, completa todos los campos.');
       return;
@@ -31,9 +34,13 @@ const Register = () => {
     }
 
     // Aquí puedes agregar la lógica para enviar los datos al servidor
-
     console.log('Formulario enviado:', formData);
-    setErrorMessage(''); // Limpiar mensaje de error si no hay errores
+
+    // Limpiar mensaje de error si no hay errores
+    setErrorMessage('');
+
+    // Redirigir a la página de registro exitoso después de un registro exitoso
+    navigate('/registro-exitoso');
   };
 
   return (
@@ -88,4 +95,3 @@ const Register = () => {
 };
 
 export default Register;
-
