@@ -1,12 +1,11 @@
 import { Chart } from 'primereact/chart';
-import './InicioForm.css';
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { InputNumber } from 'primereact/inputnumber';
 import { ToggleButton } from 'primereact/togglebutton';
+import './InicioForm.css';
 
 const InicioForm = () => {
   const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
@@ -62,13 +61,6 @@ const InicioForm = () => {
   return (
     <div className="container">
       <header className="header">
-        <div className="logo">Finanzas Personales</div>
-        <div className="search-bar">
-          <input type="text" placeholder="Búsqueda" />
-        </div>
-        <div className="user-info">
-          <span>User</span>
-        </div>
         <div className="balance">
           <div
             className="balance-info"
@@ -85,25 +77,6 @@ const InicioForm = () => {
           </div>
         </div>
       </header>
-
-      {/* Botones de navegación */}
-      <nav className="nav-buttons">
-        <NavLink to="/cuentas" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          CUENTAS
-        </NavLink>
-        <NavLink to="/ahorros" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          AHORROS
-        </NavLink>
-        <NavLink to="/gastos" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          GASTOS
-        </NavLink>
-        <NavLink to="/aportes" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          APORTES
-        </NavLink>
-        <NavLink to="/estadisticas" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          Estadísticas
-        </NavLink>
-      </nav>
 
       {/* Gráficos y datos */}
       <div className="main-content">
