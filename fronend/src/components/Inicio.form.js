@@ -1,14 +1,17 @@
-import React from "react";
 import { Chart } from 'primereact/chart';
-import './InicioForm.css'; // Importa los estilos personalizados
+import './InicioForm.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const InicioForm = () => {
+  const navigate = useNavigate();
+
   const saldoData = {
     labels: ['Mes 1', 'Mes 2', 'Mes 3', 'Mes 4', 'Mes 5'],
     datasets: [
       {
         label: 'Saldo',
-        backgroundColor: '#888',
+        backgroundColor: ['#3b82f6', '#f97316', '#14b8a6', '#f43f5e', '#8b5cf6'],
         data: [150, 120, 130, 180, 140]
       }
     ]
@@ -19,15 +22,14 @@ const InicioForm = () => {
     datasets: [
       {
         data: [950000, 2350000],
-        backgroundColor: ['#888', '#ccc'],
-        hoverBackgroundColor: ['#888', '#ccc']
+        backgroundColor: ['#4ade80', '#f87171'],
+        hoverBackgroundColor: ['#34d399', '#f87171']
       }
     ]
   };
 
   return (
     <div className="container">
-      {/* Header y navegación */}
       <header className="header">
         <div className="logo">Finanzas Personales</div>
         <div className="search-bar">
@@ -46,11 +48,11 @@ const InicioForm = () => {
 
       {/* Botones de navegación */}
       <nav className="nav-buttons">
-        <button>CUENTAS</button>
-        <button>AHORROS</button>
-        <button>GASTOS</button>
-        <button>APORTES</button>
-        <button>Estadísticas</button>
+        <button onClick={() => navigate('/cuentas')}>CUENTAS</button>
+        <button onClick={() => navigate('/ahorros')}>AHORROS</button>
+        <button onClick={() => navigate('/gastos')}>GASTOS</button>
+        <button onClick={() => navigate('/aportes')}>APORTES</button>
+        <button onClick={() => navigate('/estadisticas')}>Estadísticas</button>
       </nav>
 
       {/* Gráficos y datos */}

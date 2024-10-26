@@ -43,7 +43,6 @@
   font-size: 24px;
 }
 
-/* Navegación */
 .nav-buttons {
   display: flex;
   justify-content: space-around;
@@ -53,12 +52,20 @@
   padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #ccc;
-  background-color: white;
+  background-color: #ccc;
+  color: #000000;
   cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-buttons button:hover {
-  background-color: #eee;
+  background-color: #c1c1c1;
 }
 
 /* Contenido principal */
@@ -81,7 +88,6 @@
   background-color: #f5f5f5;
 }
 
-/* Texto en los gráficos y cajas */
 h2, h3 {
   margin: 0 0 10px 0;
 }
