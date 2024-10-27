@@ -17,6 +17,11 @@ const Ahorros = () => {
     descripcion: '',
   });
 
+  const [ahorroSeleccionado, setAhorroSeleccionado] = useState(null);
+  const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
+  const [mostrarModalAgregarDinero, setMostrarModalAgregarDinero] = useState(false);
+  const [cantidadAgregar, setCantidadAgregar] = useState(0);
+
   // Abre el modal de agregar ahorro
   const abrirModal = () => {
     setNuevoAhorro({
@@ -34,7 +39,7 @@ const Ahorros = () => {
     setMostrarModal(false);
   };
 
-  // Maneja los cambios en los inputs del formulario
+  // Maneja los cambios en los inputs del formulario de nuevo ahorro
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNuevoAhorro((prevAhorro) => ({
@@ -49,7 +54,68 @@ const Ahorros = () => {
     cerrarModal();
   };
 
+  // Abre el modal de edición para un ahorro específico
+  const abrirModalEdicion = (ahorro) => {
+    setAhorroSeleccionado(ahorro);
+    setMostrarModalEdicion(true);
+  };
+
+  // Cierra el modal de edición
+  const cerrarModalEdicion = () => {
+    setMostrarModalEdicion(false);
+  };
+
+  // Maneja los cambios en los inputs del formulario de edición
+  const handleEdicionInputChange = (e) => {
+    const { name, value } = e.target;
+    setAhorroSeleccionado((prevAhorro) => ({
+      ...prevAhorro,
+      [name]: value,
+    }));
+  };
+
+  // Guarda los cambios hechos al ahorro seleccionado
+  const handleGuardarEdicion = () => {
+    setAhorros((prevAhorros) =>
+      prevAhorros.map((ahorro) =>
+        ahorro.id === ahorroSeleccionado.id ? ahorroSeleccionado : ahorro
+      )
+    );
+    cerrarModalEdicion();
+  };
+
+  // Abre el modal para agregar dinero al ahorro seleccionado
+  const abrirModalAgregarDinero = (ahorro) => {
+    setAhorroSeleccionado(ahorro);
+    setCantidadAgregar(0); // Inicializa la cantidad a agregar en 0
+    setMostrarModalAgregarDinero(true);
+  };
+
+  // Cierra el modal de agregar dinero
+  const cerrarModalAgregarDinero = () => {
+    setMostrarModalAgregarDinero(false);
+  };
+
+  // Maneja la acción de agregar dinero al ahorro seleccionado
+  const handleAgregarDinero = () => {
+    setAhorros((prevAhorros) =>
+      prevAhorros.map((ahorro) =>
+        ahorro.id === ahorroSeleccionado.id
+          ? { ...ahorro, balanceActual: ahorro.balanceActual + cantidadAgregar }
+          : ahorro
+      )
+    );
+    cerrarModalAgregarDinero();
+  };
+
+  // Calcula el total de los ahorros actuales
   const totalAhorros = ahorros.reduce((total, ahorro) => total + ahorro.balanceActual, 0);
+
+  // Calcula la meta total de ahorro sumando todas las metas de ahorro
+  const metaTotalAhorro = ahorros.reduce((total, ahorro) => total + ahorro.meta, 0);
+
+  // Calcula el progreso hacia la meta total de ahorro
+  const progresoMetaTotal = metaTotalAhorro > 0 ? (totalAhorros / metaTotalAhorro) * 100 : 0;
 
   return (
     <div className="ahorros-container">
@@ -62,7 +128,18 @@ const Ahorros = () => {
 
       <div className="ahorros-overview">
         <div className="ahorros-total">
-          <h3>Total Ahorros</h3>
+          <h3>Meta Total de Ahorro</h3>
+          <h1>
+            {metaTotalAhorro.toLocaleString('es-CO', {
+              style: 'currency',
+              currency: 'COP',
+            })}
+          </h1>
+          <ProgressBar value={progresoMetaTotal} />
+          <p>{progresoMetaTotal.toFixed(2)}% alcanzado</p>
+        </div>
+        <div className="ahorros-total">
+          <h3>Total Ahorros Actuales</h3>
           <h1>
             {totalAhorros.toLocaleString('es-CO', {
               style: 'currency',
@@ -101,6 +178,14 @@ const Ahorros = () => {
               <p>
                 Actual: {ahorro.balanceActual.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
               </p>
+            </div>
+            <div className="ahorro-actions">
+              <button className="btn-editar" onClick={() => abrirModalEdicion(ahorro)}>
+                Editar
+              </button>
+              <button className="btn-agregar-dinero" onClick={() => abrirModalAgregarDinero(ahorro)}>
+                Agregar Dinero
+              </button>
             </div>
           </div>
         ))}
@@ -161,6 +246,96 @@ const Ahorros = () => {
           </div>
         </div>
       </Dialog>
+
+      {/* Modal para editar ahorro */}
+      {ahorroSeleccionado && (
+        <Dialog
+          header="Editar Ahorro"
+          visible={mostrarModalEdicion}
+          style={{ width: '50vw' }}
+          onHide={cerrarModalEdicion}
+        >
+          <div className="editar-ahorro-form">
+            <div className="form-field">
+              <label>Nombre</label>
+              <InputText
+                name="nombre"
+                value={ahorroSeleccionado.nombre}
+                onChange={handleEdicionInputChange}
+                placeholder="Nombre del objetivo de ahorro"
+              />
+            </div>
+            <div className="form-field">
+              <label>Meta de Ahorro</label>
+              <InputNumber
+                name="meta"
+                value={ahorroSeleccionado.meta}
+                onValueChange={(e) =>
+                  setAhorroSeleccionado({ ...ahorroSeleccionado, meta: e.value })
+                }
+                mode="currency"
+                currency="COP"
+                min={0}
+              />
+            </div>
+            <div className="form-field">
+              <label>Balance Actual</label>
+              <InputNumber
+                name="balanceActual"
+                value={ahorroSeleccionado.balanceActual}
+                onValueChange={(e) =>
+                  setAhorroSeleccionado({ ...ahorroSeleccionado, balanceActual: e.value })
+                }
+                mode="currency"
+                currency="COP"
+                min={0}
+              />
+            </div>
+            <div className="form-field">
+              <label>Descripción</label>
+              <InputText
+                name="descripcion"
+                value={ahorroSeleccionado.descripcion}
+                onChange={handleEdicionInputChange}
+                placeholder="Descripción del ahorro"
+              />
+            </div>
+            <div className="form-actions">
+              <button className="btn-guardar" onClick={handleGuardarEdicion}>
+                Guardar Cambios
+              </button>
+            </div>
+          </div>
+        </Dialog>
+      )}
+
+      {/* Modal para agregar dinero al ahorro */}
+      {ahorroSeleccionado && (
+        <Dialog
+          header={`Agregar Dinero a ${ahorroSeleccionado.nombre}`}
+          visible={mostrarModalAgregarDinero}
+          style={{ width: '50vw' }}
+          onHide={cerrarModalAgregarDinero}
+        >
+          <div className="agregar-dinero-form">
+            <div className="form-field">
+              <label>Cantidad a Agregar</label>
+              <InputNumber
+                value={cantidadAgregar}
+                onValueChange={(e) => setCantidadAgregar(e.value)}
+                mode="currency"
+                currency="COP"
+                min={0}
+              />
+            </div>
+            <div className="form-actions">
+              <button className="btn-guardar" onClick={handleAgregarDinero}>
+                Agregar Dinero
+              </button>
+            </div>
+          </div>
+        </Dialog>
+      )}
     </div>
   );
 };
