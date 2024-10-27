@@ -39,3 +39,9 @@
   gap: 10px; /* Espacio entre botones */
   margin-top: 10px; /* Espacio superior con la meta y balance */
 }
+.grafica-container {
+  width: 100%; /* Ajusta al ancho del contenedor padre */
+  max-width: 600px; /* Define un tamaño máximo para mantenerlo pequeño */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: auto; /* Centra la gráfica en la pantalla */
+}

@@ -153,7 +153,7 @@ const Ahorros = () => {
             })}
           </h1>
         </div>
-        <div className="ahorros-chart">
+        <div className="ahorros-chart grafica-container">
           <Chart
             type="doughnut"
             data={{
