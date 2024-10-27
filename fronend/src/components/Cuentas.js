@@ -68,10 +68,12 @@ const Cuentas = () => {
   return (
     <div className="cuentas-container">
       <header className="cuentas-header">
-        <h2>Cuentas</h2>
-        <button className="btn-agregar" onClick={abrirModal}>
-          + Agregar
-        </button>
+        <div className="cuentas-titulo-boton">
+          <h2>Cuentas</h2>
+          <button className="btn-agregar" onClick={abrirModal}>
+            + Agregar
+          </button>
+        </div>
       </header>
 
       <div className="cuentas-sidebar">
@@ -106,7 +108,6 @@ const Cuentas = () => {
         ))}
       </div>
 
-      {/* Modal para añadir una nueva cuenta */}
       <Dialog
         header="Añadir Cuenta Manual"
         visible={mostrarModal}

@@ -5,9 +5,9 @@ import LoginPage from "./pages/Login.page";
 import InicioForm from "./components/Inicio.form";
 import RegistroExitoso from "./components/RegistroExitoso";
 import Cuentas from "./components/Cuentas";
-//import Ahorros from "./components/Ahorros";
-//import Gastos from "./components/Gastos";
-//import Aportes from "./components/Aportes";
+import Ahorros from "./components/Ahorros";
+import Gastos from "./components/Gastos";
+import Aportes from "./components/Aportes";
 import { BrowserRouter as Router, Route, Routes, Navigate  } from "react-router-dom";
 import CuentaDetalle from "./components/CuentaDetalle";
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
@@ -25,9 +25,9 @@ function App() {
         
         <Route path="/principal" element={<Layout><InicioForm /></Layout>} />
         <Route path="/cuentas" element={<Layout><Cuentas /></Layout>} />
-        <Route path="/ahorros" element={<Layout><div>Ahorros Page</div></Layout>} />
-        <Route path="/gastos" element={<Layout><div>Gastos Page</div></Layout>} />
-        <Route path="/aportes" element={<Layout><div>Aportes Page</div></Layout>} />
+        <Route path="/ahorros" element={<Layout><Ahorros /></Layout>} />
+        <Route path="/gastos" element={<Layout><Gastos /></Layout>} />
+        <Route path="/aportes" element={<Layout><Aportes/></Layout>} />
         <Route path="/estadisticas" element={<Navigate to="/principal" />} /> 
         <Route path="/cuentas/:cuentaId" element={<Layout><CuentaDetalle /></Layout>} />
       </Routes>
