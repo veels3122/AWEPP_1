@@ -10,7 +10,6 @@ import './Gastos.css';
 const Gastos = () => {
   const navigate = useNavigate();
   const [Gastos, setGastos] = useState([
-    { id: 1, nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000, color: '#ffffff' },
   ]);
 
   const [mostrarModal, setMostrarModal] = useState(false);
@@ -93,7 +92,9 @@ const Gastos = () => {
             onClick={() => navigate(`/Gastos/${Gasto.id}`)}
             style={{ cursor: 'pointer' }}
           >
-            <div className="Gasto-icono">💰</div>
+            <div className="Gasto-icono">
+              <i className="pi pi-wallet" style={{ color: '#004aad', fontSize: '2rem' }}></i>
+            </div>
             <div className="Gasto-info" style={{ backgroundColor: Gasto.color }}>
               <h3>{Gasto.nombre}</h3>
               <p>{Gasto.tipo}</p>

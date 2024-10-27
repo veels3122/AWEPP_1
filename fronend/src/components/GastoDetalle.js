@@ -7,13 +7,13 @@ import { Dropdown } from 'primereact/dropdown';
 import { InputNumber } from 'primereact/inputnumber';
 import { ToggleButton } from 'primereact/togglebutton';
 import { useNavigate } from 'react-router-dom';
-import './CuentaDetalle.css';
+import './GastoDetalle.css';
 
-const CuentaDetalle = (cuentas, setCuentas) => {
+const GastoDetalle = () => {
   const navigate = useNavigate();
-  const { cuentaId } = useParams(); // Obtener ID de la cuenta desde la URL
+  const { GastoId } = useParams(); // Obtener ID de la Gasto desde la URL
 
-  const [cuenta, setCuenta] = useState({
+  const [Gasto, setGasto] = useState({
     nombre: 'Efectivo',
     tipo: 'Efectivo',
     balance: 10000,
@@ -28,8 +28,8 @@ const CuentaDetalle = (cuentas, setCuentas) => {
     datasets: [
       {
         label: 'Saldo',
-        backgroundColor: cuenta.color,
-        borderColor: cuenta.color,
+        backgroundColor: Gasto.color,
+        borderColor: Gasto.color,
         data: [10000, 10000, 10000, 10000, 10000], // Datos ficticios para mostrar en el gráfico
       },
     ],
@@ -45,35 +45,35 @@ const CuentaDetalle = (cuentas, setCuentas) => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setCuenta((prevCuenta) => ({ ...prevCuenta, [name]: value }));
+    setGasto((prevGasto) => ({ ...prevGasto, [name]: value }));
   };
 
   const handleEliminar = () => {
-    // Aquí puedes agregar la lógica para eliminar la cuenta.
+    // Aquí puedes agregar la lógica para eliminar la Gasto.
     // Por ejemplo, podrías hacer una llamada a la API o navegar a una página específica.
-    console.log('Cuenta eliminada:', cuentaId);
-    navigate('/cuentas'); // Redirigir a la lista de cuentas tras eliminar.
+    console.log('Gasto eliminada:', GastoId);
+    navigate('/Gastos'); // Redirigir a la lista de Gastos tras eliminar.
   };
 
   return (
-    <div className="cuenta-detalle-container">
-      <header className="cuenta-detalle-header">
+    <div className="Gasto-detalle-container">
+      <header className="Gasto-detalle-header">
         <button className="btn-volver" onClick={() => window.history.back()}>←</button>
-        <h2>Detalles de Cuenta</h2>
+        <h2>Detalles de Gasto</h2>
         <div className="btn-actions">
           <button className="btn-editar" onClick={abrirModalEdicion}>Editar</button>
           <button className="btn-eliminar" onClick={handleEliminar}>Eliminar</button>
         </div>
       </header>
 
-      <div className="cuenta-detalle-info">
-      <div className="cuenta-icono">
+      <div className="Gasto-detalle-info">
+      <div className="Gasto-icono">
               <i className="pi pi-wallet" style={{ color: '#004aad', fontSize: '2rem' }}></i>
             </div>
-        <div className="cuenta-info">
-          <h3>{cuenta.nombre}</h3>
-          <p>Tipo: {cuenta.tipo}</p>
-          <h4>{cuenta.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h4>
+        <div className="Gasto-info">
+          <h3>{Gasto.nombre}</h3>
+          <p>Tipo: {Gasto.tipo}</p>
+          <h4>{Gasto.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h4>
         </div>
       </div>
 
@@ -94,9 +94,9 @@ const CuentaDetalle = (cuentas, setCuentas) => {
 
       {activeTab === 'saldo' && (
         <div>
-          <div className="cuenta-saldo">
+          <div className="Gasto-saldo">
             <h2>Hoy</h2>
-            <h1>{cuenta.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h1>
+            <h1>{Gasto.balance.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h1>
             <p>VS PERIODO ANTERIOR: 0%</p>
           </div>
           <div className="saldo-chart">
@@ -106,11 +106,11 @@ const CuentaDetalle = (cuentas, setCuentas) => {
       )}
 
       {activeTab === 'registros' && (
-        <div className="cuenta-registros">
+        <div className="Gasto-registros">
           <h2>Registros</h2>
           <div className="no-registros">
             <p>Añadir transacciones al contacto</p>
-            <p>Añadir nuevas transacciones y mantener esta cuenta actualizada.</p>
+            <p>Añadir nuevas transacciones y mantener esta Gasto actualizada.</p>
             <p>Comienza con (+ Agregar) para crear el primero.</p>
             <button className="btn-agregar-registro">+ Agregar</button>
           </div>
@@ -118,37 +118,37 @@ const CuentaDetalle = (cuentas, setCuentas) => {
       )}
 
       {/* Modal de edición */}
-      <Dialog header="Editar Cuenta" visible={mostrarModalEdicion} style={{ width: '50vw' }} onHide={cerrarModalEdicion}>
-        <div className="editar-cuenta-form">
+      <Dialog header="Editar Gasto" visible={mostrarModalEdicion} style={{ width: '50vw' }} onHide={cerrarModalEdicion}>
+        <div className="editar-Gasto-form">
           <div className="form-field">
             <label>Nombre</label>
-            <InputText name="nombre" value={cuenta.nombre} onChange={handleInputChange} />
+            <InputText name="nombre" value={Gasto.nombre} onChange={handleInputChange} />
           </div>
           <div className="form-field">
             <label>Color</label>
-            <input type="color" name="color" value={cuenta.color} onChange={handleInputChange} />
+            <input type="color" name="color" value={Gasto.color} onChange={handleInputChange} />
           </div>
           <div className="form-field">
-            <label>Tipo de cuenta</label>
+            <label>Tipo de Gasto</label>
             <Dropdown
               name="tipo"
-              value={cuenta.tipo}
+              value={Gasto.tipo}
               options={[{ label: 'Efectivo', value: 'Efectivo' }, { label: 'Bancaria', value: 'Bancaria' }]}
-              onChange={(e) => setCuenta({ ...cuenta, tipo: e.value })}
+              onChange={(e) => setGasto({ ...Gasto, tipo: e.value })}
               placeholder="Seleccione un tipo"
             />
           </div>
           <div className="form-field">
             <label>Monto inicial</label>
-            <InputNumber name="balance" value={cuenta.balance} onValueChange={(e) => setCuenta({ ...cuenta, balance: e.value })} mode="currency" currency="COP" />
+            <InputNumber name="balance" value={Gasto.balance} onValueChange={(e) => setGasto({ ...Gasto, balance: e.value })} mode="currency" currency="COP" />
           </div>
           <div className="form-field">
             <label>Excluir de las estadísticas</label>
-            <ToggleButton onLabel="Sí" offLabel="No" checked={cuenta.excluir || false} onChange={(e) => setCuenta({ ...cuenta, excluir: e.value })} />
+            <ToggleButton onLabel="Sí" offLabel="No" checked={Gasto.excluir || false} onChange={(e) => setGasto({ ...Gasto, excluir: e.value })} />
           </div>
           <div className="form-field">
             <label>Archivar</label>
-            <ToggleButton onLabel="Sí" offLabel="No" checked={cuenta.archivar || false} onChange={(e) => setCuenta({ ...cuenta, archivar: e.value })} />
+            <ToggleButton onLabel="Sí" offLabel="No" checked={Gasto.archivar || false} onChange={(e) => setGasto({ ...Gasto, archivar: e.value })} />
           </div>
           <div className="form-actions">
             <button className="btn-guardar" onClick={cerrarModalEdicion}>Guardar</button>
@@ -159,4 +159,4 @@ const CuentaDetalle = (cuentas, setCuentas) => {
   );
 };
 
-export default CuentaDetalle;
+export default GastoDetalle;

@@ -9,9 +9,7 @@ import './Cuentas.css';
 
 const Cuentas = () => {
   const navigate = useNavigate();
-  const [cuentas, setCuentas] = useState([
-    { id: 1, nombre: 'Efectivo', tipo: 'Efectivo', balance: 10000, color: '#ffffff' },
-  ]);
+  const [cuentas, setCuentas] = useState([]);
 
   const [mostrarModal, setMostrarModal] = useState(false);
   const [nuevaCuenta, setNuevaCuenta] = useState({
@@ -75,7 +73,7 @@ const Cuentas = () => {
           </button>
         </div>
       </header>
-
+      
       <div className="cuentas-sidebar">
         <input type="text" placeholder="Buscar" className="buscar-cuentas" />
         <select className="ordenar-cuentas">
@@ -93,7 +91,9 @@ const Cuentas = () => {
             onClick={() => navigate(`/cuentas/${cuenta.id}`)}
             style={{ cursor: 'pointer' }}
           >
-            <div className="cuenta-icono">💰</div>
+            <div className="cuenta-icono">
+              <i className="pi pi-wallet" style={{ color: '#004aad', fontSize: '2rem' }}></i>
+            </div>
             <div className="cuenta-info" style={{ backgroundColor: cuenta.color }}>
               <h3>{cuenta.nombre}</h3>
               <p>{cuenta.tipo}</p>
