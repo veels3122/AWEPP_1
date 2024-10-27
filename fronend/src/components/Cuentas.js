@@ -10,9 +10,9 @@ import './Cuentas.css';
 const Cuentas = () => {
   const navigate = useNavigate();
   const [cuentas, setCuentas] = useState([]);
-
   const [mostrarModal, setMostrarModal] = useState(false);
   const [mostrarModalOpciones, setMostrarModalOpciones] = useState(false);
+  const [mostrarModalSincronizacion, setMostrarModalSincronizacion] = useState(false); // Nuevo estado para el modal de sincronización bancaria
   const [nuevaCuenta, setNuevaCuenta] = useState({
     id: null,
     nombre: '',
@@ -21,6 +21,89 @@ const Cuentas = () => {
     color: '#ffffff',
     excluirEstadisticas: false,
   });
+
+
+  
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedBank, setSelectedBank] = useState(null);
+
+  const countries = [
+    { label: 'Argentina', value: 'Argentina' },
+    { label: 'Colombia', value: 'Colombia' },
+    { label: 'México', value: 'México' },
+    { label: 'Estados Unidos', value: 'Estados Unidos' },
+    { label: 'España', value: 'España' },
+    { label: 'Brasil', value: 'Brasil' },
+    { label: 'Francia', value: 'Francia' },
+    { label: 'Alemania', value: 'Alemania' },
+    { label: 'Reino Unido', value: 'Reino Unido' },
+    { label: 'Italia', value: 'Italia' },
+    { label: 'China', value: 'China' },
+    { label: 'Japón', value: 'Japón' },
+    { label: 'India', value: 'India' },
+    { label: 'Rusia', value: 'Rusia' },
+    { label: 'Canadá', value: 'Canadá' },
+    { label: 'Australia', value: 'Australia' },
+    { label: 'Sudáfrica', value: 'Sudáfrica' },
+    { label: 'Corea del Sur', value: 'Corea del Sur' },
+    { label: 'Portugal', value: 'Portugal' },
+    { label: 'Países Bajos', value: 'Países Bajos' },
+];
+
+const bankOptions = {
+  Argentina: [
+    { label: 'BUXFER', value: 'BUXFER' },
+    { label: 'BBVA Argentina', value: 'BBVA Argentina' },
+    { label: 'Banco de la Nación Argentina', value: 'Banco de la Nación Argentina' },
+  ],
+  Colombia: [
+    { label: 'Banco de Bogotá', value: 'Banco de Bogotá' },
+    { label: 'BBVA Colombia', value: 'BBVA Colombia' },
+    { label: 'Bancolombia', value: 'Bancolombia' },
+  ],
+  México: [
+    { label: 'BBVA México', value: 'BBVA México' },
+    { label: 'Banorte', value: 'Banorte' },
+    { label: 'Santander México', value: 'Santander México' },
+  ],
+  'Estados Unidos': [
+    { label: 'Bank of America', value: 'Bank of America' },
+    { label: 'Chase', value: 'Chase' },
+    { label: 'Wells Fargo', value: 'Wells Fargo' },
+  ],
+  España: [
+    { label: 'BBVA España', value: 'BBVA España' },
+    { label: 'Banco Santander', value: 'Banco Santander' },
+    { label: 'CaixaBank', value: 'CaixaBank' },
+  ],
+  Brasil: [
+    { label: 'Banco do Brasil', value: 'Banco do Brasil' },
+    { label: 'Bradesco', value: 'Bradesco' },
+    { label: 'Itaú', value: 'Itaú' },
+  ],
+  Francia: [
+    { label: 'BNP Paribas', value: 'BNP Paribas' },
+    { label: 'Crédit Agricole', value: 'Crédit Agricole' },
+    { label: 'Société Générale', value: 'Société Générale' },
+  ],
+  Alemania: [
+    { label: 'Deutsche Bank', value: 'Deutsche Bank' },
+    { label: 'Commerzbank', value: 'Commerzbank' },
+    { label: 'Sparkasse', value: 'Sparkasse' }, 
+  ],
+  ReinoUnido: [
+    { label: 'HSBC', value: 'HSBC' },
+    { label: 'Barclays', value: 'Barclays' },
+    { label: 'Lloyds Bank', value: 'Lloyds Bank' },
+  ],
+  Italia: [
+    { label: 'Intesa Sanpaolo', value: 'Intesa Sanpaolo' },
+    { label: 'Unicredit', value: 'Unicredit' },
+    { label: 'Monte dei Paschi di Siena', value: 'Monte dei Paschi di Siena' },
+  ]};
+
+
+};
 
   // Abre el modal de agregar cuenta
   const abrirModal = () => {
@@ -45,6 +128,19 @@ const Cuentas = () => {
     setMostrarModalOpciones(false);
   };
 
+const abrirModalSincronizacion = () => {
+    setMostrarModalSincronizacion(true);
+    setErrorMessage(""); // Resetea el mensaje de error al abrir el modal
+  };
+
+  const cerrarModalSincronizacion = () => {
+    setMostrarModalSincronizacion(false);
+    setSelectedCountry(null);
+    setSelectedBank(null);
+    setErrorMessage("");
+  };
+  
+
   // Maneja los cambios en los inputs del formulario
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -60,6 +156,23 @@ const Cuentas = () => {
     cerrarModal();
   };
 
+
+  // Actualiza la selección de bancos según el país
+  const handleCountryChange = (e) => {
+    setSelectedCountry(e.value);
+    setSelectedBank(null); // Resetea el banco seleccionado cuando cambia el país
+  };
+
+  // Función para continuar la sincronización bancaria con validación
+  const handleSyncContinue = () => {
+    if (!selectedCountry || !selectedBank) {
+      setErrorMessage("Por favor, seleccione su país y banco antes de continuar.");
+    } else {
+      alert(`Sincronizando con el banco ${selectedBank} en ${selectedCountry}`);
+      cerrarModalSincronizacion();
+    }
+  };
+
   const tiposDeCuenta = [
     { label: 'General', value: 'General' },
     { label: 'Efectivo', value: 'Efectivo' },
@@ -70,6 +183,52 @@ const Cuentas = () => {
   ];
 
   return (
+    <div>
+      {/* Botón para abrir el modal de sincronización bancaria */}
+      <button onClick={abrirModalSincronizacion}>Sincronización Bancaria</button>
+
+      {/* Modal de Sincronización Bancaria */}
+      <Dialog
+        header="Sincronización Bancaria"
+        visible={mostrarModalSincronizacion}
+        style={{ width: '40vw' }}
+        onHide={cerrarModalSincronizacion}
+      >
+        <div className="sincronizacion-form">
+          <div className="form-field">
+            <label>Seleccione su País:</label>
+            <Dropdown
+              value={selectedCountry}
+              options={countries}
+              onChange={handleCountryChange}
+              placeholder="Seleccione un país"
+            />
+          </div>
+          <div className="form-field">
+            <label>Seleccione su Banco:</label>
+            <Dropdown
+              value={selectedBank}
+              options={selectedCountry ? bankOptions[selectedCountry] : []} // Opciones de bancos dinámicas
+              onChange={(e) => setSelectedBank(e.value)}
+              placeholder="Seleccione un banco"
+              disabled={!selectedCountry} // Deshabilitado hasta que se seleccione un país
+            />
+          </div>
+
+          {/* Mensaje de error si no se han seleccionado ambos campos */}
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+
+          {/* Botón "Continuar" deshabilitado hasta que ambos campos sean seleccionados */}
+          <button
+            className="action-btn"
+            onClick={handleSyncContinue}
+            disabled={!selectedCountry || !selectedBank}
+          >
+            Continuar
+          </button>
+        </div>
+      </Dialog>
+    </div>,
     <div className="cuentas-container">
       <header className="cuentas-header">
         <div className="cuentas-titulo-boton">
@@ -79,7 +238,7 @@ const Cuentas = () => {
           </button>
         </div>
       </header>
-      
+
       <div className="cuentas-sidebar">
         <input type="text" placeholder="Buscar" className="buscar-cuentas" />
         <select className="ordenar-cuentas">
@@ -122,7 +281,7 @@ const Cuentas = () => {
         onHide={cerrarModalOpciones}
       >
         <div className="opciones-agregar">
-          <div className="opcion" onClick={() => { setMostrarModal(true); setMostrarModalOpciones(false); }}>
+          <div className="opcion" onClick={abrirModalSincronizacion}>
             <i className="pi pi-sync opcion-icono" style={{ color: '#004aad' }}></i>
             <h3>Sincronización Bancaria</h3>
             <p>Conéctese a su cuenta bancaria. Sincronice sus transacciones a Wallet automáticamente.</p>
@@ -142,6 +301,38 @@ const Cuentas = () => {
             <h3>Inversiones</h3>
             <p>Cree una cuenta de inversión con el valor de su cartera actualizado automáticamente en su aplicación móvil Wallet.</p>
           </div>
+        </div>
+      </Dialog>
+
+      {/* Modal de Sincronización Bancaria */}
+      <Dialog
+        header="Sincronización Bancaria"
+        visible={mostrarModalSincronizacion}
+        style={{ width: '40vw' }}
+        onHide={cerrarModalSincronizacion}
+      >
+        <div className="sincronizacion-form">
+          <div className="form-field">
+            <label>Seleccione su País:</label>
+            <Dropdown
+              value={selectedCountry}
+              options={countries}
+              onChange={(e) => setSelectedCountry(e.value)}
+              placeholder="Seleccione un país"
+            />
+          </div>
+          <div className="form-field">
+            <label>Seleccione su Banco:</label>
+            <Dropdown
+              value={selectedBank}
+              options={banks}
+              onChange={(e) => setSelectedBank(e.value)}
+              placeholder="Seleccione un banco"
+            />
+          </div>
+          <button className="action-btn" onClick={handleSyncContinue}>
+            Continuar
+          </button>
         </div>
       </Dialog>
 
