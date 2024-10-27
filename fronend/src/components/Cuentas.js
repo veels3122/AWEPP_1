@@ -40,16 +40,9 @@ const Cuentas = () => {
     setMostrarModal(false);
   };
 
-  // Abre el modal de banco
-  const abrirModalBanco = () => {
-    setPaisSeleccionado(null);
-    setBancoSeleccionado(null);
-    setMostrarModalBanco(true);
-  };
-
-  // Cierra el modal de banco
-  const cerrarModalBanco = () => {
-    setMostrarModalBanco(false);
+  // Cierra el modal de opciones avanzadas
+  const cerrarModalOpciones = () => {
+    setMostrarModalOpciones(false);
   };
 
   // Maneja los cambios en los inputs del formulario
