@@ -18,13 +18,44 @@ input[type="email"], input[type="password"] {
   box-sizing: border-box;
 }
 
-/* Botones de inicio de sesión */
-button {
-  width: 100%;
-  padding: 10px;
+.login-page-container {
+  display: flex;
+  height: 100vh;
+}
+
+.promo-section {
+  background-color: #009DE4;
   color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.promo-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.promo-section img {
+  max-width: 50%; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin: 20px 0; /* Espacio alrededor de la imagen */
+}
+
+.promo-section p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.login-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

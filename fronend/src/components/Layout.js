@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       label: 'Cerrar Sesión',
       icon: 'pi pi-sign-out',
       command: () => {
-        navigate('/'); 
+        navigate('/Login'); 
       },
     },
   ];

@@ -44,52 +44,57 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2>Registro</h2>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Nombre:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+    <div className="register-page-container">
+      <div className="register-section">
+        <div className="register-container">
+          <h2>Registro</h2>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Nombre:</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Correo Electrónico:</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Contraseña:</label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="confirmPassword">Confirmar Contraseña:</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit" className="btn-register">Registrarse</button>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Correo Electrónico:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Contraseña:</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="confirmPassword">Confirmar Contraseña:</label>
-          <input
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit" className="btn-register">Registrarse</button>
-      </form>
+      </div>
+      <div className="background-section"></div>
     </div>
   );
 };

@@ -1,4 +1,22 @@
+/* Contenedor principal de la página de registro */
+.register-page-container {
+  display: flex;
+  height: 100vh;
+}
+
+
+/* Sección del formulario de registro */
+.register-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Contenedor del formulario */
 .register-container {
+  width: 90%;
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -6,6 +24,12 @@
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
+}
+
+/* Sección de fondo degradado */
+.background-section {
+  width: 50%;
+  background: linear-gradient(135deg, #00ff44, #01ffcc, #00ff44); /* Degradado verde */
 }
 
 h2 {
@@ -30,15 +54,29 @@ input {
   border-radius: 5px;
 }
 
-input:focus {
-  border-color: #007bff;
-  outline: none;
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none; 
+}
+
 
 .btn-register {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #00ff44;
   color: white;
   border: none;
   border-radius: 5px;
@@ -47,7 +85,7 @@ input:focus {
 }
 
 .btn-register:hover {
-  background-color: #0056b3;
+  background-color: #01ffcc;
 }
 
 .error-message {
@@ -63,4 +101,20 @@ input:focus {
   display: flex;
   gap: 1rem; 
   justify-content: center; 
+}
+.promo-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.promo-section img {
+  max-width: 50%; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin: 20px 0; /* Espacio alrededor de la imagen */
+}
+
+.promo-section p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }

@@ -9,7 +9,7 @@ const RegistroExitoso = () => {
     <div className="registro-exitoso-container">
       <h2>Registro Exitoso</h2>
       <p>¡Tu registro se ha completado con éxito!</p>
-      <button onClick={() => navigate('/')}>Ir al Login</button>
+      <button onClick={() => navigate('/Login')}>Ir al Login</button>
     </div>
   );
 };
