@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
+import imagenLogin from '../assets/imagenLogin.png';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,6 @@ const Register = () => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
 
-    // Validaciones básicas
     if (!name || !email || !password || !confirmPassword) {
       setErrorMessage('Por favor, completa todos los campos.');
       return;
@@ -33,13 +33,8 @@ const Register = () => {
       return;
     }
 
-    // Aquí puedes agregar la lógica para enviar los datos al servidor
     console.log('Formulario enviado:', formData);
-
-    // Limpiar mensaje de error si no hay errores
     setErrorMessage('');
-
-    // Redirigir a la página de registro exitoso después de un registro exitoso
     navigate('/registro-exitoso');
   };
 
@@ -94,7 +89,11 @@ const Register = () => {
           </form>
         </div>
       </div>
-      <div className="background-section"></div>
+      <div className="background-section">
+        <h1>Tus finanzas en un solo lugar</h1>
+        <img src={imagenLogin} alt="Imagen de finanzas" />
+        <p>Ingresa informes, crea presupuestos, sincroniza con tus bancos...</p>
+      </div>
     </div>
   );
 };
