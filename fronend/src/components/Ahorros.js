@@ -4,6 +4,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { ProgressBar } from 'primereact/progressbar';
+import { FaTrashAlt } from 'react-icons/fa'; // Importar ícono de caneca roja
 import './Ahorros.css';
 
 const Ahorros = () => {
@@ -84,19 +85,24 @@ const Ahorros = () => {
     cerrarModalEdicion();
   };
 
-  // Abre el modal para agregar dinero al ahorro seleccionado
-  const abrirModalAgregarDinero = (ahorro) => {
-    setAhorroSeleccionado(ahorro);
-    setCantidadAgregar(0); // Inicializa la cantidad a agregar en 0
-    setMostrarModalAgregarDinero(true);
+  // Eliminar ahorro específico
+  const handleEliminarAhorro = (id) => {
+    setAhorros((prevAhorros) => prevAhorros.filter((ahorro) => ahorro.id !== id));
   };
 
-  // Cierra el modal de agregar dinero
-  const cerrarModalAgregarDinero = () => {
-    setMostrarModalAgregarDinero(false);
-  };
+    // Abre el modal para agregar dinero al ahorro seleccionado
+    const abrirModalAgregarDinero = (ahorro) => {
+      setAhorroSeleccionado(ahorro);
+      setCantidadAgregar(0); // Inicializa la cantidad a agregar en 0
+      setMostrarModalAgregarDinero(true);
+    };
+  
+    // Cierra el modal de agregar dinero
+    const cerrarModalAgregarDinero = () => {
+      setMostrarModalAgregarDinero(false);
+    };
 
-  // Maneja la acción de agregar dinero al ahorro seleccionado
+      // Maneja la acción de agregar dinero al ahorro seleccionado
   const handleAgregarDinero = () => {
     setAhorros((prevAhorros) =>
       prevAhorros.map((ahorro) =>
@@ -170,23 +176,42 @@ const Ahorros = () => {
               <h3>{ahorro.nombre}</h3>
               <p>{ahorro.descripcion}</p>
             </div>
-            <ProgressBar value={(ahorro.balanceActual / ahorro.meta) * 100} />
-            <div className="ahorro-metas">
-              <p>
-                Meta: {ahorro.meta.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
-              </p>
-              <p>
-                Actual: {ahorro.balanceActual.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
-              </p>
+            <div
+              className="ahorro-progreso"
+              onClick={() => abrirModalEdicion(ahorro)}
+              style={{ cursor: 'pointer', position: 'relative' }}
+            >
+              <ProgressBar value={(ahorro.balanceActual / ahorro.meta) * 100} />
+              <FaTrashAlt
+                onClick={(e) => {
+                  e.stopPropagation(); // Para evitar abrir el modal de edición
+                  handleEliminarAhorro(ahorro.id);
+                }}
+                style={{
+                  color: 'red',
+                  position: 'absolute',
+                  top: '50%',
+                  right: '10px',
+                  transform: 'translateY(-50%)',
+                  cursor: 'pointer',
+                }}
+              />
+              <div className="ahorro-metas">
+                <p>
+                  Meta: {ahorro.meta.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
+                </p>
+                <p>
+                  Actual:{' '}
+                  {ahorro.balanceActual.toLocaleString('es-CO', {
+                    style: 'currency',
+                    currency: 'COP',
+                  })}
+                </p>
+              </div>
             </div>
-            <div className="ahorro-actions">
-              <button className="btn-editar" onClick={() => abrirModalEdicion(ahorro)}>
-                Editar
-              </button>
-              <button className="btn-agregar-dinero" onClick={() => abrirModalAgregarDinero(ahorro)}>
-                Agregar Dinero
-              </button>
-            </div>
+            <button className="btn-agregar-dinero" onClick={() => abrirModalAgregarDinero(ahorro)}>
+              Agregar Dinero
+            </button>
           </div>
         ))}
       </div>
@@ -246,6 +271,34 @@ const Ahorros = () => {
           </div>
         </div>
       </Dialog>
+      
+      {/* Modal para agregar dinero al ahorro */}
+      {ahorroSeleccionado && (
+        <Dialog
+          header={`Agregar Dinero a ${ahorroSeleccionado.nombre}`}
+          visible={mostrarModalAgregarDinero}
+          style={{ width: '50vw' }}
+          onHide={cerrarModalAgregarDinero}
+        >
+          <div className="agregar-dinero-form">
+            <div className="form-field">
+              <label>Cantidad a Agregar</label>
+              <InputNumber
+                value={cantidadAgregar}
+                onValueChange={(e) => setCantidadAgregar(e.value)}
+                mode="currency"
+                currency="COP"
+                min={0}
+              />
+            </div>
+            <div className="form-actions">
+              <button className="btn-guardar" onClick={handleAgregarDinero}>
+                Agregar Dinero
+              </button>
+            </div>
+          </div>
+        </Dialog>
+      )}
 
       {/* Modal para editar ahorro */}
       {ahorroSeleccionado && (
@@ -303,34 +356,6 @@ const Ahorros = () => {
             <div className="form-actions">
               <button className="btn-guardar" onClick={handleGuardarEdicion}>
                 Guardar Cambios
-              </button>
-            </div>
-          </div>
-        </Dialog>
-      )}
-
-      {/* Modal para agregar dinero al ahorro */}
-      {ahorroSeleccionado && (
-        <Dialog
-          header={`Agregar Dinero a ${ahorroSeleccionado.nombre}`}
-          visible={mostrarModalAgregarDinero}
-          style={{ width: '50vw' }}
-          onHide={cerrarModalAgregarDinero}
-        >
-          <div className="agregar-dinero-form">
-            <div className="form-field">
-              <label>Cantidad a Agregar</label>
-              <InputNumber
-                value={cantidadAgregar}
-                onValueChange={(e) => setCantidadAgregar(e.value)}
-                mode="currency"
-                currency="COP"
-                min={0}
-              />
-            </div>
-            <div className="form-actions">
-              <button className="btn-guardar" onClick={handleAgregarDinero}>
-                Agregar Dinero
               </button>
             </div>
           </div>

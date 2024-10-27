@@ -12,6 +12,7 @@ const Cuentas = () => {
   const [cuentas, setCuentas] = useState([]);
 
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [mostrarModalOpciones, setMostrarModalOpciones] = useState(false);
   const [nuevaCuenta, setNuevaCuenta] = useState({
     id: null,
     nombre: '',
@@ -31,12 +32,17 @@ const Cuentas = () => {
       color: '#ffffff',
       excluirEstadisticas: false,
     });
-    setMostrarModal(true);
+    setMostrarModalOpciones(true);
   };
 
   // Cierra el modal de agregar cuenta
   const cerrarModal = () => {
     setMostrarModal(false);
+  };
+
+  // Cierra el modal de opciones avanzadas
+  const cerrarModalOpciones = () => {
+    setMostrarModalOpciones(false);
   };
 
   // Maneja los cambios en los inputs del formulario
@@ -108,6 +114,38 @@ const Cuentas = () => {
         ))}
       </div>
 
+      {/* Modal para seleccionar opciones de cuenta */}
+      <Dialog
+        header="AÑADIR CUENTA"
+        visible={mostrarModalOpciones}
+        style={{ width: '60vw' }}
+        onHide={cerrarModalOpciones}
+      >
+        <div className="opciones-agregar">
+          <div className="opcion" onClick={() => { setMostrarModal(true); setMostrarModalOpciones(false); }}>
+            <i className="pi pi-sync opcion-icono" style={{ color: '#004aad' }}></i>
+            <h3>Sincronización Bancaria</h3>
+            <p>Conéctese a su cuenta bancaria. Sincronice sus transacciones a Wallet automáticamente.</p>
+          </div>
+          <div className="opcion" onClick={() => { setMostrarModal(true); setMostrarModalOpciones(false); }}>
+            <i className="pi pi-upload opcion-icono" style={{ color: '#004aad' }}></i>
+            <h3>Importaciones</h3>
+            <p>Sube tu historial de transacciones importando CSV, Excel, OFX u otros archivos.</p>
+          </div>
+          <div className="opcion" onClick={() => { setMostrarModal(true); setMostrarModalOpciones(false); }}>
+            <i className="pi pi-pencil opcion-icono" style={{ color: '#004aad' }}></i>
+            <h3>Ingreso Manual</h3>
+            <p>Actualiza tu cuenta manualmente. Puedes conectar tu banco o importar más tarde.</p>
+          </div>
+          <div className="opcion">
+            <i className="pi pi-chart-bar opcion-icono" style={{ color: '#004aad' }}></i>
+            <h3>Inversiones</h3>
+            <p>Cree una cuenta de inversión con el valor de su cartera actualizado automáticamente en su aplicación móvil Wallet.</p>
+          </div>
+        </div>
+      </Dialog>
+
+      {/* Modal para crear una nueva cuenta */}
       <Dialog
         header="Añadir Cuenta Manual"
         visible={mostrarModal}
