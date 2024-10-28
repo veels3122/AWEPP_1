@@ -1,0 +1,47 @@
+/* Estilo de los botones con mejoras visuales */
+.btn-editar,
+.btn-agregar-dinero {
+  background-color: #007bff; /* Color azul principal */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-editar:hover {
+  background-color: #0056b3; /* Color más oscuro al hacer hover */
+  transform: translateY(-2px);
+}
+
+.btn-agregar-dinero {
+  background-color: #28a745; /* Color verde para agregar dinero */
+}
+
+.btn-agregar-dinero:hover {
+  background-color: #218838; /* Color más oscuro al hacer hover */
+  transform: translateY(-2px);
+}
+
+/* Alinear botones con espacio adecuado entre ellos */
+.ahorro-item-buttons {
+  display: flex;
+  gap: 10px; /* Espacio entre botones */
+  margin-top: 10px; /* Espacio superior con la meta y balance */
+}
+
+/* Alternativa: botones alineados verticalmente */
+.ahorro-item-buttons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre botones */
+  margin-top: 10px; /* Espacio superior con la meta y balance */
+}
+.grafica-container {
+  width: 100%; /* Ajusta al ancho del contenedor padre */
+  max-width: 600px; /* Define un tamaño máximo para mantenerlo pequeño */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: auto; /* Centra la gráfica en la pantalla */
+}

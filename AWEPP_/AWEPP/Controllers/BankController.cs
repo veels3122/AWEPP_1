@@ -42,9 +42,12 @@ namespace AWEPP.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
         public async Task<ActionResult> CreateBank([FromBody] Bank Banks)
         {
+            Banks.IsDeleted = false;
             if (!ModelState.IsValid)
+                Banks.IsDeleted = false;
                 return BadRequest(ModelState);
 
             await _bankServices.CreateBankAsync(Banks);

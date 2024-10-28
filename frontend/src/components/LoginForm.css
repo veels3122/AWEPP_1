@@ -1,0 +1,61 @@
+.form-container {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+/* Estilo para los inputs */
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-page-container {
+  display: flex;
+  height: 100vh;
+}
+
+.promo-section {
+  background-color: #009DE4;
+  color: white;
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.promo-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.promo-section img {
+  max-width: 50%; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin: 20px 0; /* Espacio alrededor de la imagen */
+}
+
+.promo-section p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.login-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
