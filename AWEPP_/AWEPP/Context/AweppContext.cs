@@ -28,6 +28,20 @@ namespace AWEPP.Context
         public DbSet<TypeExpenses> TypeExpenses { get; set; }
         public DbSet<TypeIdenty> TypeIdentities { get; set; }
         public DbSet<TypeProducts> TypeProducts { get; set; }
+        public DbSet<BankHistory> BankHistory { get; set; }
+        public DbSet<CitiesHistory> CitiesHistory { get; set; }
+        public DbSet<ContactsHistory> ContactsHistory { get; set; }
+        public DbSet<CustomerHistory> CustomerHistory { get; set; }
+        public DbSet<ExpensesHistory> ExpensesHistory { get; set; }
+        public DbSet<ProductsHistory> ProductsHistory { get; set; }
+        public DbSet<SavingHistory> SavingHistory { get; set; }
+        public DbSet<TypeAccesHistory> TypeAccesHistory { get; set; }
+        public DbSet<TypeAccesUserHistory> TypeAccesUserHistory { get; set; }
+        public DbSet<TypeAccountsHistory> TypeAccountsHistory { get; set; }
+        public DbSet<TypeExpensesHistory> TypeExpensesHistory { get; set; }
+        public DbSet<TypeIdentyHistory> TypeIdentyHistory { get; set; }
+        public DbSet<TypeProductsHistory> TypeProductsHistory { get; set; }
+        public DbSet<UsertypeHistory> UsertypeHistory { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
