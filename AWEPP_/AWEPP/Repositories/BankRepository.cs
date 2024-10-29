@@ -26,7 +26,6 @@ namespace AWEPP.Repositories
         public async Task<IEnumerable<Bank>> GetAllBankAsync()
         {
             return await _context.Banks
-                .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
         // Obtener gasto por su Id, excluyendo eliminados
