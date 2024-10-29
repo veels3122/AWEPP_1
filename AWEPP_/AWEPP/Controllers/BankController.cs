@@ -45,13 +45,11 @@ namespace AWEPP.Controllers
 
         public async Task<ActionResult> CreateBank([FromBody] Bank Banks)
         {
-            Banks.IsDeleted = false;
             if (!ModelState.IsValid)
-                Banks.IsDeleted = false;
                 return BadRequest(ModelState);
 
             await _bankServices.CreateBankAsync(Banks);
-            return CreatedAtAction(nameof(GetBankById), new { id = Banks.Id }, Banks);
+            return CreatedAtAction(nameof(GetBankById), new { id = Banks.Id },(Banks.IsDeleted=false));
 
         }
 
