@@ -21,7 +21,7 @@ namespace AWEPP.Repositories
             
             await _context.Banks.AddAsync(Banks); // Añadir nuevo registro
             Banks.IsDeleted = false; // Asegurar que el campo delete sea false
-            await _context.SaveChangesAsync(); // Guardar cambios
+            await _context.SaveChangesAsync(Banks.IsDeleted = false); // Guardar cambios
         }
         // Obtener todos los gastos que no están eliminados
         public async Task<IEnumerable<Bank>> GetAllBankAsync()
