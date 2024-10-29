@@ -18,12 +18,12 @@ namespace AWEPP.Repositories
         // Método para crear un nuevo gasto
         public async Task CreateBankAsync(Bank Banks)
         {
-            
+
             await _context.Banks.AddAsync(Banks); // Añadir nuevo registro
             await _context.SaveChangesAsync(); // Guardar cambios
         }
         // Obtener todos los gastos que no están eliminados
-        public async Task<IEnumerable<Bank>> GetAllBanksAsync()
+        public async Task<IEnumerable<Bank>> GetAllBankAsync()
         {
             return await _context.Banks
                 .ToListAsync();
