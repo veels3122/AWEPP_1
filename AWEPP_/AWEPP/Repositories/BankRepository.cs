@@ -23,10 +23,9 @@ namespace AWEPP.Repositories
             await _context.SaveChangesAsync(); // Guardar cambios
         }
         // Obtener todos los gastos que no están eliminados
-        public async Task<IEnumerable<Bank>> GetAllBankAsync()
+        public async Task<IEnumerable<Bank>> GetAllBanksAsync()
         {
             return await _context.Banks
-                .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
         // Obtener gasto por su Id, excluyendo eliminados
