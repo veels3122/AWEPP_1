@@ -49,7 +49,6 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _bankServices.CreateBankAsync(Banks);
-            Banks.IsDeleted = false;
             return CreatedAtAction(nameof(GetBankById), new { id = Banks.Id }, Banks);
 
         }
