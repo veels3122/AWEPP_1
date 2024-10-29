@@ -63,6 +63,7 @@
   cursor: pointer;
   padding: 10px;
   transition: color 0.3s;
+  color: #007bff;
 }
 
 .tab-button.active {
