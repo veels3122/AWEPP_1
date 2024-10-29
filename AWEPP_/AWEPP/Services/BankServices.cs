@@ -1,7 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
 using AWEPP.Repositories;
-using Microsoft.AspNetCore.Mvc;
 
 namespace AWEPP.Services
 {
@@ -23,7 +22,7 @@ namespace AWEPP.Services
             await _bankRepository.CreateBankAsync(Banks);
         }
 
-        public async Task<ActionResult<IEnumerable<Bank>>> GetAllBankAsync()
+        public async Task<IEnumerable<Bank>> GetAllBankAsync()
         {
             return await _bankRepository.GetAllBankAsync();
         }

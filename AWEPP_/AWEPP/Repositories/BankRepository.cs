@@ -2,7 +2,6 @@
 using AWEPP.Model;
 using AWEPP.Modelo;
 using AWEPP.Repositories;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AWEPP.Repositories
@@ -24,9 +23,10 @@ namespace AWEPP.Repositories
             await _context.SaveChangesAsync(); // Guardar cambios
         }
         // Obtener todos los gastos que no están eliminados
-        public async Task<ActionResult<IEnumerable<Bank>>> GetAllBankAsync()
+        public async Task<IEnumerable<Bank>> GetAllBankAsync()
         {
             return await _context.Banks
+                .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
         // Obtener gasto por su Id, excluyendo eliminados
