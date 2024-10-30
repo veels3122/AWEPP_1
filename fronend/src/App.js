@@ -8,22 +8,23 @@ import Cuentas from "./components/Cuentas";
 import Ahorros from "./components/Ahorros";
 import Gastos from "./components/Gastos";
 import Aportes from "./components/Aportes";
-import { BrowserRouter as Router, Route, Routes, Navigate  } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import CuentaDetalle from "./components/CuentaDetalle";
 import GastoDetalle from "./components/GastoDetalle";
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Layout from "./components/Layout";
+import Bienvenida from "./components/Bienvenida";
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/" element={<Bienvenida />} />
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/registro-exitoso" element={<RegistroExitoso />} /> 
-        
         <Route path="/principal" element={<Layout><InicioForm /></Layout>} />
         <Route path="/cuentas" element={<Layout><Cuentas /></Layout>} />
         <Route path="/ahorros" element={<Layout><Ahorros /></Layout>} />

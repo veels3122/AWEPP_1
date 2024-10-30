@@ -63,6 +63,12 @@
   cursor: pointer;
   padding: 10px;
   transition: color 0.3s;
+  color: #007bff;
+}
+
+.tab-button:hover {
+  color: #00fbff;
+  background-color: transparent; 
 }
 
 .tab-button.active {
