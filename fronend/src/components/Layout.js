@@ -20,12 +20,11 @@ const Layout = ({ children }) => {
   ];
 
   const toggleMenu = (e) => {
-    menu.current.toggle(e); // Mostrar el menú al hacer clic en el avatar o el nombre del usuario
+    menu.current.toggle(e); 
   };
 
   return (
     <div>
-      {/* Header principal que contiene al nombre de la página y al usuario */}
       <header className="layout-header">
         <div className="header-left">
           <h1 className="page-title">Manager By Awepp</h1>
@@ -40,10 +39,10 @@ const Layout = ({ children }) => {
             />
             <span 
               className="user-name" 
-              onClick={toggleMenu} // Mostrar el menú al hacer clic en el nombre del usuario
+              onClick={toggleMenu} 
               style={{ cursor: 'pointer' }}
             >
-              Andres Rodriguez
+              New User
             </span>
           </div>
         </div>

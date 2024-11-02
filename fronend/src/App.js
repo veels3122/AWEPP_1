@@ -7,7 +7,7 @@ import RegistroExitoso from "./components/RegistroExitoso";
 import Cuentas from "./components/Cuentas";
 import Ahorros from "./components/Ahorros";
 import Gastos from "./components/Gastos";
-import Aportes from "./components/Aportes";
+import FINANZAS from "./components/finanzas";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import CuentaDetalle from "./components/CuentaDetalle";
 import GastoDetalle from "./components/GastoDetalle";
@@ -29,7 +29,7 @@ function App() {
         <Route path="/cuentas" element={<Layout><Cuentas /></Layout>} />
         <Route path="/ahorros" element={<Layout><Ahorros /></Layout>} />
         <Route path="/gastos" element={<Layout><Gastos /></Layout>} />
-        <Route path="/aportes" element={<Layout><Aportes/></Layout>} />
+        <Route path="/finanzas" element={<Layout><FINANZAS/></Layout>} />
         <Route path="/estadisticas" element={<Navigate to="/principal" />} /> 
         <Route path="/cuentas/:cuentaId" element={<Layout><CuentaDetalle /></Layout>} />
         <Route path="/Gastos/:GastoId" element={<Layout><GastoDetalle /></Layout>} />
