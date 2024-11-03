@@ -1,5 +1,5 @@
-/* GastoDetalle.css */
-.Gasto-detalle-container {
+/* CuentaDetalle.css */
+.cuenta-detalle-container {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
@@ -42,7 +42,7 @@
   background-color: #c82333;
 }
 
-.Gasto-info {
+.cuenta-info {
   margin-left: 15px;
 }
 
@@ -63,7 +63,6 @@
   cursor: pointer;
   padding: 10px;
   transition: color 0.3s;
-  color: #0e6ccf;
 }
 
 .tab-button.active {
@@ -71,7 +70,7 @@
   border-bottom: 2px solid #007bff;
 }
 
-.editar-Gasto-form {
+.editar-cuenta-form {
   display: grid;
   gap: 15px;
   padding: 10px;

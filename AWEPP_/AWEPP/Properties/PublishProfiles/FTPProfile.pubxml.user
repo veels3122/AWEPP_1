@@ -5,9 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5FiphA4ZQEag5fLsBwd9OQAAAAACAAAAAAAQZgAAAAEAACAAAACnx7EQkhUGAoN6aysip6++yGHo9MGwREuC2emrl5Q2ZgAAAAAOgAAAAAIAACAAAAB9waE2n8lEkhTIbbWWiwIiaAdRLE/nUpd2UfQRoOn9SSAAAABz7vsW9EG4ZSRKIbj5PKb8aqc0tmwqh6X5dpn9c1YrD0AAAACegmNgM/tJhbsKSZoXUSmf37W2oD0ci7veW6TrfLa6cqvkNKrl1dWrP2+WU3+SSzzuDD3OUub4OgKiowf5hhqI</EncryptedPassword>
-    <_PublishTargetUrl>ftp://155.254.246.25/www.AWEPP.somee.com</_PublishTargetUrl>
-    <History>True|2024-11-03T00:40:15.5188898Z||;False|2024-11-02T19:31:55.3649906-05:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
