@@ -57,23 +57,37 @@ builder.Services.AddScoped<IUsertypeServices, UserTypeServices>();
 ///////////////////////////////////////////////////////////////
 
 
-
-// Agregar los controladores al contenedor
 builder.Services.AddControllers();
 
-// Configuración de Swagger/OpenAPI
+// Learn more about configuring Swagger/OpenAPI at 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin() // Permitir solicitudes desde cualquier origen
+                   .AllowAnyMethod()  // Permitir cualquier método (GET, POST, etc.)
+                   .AllowAnyHeader(); // Permitir cualquier cabecera
+        });
+});
+
 var app = builder.Build();
 
-// Configuración del pipeline de solicitudes HTTP
+// Configure the HTTP request pipeline.
+//    app.Environment.IsDevelopment();
+//{
+app.UseSwagger();
+app.UseSwaggerUI();
+//}
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
-
+app.UseCors("AllowAllOrigins");
 
 app.UseHttpsRedirection();
+
 app.UseAuthorization();
 
 app.MapControllers();
