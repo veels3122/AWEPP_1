@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 import './finanzas.css';
 
 const Finanzas = () => {
-  const initialLabels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const initialLabels = useMemo(() => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'], []); 
   const currentMonthIndex = new Date().getMonth();
 
   const [monthLabels, setMonthLabels] = useState(initialLabels.slice(0, currentMonthIndex + 1));

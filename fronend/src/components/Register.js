@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import './Register.css';
+import api from '../api';
 import imagenLogin from '../assets/imagenLogin.png';
 import PoliticaTratamiento from './PoliticaTratamiento';
+import './Register.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -15,17 +15,11 @@ const Register = () => {
   const [politicaAceptada, setPoliticaAceptada] = useState(false);
   const [mostrarTooltip, setMostrarTooltip] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(""); // Nuevo estado para el mensaje de error
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
-
-    // Limpiar el mensaje de error al cambiar el campo de confirmación de contraseña
-    if (name === 'confirmPassword' && formData.password === value) {
-      setErrorMessage("");
-    }
   };
 
   const handleCheckboxChange = (e) => {
@@ -48,19 +42,16 @@ const Register = () => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
 
-    // Verificar si hay campos vacíos
     if (!name || !email || !password || !confirmPassword) {
-      setErrorMessage("Por favor, completa todos los campos."); // Cambiar alert por mensaje en línea
+      alert("Por favor, completa todos los campos.");
       return;
     }
 
-    // Verificar si las contraseñas coinciden
     if (password !== confirmPassword) {
-      setErrorMessage("Las contraseñas no coinciden."); // Cambiar alert por mensaje en línea
+      alert("Las contraseñas no coinciden.");
       return;
     }
 
-    // Verificar si la política ha sido aceptada
     if (!politicaAceptada) {
       setMostrarTooltip(true);
       return;
@@ -68,40 +59,41 @@ const Register = () => {
 
     try {
       // Solicitud POST a la API
-      const response = await axios.post('https://awepp.somee.com/api/User', {
-        id: null,
-        name: name,
-        email: email,
-        passaword: password, // Asegúrate de que el nombre del campo coincida con el esperado en la API
-        phoneNumber: '',
-        userName: name, // O utiliza otro campo si tienes un nombre de usuario diferente
-        date: new Date().toISOString(),
-        modified: new Date().toISOString(),
-        modifiedBy: name,
-        usertype: {
-          id: 1, // Ajusta esto según el tipo de usuario necesario
-          name: 'usuario', // Asigna el tipo de usuario
-          isDeleted: false
-        },
-        typeAcces: {
-          id: 1, // Ajusta esto según el nivel de acceso necesario
-          typeacces: 'general', // Nivel de acceso
-          isDeleted: false
-        },
-        typeAccesUser: {
-          id: 1,
-          typeAcces: {
-            id: 1,
-            typeacces: 'general',
-            isDeleted: false
+      const response = await api.post('/User', 
+        {
+          "id": 0,
+          "name": name,
+          "email": email,
+          "passaword": password,
+          "phoneNumber": '',
+          "userName": name,
+          "date": new Date().toISOString(),
+         "modified": new Date().toISOString(),
+          "modifiedBy": name,
+          "usertype": {
+          "id": 0,
+          "name": name,
+          "isDeleted": false
           },
-          isDeleted: false
+          "typeAcces": {
+          "id": 0,
+          "typeacces": "string",
+          "isDeleted": false
+          },
+            "typeAccesUser": {
+            "id": 0,
+            "typeAcces": {
+            "id": 0,
+            "typeacces": "string",
+            "isDeleted": false
+          },
+          "isDeleted": false
         },
-        isDeleted: false
-      });
+        "isDeleted": false
+      }
+    );
 
       console.log('Respuesta de la API:', response.data);
-      alert("Registro exitoso");
       navigate('/registro-exitoso');
     } catch (error) {
       console.error("Error al registrar el usuario:", error);
@@ -116,7 +108,7 @@ const Register = () => {
           <h2>Registro</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Nombre:</label>
+              <label htmlFor="name">Nombre y Apellido:</label>
               <input
                 type="text"
                 name="name"
@@ -154,7 +146,6 @@ const Register = () => {
                 onChange={handleChange}
                 required
               />
-              {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>} {/* Mostrar mensaje de error */}
             </div>
             <div className="form-group-checkbox" style={{ position: 'relative' }}>
               <input
