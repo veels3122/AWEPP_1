@@ -17,6 +17,7 @@ namespace AWEPP.Services
 
         public async Task CreateUserAsync(User Users)
         {
+            Users.Password = BCrypt.Net.BCrypt.HashPassword(Users.Password);
             await _userRepository.CreateUserAsync(Users);
         }
 
@@ -43,22 +44,24 @@ namespace AWEPP.Services
         public async Task<User> LoginAsync(string email, string password)
         {
             // Buscar el usuario por correo electrónico
-            var Users = await _userRepository.GetUserByEmailAsync(email);
+            var user = await _userRepository.GetUserByEmailAsync(email);
 
             // Verificar si el usuario existe y no está eliminado
-            if (Users == null || Users.IsDeleted)
+            if (user == null || user.IsDeleted)
             {
-                return null;
+                return null; // Usuario no encontrado o está eliminado
             }
 
-            // Comparar las contraseñas usando BCrypt
-            if (!BCrypt.Net.BCrypt.Verify(password, Users.Passaword))
+            // Verificar la contraseña encriptada
+            if (string.IsNullOrEmpty(user.Password) || !BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
-                return null; // Si las contraseñas no coinciden, retornar nulo
+                return null; // Contraseña incorrecta
             }
 
-            return Users; // Retornar el usuario si las credenciales son correctas
+            return user; // Retornar el usuario si las credenciales son correctas
         }
+
+
     }
 }
 

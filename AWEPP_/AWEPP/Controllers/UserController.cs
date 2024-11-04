@@ -86,15 +86,28 @@ namespace AWEPP.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);  // Si los datos no son válidos
+                return BadRequest(ModelState);  // Validación de datos de entrada
             }
 
-            var user = await _userServices.LoginAsync(loginDto.Email, loginDto.Passaword);
-
-            if (user == null)
+            try
             {
-                return Unauthorized("Credenciales inválidas.");
+                var user = await _userServices.LoginAsync(loginDto.Email, loginDto.Password);
+
+                if (user == null)
+                {
+                    return Unauthorized("Credenciales inválidas.");
+                }
+
+                // Aquí podrías generar un token JWT o similar, pero por ahora retornamos los datos del usuario
+                return Ok(new { message = "Inicio de sesión exitoso", userId = user.Id });
             }
+            catch (Exception ex)
+            {
+                // Loguear el error para revisión futura
+                Console.WriteLine($"Error en el login: {ex.Message}");
+                return StatusCode(500, "Ocurrió un error en el servidor.");
+            }
+        }
 
     }
 }
