@@ -9,5 +9,6 @@ namespace AWEPP.Repositories
         Task CreateUserAsync(User Users);
         Task UpdateUserAsync(User Users);
         Task SoftDeleteUserAsync(int Id);
+        Task<User> GetUserByEmailAsync(string email);
     }
 }

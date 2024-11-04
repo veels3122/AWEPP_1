@@ -2,6 +2,8 @@
 using AWEPP.Modelo;
 using AWEPP.Repositories;
 using AWEPP.Services;
+using Microsoft.EntityFrameworkCore;
+using BCrypt.Net;
 
 namespace AWEPP.Services
 {
@@ -36,6 +38,27 @@ namespace AWEPP.Services
         public async Task UpdateUserAsync(User Users)
         {
          await _userRepository.UpdateUserAsync(Users);
+        }
+
+        // Iniciar sesión (Login)
+        public async Task<User> LoginAsync(string email, string password)
+        {
+            // Buscar el usuario por correo electrónico
+            var Users = await _userRepository.GetUserByEmailAsync(email);
+
+            // Verificar si el usuario existe y no está eliminado
+            if (Users == null || Users.IsDeleted)
+            {
+                return null;
+            }
+
+            // Comparar las contraseñas usando BCrypt
+            if (!BCrypt.Net.BCrypt.Verify(password, Users.Passaword))
+            {
+                return null; // Si las contraseñas no coinciden, retornar nulo
+            }
+
+            return Users; // Retornar el usuario si las credenciales son correctas
         }
     }
 }

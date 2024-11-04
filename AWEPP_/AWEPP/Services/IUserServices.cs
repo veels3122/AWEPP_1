@@ -10,5 +10,8 @@ namespace AWEPP.Services
         Task CreateUserAsync(User Users);
         Task UpdateUserAsync(User Users);
         Task SoftDeleteUserAsync(int Id);
+        Task<User> LoginAsync(string email, string password);
+
+
     }
 }

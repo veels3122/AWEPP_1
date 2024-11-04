@@ -29,6 +29,24 @@ namespace AWEPP.Repositories
                 .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
+
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            var Users = await _context.Users
+                    .AsNoTracking()
+                    .Include(u => u.Usertype) // Incluir tipo de usuario si es necesario
+                   // .Include(u => u.Peoples)   // Incluir persona si es necesario
+                    .FirstOrDefaultAsync(s => s.Email == email && !s.IsDeleted);
+
+            // Manejo de errores: lanzar excepción si el usuario no se encuentra
+            if (Users == null)
+            {
+                throw new KeyNotFoundException($"No se encontró un usuario con el correo: {email}");
+            }
+
+            return Users;
+        }
+
         // Obtener gasto por su Id, excluyendo eliminados
         public async Task<User> GetUserByIdAsync(int Id)
         {
@@ -71,6 +89,7 @@ namespace AWEPP.Repositories
                 // Guardar cambios
                 await _context.SaveChangesAsync();
             }
+           
         }
     }
 }

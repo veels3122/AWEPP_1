@@ -1,4 +1,5 @@
-﻿using AWEPP.Model;
+﻿using AWEPP.DTOs;
+using AWEPP.Model;
 using AWEPP.Modelo;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
@@ -79,6 +80,25 @@ namespace AWEPP.Controllers
 
             await _userServices.SoftDeleteUserAsync(Id);
             return NoContent();
+        }
+        // contraseña usuario
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDTO loginDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);  // Si los datos no son válidos
+            }
+
+            var user = await _userServices.LoginAsync(loginDto.Email, loginDto.Passaword);
+
+            if (user == null)
+            {
+                return Unauthorized("Credenciales inválidas.");
+            }
+
+            // Aquí podrías generar un token JWT o similar, pero por ahora retornamos los datos del usuario
+            return Ok(new { message = "Inicio de sesión exitoso", userId = user.Id });
         }
     }
 }
