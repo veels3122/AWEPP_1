@@ -32,17 +32,11 @@ namespace AWEPP.Repositories
 
         public async Task<User> GetUserByEmailAsync(string email)
         {
-            var Users = await _context.Users
-                    .AsNoTracking()
-                    .Include(u => u.Usertype) // Incluir tipo de usuario si es necesario
-                   // .Include(u => u.Peoples)   // Incluir persona si es necesario
-                    .FirstOrDefaultAsync(s => s.Email == email && !s.IsDeleted);
-
-            // Manejo de errores: lanzar excepción si el usuario no se encuentra
-            if (Users == null)
-            {
-                throw new KeyNotFoundException($"No se encontró un usuario con el correo: {email}");
-            }
+            return await _context.Users
+                .AsNoTracking()
+                .Include(u => u.Usertype) // Incluir tipo de usuario si es necesario
+                .FirstOrDefaultAsync(s => s.Email == email && !s.IsDeleted);
+        }
 
 
         // Obtener gasto por su Id, excluyendo eliminados
@@ -72,7 +66,7 @@ namespace AWEPP.Repositories
                 // Actualizar campos
                 existingUser.Name = Users.Name;
                 existingUser.Email = Users.Email;
-                existingUser.Passaword = Users.Passaword;
+                existingUser.Password = Users.Password;
                 existingUser.PhoneNumber = Users.PhoneNumber;
                 existingUser.UserName = Users.UserName;
                 existingUser.date = Users.date;

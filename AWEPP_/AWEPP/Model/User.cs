@@ -9,7 +9,7 @@ namespace AWEPP.Modelo
         public int Id { get; set; }
         public required string Name { get; set; }
         public required string Email { get; set; }
-        public required string Passaword { get; set; }
+        public required string Password { get; set; }
         public required string PhoneNumber { get; set; }
         public required string UserName { get; set; }
         public required string date { get; set; }

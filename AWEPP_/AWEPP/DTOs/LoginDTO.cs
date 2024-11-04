@@ -6,9 +6,9 @@ namespace AWEPP.DTOs
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public required string Email { get; set; }
 
         [Required]
-        public string Passaword { get; set; }
+        public required string Password { get; set; } // Cambiado de Passaword a Password
     }
 }
