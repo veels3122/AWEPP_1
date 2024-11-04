@@ -81,7 +81,6 @@ namespace AWEPP.Controllers
             await _userServices.SoftDeleteUserAsync(Id);
             return NoContent();
         }
-        // contraseña usuario
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO loginDto)
         {
@@ -97,9 +96,6 @@ namespace AWEPP.Controllers
                 return Unauthorized("Credenciales inválidas.");
             }
 
-            // Aquí podrías generar un token JWT o similar, pero por ahora retornamos los datos del usuario
-            return Ok(new { message = "Inicio de sesión exitoso", userId = user.Id });
-        }
     }
 }
 

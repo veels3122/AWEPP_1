@@ -40,7 +40,6 @@ namespace AWEPP.Services
          await _userRepository.UpdateUserAsync(Users);
         }
 
-        // Iniciar sesión (Login)
         public async Task<User> LoginAsync(string email, string password)
         {
             // Buscar el usuario por correo electrónico

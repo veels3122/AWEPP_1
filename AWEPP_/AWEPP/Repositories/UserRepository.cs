@@ -44,8 +44,6 @@ namespace AWEPP.Repositories
                 throw new KeyNotFoundException($"No se encontró un usuario con el correo: {email}");
             }
 
-            return Users;
-        }
 
         // Obtener gasto por su Id, excluyendo eliminados
         public async Task<User> GetUserByIdAsync(int Id)

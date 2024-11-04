@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations;
 
 namespace AWEPP.DTOs
 {
@@ -13,5 +12,3 @@ namespace AWEPP.DTOs
         public string Passaword { get; set; }
     }
 }
-
-
