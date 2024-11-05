@@ -216,3 +216,11 @@ input[type="password"]:focus {
 .btn-close:hover {
   background-color: #01ffcc;
 }
+.password-error {
+  color: #d9534f; /* Color rojo */
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+}
+
