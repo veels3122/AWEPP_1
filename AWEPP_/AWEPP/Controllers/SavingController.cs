@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,12 @@ namespace AWEPP.Controllers
     public class SavingController : ControllerBase
     {
         private readonly ISavingService _savingService;
+        private readonly AuditService _auditLogService;
 
-        public SavingController(ISavingService savingService)
+        public SavingController(ISavingService savingService, IAuditService auditService)
         {
             _savingService = savingService;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -46,6 +49,16 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _savingService.CreateSavingAsync(saving);
+
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateSavings",
+                TableName = "Saving",
+                RecordId = saving.Id.ToString(),
+                Changes = $"saving {saving.Bank},{saving.Customer},{saving.Products},{saving.Description} creado.",
+                UserName = saving.Description,
+                Date = DateTime.UtcNow.AddHours(-5)
+            }); 
             return CreatedAtAction(nameof(GetSavingById), new { id = saving.Id }, saving);
 
         }
@@ -63,6 +76,16 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _savingService.UpdateSavingAsync(saving);
+
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateSavings",
+                TableName = "Saving",
+                RecordId = saving.Id.ToString(),
+                Changes = $"Saving {saving.Bank},{saving.Customer},{saving.Products},{saving.Description} actualizado.",
+                UserName = saving.Description,
+                Date = DateTime.UtcNow.AddHours(-5)
+            }); 
             return NoContent();
 
         }
@@ -77,6 +100,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _savingService.SoftDeleteSavingAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftSavings",
+                TableName = "Saving",
+                RecordId = saving.Id.ToString(),
+                Changes = $"Saving {saving.Bank},{saving.Customer},{saving.Products},{saving.Description} marca como eliminado.",
+                UserName = saving.Description,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
 

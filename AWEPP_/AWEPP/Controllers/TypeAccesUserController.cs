@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ namespace AWEPP.Controllers
     public class TypeAccesUserController : ControllerBase
     {
         private readonly ITypeAccesUserServices _typeAccesUserServices;
+        private readonly AuditService _auditLogService;
 
-        public TypeAccesUserController(ITypeAccesUserServices typeAccesUserServices)
+        public TypeAccesUserController(ITypeAccesUserServices typeAccesUserServices, IAuditService auditService)
         {
             _typeAccesUserServices = typeAccesUserServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -47,6 +50,14 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _typeAccesUserServices.CreateTypeAccesUserAsync(TypeAccessUsers);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateTypeAccesUser",
+                TableName = "TypeAccesUser",
+                RecordId = TypeAccessUsers.Id.ToString(),
+                Changes = $"TypeAccesUser {TypeAccessUsers.TypeAcces} creado.",
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetTypeAccesUserById), new { id = TypeAccessUsers.Id }, TypeAccessUsers);
 
         }
@@ -64,6 +75,14 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _typeAccesUserServices.UpdateTypeAccesUserAsync(TypeAccessUsers);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateTypeAccesUser",
+                TableName = "TypeAccesUser",
+                RecordId = TypeAccessUsers.Id.ToString(),
+                Changes = $"TypeAccesUser {TypeAccessUsers.TypeAcces} actualizado.",
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -78,6 +97,14 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _typeAccesUserServices.SoftDeleteTypeAccesUserAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftTypeAccesUser",
+                TableName = "TypeAccesUser",
+                RecordId = TypeAccesUser.Id.ToString(),
+                Changes = $"TypeAccesUser {TypeAccesUser.TypeAcces} marca como eliminado.",
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

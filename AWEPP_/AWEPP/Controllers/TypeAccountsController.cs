@@ -1,4 +1,6 @@
 ﻿using AWEPP.Model;
+using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +13,12 @@ namespace AWEPP.Controllers
     {
 
         private readonly ITypeAccountsService _typeAccountsService;
+        private readonly AuditService _auditLogService;
 
-        public TypeAccountsController(ITypeAccountsService typeAccountsService)
+        public TypeAccountsController(ITypeAccountsService typeAccountsService, IAuditService auditService)
         {
             _typeAccountsService = typeAccountsService;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -46,6 +50,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _typeAccountsService.CreateTypeAccountsAsync(typeAccounts);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateTypeAccounts",
+                TableName = "TypeAccounts",
+                RecordId = typeAccounts.Id.ToString(),
+                Changes = $"TypeAccounts {typeAccounts.Accounts} creado.",
+                UserName = typeAccounts.Accounts,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetTypeAccountsById), new { id = typeAccounts.Id }, typeAccounts);
 
         }
@@ -63,6 +76,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _typeAccountsService.UpdateTypeAccountsAsync(typeAccounts);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateTypeAccounts",
+                TableName = "TypeAccounts",
+                RecordId = typeAccounts.Id.ToString(),
+                Changes = $"TypeAccounts {typeAccounts.Accounts} actualizado.",
+                UserName = typeAccounts.Accounts,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -77,6 +99,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _typeAccountsService.SoftDeleteTypeAccountsAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftTypeAccounts",
+                TableName = "TypeAccounts",
+                RecordId = typeAccounts.Id.ToString(),
+                Changes = $"TypeAccounts {typeAccounts.Accounts} marca como eliminado.",
+                UserName = typeAccounts.Accounts,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

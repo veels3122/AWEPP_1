@@ -1,4 +1,6 @@
 ﻿using AWEPP.Model;
+using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +13,13 @@ namespace AWEPP.Controllers
     {
         private readonly IProductsService _productsService;
 
-        public ProductsController(IProductsService productsService)
+        private readonly AuditService _auditLogService;
+
+        public ProductsController(IProductsService productsService, IAuditService auditService)
         {
             _productsService = productsService;
+            _auditLogService = (AuditService?)auditService;
+            
         }
 
         [HttpGet]
@@ -45,6 +51,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _productsService.CreateProductsAsync(products);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateProduct",
+                TableName = "Product",
+                RecordId = products.Id.ToString(),
+                Changes = $"product {products.Customer},{products.Account},{products.NumberAccount} creado.",
+                UserName = products.Account, 
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetProductsById), new { id = products.Id }, products);
 
         }
@@ -62,6 +77,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _productsService.UpdateProductsAsync(products);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateProduct",
+                TableName = "Product",
+                RecordId = products.Id.ToString(),
+                Changes = $"product {products.Customer},{products.Account},{products.NumberAccount} actualizado.",
+                UserName = products.Account,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -75,6 +99,16 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _productsService.SoftDeleteProductsAsync(Id);
+
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftProduct",
+                TableName = "Product",
+                RecordId = products.Id.ToString(),
+                Changes = $"product {products.Customer},{products.Account},{products.NumberAccount} marca como eliminado.",
+                UserName = products.Account,
+                Date = DateTime.UtcNow.AddHours(-5)
+            }); 
             return NoContent();
         }
         

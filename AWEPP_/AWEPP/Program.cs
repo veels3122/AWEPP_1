@@ -2,12 +2,18 @@ using AWEPP.Context;
 using AWEPP.Repositories;
 using AWEPP.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurar la cadena de conexión
 var conString = builder.Configuration.GetConnectionString("Connection");
 builder.Services.AddDbContext<Aweppcontext>(options => options.UseSqlServer(conString));
+
+// Configurar logging para que se registre en archivo de texto
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddFile("Logs/audit-log-{Date}.txt", LogLevel.Information); // Configura el log diario
 
 // Registrar los servicios y repositorios en el contenedor
 builder.Services.AddScoped<IBankRepository, BankRepository>();
@@ -54,16 +60,16 @@ builder.Services.AddScoped<IUserServices, UserServices>();
 
 builder.Services.AddScoped<IUserTypeRepository, UserTypeRepository>();
 builder.Services.AddScoped<IUsertypeServices, UserTypeServices>();
-///////////////////////////////////////////////////////////////
 
+builder.Services.AddScoped<IAuditService, AuditService>();
 
 builder.Services.AddControllers();
 
-// Learn more about configuring Swagger/OpenAPI at 
+// Configuración de Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+// Configuración de CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -77,12 +83,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-//    app.Environment.IsDevelopment();
-//{
+// Configuración del pipeline de HTTP
 app.UseSwagger();
 app.UseSwaggerUI();
-//}
 
 app.UseCors("AllowAllOrigins");
 

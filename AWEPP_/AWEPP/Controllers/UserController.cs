@@ -1,20 +1,25 @@
 ﻿using AWEPP.DTOs;
 using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace AWEPP.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class UserController : ControllerBase
     {
         private readonly IUserServices _userServices;
+        private readonly AuditService _auditLogService;
 
-        public UserController(IUserServices userServices)
+        public UserController(IUserServices userServices, IAuditService auditService)
         {
             _userServices = userServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -34,6 +39,9 @@ namespace AWEPP.Controllers
             var User = await _userServices.GetUserByIdAsync(Id);
             if (User == null)
                 return NotFound();
+
+
+
             return Ok(User);
 
         }
@@ -48,6 +56,16 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _userServices.CreateUserAsync(Users);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateUser",
+                TableName = "User",
+                RecordId = Users.Id.ToString(),
+                Changes = $"User {Users.Name} creado.",
+                UserName = Users.UserName, 
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
+
             return CreatedAtAction(nameof(GetUserById), new { id = Users.Id }, Users);
 
         }
@@ -65,6 +83,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _userServices.UpdateUserAsync(Users);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateUser",
+                TableName = "User",
+                RecordId = Users.Id.ToString(),
+                Changes = $"User {Users.Name} actualizado.",
+                UserName = Users.UserName, 
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -79,6 +106,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _userServices.SoftDeleteUserAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftDeleteUser",
+                TableName = "User",
+                RecordId = Id.ToString(),
+                Changes = $"User {User.Name} marcado como eliminado.",
+                UserName = User.UserName, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
         [HttpPost("login")]

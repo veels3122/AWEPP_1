@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ namespace AWEPP.Controllers
     public class UsertypeController : ControllerBase
     {
         private readonly IUsertypeServices _usertypeServices;
+        private readonly AuditService _auditLogService;
 
-        public UsertypeController(IUsertypeServices usertypeServices)
+        public UsertypeController(IUsertypeServices usertypeServices, IAuditService auditService)
         {
             _usertypeServices = usertypeServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -47,6 +50,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _usertypeServices.CreateUsertypeAsync(Usertype);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateUserType",
+                TableName = "UserType",
+                RecordId = Usertype.Id.ToString(),
+                Changes = $"User {Usertype.Name},{Usertype.Id} creado.",
+                UserName = Usertype.Name,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetUsertypeById), new { id = Usertype.Id }, Usertype);
 
         }
