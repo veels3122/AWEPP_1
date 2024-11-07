@@ -1,3 +1,4 @@
 Fecha: 11/7/2024 4:32:44 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 26, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
 Fecha: 11/7/2024 4:41:01 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 31, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
 Fecha: 11/6/2024 10:42:56 PM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 30, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
+Fecha: 11/7/2024 1:47:38 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 32, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
