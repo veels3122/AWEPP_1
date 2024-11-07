@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -62,3 +62,6 @@
 /AWEPP_/obj/Debug/.AssemblyReference.cache
 /AWEPP_/.vs/ProjectEvaluation/awepp.metadata.v7.bin
 /AWEPP_/.vs/ProjectEvaluation/awepp.projects.v7.bin
+/AWEPP_/.vs/AWEPP/FileContentIndex/37367258-f8fe-46de-8445-01ac2a654d30.vsidx
+/AWEPP_/.vs/AWEPP/FileContentIndex/9fa0b109-976f-4d00-b6fd-2aaeb21ef0f5.vsidx
+/AWEPP_/.vs/AWEPP/FileContentIndex/37367258-f8fe-46de-8445-01ac2a654d30.vsidx

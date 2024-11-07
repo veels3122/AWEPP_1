@@ -1,0 +1,204 @@
+2024-11-06T23:31:55.6033217-05:00  [INF] Executed DbCommand ("107"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-06T23:31:55.7220650-05:00  [INF] Executed DbCommand ("106"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-06T23:31:55.8148270-05:00  [INF] Executed DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-06T23:31:55.9035022-05:00  [INF] Executed DbCommand ("88"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-06T23:31:56.0256749-05:00  [INF] Executed DbCommand ("101"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-06T23:31:56.0521668-05:00  [INF] Applying migration '"20241107043026_uptadehours"'. (0e2ac64d)
+2024-11-06T23:31:56.3731358-05:00  [INF] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241107043026_uptadehours', N'8.0.8');" (0723d8ff)
+2024-11-06T23:32:07.6562293-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-06T23:32:07.6616111-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-06T23:32:07.8178120-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-06T23:32:07.8188567-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-06T23:32:07.8189502-05:00  [INF] Content root path: "C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-06T23:32:08.6334212-05:00 0HN7USKHOP3DT:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-06T23:32:08.9235944-05:00 0HN7USKHOP3DT:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 305.8905ms (74253ad3)
+2024-11-06T23:32:08.9266661-05:00 0HN7USKHOP3DT:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-06T23:32:12.3283261-05:00 0HN7USKHOP3DT:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - null null (d509f86a)
+2024-11-06T23:32:12.4569276-05:00 0HN7USKHOP3DT:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 128.6775ms (74253ad3)
+2024-11-06T23:32:12.5072445-05:00 0HN7USKHOP3DT:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-11-06T23:32:12.5221533-05:00 0HN7USKHOP3DT:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 15.3911ms (74253ad3)
+2024-11-06T23:32:12.5400638-05:00 0HN7USKHOP3DT:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - null null (d509f86a)
+2024-11-06T23:32:12.6203499-05:00 0HN7USKHOP3DT:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 80.5754ms (74253ad3)
+2024-11-06T23:32:12.7021754-05:00 0HN7USKHOP3DT:00000009 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-11-06T23:32:13.1147991-05:00 0HN7USKHOP3DT:00000009 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 413.3815ms (74253ad3)
+2024-11-06T23:32:29.7087054-05:00 0HN7USKHOP3DT:0000000B [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - null null (d509f86a)
+2024-11-06T23:32:29.7141247-05:00 0HN7USKHOP3DT:0000000B [INF] Executing endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (500cc934)
+2024-11-06T23:32:29.7524210-05:00 0HN7USKHOP3DT:0000000B [INF] Route matched with "{action = \"GetAllUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Modelo.User]]] GetAllUser()" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:32:32.4551546-05:00 0HN7USKHOP3DT:0000000B [INF] Executed DbCommand ("149"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:32:32.5909942-05:00 0HN7USKHOP3DT:0000000B [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Modelo.User, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-06T23:32:32.6069695-05:00 0HN7USKHOP3DT:0000000B [INF] Executed action "AWEPP.Controllers.UserController.GetAllUser (AWEPP)" in 2847.8776ms (afa2e885)
+2024-11-06T23:32:32.6084054-05:00 0HN7USKHOP3DT:0000000B [INF] Executed endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (99874f2b)
+2024-11-06T23:32:32.6267865-05:00 0HN7USKHOP3DT:0000000B [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - 200 null "application/json; charset=utf-8" 2918.4525ms (74253ad3)
+2024-11-06T23:32:44.2076095-05:00 0HN7USKHOP3DT:0000000D [INF] Request starting "HTTP/2" "DELETE" "https"://"localhost:39336""""/api/User/26""" - null null (d509f86a)
+2024-11-06T23:32:44.2164871-05:00 0HN7USKHOP3DT:0000000D [INF] CORS policy execution successful. (5409d6ef)
+2024-11-06T23:32:44.2183659-05:00 0HN7USKHOP3DT:0000000D [INF] Executing endpoint '"AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)"' (500cc934)
+2024-11-06T23:32:44.2373743-05:00 0HN7USKHOP3DT:0000000D [INF] Route matched with "{action = \"SoftDeleteUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] SoftDeleteUser(Int32)" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:32:44.4548359-05:00 0HN7USKHOP3DT:0000000D [INF] Executed DbCommand ("119"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__Id_0 AND [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:32:44.7078374-05:00 0HN7USKHOP3DT:0000000D [INF] Executed DbCommand ("94"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;" (0723d8ff)
+2024-11-06T23:32:44.7580431-05:00 0HN7USKHOP3DT:0000000D [INF] Fecha: 11/7/2024 4:32:44 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 26, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
+ (97ed448e)
+2024-11-06T23:32:44.7725422-05:00 0HN7USKHOP3DT:0000000D [INF] Executing StatusCodeResult, setting HTTP status code 204 (3fe03d2f)
+2024-11-06T23:32:44.7728915-05:00 0HN7USKHOP3DT:0000000D [INF] Executed action "AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)" in 535.1939ms (afa2e885)
+2024-11-06T23:32:44.7729683-05:00 0HN7USKHOP3DT:0000000D [INF] Executed endpoint '"AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)"' (99874f2b)
+2024-11-06T23:32:44.7759738-05:00 0HN7USKHOP3DT:0000000D [INF] Request finished "HTTP/2" "DELETE" "https"://"localhost:39336""""/api/User/26""" - 204 null null 568.4872ms (74253ad3)
+2024-11-06T23:32:50.0779332-05:00 0HN7USKHOP3DT:0000000F [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - null null (d509f86a)
+2024-11-06T23:32:50.0782428-05:00 0HN7USKHOP3DT:0000000F [INF] Executing endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (500cc934)
+2024-11-06T23:32:50.0784315-05:00 0HN7USKHOP3DT:0000000F [INF] Route matched with "{action = \"GetAllUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Modelo.User]]] GetAllUser()" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:32:50.2685124-05:00 0HN7USKHOP3DT:0000000F [INF] Executed DbCommand ("88"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:32:50.2699198-05:00 0HN7USKHOP3DT:0000000F [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Modelo.User, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-06T23:32:50.2703628-05:00 0HN7USKHOP3DT:0000000F [INF] Executed action "AWEPP.Controllers.UserController.GetAllUser (AWEPP)" in 191.8837ms (afa2e885)
+2024-11-06T23:32:50.2704035-05:00 0HN7USKHOP3DT:0000000F [INF] Executed endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (99874f2b)
+2024-11-06T23:32:50.2706944-05:00 0HN7USKHOP3DT:0000000F [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - 200 null "application/json; charset=utf-8" 193.1292ms (74253ad3)
+2024-11-06T23:35:30.5026868-05:00 0HN7USKHOP3DU:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - null null (d509f86a)
+2024-11-06T23:35:30.5035052-05:00 0HN7USKHOP3DU:00000001 [INF] Executing endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (500cc934)
+2024-11-06T23:35:30.5055262-05:00 0HN7USKHOP3DU:00000001 [INF] Route matched with "{action = \"GetAllUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Modelo.User]]] GetAllUser()" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:35:30.6082831-05:00 0HN7USKHOP3DU:00000001 [INF] Executed DbCommand ("94"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:35:30.6092840-05:00 0HN7USKHOP3DU:00000001 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Modelo.User, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-06T23:35:30.6099694-05:00 0HN7USKHOP3DU:00000001 [INF] Executed action "AWEPP.Controllers.UserController.GetAllUser (AWEPP)" in 104.089ms (afa2e885)
+2024-11-06T23:35:30.6100674-05:00 0HN7USKHOP3DU:00000001 [INF] Executed endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (99874f2b)
+2024-11-06T23:35:30.6105379-05:00 0HN7USKHOP3DU:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - 200 null "application/json; charset=utf-8" 108.6215ms (74253ad3)
+2024-11-06T23:40:24.3434586-05:00  [INF] Executed DbCommand ("104"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-06T23:40:24.4607349-05:00  [INF] Executed DbCommand ("104"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-06T23:40:24.5518441-05:00  [INF] Executed DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-06T23:40:24.6402071-05:00  [INF] Executed DbCommand ("88"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-06T23:40:24.7535270-05:00  [INF] Executed DbCommand ("95"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-06T23:40:24.7687061-05:00  [INF] Applying migration '"20241107044010_uptadehours_1"'. (0e2ac64d)
+2024-11-06T23:40:25.1415625-05:00  [INF] Executed DbCommand ("173"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AuditLogs]') AND [c].[name] = N'Date');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [AuditLogs] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [AuditLogs] ALTER COLUMN [Date] datetime NOT NULL;
+ALTER TABLE [AuditLogs] ADD DEFAULT (GETDATE()) FOR [Date];" (0723d8ff)
+2024-11-06T23:40:25.2340747-05:00  [INF] Executed DbCommand ("92"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241107044010_uptadehours_1', N'8.0.8');" (0723d8ff)
+2024-11-06T23:40:37.9841070-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-06T23:40:37.9903942-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-06T23:40:38.2295021-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-06T23:40:38.2304114-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-06T23:40:38.2305312-05:00  [INF] Content root path: "C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-06T23:40:39.1264063-05:00 0HN7USP9RH7QT:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-06T23:40:39.5619593-05:00 0HN7USP9RH7QT:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 450.4943ms (74253ad3)
+2024-11-06T23:40:39.5656277-05:00 0HN7USP9RH7QT:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-06T23:40:43.8488595-05:00 0HN7USP9RH7QT:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - null null (d509f86a)
+2024-11-06T23:40:43.9654884-05:00 0HN7USP9RH7QT:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 116.7716ms (74253ad3)
+2024-11-06T23:40:44.0273625-05:00 0HN7USP9RH7QT:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-11-06T23:40:44.0378051-05:00 0HN7USP9RH7QT:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 12.3741ms (74253ad3)
+2024-11-06T23:40:44.0546362-05:00 0HN7USP9RH7QT:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - null null (d509f86a)
+2024-11-06T23:40:44.1172820-05:00 0HN7USP9RH7QT:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 62.9259ms (74253ad3)
+2024-11-06T23:40:44.1855130-05:00 0HN7USP9RH7QT:00000009 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-11-06T23:40:44.5538118-05:00 0HN7USP9RH7QT:00000009 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 368.7294ms (74253ad3)
+2024-11-06T23:40:51.1319506-05:00 0HN7USP9RH7QU:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - null null (d509f86a)
+2024-11-06T23:40:51.1355532-05:00 0HN7USP9RH7QU:00000001 [INF] Executing endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (500cc934)
+2024-11-06T23:40:51.1627216-05:00 0HN7USP9RH7QU:00000001 [INF] Route matched with "{action = \"GetAllUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Modelo.User]]] GetAllUser()" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:40:53.7726851-05:00 0HN7USP9RH7QU:00000001 [INF] Executed DbCommand ("151"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:40:53.9050179-05:00 0HN7USP9RH7QU:00000001 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Modelo.User, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-06T23:40:53.9175153-05:00 0HN7USP9RH7QU:00000001 [INF] Executed action "AWEPP.Controllers.UserController.GetAllUser (AWEPP)" in 2748.6621ms (afa2e885)
+2024-11-06T23:40:53.9183448-05:00 0HN7USP9RH7QU:00000001 [INF] Executed endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (99874f2b)
+2024-11-06T23:40:53.9287156-05:00 0HN7USP9RH7QU:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - 200 null "application/json; charset=utf-8" 2797.1038ms (74253ad3)
+2024-11-06T23:41:01.1217011-05:00 0HN7USP9RH7QV:00000001 [INF] Request starting "HTTP/2" "DELETE" "https"://"localhost:39336""""/api/User/31""" - null null (d509f86a)
+2024-11-06T23:41:01.1426651-05:00 0HN7USP9RH7QV:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2024-11-06T23:41:01.1463462-05:00 0HN7USP9RH7QV:00000001 [INF] Executing endpoint '"AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)"' (500cc934)
+2024-11-06T23:41:01.1701920-05:00 0HN7USP9RH7QV:00000001 [INF] Route matched with "{action = \"SoftDeleteUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] SoftDeleteUser(Int32)" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:41:01.4416855-05:00 0HN7USP9RH7QV:00000001 [INF] Executed DbCommand ("146"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__Id_0 AND [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:41:01.6712015-05:00 0HN7USP9RH7QV:00000001 [INF] Executed DbCommand ("94"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;" (0723d8ff)
+2024-11-06T23:41:01.7010037-05:00 0HN7USP9RH7QV:00000001 [INF] Fecha: 11/7/2024 4:41:01 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 31, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
+ (88f937d3)
+2024-11-06T23:41:01.7071110-05:00 0HN7USP9RH7QV:00000001 [INF] Executing StatusCodeResult, setting HTTP status code 204 (3fe03d2f)
+2024-11-06T23:41:01.7074258-05:00 0HN7USP9RH7QV:00000001 [INF] Executed action "AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)" in 537.0271ms (afa2e885)
+2024-11-06T23:41:01.7074879-05:00 0HN7USP9RH7QV:00000001 [INF] Executed endpoint '"AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)"' (99874f2b)
+2024-11-06T23:41:01.7086732-05:00 0HN7USP9RH7QV:00000001 [INF] Request finished "HTTP/2" "DELETE" "https"://"localhost:39336""""/api/User/31""" - 204 null null 587.1036ms (74253ad3)
+2024-11-06T23:41:06.2612675-05:00 0HN7USP9RH7R0:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - null null (d509f86a)
+2024-11-06T23:41:06.2621436-05:00 0HN7USP9RH7R0:00000001 [INF] Executing endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (500cc934)
+2024-11-06T23:41:06.2623953-05:00 0HN7USP9RH7R0:00000001 [INF] Route matched with "{action = \"GetAllUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Modelo.User]]] GetAllUser()" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:41:06.4357987-05:00 0HN7USP9RH7R0:00000001 [INF] Executed DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:41:06.4373896-05:00 0HN7USP9RH7R0:00000001 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Modelo.User, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-06T23:41:06.4379425-05:00 0HN7USP9RH7R0:00000001 [INF] Executed action "AWEPP.Controllers.UserController.GetAllUser (AWEPP)" in 175.4663ms (afa2e885)
+2024-11-06T23:41:06.4384745-05:00 0HN7USP9RH7R0:00000001 [INF] Executed endpoint '"AWEPP.Controllers.UserController.GetAllUser (AWEPP)"' (99874f2b)
+2024-11-06T23:41:06.4388848-05:00 0HN7USP9RH7R0:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/User""" - 200 null "application/json; charset=utf-8" 177.8349ms (74253ad3)
+2024-11-06T23:42:39.8971446-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-06T23:42:39.9028144-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-06T23:42:40.0437350-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-06T23:42:40.0449334-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-06T23:42:40.0451153-05:00  [INF] Content root path: "C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-06T23:42:40.8480375-05:00 0HN7USQE8KH35:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-06T23:42:41.1460636-05:00 0HN7USQE8KH35:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 308.9905ms (74253ad3)
+2024-11-06T23:42:41.1508688-05:00 0HN7USQE8KH35:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-06T23:42:43.0334473-05:00 0HN7USQE8KH35:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - null null (d509f86a)
+2024-11-06T23:42:43.1914257-05:00 0HN7USQE8KH35:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 158.0871ms (74253ad3)
+2024-11-06T23:42:43.2425313-05:00 0HN7USQE8KH35:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-11-06T23:42:43.2538808-05:00 0HN7USQE8KH35:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 13.0497ms (74253ad3)
+2024-11-06T23:42:43.2765074-05:00 0HN7USQE8KH35:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - null null (d509f86a)
+2024-11-06T23:42:43.3796976-05:00 0HN7USQE8KH35:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 103.6452ms (74253ad3)
+2024-11-06T23:42:43.4369373-05:00 0HN7USQE8KH35:00000009 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-11-06T23:42:43.8984336-05:00 0HN7USQE8KH35:00000009 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 461.9399ms (74253ad3)
+2024-11-06T23:42:51.8277974-05:00 0HN7USQE8KH36:00000001 [INF] Request starting "HTTP/2" "DELETE" "https"://"localhost:39336""""/api/User/30""" - null null (d509f86a)
+2024-11-06T23:42:51.8341944-05:00 0HN7USQE8KH36:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2024-11-06T23:42:51.8374724-05:00 0HN7USQE8KH36:00000001 [INF] Executing endpoint '"AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)"' (500cc934)
+2024-11-06T23:42:51.8771556-05:00 0HN7USQE8KH36:00000001 [INF] Route matched with "{action = \"SoftDeleteUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] SoftDeleteUser(Int32)" on controller "AWEPP.Controllers.UserController" ("AWEPP"). (122b2fdf)
+2024-11-06T23:42:55.7470778-05:00 0HN7USQE8KH36:00000001 [INF] Executed DbCommand ("167"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[IsDeleted], [u].[Modified], [u].[ModifiedBy], [u].[Name], [u].[Password], [u].[PhoneNumber], [u].[TypeAccesId], [u].[TypeAccesUserId], [u].[UserName], [u].[UsertypeId], [u].[date]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__Id_0 AND [u].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-06T23:42:56.1755281-05:00 0HN7USQE8KH36:00000001 [INF] Executed DbCommand ("97"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;" (0723d8ff)
+2024-11-06T23:42:56.2143321-05:00 0HN7USQE8KH36:00000001 [INF] Fecha: 11/6/2024 10:42:56 PM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 30, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
+ (ae2b7886)
+2024-11-06T23:42:56.2260161-05:00 0HN7USQE8KH36:00000001 [INF] Executing StatusCodeResult, setting HTTP status code 204 (3fe03d2f)
+2024-11-06T23:42:56.2339368-05:00 0HN7USQE8KH36:00000001 [INF] Executed action "AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)" in 4350.1575ms (afa2e885)
+2024-11-06T23:42:56.2349515-05:00 0HN7USQE8KH36:00000001 [INF] Executed endpoint '"AWEPP.Controllers.UserController.SoftDeleteUser (AWEPP)"' (99874f2b)
+2024-11-06T23:42:56.2518971-05:00 0HN7USQE8KH36:00000001 [INF] Request finished "HTTP/2" "DELETE" "https"://"localhost:39336""""/api/User/30""" - 204 null null 4424.2751ms (74253ad3)
