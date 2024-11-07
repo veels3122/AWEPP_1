@@ -143,3 +143,9 @@ C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Serilog.Format
 C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Serilog.Sinks.Async.dll
 C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Serilog.Sinks.RollingFile.dll
+C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\matis\source\repos\AWEPP_1\AWEPP_\AWEPP\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
