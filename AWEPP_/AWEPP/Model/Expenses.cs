@@ -18,6 +18,7 @@ namespace AWEPP.Model
         public virtual required TypeAccounts TypeAccounts { get; set; }
         public virtual required TypeProducts TypeProducts { get; set; }
         public virtual required Customer Customer { get; set; }
+        public required bool IsDeleted { get; set; }
 
     }
 }

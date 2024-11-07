@@ -18,8 +18,8 @@ namespace AWEPP.Context
         public DbSet<TypeAcces> TypeAccesses { get; set; }
         public DbSet<TypeAccesUser> TypeAccessUsers { get; set; }
         public DbSet<Bank> Banks { get; set; }
-        public DbSet<City> Cities { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Cities> Cities { get; set; }
+        public DbSet<Contacts> Contacts { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Expenses> Expenses { get; set; }
         public DbSet<Products> Products { get; set; }
@@ -28,6 +28,21 @@ namespace AWEPP.Context
         public DbSet<TypeExpenses> TypeExpenses { get; set; }
         public DbSet<TypeIdenty> TypeIdentities { get; set; }
         public DbSet<TypeProducts> TypeProducts { get; set; }
+        public DbSet<BankHistory> BankHistory { get; set; }
+        public DbSet<CitiesHistory> CitiesHistory { get; set; }
+        public DbSet<ContactsHistory> ContactsHistory { get; set; }
+        public DbSet<CustomerHistory> CustomerHistory { get; set; }
+        public DbSet<ExpensesHistory> ExpensesHistory { get; set; }
+        public DbSet<ProductsHistory> ProductsHistory { get; set; }
+        public DbSet<SavingHistory> SavingHistory { get; set; }
+        public DbSet<TypeAccesHistory> TypeAccesHistory { get; set; }
+        public DbSet<TypeAccesUserHistory> TypeAccesUserHistory { get; set; }
+        public DbSet<TypeAccountsHistory> TypeAccountsHistory { get; set; }
+        public DbSet<TypeExpensesHistory> TypeExpensesHistory { get; set; }
+        public DbSet<TypeIdentyHistory> TypeIdentyHistory { get; set; }
+        public DbSet<TypeProductsHistory> TypeProductsHistory { get; set; }
+        public DbSet<UsertypeHistory> UsertypeHistory { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,8 +54,8 @@ namespace AWEPP.Context
             modelBuilder.Entity<TypeAcces>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeAccesUser>().HasKey(u => u.Id);
             modelBuilder.Entity<Bank>().HasKey(u => u.Id);
-            modelBuilder.Entity<City>().HasKey(u => u.Id);
-            modelBuilder.Entity<Contact>().HasKey(u => u.Id);
+            modelBuilder.Entity<Cities>().HasKey(u => u.Id);
+            modelBuilder.Entity<Contacts>().HasKey(u => u.Id);
             modelBuilder.Entity<Customer>().HasKey(u => u.Id);
             modelBuilder.Entity<Expenses>().HasKey(u => u.Id);
             modelBuilder.Entity<Products>().HasKey(u => u.Id);

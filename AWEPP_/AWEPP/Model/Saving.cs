@@ -17,6 +17,7 @@ namespace AWEPP.Modelo
         public virtual required Products Products { get; set; }
         public virtual required Bank Bank { get; set; }
         public virtual required Customer Customer { get; set; }
+        public required bool IsDeleted { get; set; }
 
     }
 }

@@ -12,5 +12,6 @@ namespace AWEPP.Model
         public required string Modifed { get; set; }
         public required string ModifedBy { get; set; }
         public required string datemodified { get; set; }
+        public required bool IsDeleted { get; set; }
     }
 }
