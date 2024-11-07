@@ -12,14 +12,12 @@ public class AuditService : IAuditService
     private readonly Aweppcontext _context;
     private const string AuditLogFilePath = "AuditLog.txt"; // Define el nombre del archivo de log de auditoría.
 
-    public AuditService(ILogger<AuditService> logger)
+    public AuditService(ILogger<AuditService> logger, Aweppcontext context)
     {
         _logger = logger;
-    }
-    public AuditService(Aweppcontext context)
-    {
         _context = context;
     }
+  
 
 
     public async Task LogEventAsync(AuditLog auditLog)
