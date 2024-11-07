@@ -7,6 +7,7 @@ namespace AWEPP.Model
         [Key]
         public int Id { get; set; }
         public required string Expenses { get; set; }
+        public required bool IsDeleted { get; set; }
 
     }
 }

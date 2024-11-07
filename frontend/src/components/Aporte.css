@@ -1,0 +1,21 @@
+.aportes-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .aportes-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .aportes-table th,
+  .aportes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .aportes-table th {
+    background-color: #f2f2f2;
+  }

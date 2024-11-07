@@ -21,6 +21,80 @@ namespace AWEPP.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("AWEPP.Model.BankHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BankId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BankId");
+
+                    b.ToTable("BankHistory");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.CitiesHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CitiesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CitiesId");
+
+                    b.ToTable("CitiesHistory");
+                });
+
             modelBuilder.Entity("AWEPP.Model.Contacts", b =>
                 {
                     b.Property<int>("Id")
@@ -33,9 +107,49 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.ContactsHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ContactsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContactsId");
+
+                    b.ToTable("ContactsHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.Customer", b =>
@@ -59,6 +173,9 @@ namespace AWEPP.Migrations
 
                     b.Property<int>("ContactsId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -88,6 +205,43 @@ namespace AWEPP.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.CustomerHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("CustomerHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.Expenses", b =>
@@ -121,6 +275,9 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("NumberFee")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -149,6 +306,43 @@ namespace AWEPP.Migrations
                     b.HasIndex("TypeProductsId");
 
                     b.ToTable("Expenses");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.ExpensesHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ExpensesId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExpensesId");
+
+                    b.ToTable("ExpensesHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.Products", b =>
@@ -181,7 +375,10 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NumberAcount")
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NumberAccount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -212,6 +409,80 @@ namespace AWEPP.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("ProductsHistory");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.SavingHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SavingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SavingId");
+
+                    b.ToTable("SavingHistory");
+                });
+
             modelBuilder.Entity("AWEPP.Model.TypeAcces", b =>
                 {
                     b.Property<int>("Id")
@@ -219,6 +490,9 @@ namespace AWEPP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Typeacces")
                         .IsRequired()
@@ -229,6 +503,43 @@ namespace AWEPP.Migrations
                     b.ToTable("TypeAccesses");
                 });
 
+            modelBuilder.Entity("AWEPP.Model.TypeAccesHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeAccesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeAccesId");
+
+                    b.ToTable("TypeAccesHistory");
+                });
+
             modelBuilder.Entity("AWEPP.Model.TypeAccesUser", b =>
                 {
                     b.Property<int>("Id")
@@ -236,6 +547,9 @@ namespace AWEPP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<int>("TypeAccesId")
                         .HasColumnType("int");
@@ -245,6 +559,43 @@ namespace AWEPP.Migrations
                     b.HasIndex("TypeAccesId");
 
                     b.ToTable("TypeAccessUsers");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeAccesUserHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeAccesUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeAccesUserId");
+
+                    b.ToTable("TypeAccesUserHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeAccounts", b =>
@@ -259,6 +610,9 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<int>("TypeproductsId")
                         .HasColumnType("int");
 
@@ -267,6 +621,43 @@ namespace AWEPP.Migrations
                     b.HasIndex("TypeproductsId");
 
                     b.ToTable("TypeAccounts");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeAccountsHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeAccountsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeAccountsId");
+
+                    b.ToTable("TypeAccountsHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeExpenses", b =>
@@ -281,9 +672,49 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("TypeExpenses");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeExpensesHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeExpensesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeExpensesId");
+
+                    b.ToTable("TypeExpensesHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeIdenty", b =>
@@ -294,6 +725,9 @@ namespace AWEPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("TipoIdenty")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -301,6 +735,43 @@ namespace AWEPP.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TypeIdentities");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeIdentyHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeIdentyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeIdentyId");
+
+                    b.ToTable("TypeIdentyHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeProducts", b =>
@@ -315,12 +786,52 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Product")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("TypeProducts");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeProductsHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeProductsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeProductsId");
+
+                    b.ToTable("TypeProductsHistory");
                 });
 
             modelBuilder.Entity("AWEPP.Model.UserHistory", b =>
@@ -334,6 +845,9 @@ namespace AWEPP.Migrations
                     b.Property<string>("Datecreate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Modifed")
                         .IsRequired()
@@ -357,6 +871,43 @@ namespace AWEPP.Migrations
                     b.ToTable("UserHistories");
                 });
 
+            modelBuilder.Entity("AWEPP.Model.UsertypeHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Datecreate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Modifed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UsertypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("datemodified")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsertypeId");
+
+                    b.ToTable("UsertypeHistory");
+                });
+
             modelBuilder.Entity("AWEPP.Modelo.Bank", b =>
                 {
                     b.Property<int>("Id")
@@ -368,6 +919,9 @@ namespace AWEPP.Migrations
                     b.Property<string>("Banks")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -385,6 +939,9 @@ namespace AWEPP.Migrations
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -408,6 +965,9 @@ namespace AWEPP.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<int>("ProductsId")
                         .HasColumnType("int");
@@ -460,6 +1020,9 @@ namespace AWEPP.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Modified")
                         .IsRequired()
@@ -517,6 +1080,9 @@ namespace AWEPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -524,6 +1090,39 @@ namespace AWEPP.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserTypes");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.BankHistory", b =>
+                {
+                    b.HasOne("AWEPP.Modelo.Bank", "Bank")
+                        .WithMany()
+                        .HasForeignKey("BankId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bank");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.CitiesHistory", b =>
+                {
+                    b.HasOne("AWEPP.Modelo.Cities", "Cities")
+                        .WithMany()
+                        .HasForeignKey("CitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cities");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.ContactsHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.Contacts", "Contacts")
+                        .WithMany()
+                        .HasForeignKey("ContactsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contacts");
                 });
 
             modelBuilder.Entity("AWEPP.Model.Customer", b =>
@@ -561,6 +1160,17 @@ namespace AWEPP.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("AWEPP.Model.CustomerHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("AWEPP.Model.Expenses", b =>
                 {
                     b.HasOne("AWEPP.Model.Customer", "Customer")
@@ -594,6 +1204,17 @@ namespace AWEPP.Migrations
                     b.Navigation("TypeExpenses");
 
                     b.Navigation("TypeProducts");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.ExpensesHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.Expenses", "Expenses")
+                        .WithMany()
+                        .HasForeignKey("ExpensesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Expenses");
                 });
 
             modelBuilder.Entity("AWEPP.Model.Products", b =>
@@ -631,6 +1252,39 @@ namespace AWEPP.Migrations
                     b.Navigation("TypeProducts");
                 });
 
+            modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.Products", "Products")
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.SavingHistory", b =>
+                {
+                    b.HasOne("AWEPP.Modelo.Saving", "Saving")
+                        .WithMany()
+                        .HasForeignKey("SavingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Saving");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeAccesHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeAcces", "TypeAcces")
+                        .WithMany()
+                        .HasForeignKey("TypeAccesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeAcces");
+                });
+
             modelBuilder.Entity("AWEPP.Model.TypeAccesUser", b =>
                 {
                     b.HasOne("AWEPP.Model.TypeAcces", "TypeAcces")
@@ -640,6 +1294,17 @@ namespace AWEPP.Migrations
                         .IsRequired();
 
                     b.Navigation("TypeAcces");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeAccesUserHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeAccesUser", "TypeAccesUser")
+                        .WithMany()
+                        .HasForeignKey("TypeAccesUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeAccesUser");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeAccounts", b =>
@@ -653,6 +1318,50 @@ namespace AWEPP.Migrations
                     b.Navigation("Typeproducts");
                 });
 
+            modelBuilder.Entity("AWEPP.Model.TypeAccountsHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeAccounts", "TypeAccounts")
+                        .WithMany()
+                        .HasForeignKey("TypeAccountsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeAccounts");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeExpensesHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeExpenses", "TypeExpenses")
+                        .WithMany()
+                        .HasForeignKey("TypeExpensesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeExpenses");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeIdentyHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeIdenty", "TypeIdenty")
+                        .WithMany()
+                        .HasForeignKey("TypeIdentyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeIdenty");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeProductsHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeProducts", "TypeProducts")
+                        .WithMany()
+                        .HasForeignKey("TypeProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeProducts");
+                });
+
             modelBuilder.Entity("AWEPP.Model.UserHistory", b =>
                 {
                     b.HasOne("AWEPP.Modelo.User", "User")
@@ -662,6 +1371,17 @@ namespace AWEPP.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.UsertypeHistory", b =>
+                {
+                    b.HasOne("AWEPP.Modelo.Usertype", "Usertype")
+                        .WithMany()
+                        .HasForeignKey("UsertypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usertype");
                 });
 
             modelBuilder.Entity("AWEPP.Modelo.Saving", b =>

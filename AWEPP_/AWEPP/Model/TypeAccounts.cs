@@ -9,6 +9,7 @@ namespace AWEPP.Model
         public int Id { get; set; }
         public required string Accounts { get; set; }
         public virtual required TypeProducts Typeproducts { get; set; }
-        
+        public required bool IsDeleted { get; set; }
+
     }
 }

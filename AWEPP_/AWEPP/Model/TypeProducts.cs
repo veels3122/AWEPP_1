@@ -8,6 +8,7 @@ namespace AWEPP.Model
         public int Id { get; set; }
         public required int Product { get; set; }
         public required string Description { get; set; }
+        public required bool IsDeleted { get; set; }
 
     }
 }
