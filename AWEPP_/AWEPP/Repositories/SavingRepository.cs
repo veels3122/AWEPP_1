@@ -16,26 +16,26 @@ namespace AWEPP.Repositories
 
         public async Task CreateSavingAsync(Saving saving)
         {
-            await _context.Savings.AddAsync(saving); // Añadir nuevo registro
+            await _context.Savingss.AddAsync(saving); // Añadir nuevo registro
             await _context.SaveChangesAsync(); // Guardar cambios
         }
 
         public async Task<IEnumerable<Saving>> GetAllSavingAsync()
         {
-            return await _context.Savings
+            return await _context.Savingss
                 .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
 
         public async Task<Saving> GetSavingByIdAsync(int Id)
         {
-            return await _context.Savings
+            return await _context.Savingss
                 .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
         }
 
         public async Task SoftDeleteSavingAsync(int Id)
         {
-            var Saving = await _context.Savings.FindAsync(Id);
+            var Saving = await _context.Savingss.FindAsync(Id);
             if (Saving != null)
             {
                 Saving.IsDeleted = true; // Marcar como eliminado
@@ -45,7 +45,7 @@ namespace AWEPP.Repositories
 
         public async Task UpdateSavingAsync(Saving saving)
         {
-            var existingSaving = await _context.Savings.FindAsync(saving.Id); // Usar Savings (plural)
+            var existingSaving = await _context.Savingss.FindAsync(saving.Id); // Usar Savings (plural)
             if (existingSaving != null)
             {
                 // Actualizar los campos necesarios

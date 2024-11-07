@@ -306,7 +306,7 @@ namespace AWEPP.Migrations
 
                     b.HasIndex("TypeProductsId");
 
-                    b.ToTable("Expenses");
+                    b.ToTable("Expensess");
                 });
 
             modelBuilder.Entity("AWEPP.Model.ExpensesHistory", b =>
@@ -407,7 +407,7 @@ namespace AWEPP.Migrations
 
                     b.HasIndex("TypeProductsId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Productss");
                 });
 
             modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
@@ -621,7 +621,7 @@ namespace AWEPP.Migrations
 
                     b.HasIndex("TypeproductsId");
 
-                    b.ToTable("TypeAccounts");
+                    b.ToTable("TypeAccountss");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeAccountsHistory", b =>
@@ -678,7 +678,7 @@ namespace AWEPP.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TypeExpenses");
+                    b.ToTable("TypeExpensess");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeExpensesHistory", b =>
@@ -795,7 +795,7 @@ namespace AWEPP.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TypeProducts");
+                    b.ToTable("TypeProductss");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeProductsHistory", b =>
@@ -1007,7 +1007,7 @@ namespace AWEPP.Migrations
 
                     b.HasIndex("TypeProductsId");
 
-                    b.ToTable("Savings");
+                    b.ToTable("Savingss");
                 });
 
             modelBuilder.Entity("AWEPP.Modelo.User", b =>

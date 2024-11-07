@@ -1,0 +1,214 @@
+2024-11-09T15:12:20.9788956-05:00  [INF] Executed DbCommand ("134"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:12:21.1238487-05:00  [INF] Executed DbCommand ("133"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:12:21.2583870-05:00  [INF] Executed DbCommand ("133"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:12:21.3774082-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:12:21.5263866-05:00  [INF] Executed DbCommand ("128"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-09T15:12:21.5513017-05:00  [INF] Applying migration '"20241109195710_updateee"'. (0e2ac64d)
+2024-11-09T15:12:21.9354804-05:00  [INF] Executed DbCommand ("123"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241109195710_updateee', N'8.0.10');" (0723d8ff)
+2024-11-09T15:12:22.0591032-05:00  [INF] Applying migration '"20241109201209_updateeed"'. (0e2ac64d)
+2024-11-09T15:12:22.3722167-05:00  [INF] Executed DbCommand ("135"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_Customers_CustomerId];" (0723d8ff)
+2024-11-09T15:12:22.5038050-05:00  [INF] Executed DbCommand ("131"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-09T15:12:22.6326053-05:00  [INF] Executed DbCommand ("128"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeExpenses_TypeExpensesId];" (0723d8ff)
+2024-11-09T15:12:22.7565943-05:00  [INF] Executed DbCommand ("124"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-09T15:12:22.8841309-05:00  [INF] Executed DbCommand ("127"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [FK_ExpensesHistory_Expenses_ExpensesId];" (0723d8ff)
+2024-11-09T15:12:23.0215695-05:00  [INF] Executed DbCommand ("137"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_Banks_BankId];" (0723d8ff)
+2024-11-09T15:12:23.1474897-05:00  [INF] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_Customers_CustomerId];" (0723d8ff)
+2024-11-09T15:12:23.2730667-05:00  [INF] Executed DbCommand ("125"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-09T15:12:23.4042779-05:00  [INF] Executed DbCommand ("131"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-09T15:12:23.5334411-05:00  [INF] Executed DbCommand ("129"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ProductsHistory] DROP CONSTRAINT [FK_ProductsHistory_Products_ProductsId];" (0723d8ff)
+2024-11-09T15:12:23.6666326-05:00  [INF] Executed DbCommand ("133"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [SavingHistory] DROP CONSTRAINT [FK_SavingHistory_Savings_SavingId];" (0723d8ff)
+2024-11-09T15:12:23.7938184-05:00  [INF] Executed DbCommand ("127"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_Banks_BankId];" (0723d8ff)
+2024-11-09T15:12:23.9176920-05:00  [INF] Executed DbCommand ("124"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_Customers_CustomerId];" (0723d8ff)
+2024-11-09T15:33:17.2830486-05:00  [INF] Executed DbCommand ("205"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:33:17.5001675-05:00  [INF] Executed DbCommand ("204"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:33:17.6313478-05:00  [INF] Executed DbCommand ("129"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:33:17.7843800-05:00  [INF] Executed DbCommand ("153"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:33:18.0103717-05:00  [INF] Executed DbCommand ("211"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-09T15:33:18.0308054-05:00  [INF] Applying migration '"20241109201209_updateeed"'. (0e2ac64d)
+2024-11-09T15:33:18.4148867-05:00  [INF] Executed DbCommand ("127"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_Customers_CustomerId];" (0723d8ff)
+2024-11-09T15:33:18.5286782-05:00  [INF] Executed DbCommand ("113"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-09T15:33:18.6356501-05:00  [INF] Executed DbCommand ("107"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeExpenses_TypeExpensesId];" (0723d8ff)
+2024-11-09T15:33:18.7469912-05:00  [INF] Executed DbCommand ("111"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-09T15:33:18.8580244-05:00  [INF] Executed DbCommand ("111"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [FK_ExpensesHistory_Expenses_ExpensesId];" (0723d8ff)
+2024-11-09T15:33:18.9685317-05:00  [INF] Executed DbCommand ("110"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_Banks_BankId];" (0723d8ff)
+2024-11-09T15:33:19.1009353-05:00  [INF] Executed DbCommand ("132"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_Customers_CustomerId];" (0723d8ff)
+2024-11-09T15:33:19.2061181-05:00  [INF] Executed DbCommand ("105"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-09T15:33:19.3240528-05:00  [INF] Executed DbCommand ("118"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [FK_Products_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-09T15:33:19.4379748-05:00  [INF] Executed DbCommand ("114"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ProductsHistory] DROP CONSTRAINT [FK_ProductsHistory_Products_ProductsId];" (0723d8ff)
+2024-11-09T15:33:19.5637941-05:00  [INF] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [SavingHistory] DROP CONSTRAINT [FK_SavingHistory_Savings_SavingId];" (0723d8ff)
+2024-11-09T15:33:19.6777729-05:00  [INF] Executed DbCommand ("114"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_Banks_BankId];" (0723d8ff)
+2024-11-09T15:33:19.7948695-05:00  [INF] Executed DbCommand ("117"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_Customers_CustomerId];" (0723d8ff)
+2024-11-09T15:33:19.9078689-05:00  [INF] Executed DbCommand ("113"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_Products_ProductsId];" (0723d8ff)
+2024-11-09T15:33:20.0268726-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-09T15:33:20.1401971-05:00  [INF] Executed DbCommand ("113"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [FK_Savings_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-09T15:33:20.2481124-05:00  [INF] Executed DbCommand ("108"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeAccounts] DROP CONSTRAINT [FK_TypeAccounts_TypeProducts_TypeproductsId];" (0723d8ff)
+2024-11-09T15:33:20.3739084-05:00  [INF] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeAccountsHistory] DROP CONSTRAINT [FK_TypeAccountsHistory_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-09T15:33:20.4901475-05:00  [INF] Executed DbCommand ("116"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeExpensesHistory] DROP CONSTRAINT [FK_TypeExpensesHistory_TypeExpenses_TypeExpensesId];" (0723d8ff)
+2024-11-09T15:33:20.5980376-05:00  [INF] Executed DbCommand ("108"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeProductsHistory] DROP CONSTRAINT [FK_TypeProductsHistory_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-09T15:33:20.7079336-05:00  [INF] Executed DbCommand ("110"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeProducts] DROP CONSTRAINT [PK_TypeProducts];" (0723d8ff)
+2024-11-09T15:33:20.8288695-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeExpenses] DROP CONSTRAINT [PK_TypeExpenses];" (0723d8ff)
+2024-11-09T15:33:20.9430257-05:00  [INF] Executed DbCommand ("114"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeAccounts] DROP CONSTRAINT [PK_TypeAccounts];" (0723d8ff)
+2024-11-09T15:33:21.0989431-05:00  [INF] Executed DbCommand ("156"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savings] DROP CONSTRAINT [PK_Savings];" (0723d8ff)
+2024-11-09T15:33:21.2205768-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Products] DROP CONSTRAINT [PK_Products];" (0723d8ff)
+2024-11-09T15:33:21.3646064-05:00  [INF] Executed DbCommand ("144"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [PK_Expenses];" (0723d8ff)
+2024-11-09T15:33:21.7268418-05:00  [INF] Executed DbCommand ("362"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[TypeProducts]', N'TypeProductss';" (0723d8ff)
+2024-11-09T15:33:21.8445512-05:00  [INF] Executed DbCommand ("117"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[TypeExpenses]', N'TypeExpensess';" (0723d8ff)
+2024-11-09T15:33:21.9653796-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[TypeAccounts]', N'TypeAccountss';" (0723d8ff)
+2024-11-09T15:33:22.0811870-05:00  [INF] Executed DbCommand ("116"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Savings]', N'Savingss';" (0723d8ff)
+2024-11-09T15:33:22.2095702-05:00  [INF] Executed DbCommand ("128"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Products]', N'Productss';" (0723d8ff)
+2024-11-09T15:33:22.3266657-05:00  [INF] Executed DbCommand ("117"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expenses]', N'Expensess';" (0723d8ff)
+2024-11-09T15:33:22.4456575-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[TypeAccountss].[IX_TypeAccounts_TypeproductsId]', N'IX_TypeAccountss_TypeproductsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:22.5654026-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Savingss].[IX_Savings_TypeProductsId]', N'IX_Savingss_TypeProductsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:22.6847880-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Savingss].[IX_Savings_TypeAccountsId]', N'IX_Savingss_TypeAccountsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:22.8062333-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Savingss].[IX_Savings_ProductsId]', N'IX_Savingss_ProductsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:22.9257790-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Savingss].[IX_Savings_CustomerId]', N'IX_Savingss_CustomerId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.0465105-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Savingss].[IX_Savings_BankId]', N'IX_Savingss_BankId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.1674236-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Productss].[IX_Products_TypeProductsId]', N'IX_Productss_TypeProductsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.2849689-05:00  [INF] Executed DbCommand ("117"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Productss].[IX_Products_TypeAccountsId]', N'IX_Productss_TypeAccountsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.4049041-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Productss].[IX_Products_CustomerId]', N'IX_Productss_CustomerId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.5251033-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Productss].[IX_Products_BankId]', N'IX_Productss_BankId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.6958964-05:00  [INF] Executed DbCommand ("171"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_TypeProductsId]', N'IX_Expensess_TypeProductsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.8455569-05:00  [INF] Executed DbCommand ("150"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_TypeExpensesId]', N'IX_Expensess_TypeExpensesId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:23.9662336-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_TypeAccountsId]', N'IX_Expensess_TypeAccountsId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:24.0847215-05:00  [INF] Executed DbCommand ("118"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_CustomerId]', N'IX_Expensess_CustomerId', N'INDEX';" (0723d8ff)
+2024-11-09T15:33:24.2457155-05:00  [INF] Executed DbCommand ("161"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeProductss] ADD CONSTRAINT [PK_TypeProductss] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-09T15:33:24.3655766-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeExpensess] ADD CONSTRAINT [PK_TypeExpensess] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-09T15:33:24.5262963-05:00  [INF] Executed DbCommand ("161"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeAccountss] ADD CONSTRAINT [PK_TypeAccountss] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-09T15:33:24.6859018-05:00  [INF] Executed DbCommand ("159"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savingss] ADD CONSTRAINT [PK_Savingss] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-09T15:33:24.8528152-05:00  [INF] Executed DbCommand ("167"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Productss] ADD CONSTRAINT [PK_Productss] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-09T15:33:24.9986775-05:00  [INF] Executed DbCommand ("146"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [PK_Expensess] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-09T15:33:25.1150247-05:00  [INF] Executed DbCommand ("116"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] ADD CONSTRAINT [FK_ExpensesHistory_Expensess_ExpensesId] FOREIGN KEY ([ExpensesId]) REFERENCES [Expensess] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:25.2461580-05:00  [INF] Executed DbCommand ("131"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:25.4059306-05:00  [INF] Executed DbCommand ("160"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_TypeAccountss_TypeAccountsId] FOREIGN KEY ([TypeAccountsId]) REFERENCES [TypeAccountss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:25.5257927-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_TypeExpensess_TypeExpensesId] FOREIGN KEY ([TypeExpensesId]) REFERENCES [TypeExpensess] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:25.6453649-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_TypeProductss_TypeProductsId] FOREIGN KEY ([TypeProductsId]) REFERENCES [TypeProductss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:25.7665060-05:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ProductsHistory] ADD CONSTRAINT [FK_ProductsHistory_Productss_ProductsId] FOREIGN KEY ([ProductsId]) REFERENCES [Productss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:25.8870389-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Productss] ADD CONSTRAINT [FK_Productss_Banks_BankId] FOREIGN KEY ([BankId]) REFERENCES [Banks] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.0055418-05:00  [INF] Executed DbCommand ("118"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Productss] ADD CONSTRAINT [FK_Productss_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.1211030-05:00  [INF] Executed DbCommand ("115"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Productss] ADD CONSTRAINT [FK_Productss_TypeAccountss_TypeAccountsId] FOREIGN KEY ([TypeAccountsId]) REFERENCES [TypeAccountss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.2452121-05:00  [INF] Executed DbCommand ("124"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Productss] ADD CONSTRAINT [FK_Productss_TypeProductss_TypeProductsId] FOREIGN KEY ([TypeProductsId]) REFERENCES [TypeProductss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.3659029-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [SavingHistory] ADD CONSTRAINT [FK_SavingHistory_Savingss_SavingId] FOREIGN KEY ([SavingId]) REFERENCES [Savingss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.4853868-05:00  [INF] Executed DbCommand ("119"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savingss] ADD CONSTRAINT [FK_Savingss_Banks_BankId] FOREIGN KEY ([BankId]) REFERENCES [Banks] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.6464328-05:00  [INF] Executed DbCommand ("161"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savingss] ADD CONSTRAINT [FK_Savingss_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-09T15:33:26.8090591-05:00  [ERR] Failed executing DbCommand ("162"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Savingss] ADD CONSTRAINT [FK_Savingss_Productss_ProductsId] FOREIGN KEY ([ProductsId]) REFERENCES [Productss] ([Id]) ON DELETE CASCADE;" (627a98df)
+2024-11-09T15:33:48.5488250-05:00  [INF] Executed DbCommand ("227"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:33:48.8167521-05:00  [INF] Executed DbCommand ("255"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:33:49.0103871-05:00  [INF] Executed DbCommand ("192"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:33:49.2110789-05:00  [INF] Executed DbCommand ("200"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:33:49.4111919-05:00  [INF] Executed DbCommand ("186"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-09T15:33:49.4231064-05:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-11-09T15:34:24.3564689-05:00  [INF] Executed DbCommand ("147"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:34:24.4991931-05:00  [INF] Executed DbCommand ("131"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:34:24.6268435-05:00  [INF] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-09T15:34:24.7563381-05:00  [INF] Executed DbCommand ("129"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-09T15:34:24.9037039-05:00  [INF] Executed DbCommand ("131"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-09T15:34:24.9181224-05:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)

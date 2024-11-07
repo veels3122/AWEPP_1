@@ -6,8 +6,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <LastFailureDetails />
-    <History>True|2024-11-07T06:43:55.5290346Z;True|2024-11-04T16:27:34.6912098-05:00;False|2024-11-04T16:23:34.1322479-05:00;False|2024-11-04T16:14:40.1984455-05:00;False|2024-11-04T16:11:56.2624855-05:00;False|2024-11-04T16:10:08.1092347-05:00;False|2024-11-04T16:08:09.5383470-05:00;True|2024-11-04T15:37:17.6510508-05:00;False|2024-11-04T15:34:49.4872527-05:00;False|2024-11-04T15:31:28.5820541-05:00;</History>
-    <_PublishTargetUrl>ftp://155.254.246.25/www.AWEPP.somee.com</_PublishTargetUrl>
+    <History>True|2024-11-09T20:06:26.9020553Z;False|2024-11-09T15:05:48.7681496-05:00;True|2024-11-07T02:10:07.5839546-05:00;False|2024-11-07T02:09:10.9178861-05:00;True|2024-11-07T01:43:55.5290346-05:00;True|2024-11-04T16:27:34.6912098-05:00;False|2024-11-04T16:23:34.1322479-05:00;False|2024-11-04T16:14:40.1984455-05:00;False|2024-11-04T16:11:56.2624855-05:00;False|2024-11-04T16:10:08.1092347-05:00;False|2024-11-04T16:08:09.5383470-05:00;True|2024-11-04T15:37:17.6510508-05:00;False|2024-11-04T15:34:49.4872527-05:00;False|2024-11-04T15:31:28.5820541-05:00;</History>
+    <_PublishTargetUrl>ftp://AWEPP.somee.com/www.AWEPP.somee.com</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl2p0o0Id0kWcaLIfobOsHAAAAAACAAAAAAAQZgAAAAEAACAAAAD6O3MkMeqdLXrDOh+jCULIluDn5edtzxRK6vveu8zb9gAAAAAOgAAAAAIAACAAAAAPOgmTh9AhrMKMuZJ0/CvSYGmLWuADglgQt+Own1Y29yAAAABfwkPaW80FRbiUHF29KeI+wDeGiqRaXvSLVCqHqZPVTkAAAAAfTscM4uFKeYRME0Nc9ZTX+mjWPMl9HU6JOoUDv9k7YftD2XVvI7GX7MLCbzVRvCxbc4xG3A6FmeA5AdWQQf2k</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
@@ -17,22 +18,22 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/07/2024 01:32:20</publishTime>
     </File>
     <File Include="AWEPP.deps.json">
-      <publishTime>11/07/2024 01:43:02</publishTime>
+      <publishTime>11/09/2024 15:06:03</publishTime>
     </File>
     <File Include="AWEPP.dll">
-      <publishTime>11/07/2024 01:42:53</publishTime>
+      <publishTime>11/09/2024 15:05:57</publishTime>
     </File>
     <File Include="AWEPP.exe">
-      <publishTime>11/07/2024 01:42:53</publishTime>
+      <publishTime>11/09/2024 15:05:58</publishTime>
     </File>
     <File Include="AWEPP.pdb">
-      <publishTime>11/07/2024 01:42:53</publishTime>
+      <publishTime>11/09/2024 15:05:57</publishTime>
     </File>
     <File Include="AWEPP.runtimeconfig.json">
-      <publishTime>11/07/2024 01:42:54</publishTime>
+      <publishTime>11/07/2024 02:08:41</publishTime>
     </File>
     <File Include="Azure.Core.dll">
-      <publishTime>07/09/2023 12:50:30</publishTime>
+      <publishTime>09/07/2023 12:50:30</publishTime>
     </File>
     <File Include="Azure.Identity.dll">
       <publishTime>10/18/2023 14:59:42</publishTime>
@@ -80,13 +81,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/05/2023 13:25:28</publishTime>
     </File>
     <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
-      <publishTime>05/09/2023 13:31:58</publishTime>
+      <publishTime>09/05/2023 13:31:58</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Abstractions.dll">
       <publishTime>11/30/2023 23:56:56</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/30/2023 23:34:00</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Logging.dll">
       <publishTime>11/30/2023 23:35:22</publishTime>
@@ -116,16 +117,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2021 18:51:42</publishTime>
     </File>
     <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 13:56:28</publishTime>
+      <publishTime>08/11/2023 13:56:28</publishTime>
     </File>
     <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 13:56:28</publishTime>
+      <publishTime>08/11/2023 13:56:28</publishTime>
     </File>
     <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 13:56:18</publishTime>
+      <publishTime>08/11/2023 13:56:18</publishTime>
     </File>
     <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 13:56:18</publishTime>
+      <publishTime>08/11/2023 13:56:18</publishTime>
     </File>
     <File Include="runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll">
       <publishTime>01/26/2024 21:49:42</publishTime>
@@ -185,7 +186,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/30/2023 23:31:48</publishTime>
     </File>
     <File Include="System.Memory.Data.dll">
-      <publishTime>08/04/2021 11:45:54</publishTime>
+      <publishTime>04/08/2021 11:45:54</publishTime>
     </File>
     <File Include="System.Runtime.Caching.dll">
       <publishTime>10/22/2021 18:52:02</publishTime>
@@ -200,7 +201,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2021 18:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/07/2024 01:43:02</publishTime>
+      <publishTime>11/09/2024 15:06:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

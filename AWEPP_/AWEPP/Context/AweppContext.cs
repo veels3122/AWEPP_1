@@ -22,13 +22,13 @@ namespace AWEPP.Context
         public DbSet<Cities> Cities { get; set; }
         public DbSet<Contacts> Contacts { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Expenses> Expenses { get; set; }
-        public DbSet<Products> Products { get; set; }
-        public DbSet<Saving> Savings { get; set; }
-        public DbSet<TypeAccounts> TypeAccounts { get; set; }
-        public DbSet<TypeExpenses> TypeExpenses { get; set; }
+        public DbSet<Expenses> Expensess { get; set; }
+        public DbSet<Products> Productss { get; set; }
+        public DbSet<Saving> Savingss { get; set; }
+        public DbSet<TypeAccounts> TypeAccountss { get; set; }
+        public DbSet<TypeExpenses> TypeExpensess { get; set; }
         public DbSet<TypeIdenty> TypeIdentities { get; set; }
-        public DbSet<TypeProducts> TypeProducts { get; set; }
+        public DbSet<TypeProducts> TypeProductss { get; set; }
         public DbSet<BankHistory> BankHistory { get; set; }
         public DbSet<CitiesHistory> CitiesHistory { get; set; }
         public DbSet<ContactsHistory> ContactsHistory { get; set; }
