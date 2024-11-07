@@ -22,9 +22,7 @@ public class AuditService : IAuditService
 
     public async Task LogEventAsync(AuditLog auditLog)
     {
-        // Guardar en la base de datos (si ya tienes esa implementación)
-         await _context.AuditLogs.AddAsync(auditLog);
-         await _context.SaveChangesAsync();
+        
 
         // Guardar en archivo de texto
         var logMessage = $"Fecha: {auditLog.Date}, Acción: {auditLog.Action}, " +
@@ -33,5 +31,8 @@ public class AuditService : IAuditService
 
         await File.AppendAllTextAsync(AuditLogFilePath, logMessage);
         _logger.LogInformation(logMessage); // Esto también registra en el sistema de logging general
+                                            // Guardar en la base de datos (si ya tienes esa implementación)
+        await _context.AuditLogs.AddAsync(auditLog);
+        await _context.SaveChangesAsync();
     }
 }
