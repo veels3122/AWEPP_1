@@ -10,6 +10,7 @@ var conString = builder.Configuration.GetConnectionString("Connection");
 builder.Services.AddDbContext<Aweppcontext>(options => options.UseSqlServer(conString));
 
 // Registrar los servicios y repositorios en el contenedor
+
 builder.Services.AddScoped<IBankRepository, BankRepository>();
 builder.Services.AddScoped<IBankServices, BankServices>();
 
@@ -54,6 +55,7 @@ builder.Services.AddScoped<IUserServices, UserServices>();
 
 builder.Services.AddScoped<IUserTypeRepository, UserTypeRepository>();
 builder.Services.AddScoped<IUsertypeServices, UserTypeServices>();
+builder.Services.AddScoped<IAuditService, AuditService>();
 ///////////////////////////////////////////////////////////////
 
 
