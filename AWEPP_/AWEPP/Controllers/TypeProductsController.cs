@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace AWEPP.Controllers
     public class TypeProductsController : ControllerBase
     {
         private readonly ITypeProductsServices _typeProductsServices;
+        private readonly AuditService _auditLogService;
 
-        public TypeProductsController(ITypeProductsServices typeProductsServices)
+        public TypeProductsController(ITypeProductsServices typeProductsServices, IAuditService auditService)
         {
             _typeProductsServices = typeProductsServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -49,6 +52,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _typeProductsServices.CreateTypeProductsAsync(TypeProducts);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateTypeProducts",
+                TableName = "TypeProducts",
+                RecordId = TypeProducts.Id.ToString(),
+                Changes = $"TypeProducts {TypeProducts.Product},{TypeProducts.Description} creado.",
+                UserName = TypeProducts.Description,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetTypeProductsById), new { id = TypeProducts.Id }, TypeProducts);
 
         }
@@ -66,6 +78,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _typeProductsServices.UpdateTypeProductsAsync(TypeProducts);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateTypeProducts",
+                TableName = "TypeProducts",
+                RecordId = TypeProducts.Id.ToString(),
+                Changes = $"TypeProducts {TypeProducts.Product},{TypeProducts.Description} actualizado.",
+                UserName = TypeProducts.Description,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -80,6 +101,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _typeProductsServices.SoftDeleteTypeProductsAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftTypeProducts",
+                TableName = "TypeProducts",
+                RecordId = TypeProducts.Id.ToString(),
+                Changes = $"TypeProducts {TypeProducts.Product},{TypeProducts.Description} marca como eliminado.",
+                UserName = TypeProducts.Description,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

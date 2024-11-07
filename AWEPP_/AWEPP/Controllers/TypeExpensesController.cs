@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace AWEPP.Controllers
     public class TypeExpensesController : ControllerBase
     {
         private readonly ITypeExpensesServices _typeExpensesServices;
+        private readonly AuditService _auditLogService;
 
-        public TypeExpensesController(ITypeExpensesServices typeExpensesServices)
+        public TypeExpensesController(ITypeExpensesServices typeExpensesServices, IAuditService auditService)
         {
             _typeExpensesServices = typeExpensesServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -49,6 +52,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _typeExpensesServices.CreateTypeExpensesAsync(TypeExpenses);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateTypeExpenses",
+                TableName = "TypeExpenses",
+                RecordId = TypeExpenses.Id.ToString(),
+                Changes = $"TypeExpenses {TypeExpenses.Expenses} creado.",
+                UserName = TypeExpenses.Expenses,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetTypeExpensesById), new { id = TypeExpenses.Id }, TypeExpenses);
 
         }
@@ -66,6 +78,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _typeExpensesServices.UpdateTypeExpensesAsync(TypeExpenses);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateTypeExpenses",
+                TableName = "TypeExpenses",
+                RecordId = TypeExpenses.Id.ToString(),
+                Changes = $"TypeExpenses {TypeExpenses.Expenses} actualizado.",
+                UserName = TypeExpenses.Expenses,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -80,6 +101,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _typeExpensesServices.SoftDeleteTypeExpensesAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftTypeExpenses",
+                TableName = "TypeExpenses",
+                RecordId = TypeExpenses.Id.ToString(),
+                Changes = $"TypeExpenses {TypeExpenses.Expenses} marca como eliminado.",
+                UserName = TypeExpenses.Expenses,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

@@ -65,6 +65,9 @@ namespace AWEPP.Context
             modelBuilder.Entity<TypeExpenses>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeIdenty>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeProducts>().HasKey(u => u.Id);
+            modelBuilder.Entity<AuditLog>().Property(a => a.Date).HasColumnType("datetime").HasDefaultValueSql("GETDATE()");
+
+
         }
     }
 }

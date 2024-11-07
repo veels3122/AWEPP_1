@@ -20,7 +20,6 @@ namespace AWEPP.Controllers
         {
             _userServices = userServices;
             _auditLogService = (AuditService?)auditService;
-          
         }
 
         [HttpGet]
@@ -63,8 +62,8 @@ namespace AWEPP.Controllers
                 TableName = "User",
                 RecordId = Users.Id.ToString(),
                 Changes = $"User {Users.Name} creado.",
-                UserName = Users.UserName, // O el usuario que esté logueado
-                Date = DateTime.UtcNow
+                UserName = Users.UserName, 
+                Date = DateTime.UtcNow.AddHours(-5)
             });
 
             return CreatedAtAction(nameof(GetUserById), new { id = Users.Id }, Users);
@@ -90,8 +89,8 @@ namespace AWEPP.Controllers
                 TableName = "User",
                 RecordId = Users.Id.ToString(),
                 Changes = $"User {Users.Name} actualizado.",
-                UserName = Users.UserName, // O el usuario que esté logueado
-                Date = DateTime.UtcNow
+                UserName = Users.UserName, 
+                Date = DateTime.UtcNow.AddHours(-5)
             });
             return NoContent();
 
@@ -114,7 +113,7 @@ namespace AWEPP.Controllers
                 RecordId = Id.ToString(),
                 Changes = $"User {User.Name} marcado como eliminado.",
                 UserName = User.UserName, // O el usuario que esté logueado
-                Date = DateTime.UtcNow
+                Date = DateTime.UtcNow.AddHours(-5)
             });
             return NoContent();
         }

@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,12 @@ namespace AWEPP.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerServices _customerServices;
+        private readonly AuditService _auditLogService;
 
-        public CustomerController(ICustomerServices customerServices)
+        public CustomerController(ICustomerServices customerServices, IAuditService auditService)
         {
             _customerServices = customerServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -48,6 +51,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _customerServices.CreateCustomerAsync(Customer);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateCustomer",
+                TableName = "Customer",
+                RecordId = Customer.Id.ToString(),
+                Changes = $"Customer {Customer.Name},{Customer.LastName} creado.",
+                UserName = Customer.Name, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetCustomerById), new { id = Customer.Id }, Customer);
 
         }
@@ -65,6 +77,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _customerServices.UpdateCustomerAsync(Customer);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "updateCustomer",
+                TableName = "Customer",
+                RecordId = Customer.Id.ToString(),
+                Changes = $"Customer {Customer.Name},{Customer.LastName} actualizado.",
+                UserName = Customer.Name, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -79,6 +100,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _customerServices.SoftDeleteCustomerAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "softCustomer",
+                TableName = "Customer",
+                RecordId = Customer.Id.ToString(),
+                Changes = $"Customer {Customer.Name},{Customer.LastName} marca como eliminado.",
+                UserName = Customer.Name, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

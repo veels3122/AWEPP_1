@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,12 @@ namespace AWEPP.Controllers
     public class TypeIdentyController : ControllerBase
     {
         private readonly ITypeIdentyServices _typeIdentyServices;
+        private readonly AuditService _auditLogService;
 
-        public TypeIdentyController(ITypeIdentyServices typeIdentyServices)
+        public TypeIdentyController(ITypeIdentyServices typeIdentyServices, IAuditService auditService)
         {
             _typeIdentyServices = typeIdentyServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -48,6 +51,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _typeIdentyServices.CreateTypeIdentyAsync(TypeIdentities);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateTypeIdenty",
+                TableName = "TypeIdenty",
+                RecordId = TypeIdentities.Id.ToString(),
+                Changes = $"TypeIdenty {TypeIdentities.TipoIdenty} creado.",
+                UserName = TypeIdentities.TipoIdenty,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetTypeIdentyById), new { id = TypeIdentities.Id }, TypeIdentities);
 
         }
@@ -65,6 +77,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _typeIdentyServices.UpdateTypeIdentyAsync(TypeIdentities);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateTypeIdenty",
+                TableName = "TypeIdenty",
+                RecordId = TypeIdentities.Id.ToString(),
+                Changes = $"TypeIdenty {TypeIdentities.TipoIdenty} actualizado.",
+                UserName = TypeIdentities.TipoIdenty,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -79,6 +100,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _typeIdentyServices.SoftDeleteTypeIdentyAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftTypeIdenty",
+                TableName = "TypeIdenty",
+                RecordId = TypeIdenty.Id.ToString(),
+                Changes = $"TypeIdenty {TypeIdenty.TipoIdenty} marca como leido.",
+                UserName = TypeIdenty.TipoIdenty,
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

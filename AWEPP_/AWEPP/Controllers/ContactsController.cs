@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace AWEPP.Controllers
     {
 
         private readonly IContactsServices _contactsServices;
+        private readonly AuditService _auditLogService;
 
-        public ContactsController(IContactsServices contactsServices)
+        public ContactsController(IContactsServices contactsServices, IAuditService auditService)
         {
             _contactsServices = contactsServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -49,6 +52,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _contactsServices.CreateContactsAsync(Contacts);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateContact",
+                TableName = "Contact",
+                RecordId = Contacts.Id.ToString(),
+                Changes = $"Contact {Contacts.Contact} creado.",
+                UserName = Contacts.Contact, // O el contacto que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetContactsById), new { id = Contacts.Id }, Contacts);
 
         }
@@ -66,6 +78,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _contactsServices.UpdateContactsAsync(Contacts);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateContact",
+                TableName = "Contact",
+                RecordId = Contacts.Id.ToString(),
+                Changes = $"Contact {Contacts.Contact} actualizado.",
+                UserName = Contacts.Contact, // O el contacto que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -80,6 +101,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _contactsServices.SoftDeleteContactsAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "softContact",
+                TableName = "Contact",
+                RecordId = Contacts.Id.ToString(),
+                Changes = $"Contact {Contacts.Contact} marca como eliminado.",
+                UserName = Contacts.Contact, // O el contacto que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

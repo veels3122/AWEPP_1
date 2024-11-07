@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,11 @@ namespace AWEPP.Controllers
     public class CitiesController : ControllerBase
     {
         private readonly ICitiesServices _citiesServices;
-
-        public CitiesController(ICitiesServices citiesServices)
+        private readonly AuditService _auditLogService;
+        public CitiesController(ICitiesServices citiesServices,IAuditService auditService)
         {
             _citiesServices = citiesServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -48,6 +50,15 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _citiesServices.CreateCitiesAsync(Cities);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateCities",
+                TableName = "Cities",
+                RecordId = Cities.Id.ToString(),
+                Changes = $"City {Cities.City} creado.",
+                UserName = "Admin",
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return CreatedAtAction(nameof(GetCitiesById), new { id = Cities.Id }, Cities);
 
         }
@@ -65,6 +76,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _citiesServices.UpdateCitiesAsync(Cities);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateCities",
+                TableName = "Cities",
+                RecordId = Cities.Id.ToString(),
+                Changes = $"City {Cities.City} actualizado.",
+                UserName = "Admin",
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -79,6 +99,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _citiesServices.SoftDeleteCitiesAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "softCities",
+                TableName = "Cities",
+                RecordId = Cities.Id.ToString(),
+                Changes = $"City {Cities.City} marca como eliminado.",
+                UserName = "Admin",
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }

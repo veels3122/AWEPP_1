@@ -1,4 +1,6 @@
 ﻿using AWEPP.Model;
+using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Repositories;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
@@ -13,10 +15,12 @@ namespace AWEPP.Controllers
     public class ExpensesController : ControllerBase
     {
         private readonly IExpensesService _expensesService;
+        private readonly AuditService _auditLogService;
 
-        public ExpensesController(IExpensesService expensesService)
+        public ExpensesController(IExpensesService expensesService, IAuditService auditService)
         {
             _expensesService = expensesService;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -50,6 +54,16 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _expensesService.CreateExpensesAsync(expenses);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateExpense",
+                TableName = "Expense",
+                RecordId = expenses.Id.ToString(),
+                Changes = $"Expense {expenses.Id} creado.",
+                UserName = expenses.Description, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
+
             return CreatedAtAction(nameof(GetExpenseById), new {id = expenses.Id}, expenses);
 
         }
@@ -67,6 +81,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _expensesService.UpdateExpensesAsync(expenses);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "updateExpense",
+                TableName = "Expense",
+                RecordId = expenses.Id.ToString(),
+                Changes = $"Expense {expenses.Id} actualizado.",
+                UserName = expenses.Description, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -81,6 +104,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _expensesService.SoftDeleteExpensesAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "softExpense",
+                TableName = "Expense",
+                RecordId = expenses.Id.ToString(),
+                Changes = $"Expense {expenses.Id} marca como eliminado.",
+                UserName = expenses.Description, // O el usuario que esté logueado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
         

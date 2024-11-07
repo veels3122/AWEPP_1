@@ -1,5 +1,6 @@
 ﻿using AWEPP.Model;
 using AWEPP.Modelo;
+using AWEPP.Models;
 using AWEPP.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,12 @@ namespace AWEPP.Controllers
     public class BankController : ControllerBase
     {
         private readonly IBankServices _bankServices;
+        private readonly AuditService _auditLogService;
 
-        public BankController(IBankServices bankServices)
+        public BankController(IBankServices bankServices, IAuditService auditService)
         {
             _bankServices = bankServices;
+            _auditLogService = (AuditService?)auditService;
         }
 
         [HttpGet]
@@ -49,6 +52,16 @@ namespace AWEPP.Controllers
                 return BadRequest(ModelState);
 
             await _bankServices.CreateBankAsync(Banks);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "CreateBank",
+                TableName = "Bank",
+                RecordId = Banks.Id.ToString(),
+                Changes = $"Bank {Banks.Banks} creado.",
+                UserName = "Admin", // Reemplaza con el usuario autenticado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
+
             return CreatedAtAction(nameof(GetBankById), new { id = Banks.Id }, Banks);
 
         }
@@ -66,6 +79,15 @@ namespace AWEPP.Controllers
                 return NoContent();
 
             await _bankServices.UpdateBankAsync(Banks);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "UpdateBank",
+                TableName = "Bank",
+                RecordId = Banks.Id.ToString(),
+                Changes = $"Bank {Banks.Banks} actualizado.",
+                UserName = "Admin", // Reemplaza con el usuario autenticado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
 
         }
@@ -80,6 +102,15 @@ namespace AWEPP.Controllers
                 return NotFound();
 
             await _bankServices.SoftDeleteBankAsync(Id);
+            await _auditLogService.LogEventAsync(new AuditLog
+            {
+                Action = "SoftBank",
+                TableName = "Bank",
+                RecordId = Banks.Id.ToString(),
+                Changes = $"Bank {Banks.Banks} marca como eliminado.",
+                UserName = "Admin", // Reemplaza con el usuario autenticado
+                Date = DateTime.UtcNow.AddHours(-5)
+            });
             return NoContent();
         }
     }
