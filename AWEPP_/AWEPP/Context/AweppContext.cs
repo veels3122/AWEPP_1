@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Reflection.Emit;
+using AWEPP.Models;
 using AWEPP.Model;
 using AWEPP.Modelo;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ namespace AWEPP.Context
         public Aweppcontext(DbContextOptions options) : base(options)
         {
         }
-
+        public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Usertype> UserTypes { get; set; }
         public DbSet<UserHistory> UserHistories { get; set; }
@@ -64,6 +65,9 @@ namespace AWEPP.Context
             modelBuilder.Entity<TypeExpenses>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeIdenty>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeProducts>().HasKey(u => u.Id);
+            modelBuilder.Entity<AuditLog>().Property(a => a.Date).HasColumnType("datetime").HasDefaultValueSql("GETDATE()");
+
+
         }
     }
 }
