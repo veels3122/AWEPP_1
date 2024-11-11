@@ -73,8 +73,6 @@ namespace AWEPP.Repositories
                 existingUser.Modified = Users.Modified;
                 existingUser.ModifiedBy = Users.ModifiedBy;
                 existingUser.Usertype = Users.Usertype;
-                existingUser.TypeAcces = Users.TypeAcces;
-                existingUser.TypeAccesUser = Users.TypeAccesUser;
                 existingUser.IsDeleted = Users.IsDeleted;
 
 

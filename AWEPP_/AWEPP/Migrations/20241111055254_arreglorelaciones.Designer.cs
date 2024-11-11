@@ -4,6 +4,7 @@ using AWEPP.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AWEPP.Migrations
 {
     [DbContext(typeof(Aweppcontext))]
-    partial class AweppcontextModelSnapshot : ModelSnapshot
+    [Migration("20241111055254_arreglorelaciones")]
+    partial class arreglorelaciones
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -532,11 +535,12 @@ namespace AWEPP.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("TypeAccesUserss")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("TypeAccesId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TypeAccesId");
 
                     b.ToTable("TypeAccessUsers");
                 });
@@ -564,11 +568,16 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TypeAccesUserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("datemodified")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TypeAccesUserId");
 
                     b.ToTable("TypeAccesUserHistory");
                 });
@@ -1248,6 +1257,28 @@ namespace AWEPP.Migrations
                         .IsRequired();
 
                     b.Navigation("TypeAcces");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeAccesUser", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeAcces", "TypeAcces")
+                        .WithMany()
+                        .HasForeignKey("TypeAccesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeAcces");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.TypeAccesUserHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.TypeAccesUser", "TypeAccesUser")
+                        .WithMany()
+                        .HasForeignKey("TypeAccesUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TypeAccesUser");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeAccounts", b =>

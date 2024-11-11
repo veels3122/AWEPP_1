@@ -5,3 +5,15 @@ Fecha: 11/7/2024 1:47:38 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 
 Fecha: 11/10/2024 11:07:45 PM, Acción: CreateExpense, Tabla: Expense, ID Registro: 1, Cambios: Expense 1 creado., Usuario: string
 Fecha: 11/11/2024 12:25:21 AM, Acción: CreateProduct, Tabla: Product, ID Registro: 1, Cambios: product AWEPP.Model.Customer,string,string creado., Usuario: string
 Fecha: 11/11/2024 12:32:48 AM, Acción: CreateProduct, Tabla: Product, ID Registro: 2, Cambios: product AWEPP.Model.Customer,string,string creado., Usuario: string
+Fecha: 11/11/2024 12:53:54 AM, Acción: CreateSavings, Tabla: Saving, ID Registro: 16, Cambios: saving AWEPP.Modelo.Bank,AWEPP.Model.Customer,string creado., Usuario: string
+Fecha: 11/11/2024 12:54:00 AM, Acción: CreateSavings, Tabla: Saving, ID Registro: 17, Cambios: saving AWEPP.Modelo.Bank,AWEPP.Model.Customer,string creado., Usuario: string
+Fecha: 11/11/2024 12:54:20 AM, Acción: UpdateSavings, Tabla: Saving, ID Registro: 16, Cambios: Saving AWEPP.Modelo.Bank,AWEPP.Model.Customer,string actualizado., Usuario: string
+Fecha: 11/11/2024 12:54:30 AM, Acción: SoftSavings, Tabla: Saving, ID Registro: 17, Cambios: Saving ,,string marca como eliminado., Usuario: string
+Fecha: 11/11/2024 12:54:48 AM, Acción: CreateTypeAcces, Tabla: TypeAcces, ID Registro: 96, Cambios: TypeAcces string creado., Usuario: string
+Fecha: 11/11/2024 12:55:05 AM, Acción: UpdateTypeAcces, Tabla: TypeAcces, ID Registro: 96, Cambios: TypeAcces string actualiado., Usuario: string
+Fecha: 11/11/2024 12:55:14 AM, Acción: SoftTypeAcces, Tabla: TypeAcces, ID Registro: 96, Cambios: TypeAcces string marca como eliminado., Usuario: string
+Fecha: 11/11/2024 12:55:34 AM, Acción: CreateTypeAccesUser, Tabla: TypeAccesUser, ID Registro: 80, Cambios: TypeAccesUser AWEPP.Model.TypeAcces creado., Usuario: 
+Fecha: 11/11/2024 8:31:39 AM, Acción: CreateTypeAccesUser, Tabla: TypeAccesUser, ID Registro: 81, Cambios: TypeAccesUser AWEPP.Model.TypeAcces creado., Usuario: 
+Fecha: 11/11/2024 12:26:11 PM, Acción: CreateTypeAcces, Tabla: TypeAcces, ID Registro: 1, Cambios: TypeAcces string creado., Usuario: string
+Fecha: 11/11/2024 12:26:16 PM, Acción: CreateTypeAcces, Tabla: TypeAcces, ID Registro: 2, Cambios: TypeAcces string creado., Usuario: string
+Fecha: 11/11/2024 12:26:36 PM, Acción: CreateTypeAccesUser, Tabla: TypeAccesUser, ID Registro: 3, Cambios: TypeAccesUser string creado., Usuario: 

@@ -4,6 +4,7 @@ using AWEPP.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AWEPP.Migrations
 {
     [DbContext(typeof(Aweppcontext))]
-    partial class AweppcontextModelSnapshot : ModelSnapshot
+    [Migration("20241111172055_typeaccesssj")]
+    partial class typeaccesssj
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -464,26 +467,6 @@ namespace AWEPP.Migrations
                     b.ToTable("SavingHistory");
                 });
 
-            modelBuilder.Entity("AWEPP.Model.TypeAcces", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Typeacces")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TypeAccesses");
-                });
-
             modelBuilder.Entity("AWEPP.Model.TypeAccesHistory", b =>
                 {
                     b.Property<int>("Id")
@@ -507,16 +490,11 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TypeAccesId")
-                        .HasColumnType("int");
-
                     b.Property<string>("datemodified")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TypeAccesId");
 
                     b.ToTable("TypeAccesHistory");
                 });
@@ -1009,12 +987,6 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TypeAccesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TypeAccesUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1027,10 +999,6 @@ namespace AWEPP.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TypeAccesId");
-
-                    b.HasIndex("TypeAccesUserId");
 
                     b.HasIndex("UsertypeId");
 
@@ -1239,17 +1207,6 @@ namespace AWEPP.Migrations
                     b.Navigation("Saving");
                 });
 
-            modelBuilder.Entity("AWEPP.Model.TypeAccesHistory", b =>
-                {
-                    b.HasOne("AWEPP.Model.TypeAcces", "TypeAcces")
-                        .WithMany()
-                        .HasForeignKey("TypeAccesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TypeAcces");
-                });
-
             modelBuilder.Entity("AWEPP.Model.TypeAccounts", b =>
                 {
                     b.HasOne("AWEPP.Model.TypeProducts", "Typeproducts")
@@ -1356,27 +1313,11 @@ namespace AWEPP.Migrations
 
             modelBuilder.Entity("AWEPP.Modelo.User", b =>
                 {
-                    b.HasOne("AWEPP.Model.TypeAcces", "TypeAcces")
-                        .WithMany()
-                        .HasForeignKey("TypeAccesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AWEPP.Model.TypeAccesUser", "TypeAccesUser")
-                        .WithMany()
-                        .HasForeignKey("TypeAccesUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("AWEPP.Modelo.Usertype", "Usertype")
                         .WithMany()
                         .HasForeignKey("UsertypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("TypeAcces");
-
-                    b.Navigation("TypeAccesUser");
 
                     b.Navigation("Usertype");
                 });

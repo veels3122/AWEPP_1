@@ -55,7 +55,6 @@ namespace AWEPP.Repositories
                 existingSaving.paymentAmount = saving.paymentAmount;
                 existingSaving.Description = saving.Description;
                 existingSaving.TypeProducts = saving.TypeProducts;
-                existingSaving.TypeAccounts = saving.TypeAccounts;
 
                 existingSaving.Bank = saving.Bank;
                 existingSaving.Customer = saving.Customer;

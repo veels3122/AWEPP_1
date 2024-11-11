@@ -52,8 +52,8 @@ namespace AWEPP.Context
             modelBuilder.Entity<User>().HasKey(u => u.Id);
             modelBuilder.Entity<Usertype>().HasKey(u => u.Id);
             modelBuilder.Entity<UserHistory>().HasKey(u => u.Id);
+            modelBuilder.Entity<TypeAccesUser>().HasKey(ta => ta.Id);
             modelBuilder.Entity<TypeAcces>().HasKey(u => u.Id);
-            modelBuilder.Entity<TypeAccesUser>().HasKey(u => u.Id);
             modelBuilder.Entity<Bank>().HasKey(u => u.Id);
             modelBuilder.Entity<Cities>().HasKey(u => u.Id);
             modelBuilder.Entity<Contacts>().HasKey(u => u.Id);

@@ -3,40 +3,156 @@
   "WorkspaceRootPath": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\typeproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\typeproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111174111_typeaccesprods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111174111_typeaccesprods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeacces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeacces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\controllers\\typeaccesusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\controllers\\typeaccesusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111173941_typeaccesprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111173941_typeaccesprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\context\\aweppcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\context\\aweppcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241111172514_typeaccesprobe2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\20241111172514_typeaccesprobe2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111173423_typeaccesprobe3ds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111173423_typeaccesprobe3ds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\aweppcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\aweppcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172206_typeaccesprobe1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111172206_typeaccesprobe1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052141_cambio_productsd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111052141_cambio_productsd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172055_typeaccesssj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111172055_typeaccesssj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeacceshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeacceshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111170817_typeaccesss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111170817_typeaccesss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241111141700_repositories.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\20241111141700_repositories.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241111141700_repositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\20241111141700_repositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111142126_typeaccesss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111142126_typeaccesss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241111135814_cambiousers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\20241111135814_cambiousers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111135922_cambioUserss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111135922_cambioUserss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134935_cambioUsers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111134935_cambioUsers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134845_cambiotypeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111134845_cambiotypeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134419_cambiotypeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111134419_cambiotypeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134023_cambiotyj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111134023_cambiotyj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111133752_cambioty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111133752_cambioty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccesuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccesuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\savingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\savingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\controllers\\savingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\controllers\\savingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241111052343_cambio_productsdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\20241111052343_cambio_productsdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\typeproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\typeproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052141_cambio_productsd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111052141_cambio_productsd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeproductshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,20 +171,8 @@
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeexpenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeexpenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeacces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeacces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,10 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeidenty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeidenty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051127_cambio_productsd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -135,20 +235,8 @@
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\bankhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111042826_cambio_products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111042826_cambio_products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\controllers\\savingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\controllers\\savingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\savingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\savingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\services\\expensesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -177,10 +265,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\expenseshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\expenseshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\aweppcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\aweppcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241111025817_complete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -213,14 +297,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccountshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccountshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeaccesuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeaccesuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeacceshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeacceshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\savinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -263,10 +339,6 @@
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\services\\savingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\services\\typeaccesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\services\\typeaccesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\isavingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\isavingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -293,10 +365,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\repositories\\iusertyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -392,440 +460,349 @@
         },
         {
           "DockedWidth": 121,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "AWEPP\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAswAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:31:38.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AweppContext.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Context\\AweppContext.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Context\\AweppContext.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Context\\AweppContext.cs",
-              "RelativeToolTip": "AWEPP\\Context\\AweppContext.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAASwB8AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:32:29.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Program.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Program.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Program.cs",
-              "RelativeToolTip": "AWEPP\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T06:49:08.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\ProductsRepository.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Repositories\\ProductsRepository.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\ProductsRepository.cs*",
-              "RelativeToolTip": "AWEPP\\Repositories\\ProductsRepository.cs*",
-              "ViewState": "AQIAABsAAAAAAAAAAAAlwC8AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:23:14.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TypeProductsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\TypeProductsRepository.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Repositories\\TypeProductsRepository.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\TypeProductsRepository.cs*",
-              "RelativeToolTip": "AWEPP\\Repositories\\TypeProductsRepository.cs*",
-              "ViewState": "AQIAABgAAAAAAAAAAAAhwCwAAAANAAAA",
+              "Title": "20241111174111_typeaccesprods.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111174111_typeaccesprods.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111174111_typeaccesprods.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111174111_typeaccesprods.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111174111_typeaccesprods.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:11:49.676Z",
+              "WhenOpened": "2024-11-11T17:41:11.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20241111052343_cambio_productsdf.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
+              "Title": "20241111173941_typeaccesprod.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111173941_typeaccesprod.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111173941_typeaccesprod.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111173941_typeaccesprod.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111173941_typeaccesprod.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:23:43.553Z",
+              "WhenOpened": "2024-11-11T17:39:41.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20241111052141_cambio_productsd.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "20241111172514_typeaccesprobe2.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172514_typeaccesprobe2.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111172514_typeaccesprobe2.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172514_typeaccesprobe2.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111172514_typeaccesprobe2.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:21:41.853Z",
+              "WhenOpened": "2024-11-11T17:25:14.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "TypeAcces.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAcces.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAcces.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAcces.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeAcces.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T17:21:28.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\User.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\User.cs",
               "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\User.cs",
               "RelativeToolTip": "AWEPP\\Model\\User.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAYwBEAAAA5AAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABQAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T23:32:18.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TypeProductsHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProductsHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeProductsHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProductsHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeProductsHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "TypeAccesUserController.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\TypeAccesUserController.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Controllers\\TypeAccesUserController.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\TypeAccesUserController.cs",
+              "RelativeToolTip": "AWEPP\\Controllers\\TypeAccesUserController.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAApwGgAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:23:58.97Z",
+              "WhenOpened": "2024-11-11T14:16:13.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Products.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Products.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\Products.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Products.cs",
-              "RelativeToolTip": "AWEPP\\Model\\Products.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:13:33.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TypeProducts.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProducts.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeProducts.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProducts.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeProducts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:23:48.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Customer.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\Customer.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Customer.cs",
-              "RelativeToolTip": "AWEPP\\Model\\Customer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T04:37:41.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Expenses.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Expenses.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\Expenses.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Expenses.cs",
-              "RelativeToolTip": "AWEPP\\Model\\Expenses.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T04:02:28.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TypeAccounts.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccounts.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccounts.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccounts.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeAccounts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:23:38.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TypeExpenses.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpenses.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeExpenses.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpenses.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeExpenses.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:24:02.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "TypeAccesUser.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesUser.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccesUser.cs",
               "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesUser.cs",
               "RelativeToolTip": "AWEPP\\Model\\TypeAccesUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T13:47:19.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20241111173423_typeaccesprobe3ds.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111173423_typeaccesprobe3ds.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111173423_typeaccesprobe3ds.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111173423_typeaccesprobe3ds.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111173423_typeaccesprobe3ds.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:24:08.296Z",
+              "WhenOpened": "2024-11-11T17:34:23.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AweppcontextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T17:32:29.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AweppContext.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Context\\AweppContext.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Context\\AweppContext.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Context\\AweppContext.cs",
+              "RelativeToolTip": "AWEPP\\Context\\AweppContext.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAUwBkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T23:32:29.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Program.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Program.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Program.cs",
+              "RelativeToolTip": "AWEPP\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T06:49:08.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20241111172055_typeaccesssj.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172055_typeaccesssj.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111172055_typeaccesssj.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172055_typeaccesssj.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111172055_typeaccesssj.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T17:20:55.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241111172206_typeaccesprobe1.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172206_typeaccesprobe1.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111172206_typeaccesprobe1.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111172206_typeaccesprobe1.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111172206_typeaccesprobe1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T17:22:06.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TypeAccesHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccesHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeAccesHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:00:38.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20241111170817_typeaccesss.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111170817_typeaccesss.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111170817_typeaccesss.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111170817_typeaccesss.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111170817_typeaccesss.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T17:08:18.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "AWEPP\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAawEkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T23:33:38.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "TypeAcces.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAcces.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAcces.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAcces.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeAcces.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "20241111141700_repositories.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111141700_repositories.Designer.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111141700_repositories.Designer.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111141700_repositories.Designer.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111141700_repositories.Designer.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:22:51.182Z",
+              "WhenOpened": "2024-11-11T17:07:42.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Usertype.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Usertype.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\Usertype.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Usertype.cs",
-              "RelativeToolTip": "AWEPP\\Model\\Usertype.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Title": "20241111141700_repositories.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111141700_repositories.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111141700_repositories.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111141700_repositories.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111141700_repositories.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:23:55.57Z",
+              "WhenOpened": "2024-11-11T14:17:00.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "TypeIdenty.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdenty.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeIdenty.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdenty.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeIdenty.cs",
+              "Title": "20241111142126_typeaccesss.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111142126_typeaccesss.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111142126_typeaccesss.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111142126_typeaccesss.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111142126_typeaccesss.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:24:01.054Z",
+              "WhenOpened": "2024-11-11T14:21:27.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "Saving.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Saving.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\Saving.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Saving.cs",
-              "RelativeToolTip": "AWEPP\\Model\\Saving.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAewBAAAAAIAAAA",
+              "Title": "20241111135814_cambioUsers.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111135814_cambioUsers.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111135814_cambioUsers.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111135814_cambioUsers.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111135814_cambioUsers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:13:43.102Z",
+              "WhenOpened": "2024-11-11T13:58:14.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "20241111051127_cambio_productsd.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
+              "Title": "20241111135922_cambioUserss.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111135922_cambioUserss.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111135922_cambioUserss.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111135922_cambioUserss.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111135922_cambioUserss.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:11:28.013Z",
+              "WhenOpened": "2024-11-11T13:59:22.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "20241111051016_cambio_products.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051016_cambio_products.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111051016_cambio_products.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051016_cambio_products.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111051016_cambio_products.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "20241111134935_cambioUsers.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134935_cambioUsers.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111134935_cambioUsers.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134935_cambioUsers.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111134935_cambioUsers.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwA0AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:10:16.694Z",
+              "WhenOpened": "2024-11-11T13:49:36.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "TypeProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\TypeProductsController.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Controllers\\TypeProductsController.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\TypeProductsController.cs",
-              "RelativeToolTip": "AWEPP\\Controllers\\TypeProductsController.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAlwGwAAAA+AAAA",
+              "Title": "20241111134845_cambiotypeaccesuser.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134845_cambiotypeaccesuser.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111134845_cambiotypeaccesuser.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134845_cambiotypeaccesuser.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111134845_cambiotypeaccesuser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:17:42.279Z",
+              "WhenOpened": "2024-11-11T13:48:45.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "UserHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\UserHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\UserHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\UserHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\UserHistory.cs",
+              "Title": "20241111134419_cambiotypeaccesuser.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134419_cambiotypeaccesuser.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111134419_cambiotypeaccesuser.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134419_cambiotypeaccesuser.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111134419_cambiotypeaccesuser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:03:00.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TypeIdentyHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdentyHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeIdentyHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdentyHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeIdentyHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:02:57.963Z",
+              "WhenOpened": "2024-11-11T13:44:19.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "20241111050805_cambio_productsj.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
+              "Title": "20241111134023_cambiotyj.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134023_cambiotyj.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111134023_cambiotyj.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111134023_cambiotyj.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111134023_cambiotyj.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:08:06.027Z",
+              "WhenOpened": "2024-11-11T13:40:23.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "CustomerHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\CustomerHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\CustomerHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\CustomerHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\CustomerHistory.cs",
+              "Title": "20241111133752_cambioty.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111133752_cambioty.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111133752_cambioty.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111133752_cambioty.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111133752_cambioty.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:06:14.166Z",
+              "WhenOpened": "2024-11-11T13:37:52.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "20241111042615_cambio_2.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111042615_cambio_2.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111042615_cambio_2.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111042615_cambio_2.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111042615_cambio_2.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T04:26:15.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TypeExpensesHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpensesHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeExpensesHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpensesHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeExpensesHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:02:55.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "20241111041648_cambio_1.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111041648_cambio_1.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111041648_cambio_1.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111041648_cambio_1.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111041648_cambio_1.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T04:16:48.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "20241111040628_completeted.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040628_completeted.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111040628_completeted.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040628_completeted.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\20241111040628_completeted.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T04:06:28.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Cities.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Cities.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\Cities.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Cities.cs",
-              "RelativeToolTip": "AWEPP\\Model\\Cities.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:24:50.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "BankHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\BankHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\BankHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\BankHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\BankHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:02:27.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 24,
               "Title": "Bank.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Bank.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\Bank.cs",
@@ -838,7 +815,410 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Saving.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Saving.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\Saving.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Saving.cs",
+              "RelativeToolTip": "AWEPP\\Model\\Saving.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAewA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:13:43.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SavingController.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\SavingController.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Controllers\\SavingController.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\SavingController.cs",
+              "RelativeToolTip": "AWEPP\\Controllers\\SavingController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAuwGsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:15:04.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TypeAccesUserHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesUserHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccesUserHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesUserHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeAccesUserHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:02:51.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SavingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\SavingRepository.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Repositories\\SavingRepository.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\SavingRepository.cs",
+              "RelativeToolTip": "AWEPP\\Repositories\\SavingRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAawDgAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:11:04.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Products.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\Products.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Products.cs",
+              "RelativeToolTip": "AWEPP\\Model\\Products.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:13:33.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "AWEPP\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:31:38.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20241111052343_cambio_productsdf.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111052343_cambio_productsdf.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:23:43.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "TypeProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\TypeProductsRepository.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Repositories\\TypeProductsRepository.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\TypeProductsRepository.cs",
+              "RelativeToolTip": "AWEPP\\Repositories\\TypeProductsRepository.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAhwCwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:11:49.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 34,
+              "Title": "TypeAccounts.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccounts.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccounts.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccounts.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeAccounts.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:23:38.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\ProductsRepository.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Repositories\\ProductsRepository.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\ProductsRepository.cs",
+              "RelativeToolTip": "AWEPP\\Repositories\\ProductsRepository.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAlwC8AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:23:14.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20241111052141_cambio_productsd.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111052141_cambio_productsd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:21:41.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TypeProductsHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProductsHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeProductsHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProductsHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeProductsHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:23:58.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "TypeProducts.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProducts.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeProducts.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeProducts.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeProducts.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:23:48.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Customer.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\Customer.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Customer.cs",
+              "RelativeToolTip": "AWEPP\\Model\\Customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T04:37:41.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Expenses.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Expenses.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\Expenses.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Expenses.cs",
+              "RelativeToolTip": "AWEPP\\Model\\Expenses.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T04:02:28.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "TypeExpenses.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpenses.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeExpenses.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpenses.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeExpenses.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:24:02.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Usertype.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Usertype.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\Usertype.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Usertype.cs",
+              "RelativeToolTip": "AWEPP\\Model\\Usertype.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:23:55.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TypeIdenty.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdenty.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeIdenty.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdenty.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeIdenty.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:24:01.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "20241111051127_cambio_productsd.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111051127_cambio_productsd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:11:28.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20241111051016_cambio_products.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051016_cambio_products.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111051016_cambio_products.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111051016_cambio_products.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111051016_cambio_products.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:10:16.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "TypeProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\TypeProductsController.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Controllers\\TypeProductsController.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\TypeProductsController.cs",
+              "RelativeToolTip": "AWEPP\\Controllers\\TypeProductsController.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAlwGwAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T17:17:42.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "UserHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\UserHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\UserHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\UserHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\UserHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:03:00.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TypeIdentyHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdentyHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeIdentyHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeIdentyHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeIdentyHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:02:57.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "20241111050805_cambio_productsj.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111050805_cambio_productsj.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:08:06.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CustomerHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\CustomerHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\CustomerHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\CustomerHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\CustomerHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:06:14.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "20241111042615_cambio_2.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111042615_cambio_2.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111042615_cambio_2.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111042615_cambio_2.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111042615_cambio_2.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T04:26:15.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TypeExpensesHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpensesHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeExpensesHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeExpensesHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\TypeExpensesHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:02:55.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "20241111041648_cambio_1.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111041648_cambio_1.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111041648_cambio_1.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111041648_cambio_1.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111041648_cambio_1.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T04:16:48.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "20241111040628_completeted.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040628_completeted.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111040628_completeted.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040628_completeted.cs",
+              "RelativeToolTip": "AWEPP\\Migrations\\20241111040628_completeted.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T04:06:28.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Cities.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Cities.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\Cities.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Cities.cs",
+              "RelativeToolTip": "AWEPP\\Model\\Cities.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T20:24:50.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "BankHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\BankHistory.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Model\\BankHistory.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\BankHistory.cs",
+              "RelativeToolTip": "AWEPP\\Model\\BankHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:02:27.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
               "Title": "20241111042826_cambio_products.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111042826_cambio_products.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111042826_cambio_products.cs",
@@ -851,33 +1231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "SavingController.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\SavingController.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Controllers\\SavingController.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\SavingController.cs",
-              "RelativeToolTip": "AWEPP\\Controllers\\SavingController.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAApwHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:15:04.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "SavingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\SavingRepository.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Repositories\\SavingRepository.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\SavingRepository.cs",
-              "RelativeToolTip": "AWEPP\\Repositories\\SavingRepository.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAawD8AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:11:04.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 59,
               "Title": "ExpensesService.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\ExpensesService.cs",
               "RelativeDocumentMoniker": "AWEPP\\Services\\ExpensesService.cs",
@@ -890,7 +1244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 60,
               "Title": "ITypeProductsServices.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\ITypeProductsServices.cs",
               "RelativeDocumentMoniker": "AWEPP\\Services\\ITypeProductsServices.cs",
@@ -903,7 +1257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 61,
               "Title": "ExpensesRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\ExpensesRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\ExpensesRepository.cs",
@@ -916,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 62,
               "Title": "IExpensesRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\IExpensesRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\IExpensesRepository.cs",
@@ -929,7 +1283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 63,
               "Title": "20241111040242_completet.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040242_completet.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111040242_completet.cs",
@@ -942,7 +1296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 64,
               "Title": "20241111040111_completet.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040111_completet.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111040111_completet.cs",
@@ -955,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 65,
               "Title": "ExpensesHistory.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\ExpensesHistory.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\ExpensesHistory.cs",
@@ -968,20 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "AweppcontextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
-              "RelativeToolTip": "AWEPP\\Migrations\\AweppcontextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:51:41.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 66,
               "Title": "20241111025817_complete.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111025817_complete.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241111025817_complete.cs",
@@ -994,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 67,
               "Title": "20241109204642_deletedprobess.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241109204642_deletedprobess.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241109204642_deletedprobess.cs",
@@ -1007,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 68,
               "Title": "20241107044010_uptadehours_1.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107044010_uptadehours_1.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107044010_uptadehours_1.cs",
@@ -1020,7 +1361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 69,
               "Title": "TypeExpensesRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\TypeExpensesRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\TypeExpensesRepository.cs",
@@ -1033,7 +1374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 70,
               "Title": "TypeAccountsRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\TypeAccountsRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\TypeAccountsRepository.cs",
@@ -1046,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 71,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\AuditLog.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\AuditLog.cs",
@@ -1059,7 +1400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 72,
               "Title": "UsertypeHistory.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\UsertypeHistory.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\UsertypeHistory.cs",
@@ -1072,7 +1413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 73,
               "Title": "TypeAccountsHistory.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccountsHistory.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccountsHistory.cs",
@@ -1085,33 +1426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "TypeAccesUserHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesUserHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccesUserHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesUserHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeAccesUserHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:02:51.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "TypeAccesHistory.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesHistory.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Model\\TypeAccesHistory.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\TypeAccesHistory.cs",
-              "RelativeToolTip": "AWEPP\\Model\\TypeAccesHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:00:38.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 74,
               "Title": "SavingHistory.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\SavingHistory.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\SavingHistory.cs",
@@ -1124,7 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 75,
               "Title": "ContactsHistory.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\ContactsHistory.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\ContactsHistory.cs",
@@ -1137,7 +1452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 77,
               "Title": "CitiesHistory.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\CitiesHistory.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\CitiesHistory.cs",
@@ -1150,7 +1465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 76,
               "Title": "Contacts.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Model\\Contacts.cs",
               "RelativeDocumentMoniker": "AWEPP\\Model\\Contacts.cs",
@@ -1163,7 +1478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 78,
               "Title": "20241110172031_deletedprobest.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241110172031_deletedprobest.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241110172031_deletedprobest.cs",
@@ -1175,7 +1490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 79,
               "Title": "20241107034625_AddAuditLogTable_1.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107034625_AddAuditLogTable_1.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107034625_AddAuditLogTable_1.cs",
@@ -1187,7 +1502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 80,
               "Title": "20241107043026_uptadehours.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107043026_uptadehours.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107043026_uptadehours.cs",
@@ -1199,7 +1514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 81,
               "Title": "BankRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\BankRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\BankRepository.cs",
@@ -1211,7 +1526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 82,
               "Title": "20241109202206_deleted.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241109202206_deleted.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241109202206_deleted.cs",
@@ -1223,7 +1538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 83,
               "Title": "SavingService.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\SavingService.cs",
               "RelativeDocumentMoniker": "AWEPP\\Services\\SavingService.cs",
@@ -1235,19 +1550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "TypeAccesServices.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\TypeAccesServices.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Services\\TypeAccesServices.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\TypeAccesServices.cs",
-              "RelativeToolTip": "AWEPP\\Services\\TypeAccesServices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:20:50.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 84,
               "Title": "ISavingRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\ISavingRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\ISavingRepository.cs",
@@ -1259,7 +1562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 85,
               "Title": "20241109201711_delete.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241109201711_delete.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241109201711_delete.cs",
@@ -1271,7 +1574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 86,
               "Title": "BankController.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\BankController.cs",
               "RelativeDocumentMoniker": "AWEPP\\Controllers\\BankController.cs",
@@ -1283,7 +1586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 87,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "AWEPP\\DTOs\\LoginDTO.cs",
@@ -1295,7 +1598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 89,
               "Title": "ContactsController.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\ContactsController.cs",
               "RelativeDocumentMoniker": "AWEPP\\Controllers\\ContactsController.cs",
@@ -1307,7 +1610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 88,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "AWEPP\\Controllers\\CustomerController.cs",
@@ -1319,7 +1622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 90,
               "Title": "UserServices.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\UserServices.cs",
               "RelativeDocumentMoniker": "AWEPP\\Services\\UserServices.cs",
@@ -1331,19 +1634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "AWEPP\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "AWEPP\\Repositories\\UserRepository.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:33:38.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 91,
               "Title": "IUsertypeRepository.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Repositories\\IUsertypeRepository.cs",
               "RelativeDocumentMoniker": "AWEPP\\Repositories\\IUsertypeRepository.cs",
@@ -1355,7 +1646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 92,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "AWEPP\\Controllers\\UserController.cs",
@@ -1367,7 +1658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 93,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\appsettings.json",
               "RelativeDocumentMoniker": "AWEPP\\appsettings.json",
@@ -1379,7 +1670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 95,
               "Title": "IAuditService.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\IAuditService.cs",
               "RelativeDocumentMoniker": "AWEPP\\Services\\IAuditService.cs",
@@ -1391,7 +1682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 94,
               "Title": "AuditService.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Services\\AuditService.cs",
               "RelativeDocumentMoniker": "AWEPP\\Services\\AuditService.cs",
@@ -1403,7 +1694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 96,
               "Title": "AWEPP.http",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\AWEPP.http",
               "RelativeDocumentMoniker": "AWEPP\\AWEPP.http",
@@ -1415,7 +1706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 97,
               "Title": "AuditLog.txt",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\AuditLog.txt",
               "RelativeDocumentMoniker": "AWEPP\\AuditLog.txt",
@@ -1427,7 +1718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 98,
               "Title": "20241107024133_AddAuditLogTable.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107024133_AddAuditLogTable.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107024133_AddAuditLogTable.cs",
@@ -1438,7 +1729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 99,
               "Title": "20241107024008_AddAuditLogTable.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107024008_AddAuditLogTable.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107024008_AddAuditLogTable.cs",
@@ -1449,7 +1740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 100,
               "Title": "20241107023708_AddAuditLogTable.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107023708_AddAuditLogTable.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107023708_AddAuditLogTable.cs",
@@ -1460,7 +1751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 101,
               "Title": "20241107023356_AddAuditLogTable.cs",
               "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241107023356_AddAuditLogTable.cs",
               "RelativeDocumentMoniker": "AWEPP\\Migrations\\20241107023356_AddAuditLogTable.cs",

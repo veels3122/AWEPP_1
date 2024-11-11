@@ -53,7 +53,7 @@ namespace AWEPP.Repositories
                 if (existingTypeAccesUser != null)
                 {
                 // Actualizar campos
-                existingTypeAccesUser.TypeAcces = TypeAccessUsers.TypeAcces;
+                existingTypeAccesUser.TypeAccesUserss = TypeAccessUsers.TypeAccesUserss;
                 existingTypeAccesUser.IsDeleted = TypeAccessUsers.IsDeleted;
 
 

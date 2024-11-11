@@ -4,6 +4,7 @@ using AWEPP.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AWEPP.Migrations
 {
     [DbContext(typeof(Aweppcontext))]
-    partial class AweppcontextModelSnapshot : ModelSnapshot
+    [Migration("20241111135814_cambioUsers")]
+    partial class cambioUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1012,9 +1015,6 @@ namespace AWEPP.Migrations
                     b.Property<int>("TypeAccesId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TypeAccesUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1029,8 +1029,6 @@ namespace AWEPP.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("TypeAccesId");
-
-                    b.HasIndex("TypeAccesUserId");
 
                     b.HasIndex("UsertypeId");
 
@@ -1362,12 +1360,6 @@ namespace AWEPP.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AWEPP.Model.TypeAccesUser", "TypeAccesUser")
-                        .WithMany()
-                        .HasForeignKey("TypeAccesUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("AWEPP.Modelo.Usertype", "Usertype")
                         .WithMany()
                         .HasForeignKey("UsertypeId")
@@ -1375,8 +1367,6 @@ namespace AWEPP.Migrations
                         .IsRequired();
 
                     b.Navigation("TypeAcces");
-
-                    b.Navigation("TypeAccesUser");
 
                     b.Navigation("Usertype");
                 });

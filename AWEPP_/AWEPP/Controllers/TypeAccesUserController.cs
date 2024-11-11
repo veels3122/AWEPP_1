@@ -55,7 +55,7 @@ namespace AWEPP.Controllers
                 Action = "CreateTypeAccesUser",
                 TableName = "TypeAccesUser",
                 RecordId = TypeAccessUsers.Id.ToString(),
-                Changes = $"TypeAccesUser {TypeAccessUsers.TypeAcces} creado.",
+                Changes = $"TypeAccesUser {TypeAccessUsers.TypeAccesUserss} creado.",
                 Date = DateTime.UtcNow.AddHours(-5)
             });
             return CreatedAtAction(nameof(GetTypeAccesUserById), new { id = TypeAccessUsers.Id }, TypeAccessUsers);
@@ -80,7 +80,7 @@ namespace AWEPP.Controllers
                 Action = "UpdateTypeAccesUser",
                 TableName = "TypeAccesUser",
                 RecordId = TypeAccessUsers.Id.ToString(),
-                Changes = $"TypeAccesUser {TypeAccessUsers.TypeAcces} actualizado.",
+                Changes = $"TypeAccesUser {TypeAccessUsers.TypeAccesUserss} actualizado.",
                 Date = DateTime.UtcNow.AddHours(-5)
             });
             return NoContent();
@@ -102,7 +102,7 @@ namespace AWEPP.Controllers
                 Action = "SoftTypeAccesUser",
                 TableName = "TypeAccesUser",
                 RecordId = TypeAccesUser.Id.ToString(),
-                Changes = $"TypeAccesUser {TypeAccesUser.TypeAcces} marca como eliminado.",
+                Changes = $"TypeAccesUser {TypeAccesUser.TypeAccesUserss} marca como eliminado.",
                 Date = DateTime.UtcNow.AddHours(-5)
             });
             return NoContent();
