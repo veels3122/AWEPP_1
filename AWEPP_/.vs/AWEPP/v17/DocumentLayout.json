@@ -43,6 +43,10 @@
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Migrations\\20241111040242_completet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AWEPP\\Migrations\\20241111040242_completet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,8 +71,8 @@
       "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\typeidenty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\model\\typeidenty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\migrations\\20241107044010_uptadehours_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|solutionrelative:awepp\\migrations\\20241107044010_uptadehours_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7BF9BD9-C84E-44F0-820F-26FCFE1B628A}|AWEPP\\AWEPP.csproj|c:\\users\\matis\\source\\repos\\awepp_1\\awepp_\\awepp\\model\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -624,7 +628,7 @@
               "RelativeToolTip": "AWEPP\\Model\\TypeAccesUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:24:08.296Z",
+              "WhenOpened": "2024-11-09T20:11:21.264Z",
               "EditorCaption": ""
             },
             {
@@ -663,7 +667,7 @@
               "RelativeToolTip": "AWEPP\\Model\\TypeIdenty.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:24:01.054Z",
+              "WhenOpened": "2024-11-09T20:11:04.805Z",
               "EditorCaption": ""
             },
             {
@@ -1001,8 +1005,19 @@
               "RelativeToolTip": "AWEPP\\Model\\ExpensesHistory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:08:15.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T20:17:11.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "BankController.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\BankController.cs",
+              "RelativeDocumentMoniker": "AWEPP\\Controllers\\BankController.cs",
+              "ToolTip": "C:\\Users\\matis\\source\\repos\\AWEPP_1\\AWEPP_\\AWEPP\\Controllers\\BankController.cs",
+              "RelativeToolTip": "AWEPP\\Controllers\\BankController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwDMAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T06:55:30.575Z"
             },
             {
               "$type": "Document",

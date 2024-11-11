@@ -392,7 +392,7 @@ namespace AWEPP.Migrations
 
                     b.HasIndex("TypeProductsId");
 
-                    b.ToTable("Productss");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
@@ -775,7 +775,7 @@ namespace AWEPP.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TypeProductss");
+                    b.ToTable("TypeProducts");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeProductsHistory", b =>
