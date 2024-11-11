@@ -59,6 +59,7 @@ namespace AWEPP.Context
             modelBuilder.Entity<Contacts>().HasKey(u => u.Id);
             modelBuilder.Entity<Customer>().HasKey(u => u.Id);
             modelBuilder.Entity<Saving>().HasKey(u => u.Id);
+            modelBuilder.Entity<Products>().HasKey(p => p.Id);
             modelBuilder.Entity<TypeAccounts>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeExpenses>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeIdenty>().HasKey(u => u.Id);

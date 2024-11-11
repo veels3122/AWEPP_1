@@ -8,7 +8,7 @@ namespace AWEPP.Model
         
     [Key]
         public int Id { get; set; }
-        public virtual string TypeAccesUserss {  get; set; }
+        public virtual required string TypeAccesUserss {  get; set; }
         public required bool IsDeleted { get; set; }
     }
 }

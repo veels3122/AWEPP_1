@@ -17,3 +17,29 @@ Fecha: 11/11/2024 8:31:39 AM, Acción: CreateTypeAccesUser, Tabla: TypeAccesUser
 Fecha: 11/11/2024 12:26:11 PM, Acción: CreateTypeAcces, Tabla: TypeAcces, ID Registro: 1, Cambios: TypeAcces string creado., Usuario: string
 Fecha: 11/11/2024 12:26:16 PM, Acción: CreateTypeAcces, Tabla: TypeAcces, ID Registro: 2, Cambios: TypeAcces string creado., Usuario: string
 Fecha: 11/11/2024 12:26:36 PM, Acción: CreateTypeAccesUser, Tabla: TypeAccesUser, ID Registro: 3, Cambios: TypeAccesUser string creado., Usuario: 
+Fecha: 11/11/2024 12:46:49 PM, Acción: CreateTypeAccesUser, Tabla: TypeAccesUser, ID Registro: 6, Cambios: TypeAccesUser string creado., Usuario: 
+Fecha: 11/11/2024 11:10:23 PM, Acción: CreateUser, Tabla: User, ID Registro: 1, Cambios: User string creado., Usuario: string
+Fecha: 11/11/2024 11:10:27 PM, Acción: CreateUser, Tabla: User, ID Registro: 2, Cambios: User string creado., Usuario: string
+Fecha: 11/11/2024 11:10:29 PM, Acción: CreateUser, Tabla: User, ID Registro: 3, Cambios: User string creado., Usuario: string
+Fecha: 11/11/2024 11:11:15 PM, Acción: UpdateUser, Tabla: User, ID Registro: 2, Cambios: User string actualizado., Usuario: string
+Fecha: 11/11/2024 11:11:57 PM, Acción: CreateCustomer, Tabla: Customer, ID Registro: 1, Cambios: Customer string,string creado., Usuario: string
+Fecha: 11/11/2024 11:12:02 PM, Acción: CreateCustomer, Tabla: Customer, ID Registro: 2, Cambios: Customer string,string creado., Usuario: string
+Fecha: 11/11/2024 11:12:03 PM, Acción: CreateCustomer, Tabla: Customer, ID Registro: 3, Cambios: Customer string,string creado., Usuario: string
+Fecha: 11/11/2024 11:12:51 PM, Acción: CreateTypeExpenses, Tabla: TypeExpenses, ID Registro: 1, Cambios: TypeExpenses string creado., Usuario: string
+Fecha: 11/11/2024 11:12:53 PM, Acción: CreateTypeExpenses, Tabla: TypeExpenses, ID Registro: 2, Cambios: TypeExpenses string creado., Usuario: string
+Fecha: 11/11/2024 11:12:54 PM, Acción: CreateTypeExpenses, Tabla: TypeExpenses, ID Registro: 3, Cambios: TypeExpenses string creado., Usuario: string
+Fecha: 11/11/2024 11:13:19 PM, Acción: CreateTypeProducts, Tabla: TypeProducts, ID Registro: 1, Cambios: TypeProducts 0,string creado., Usuario: string
+Fecha: 11/11/2024 11:13:22 PM, Acción: CreateTypeProducts, Tabla: TypeProducts, ID Registro: 2, Cambios: TypeProducts 0,string creado., Usuario: string
+Fecha: 11/11/2024 11:13:23 PM, Acción: CreateTypeProducts, Tabla: TypeProducts, ID Registro: 3, Cambios: TypeProducts 0,string creado., Usuario: string
+Fecha: 11/11/2024 11:16:15 PM, Acción: CreateTypeProducts, Tabla: TypeProducts, ID Registro: 4, Cambios: TypeProducts 1,string creado., Usuario: string
+Fecha: 11/11/2024 11:21:47 PM, Acción: CreateTypeAccounts, Tabla: TypeAccounts, ID Registro: 0, Cambios: TypeAccounts string creado., Usuario: string
+Fecha: 11/11/2024 11:25:57 PM, Acción: CreateTypeAccounts, Tabla: TypeAccounts, ID Registro: 0, Cambios: TypeAccounts string creado., Usuario: string
+Fecha: 11/11/2024 11:30:59 PM, Acción: CreateTypeAccounts, Tabla: TypeAccounts, ID Registro: 0, Cambios: TypeAccounts string creado., Usuario: string
+Fecha: 11/11/2024 11:48:10 PM, Acción: CreateTypeAccounts, Tabla: TypeAccounts, ID Registro: 1, Cambios: TypeAccounts string creado., Usuario: string
+Fecha: 11/11/2024 11:48:17 PM, Acción: CreateTypeAccounts, Tabla: TypeAccounts, ID Registro: 2, Cambios: TypeAccounts string creado., Usuario: string
+Fecha: 11/11/2024 11:48:19 PM, Acción: CreateTypeAccounts, Tabla: TypeAccounts, ID Registro: 3, Cambios: TypeAccounts string creado., Usuario: string
+Fecha: 11/11/2024 11:49:49 PM, Acción: CreateExpense, Tabla: Expense, ID Registro: 1, Cambios: Expense 1 creado., Usuario: string
+Fecha: 11/11/2024 11:49:54 PM, Acción: CreateExpense, Tabla: Expense, ID Registro: 2, Cambios: Expense 2 creado., Usuario: string
+Fecha: 11/11/2024 11:50:37 PM, Acción: CreateProduct, Tabla: Product, ID Registro: 1, Cambios: product AWEPP.Model.Customer,string,string creado., Usuario: string
+Fecha: 11/11/2024 11:50:42 PM, Acción: CreateProduct, Tabla: Product, ID Registro: 2, Cambios: product AWEPP.Model.Customer,string,string creado., Usuario: string
+Fecha: 11/11/2024 11:51:17 PM, Acción: CreateSavings, Tabla: Saving, ID Registro: 1, Cambios: saving AWEPP.Modelo.Bank,AWEPP.Model.Customer,string creado., Usuario: string

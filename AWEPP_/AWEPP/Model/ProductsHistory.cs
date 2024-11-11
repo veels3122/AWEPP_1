@@ -7,6 +7,7 @@ namespace AWEPP.Model
     {
         [Key]
         public int Id { get; set; }
+        public virtual required Products Products { get; set; }
         public required string Datecreate { get; set; }
         public required string Modifed { get; set; }
         public required string ModifedBy { get; set; }

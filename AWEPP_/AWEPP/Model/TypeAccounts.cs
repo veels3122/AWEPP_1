@@ -1,5 +1,7 @@
 ﻿using AWEPP.Modelo;
 using System.ComponentModel.DataAnnotations;
+using AWEPP.Model;
+using AWEPP.Models;
 
 namespace AWEPP.Model
 {

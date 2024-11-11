@@ -49,7 +49,10 @@ namespace AWEPP.Repositories
         public async Task UpdateTypeAccountsAsync(TypeAccounts typeAccounts)
         {
             var existingTypeAccounts = await _context.TypeAccounts.FindAsync(typeAccounts.Id);
-
+            if (existingTypeAccounts == null)
+            {
+                throw new Exception("El TypeAccount no fue encontrado.");
+            }
             // Verificar si el registro fue encontrado
             if (existingTypeAccounts != null)
             {
@@ -60,11 +63,9 @@ namespace AWEPP.Repositories
                 // Guardar cambios en la base de datos
                 await _context.SaveChangesAsync();
             }
-            else
-            {
-                // Lanzar una excepción si no se encuentra el registro
-                throw new KeyNotFoundException("TypeAccounts not found");
-            }
+            
+
+
         }
     }
 }

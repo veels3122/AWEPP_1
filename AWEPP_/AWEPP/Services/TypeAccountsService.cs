@@ -13,7 +13,7 @@ namespace AWEPP.Services
         }
         public async Task CreateTypeAccountsAsync(TypeAccounts typeAccounts)
         {
-            await _typeAccountsRepository.UpdateTypeAccountsAsync(typeAccounts);
+            await _typeAccountsRepository.CreateTypeAccountsAsync(typeAccounts);
         }
 
         public async Task<IEnumerable<TypeAccounts>> GetAllTypeAccountsAsync()

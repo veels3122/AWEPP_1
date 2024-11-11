@@ -1,0 +1,34 @@
+2024-11-12T00:12:37.1730804-05:00  [INF] Executed DbCommand ("97"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-12T00:12:37.2867527-05:00  [INF] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-12T00:12:37.3660491-05:00  [INF] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-12T00:12:37.4462422-05:00  [INF] Executed DbCommand ("80"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-12T00:12:37.5470840-05:00  [INF] Executed DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-12T00:12:37.5729517-05:00  [INF] Applying migration '"20241112051226_total_1"'. (0e2ac64d)
+2024-11-12T00:12:37.9097036-05:00  [INF] Executed DbCommand ("85"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeAccesUserHistory] ADD [TypeAccesUserId] int NOT NULL DEFAULT 0;" (0723d8ff)
+2024-11-12T00:12:37.9908677-05:00  [INF] Executed DbCommand ("80"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ProductsHistory] ADD [ProductsId] int NOT NULL DEFAULT 0;" (0723d8ff)
+2024-11-12T00:12:38.0726311-05:00  [INF] Executed DbCommand ("81"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] ADD [ExpensesId] int NOT NULL DEFAULT 0;" (0723d8ff)
+2024-11-12T00:12:38.1506969-05:00  [INF] Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_TypeAccesUserHistory_TypeAccesUserId] ON [TypeAccesUserHistory] ([TypeAccesUserId]);" (0723d8ff)
+2024-11-12T00:12:38.2280128-05:00  [INF] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_ProductsHistory_ProductsId] ON [ProductsHistory] ([ProductsId]);" (0723d8ff)
+2024-11-12T00:12:38.3007936-05:00  [INF] Executed DbCommand ("72"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_ExpensesHistory_ExpensesId] ON [ExpensesHistory] ([ExpensesId]);" (0723d8ff)
+2024-11-12T00:12:38.3942635-05:00  [INF] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] ADD CONSTRAINT [FK_ExpensesHistory_Expensess_ExpensesId] FOREIGN KEY ([ExpensesId]) REFERENCES [Expensess] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-12T00:12:38.4723494-05:00  [INF] Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ProductsHistory] ADD CONSTRAINT [FK_ProductsHistory_Productss_ProductsId] FOREIGN KEY ([ProductsId]) REFERENCES [Productss] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-12T00:12:38.5515190-05:00  [INF] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [TypeAccesUserHistory] ADD CONSTRAINT [FK_TypeAccesUserHistory_TypeAccessUsers_TypeAccesUserId] FOREIGN KEY ([TypeAccesUserId]) REFERENCES [TypeAccessUsers] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-12T00:12:38.6305439-05:00  [INF] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241112051226_total_1', N'8.0.10');" (0723d8ff)
