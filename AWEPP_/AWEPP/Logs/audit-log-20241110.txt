@@ -1,0 +1,572 @@
+2024-11-10T12:19:41.2346864-05:00  [INF] Executed DbCommand ("143"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T12:19:41.3876376-05:00  [INF] Executed DbCommand ("139"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T12:19:41.5157202-05:00  [INF] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T12:19:41.6625698-05:00  [INF] Executed DbCommand ("146"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T12:19:41.8111485-05:00  [INF] Executed DbCommand ("132"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T12:19:41.8272160-05:00  [INF] Applying migration '"20241110171917_deletedprobest"'. (0e2ac64d)
+2024-11-10T12:19:42.1852048-05:00  [ERR] Failed executing DbCommand ("133"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [FK_ExpensesHistory_Expensess_ExpensesId];" (627a98df)
+2024-11-10T12:20:41.0163291-05:00  [INF] Executed DbCommand ("137"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T12:20:41.1625232-05:00  [INF] Executed DbCommand ("130"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T12:20:41.2895692-05:00  [INF] Executed DbCommand ("125"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T12:20:41.4127925-05:00  [INF] Executed DbCommand ("123"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T12:20:41.5654722-05:00  [INF] Executed DbCommand ("132"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T12:20:41.5823276-05:00  [INF] Applying migration '"20241110172031_deletedprobest"'. (0e2ac64d)
+2024-11-10T12:20:41.9181839-05:00  [INF] Executed DbCommand ("129"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241110172031_deletedprobest', N'8.0.10');" (0723d8ff)
+2024-11-10T12:24:15.5126924-05:00  [INF] Executed DbCommand ("125"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T12:24:15.6702928-05:00  [INF] Executed DbCommand ("129"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T12:24:15.7755922-05:00  [INF] Executed DbCommand ("104"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T12:24:15.8957880-05:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T12:24:16.0335109-05:00  [INF] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T12:24:16.0482425-05:00  [INF] Applying migration '"20241110172406_deletedprobeste"'. (0e2ac64d)
+2024-11-10T12:24:16.3730146-05:00  [INF] Executed DbCommand ("123"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_Customers_CustomerId];" (0723d8ff)
+2024-11-10T12:24:16.5115695-05:00  [INF] Executed DbCommand ("138"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeAccounts_TypeAccountsId];" (0723d8ff)
+2024-11-10T12:24:16.6238934-05:00  [INF] Executed DbCommand ("112"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeExpenses_TypeExpensesId];" (0723d8ff)
+2024-11-10T12:24:16.7322547-05:00  [INF] Executed DbCommand ("108"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [FK_Expenses_TypeProducts_TypeProductsId];" (0723d8ff)
+2024-11-10T12:24:16.8630926-05:00  [INF] Executed DbCommand ("131"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [FK_ExpensesHistory_Expenses_ExpensesId];" (0723d8ff)
+2024-11-10T12:24:17.0267357-05:00  [INF] Executed DbCommand ("163"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expenses] DROP CONSTRAINT [PK_Expenses];" (0723d8ff)
+2024-11-10T12:24:17.5854711-05:00  [INF] Executed DbCommand ("558"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expenses]', N'Expensess';" (0723d8ff)
+2024-11-10T12:24:17.7101992-05:00  [INF] Executed DbCommand ("124"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[TypeProducts].[Product]', N'ProductId', N'COLUMN';" (0723d8ff)
+2024-11-10T12:24:17.8284269-05:00  [INF] Executed DbCommand ("118"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_TypeProductsId]', N'IX_Expensess_TypeProductsId', N'INDEX';" (0723d8ff)
+2024-11-10T12:24:17.9452236-05:00  [INF] Executed DbCommand ("116"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_TypeExpensesId]', N'IX_Expensess_TypeExpensesId', N'INDEX';" (0723d8ff)
+2024-11-10T12:24:18.0596426-05:00  [INF] Executed DbCommand ("114"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_TypeAccountsId]', N'IX_Expensess_TypeAccountsId', N'INDEX';" (0723d8ff)
+2024-11-10T12:24:18.1696497-05:00  [INF] Executed DbCommand ("110"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[Expensess].[IX_Expenses_CustomerId]', N'IX_Expensess_CustomerId', N'INDEX';" (0723d8ff)
+2024-11-10T12:24:18.2952493-05:00  [INF] Executed DbCommand ("125"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [PK_Expensess] PRIMARY KEY ([Id]);" (0723d8ff)
+2024-11-10T12:24:18.4195377-05:00  [INF] Executed DbCommand ("124"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] ADD CONSTRAINT [FK_ExpensesHistory_Expensess_ExpensesId] FOREIGN KEY ([ExpensesId]) REFERENCES [Expensess] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-10T12:24:18.5378764-05:00  [INF] Executed DbCommand ("118"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-10T12:24:18.6734630-05:00  [INF] Executed DbCommand ("135"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_TypeAccounts_TypeAccountsId] FOREIGN KEY ([TypeAccountsId]) REFERENCES [TypeAccounts] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-10T12:24:18.7828307-05:00  [INF] Executed DbCommand ("109"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_TypeExpenses_TypeExpensesId] FOREIGN KEY ([TypeExpensesId]) REFERENCES [TypeExpenses] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2024-11-10T12:24:18.9102037-05:00  [ERR] Failed executing DbCommand ("127"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Expensess] ADD CONSTRAINT [FK_Expensess_TypeProducts_TypeProductsId] FOREIGN KEY ([TypeProductsId]) REFERENCES [TypeProducts] ([Id]) ON DELETE CASCADE;" (627a98df)
+2024-11-10T21:49:38.0487587-05:00  [INF] Executed DbCommand ("94"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T21:49:38.1450105-05:00  [INF] Executed DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T21:49:38.2203816-05:00  [INF] Executed DbCommand ("74"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T21:49:38.2910570-05:00  [INF] Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T21:49:38.7068676-05:00  [INF] Executed DbCommand ("392"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T21:49:38.7281007-05:00  [INF] Applying migration '"20241111024921_deletedprobeste"'. (0e2ac64d)
+2024-11-10T21:49:39.0289396-05:00  [ERR] Failed executing DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [FK_ExpensesHistory_Expensess_ExpensesId];" (627a98df)
+2024-11-10T21:50:15.1577930-05:00  [INF] Executed DbCommand ("1,325"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T21:50:15.6006850-05:00  [INF] Executed DbCommand ("430"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T21:50:15.7840968-05:00  [INF] Executed DbCommand ("181"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T21:50:15.8630364-05:00  [INF] Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T21:50:15.9531519-05:00  [INF] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T21:50:15.9722631-05:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-11-10T21:54:03.4052105-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-10T21:54:03.4095357-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-10T21:54:03.5648556-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-10T21:54:03.5657469-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-10T21:54:03.5658323-05:00  [INF] Content root path: "C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-10T21:54:04.2658611-05:00 0HN81VGCUNDUS:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-10T21:54:04.4878499-05:00 0HN81VGCUNDUS:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 231.8936ms (74253ad3)
+2024-11-10T21:54:04.4906443-05:00 0HN81VGCUNDUS:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-10T21:54:07.7780965-05:00 0HN81VGCUNDUS:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - null null (d509f86a)
+2024-11-10T21:54:07.9256884-05:00 0HN81VGCUNDUS:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 147.731ms (74253ad3)
+2024-11-10T21:54:07.9582002-05:00 0HN81VGCUNDUS:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/swagger-ui.css""" - null null (d509f86a)
+2024-11-10T21:54:07.9667455-05:00 0HN81VGCUNDUS:0000000B [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/swagger-ui-standalone-preset.js""" - null null (d509f86a)
+2024-11-10T21:54:07.9667456-05:00 0HN81VGCUNDUS:00000009 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/swagger-ui-bundle.js""" - null null (d509f86a)
+2024-11-10T21:54:07.9667455-05:00 0HN81VGCUNDUS:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.css""" - null null (d509f86a)
+2024-11-10T21:54:07.9694258-05:00 0HN81VGCUNDUS:0000000F [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-11-10T21:54:07.9714097-05:00 0HN81VGCUNDUS:0000000D [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.js""" - null null (d509f86a)
+2024-11-10T21:54:07.9803062-05:00 0HN81VGCUNDUS:0000000D [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 10.2498ms (74253ad3)
+2024-11-10T21:54:07.9890002-05:00 0HN81VGCUNDUS:00000007 [INF] Sending file. Request path: '"/index.css"'. Physical path: '"N/A"' (27b0a520)
+2024-11-10T21:54:07.9892997-05:00 0HN81VGCUNDUS:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.css""" - 200 202 "text/css" 22.5272ms (74253ad3)
+2024-11-10T21:54:08.0135239-05:00 0HN81VGCUNDUS:0000000F [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 44.9447ms (74253ad3)
+2024-11-10T21:54:08.0228255-05:00 0HN81VGCUNDUS:0000000B [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2024-11-10T21:54:08.0228255-05:00 0HN81VGCUNDUS:00000005 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2024-11-10T21:54:08.0251390-05:00 0HN81VGCUNDUS:0000000B [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/swagger-ui-standalone-preset.js""" - 200 230293 "text/javascript" 57.6532ms (74253ad3)
+2024-11-10T21:54:08.0251344-05:00 0HN81VGCUNDUS:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/swagger-ui.css""" - 200 152034 "text/css" 67.3055ms (74253ad3)
+2024-11-10T21:54:08.0285810-05:00 0HN81VGCUNDUS:00000011 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - null null (d509f86a)
+2024-11-10T21:54:08.1131956-05:00 0HN81VGCUNDUS:00000009 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2024-11-10T21:54:08.1135534-05:00 0HN81VGCUNDUS:00000009 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/swagger-ui-bundle.js""" - 200 1452753 "text/javascript" 146.7297ms (74253ad3)
+2024-11-10T21:54:08.1474283-05:00 0HN81VGCUNDUS:00000011 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 119.1713ms (74253ad3)
+2024-11-10T21:54:08.3463723-05:00 0HN81VGCUNDUS:00000013 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-11-10T21:54:08.7645289-05:00 0HN81VGCUNDUS:00000013 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 418.5441ms (74253ad3)
+2024-11-10T21:54:14.3619396-05:00 0HN81VGCUNDUS:00000015 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/Cities""" - null null (d509f86a)
+2024-11-10T21:54:14.3725168-05:00 0HN81VGCUNDUS:00000015 [INF] Executing endpoint '"AWEPP.Controllers.CitiesController.GetAllCities (AWEPP)"' (500cc934)
+2024-11-10T21:54:14.4154792-05:00 0HN81VGCUNDUS:00000015 [INF] Route matched with "{action = \"GetAllCities\", controller = \"Cities\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Modelo.Cities]]] GetAllCities()" on controller "AWEPP.Controllers.CitiesController" ("AWEPP"). (122b2fdf)
+2024-11-10T21:54:18.4210838-05:00 0HN81VGCUNDUS:00000015 [INF] Executed DbCommand ("454"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[City], [c].[IsDeleted]
+FROM [Cities] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-10T21:54:18.5585375-05:00 0HN81VGCUNDUS:00000015 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Modelo.Cities, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-10T21:54:18.5758471-05:00 0HN81VGCUNDUS:00000015 [INF] Executed action "AWEPP.Controllers.CitiesController.GetAllCities (AWEPP)" in 4154.6296ms (afa2e885)
+2024-11-10T21:54:18.5768028-05:00 0HN81VGCUNDUS:00000015 [INF] Executed endpoint '"AWEPP.Controllers.CitiesController.GetAllCities (AWEPP)"' (99874f2b)
+2024-11-10T21:54:18.5892349-05:00 0HN81VGCUNDUS:00000015 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/Cities""" - 200 null "application/json; charset=utf-8" 4227.9255ms (74253ad3)
+2024-11-10T21:54:25.5216000-05:00 0HN81VGCUNDUS:00000017 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/Customer""" - null null (d509f86a)
+2024-11-10T21:54:25.5246426-05:00 0HN81VGCUNDUS:00000017 [INF] Executing endpoint '"AWEPP.Controllers.CustomerController.GetAllCustomer (AWEPP)"' (500cc934)
+2024-11-10T21:54:25.5326623-05:00 0HN81VGCUNDUS:00000017 [INF] Route matched with "{action = \"GetAllCustomer\", controller = \"Customer\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Model.Customer]]] GetAllCustomer()" on controller "AWEPP.Controllers.CustomerController" ("AWEPP"). (122b2fdf)
+2024-11-10T21:54:25.6795671-05:00 0HN81VGCUNDUS:00000017 [INF] Executed DbCommand ("99"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Adress], [c].[CitiesId], [c].[Contact], [c].[ContactsId], [c].[IsDeleted], [c].[LastName], [c].[Name], [c].[NumIdenty], [c].[TypeIdentyId], [c].[UserId]
+FROM [Customers] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-10T21:54:25.7302188-05:00 0HN81VGCUNDUS:00000017 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Model.Customer, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-10T21:54:25.7403993-05:00 0HN81VGCUNDUS:00000017 [INF] Executed action "AWEPP.Controllers.CustomerController.GetAllCustomer (AWEPP)" in 207.5337ms (afa2e885)
+2024-11-10T21:54:25.7405037-05:00 0HN81VGCUNDUS:00000017 [INF] Executed endpoint '"AWEPP.Controllers.CustomerController.GetAllCustomer (AWEPP)"' (99874f2b)
+2024-11-10T21:54:25.7410284-05:00 0HN81VGCUNDUS:00000017 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/Customer""" - 200 null "application/json; charset=utf-8" 219.4748ms (74253ad3)
+2024-11-10T21:54:32.0906349-05:00 0HN81VGCUNDUS:00000019 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/Expenses""" - null null (d509f86a)
+2024-11-10T21:54:32.0912062-05:00 0HN81VGCUNDUS:00000019 [INF] Executing endpoint '"AWEPP.Controllers.ExpensesController.GetAllExpenses (AWEPP)"' (500cc934)
+2024-11-10T21:54:32.0985612-05:00 0HN81VGCUNDUS:00000019 [INF] Route matched with "{action = \"GetAllExpenses\", controller = \"Expenses\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Model.Expenses]]] GetAllExpenses()" on controller "AWEPP.Controllers.ExpensesController" ("AWEPP"). (122b2fdf)
+2024-11-10T21:54:32.2967828-05:00 0HN81VGCUNDUS:00000019 [INF] Executed DbCommand ("94"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[Id], [e].[BalanceFee], [e].[CustomerId], [e].[DateEnd], [e].[DateExpense], [e].[DateStart], [e].[Description], [e].[IsDeleted], [e].[NumberFee], [e].[TotalExpense], [e].[TypeAccountsId], [e].[TypeExpensesId], [e].[TypeProductsId]
+FROM [Expenses] AS [e]
+WHERE [e].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-10T21:54:32.3689511-05:00 0HN81VGCUNDUS:00000019 [ERR] An exception occurred while iterating over the results of a query for context type '"AWEPP.Context.Aweppcontext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method166(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method166(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-11-10T21:54:32.5625737-05:00 0HN81VGCUNDUS:00000019 [INF] Executed action "AWEPP.Controllers.ExpensesController.GetAllExpenses (AWEPP)" in 463.8857ms (afa2e885)
+2024-11-10T21:54:32.5638065-05:00 0HN81VGCUNDUS:00000019 [INF] Executed endpoint '"AWEPP.Controllers.ExpensesController.GetAllExpenses (AWEPP)"' (99874f2b)
+2024-11-10T21:54:32.5899134-05:00 0HN81VGCUNDUS:00000019 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method166(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at AWEPP.Repositories.ExpensesRepository.GetAllExpensesAsync() in C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\Repositories\ExpensesRepository.cs:line 27
+   at AWEPP.Services.ExpensesService.GetAllExpensesAsync() in C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\Services\ExpensesService.cs:line 22
+   at AWEPP.Controllers.ExpensesController.GetAllExpenses() in C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP\Controllers\ExpensesController.cs:line 30
+   at lambda_method161(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-10T21:54:32.5955987-05:00 0HN81VGCUNDUS:00000019 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/Expenses""" - 500 null "text/plain; charset=utf-8" 505.3988ms (74253ad3)
+2024-11-10T21:58:43.1038792-05:00  [INF] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T21:58:43.2070812-05:00  [INF] Executed DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T21:58:43.2907356-05:00  [INF] Executed DbCommand ("82"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T21:58:43.3743243-05:00  [INF] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T21:58:43.4717558-05:00  [INF] Executed DbCommand ("81"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T21:58:43.4879463-05:00  [INF] Applying migration '"20241111025817_complete"'. (0e2ac64d)
+2024-11-10T21:58:44.9577953-05:00  [INF] Executed DbCommand ("1,319"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [FK_ExpensesHistory_Expenses_ExpensesId];" (0723d8ff)
+2024-11-10T21:58:45.0458146-05:00  [INF] Executed DbCommand ("87"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP TABLE [Expenses];" (0723d8ff)
+2024-11-10T21:58:45.1195349-05:00  [INF] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP INDEX [IX_ExpensesHistory_ExpensesId] ON [ExpensesHistory];" (0723d8ff)
+2024-11-10T21:58:45.2634669-05:00  [INF] Executed DbCommand ("144"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[ExpensesHistory]') AND [c].[name] = N'ExpensesId');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [ExpensesHistory] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [ExpensesHistory] DROP COLUMN [ExpensesId];" (0723d8ff)
+2024-11-10T21:58:45.6483866-05:00  [INF] Executed DbCommand ("385"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241111025817_complete', N'8.0.10');" (0723d8ff)
+2024-11-10T21:59:18.8068269-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-10T21:59:18.8125191-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-10T21:59:18.9124870-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-10T21:59:18.9131528-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-10T21:59:18.9132352-05:00  [INF] Content root path: "C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-10T21:59:19.5134882-05:00 0HN81VJAVECUJ:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-10T21:59:19.7376308-05:00 0HN81VJAVECUJ:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 231.4466ms (74253ad3)
+2024-11-10T21:59:19.7403125-05:00 0HN81VJAVECUJ:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-10T21:59:29.1916768-05:00 0HN81VJAVECUJ:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - null null (d509f86a)
+2024-11-10T21:59:29.3972456-05:00 0HN81VJAVECUJ:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 205.5856ms (74253ad3)
+2024-11-10T21:59:29.6478458-05:00 0HN81VJAVECUJ:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-11-10T21:59:29.6547570-05:00 0HN81VJAVECUJ:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.js""" - null null (d509f86a)
+2024-11-10T21:59:29.6553466-05:00 0HN81VJAVECUJ:00000009 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - null null (d509f86a)
+2024-11-10T21:59:29.6689973-05:00 0HN81VJAVECUJ:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 14.3622ms (74253ad3)
+2024-11-10T21:59:29.7251463-05:00 0HN81VJAVECUJ:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 77.4765ms (74253ad3)
+2024-11-10T21:59:29.8077472-05:00 0HN81VJAVECUJ:00000009 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 152.5ms (74253ad3)
+2024-11-10T21:59:29.8965600-05:00 0HN81VJAVECUJ:0000000B [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-11-10T21:59:30.4260669-05:00 0HN81VJAVECUJ:0000000B [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 529.6112ms (74253ad3)
+2024-11-10T21:59:51.4836673-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-10T21:59:51.4935647-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-10T21:59:51.7208725-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-10T21:59:51.7222590-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-10T21:59:51.7224001-05:00  [INF] Content root path: "C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-10T21:59:52.2588808-05:00 0HN81VJKMFM69:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-10T21:59:52.5949849-05:00 0HN81VJKMFM69:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 344.7537ms (74253ad3)
+2024-11-10T21:59:52.5981116-05:00 0HN81VJKMFM69:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-10T22:22:41.8965842-05:00  [INF] Executed DbCommand ("118"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:22:42.3350903-05:00  [INF] Executed DbCommand ("425"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:22:42.4316594-05:00  [INF] Executed DbCommand ("95"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:22:42.5280779-05:00  [INF] Executed DbCommand ("96"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:22:42.6535893-05:00  [INF] Executed DbCommand ("111"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T22:22:42.6695304-05:00  [INF] Applying migration '"20241111032231_completet"'. (0e2ac64d)
+2024-11-10T22:22:43.1057390-05:00  [ERR] Failed executing DbCommand ("234"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Expensess] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(max) NOT NULL,
+    [TotalExpense] nvarchar(max) NOT NULL,
+    [NumberFee] nvarchar(max) NOT NULL,
+    [DateExpense] nvarchar(max) NOT NULL,
+    [DateStart] nvarchar(max) NOT NULL,
+    [DateEnd] nvarchar(max) NOT NULL,
+    [BalanceFee] nvarchar(max) NOT NULL,
+    [TypeExpensesId] int NOT NULL,
+    [TypeAccountsId] int NOT NULL,
+    [TypeProductsId] int NOT NULL,
+    [CustomerId] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_Expensess] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Expensess_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeAccounts_TypeAccountsId] FOREIGN KEY ([TypeAccountsId]) REFERENCES [TypeAccounts] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeExpenses_TypeExpensesId] FOREIGN KEY ([TypeExpensesId]) REFERENCES [TypeExpenses] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeProducts_TypeProductsId] FOREIGN KEY ([TypeProductsId]) REFERENCES [TypeProducts] ([Id]) ON DELETE CASCADE
+);" (627a98df)
+2024-11-10T22:37:23.0330117-05:00  [INF] Executed DbCommand ("91"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:37:23.1326020-05:00  [INF] Executed DbCommand ("86"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:37:23.5232079-05:00  [INF] Executed DbCommand ("389"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:37:23.6140372-05:00  [INF] Executed DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:37:23.7025584-05:00  [INF] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T22:37:23.7138564-05:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-11-10T22:48:25.5154918-05:00  [INF] Executed DbCommand ("99"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:48:26.2688237-05:00  [INF] Executed DbCommand ("714"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:48:26.3451316-05:00  [INF] Executed DbCommand ("75"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:48:26.4264122-05:00  [INF] Executed DbCommand ("81"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:48:26.5201161-05:00  [INF] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T22:48:26.5328082-05:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-11-10T22:48:41.3381711-05:00  [INF] Executed DbCommand ("404"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:48:41.7590161-05:00  [INF] Executed DbCommand ("408"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:48:42.1636357-05:00  [INF] Executed DbCommand ("403"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:48:42.8713760-05:00  [INF] Executed DbCommand ("707"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:48:43.2839309-05:00  [INF] Executed DbCommand ("399"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T22:48:43.2989134-05:00  [INF] Applying migration '"20241111034831_completet"'. (0e2ac64d)
+2024-11-10T22:48:43.9197974-05:00  [ERR] Failed executing DbCommand ("429"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'[TypeProducts].[ProductId]', N'Product', N'COLUMN';" (627a98df)
+2024-11-10T22:49:20.5464227-05:00  [INF] Executed DbCommand ("99"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:49:20.6529882-05:00  [INF] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:49:21.0420119-05:00  [INF] Executed DbCommand ("387"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:49:21.1348811-05:00  [INF] Executed DbCommand ("92"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:49:21.2342012-05:00  [INF] Executed DbCommand ("88"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T22:49:21.2463698-05:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-11-10T22:50:35.1452831-05:00  [INF] Executed DbCommand ("116"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:50:35.2580595-05:00  [INF] Executed DbCommand ("100"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:50:35.3554751-05:00  [INF] Executed DbCommand ("96"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T22:50:35.4533427-05:00  [INF] Executed DbCommand ("96"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T22:50:35.5634514-05:00  [INF] Executed DbCommand ("95"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T22:50:35.5824170-05:00  [INF] Applying migration '"20241111035015_completet"'. (0e2ac64d)
+2024-11-10T22:50:35.8764928-05:00  [INF] Executed DbCommand ("98"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241111035015_completet', N'8.0.10');" (0723d8ff)
+2024-11-10T23:00:08.2571537-05:00  [INF] Executed DbCommand ("456"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:00:08.3924688-05:00  [INF] Executed DbCommand ("122"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:00:08.4858424-05:00  [INF] Executed DbCommand ("92"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:00:08.8829246-05:00  [INF] Executed DbCommand ("397"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:00:08.9986608-05:00  [INF] Executed DbCommand ("92"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T23:00:09.0140521-05:00  [INF] Applying migration '"20241111040000_completet"'. (0e2ac64d)
+2024-11-10T23:00:09.4842127-05:00  [ERR] Failed executing DbCommand ("278"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Expensess] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(max) NOT NULL,
+    [TotalExpense] nvarchar(max) NOT NULL,
+    [NumberFee] nvarchar(max) NOT NULL,
+    [DateExpense] nvarchar(max) NOT NULL,
+    [DateStart] nvarchar(max) NOT NULL,
+    [DateEnd] nvarchar(max) NOT NULL,
+    [BalanceFee] nvarchar(max) NOT NULL,
+    [TypeExpensesId] int NOT NULL,
+    [TypeAccountsId] int NOT NULL,
+    [TypeProductsId] int NOT NULL,
+    [CustomerId] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_Expensess] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Expensess_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeAccounts_TypeAccountsId] FOREIGN KEY ([TypeAccountsId]) REFERENCES [TypeAccounts] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeExpenses_TypeExpensesId] FOREIGN KEY ([TypeExpensesId]) REFERENCES [TypeExpenses] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeProducts_TypeProductsId] FOREIGN KEY ([TypeProductsId]) REFERENCES [TypeProducts] ([Id]) ON DELETE CASCADE
+);" (627a98df)
+2024-11-10T23:01:19.3772355-05:00  [INF] Executed DbCommand ("104"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:01:19.7995279-05:00  [INF] Executed DbCommand ("409"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:01:20.1916577-05:00  [INF] Executed DbCommand ("391"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:01:25.1381543-05:00  [INF] Executed DbCommand ("4,945"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:01:25.2440516-05:00  [INF] Executed DbCommand ("92"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T23:01:25.2582315-05:00  [INF] Applying migration '"20241111040111_completet"'. (0e2ac64d)
+2024-11-10T23:01:25.8328273-05:00  [ERR] Failed executing DbCommand ("398"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP TABLE [Expensess];" (627a98df)
+2024-11-10T23:02:50.9078129-05:00  [INF] Executed DbCommand ("716"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:02:51.0006817-05:00  [INF] Executed DbCommand ("80"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:02:51.0808711-05:00  [INF] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:02:51.1663349-05:00  [INF] Executed DbCommand ("85"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:02:51.2530950-05:00  [INF] Executed DbCommand ("72"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T23:02:51.2680419-05:00  [INF] Applying migration '"20241111040242_completet"'. (0e2ac64d)
+2024-11-10T23:02:51.7338838-05:00  [INF] Executed DbCommand ("292"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Expensess] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(max) NOT NULL,
+    [TotalExpense] nvarchar(max) NOT NULL,
+    [NumberFee] nvarchar(max) NOT NULL,
+    [DateExpense] nvarchar(max) NOT NULL,
+    [DateStart] nvarchar(max) NOT NULL,
+    [DateEnd] nvarchar(max) NOT NULL,
+    [BalanceFee] nvarchar(max) NOT NULL,
+    [TypeExpensesId] int NOT NULL,
+    [TypeAccountsId] int NOT NULL,
+    [CustomerId] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_Expensess] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Expensess_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeAccounts_TypeAccountsId] FOREIGN KEY ([TypeAccountsId]) REFERENCES [TypeAccounts] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Expensess_TypeExpenses_TypeExpensesId] FOREIGN KEY ([TypeExpensesId]) REFERENCES [TypeExpenses] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2024-11-10T23:02:51.8132726-05:00  [INF] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_Expensess_CustomerId] ON [Expensess] ([CustomerId]);" (0723d8ff)
+2024-11-10T23:02:52.5007639-05:00  [INF] Executed DbCommand ("687"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_Expensess_TypeAccountsId] ON [Expensess] ([TypeAccountsId]);" (0723d8ff)
+2024-11-10T23:02:53.1958538-05:00  [INF] Executed DbCommand ("694"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_Expensess_TypeExpensesId] ON [Expensess] ([TypeExpensesId]);" (0723d8ff)
+2024-11-10T23:02:53.2719170-05:00  [INF] Executed DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241111040242_completet', N'8.0.10');" (0723d8ff)
+2024-11-10T23:06:55.2898511-05:00  [INF] Executed DbCommand ("91"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:06:55.3874762-05:00  [INF] Executed DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:06:55.4666501-05:00  [INF] Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-11-10T23:06:55.5456224-05:00  [INF] Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-11-10T23:06:55.6542989-05:00  [INF] Executed DbCommand ("94"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-11-10T23:06:55.6668362-05:00  [INF] Applying migration '"20241111040628_completeted"'. (0e2ac64d)
+2024-11-10T23:06:55.8939908-05:00  [INF] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241111040628_completeted', N'8.0.10');" (0723d8ff)
+2024-11-10T23:07:21.3221095-05:00  [INF] Now listening on: "https://localhost:39336" (d826f4b8)
+2024-11-10T23:07:21.3242232-05:00  [INF] Now listening on: "http://localhost:39337" (d826f4b8)
+2024-11-10T23:07:21.3965847-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-11-10T23:07:21.3974282-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-11-10T23:07:21.3975591-05:00  [INF] Content root path: "C:\Users\matis\Source\Repos\AWEPP_1\AWEPP_\AWEPP" (cc26f24e)
+2024-11-10T23:07:22.2160281-05:00 0HN820PBMCTFB:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/""" - null null (d509f86a)
+2024-11-10T23:07:22.5155561-05:00 0HN820PBMCTFB:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/""" - 404 0 null 307.6773ms (74253ad3)
+2024-11-10T23:07:22.5193792-05:00 0HN820PBMCTFB:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:39336""""/", Response status code: 404 (e353595a)
+2024-11-10T23:07:26.4173596-05:00 0HN820PBMCTFB:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - null null (d509f86a)
+2024-11-10T23:07:26.5536930-05:00 0HN820PBMCTFB:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 136.6206ms (74253ad3)
+2024-11-10T23:07:26.6061712-05:00 0HN820PBMCTFB:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-11-10T23:07:26.6063803-05:00 0HN820PBMCTFB:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.js""" - null null (d509f86a)
+2024-11-10T23:07:26.6118948-05:00 0HN820PBMCTFB:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 5.5928ms (74253ad3)
+2024-11-10T23:07:26.6257878-05:00 0HN820PBMCTFB:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 20.4084ms (74253ad3)
+2024-11-10T23:07:26.6500872-05:00 0HN820PBMCTFB:00000009 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - null null (d509f86a)
+2024-11-10T23:07:26.7174991-05:00 0HN820PBMCTFB:00000009 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 67.6715ms (74253ad3)
+2024-11-10T23:07:26.7815684-05:00 0HN820PBMCTFB:0000000B [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-11-10T23:07:27.1775744-05:00 0HN820PBMCTFB:0000000B [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 396.3637ms (74253ad3)
+2024-11-10T23:07:31.6644862-05:00 0HN820PBMCTFB:0000000D [INF] Request starting "HTTP/2" "GET" "https"://"localhost:39336""""/api/Expenses""" - null null (d509f86a)
+2024-11-10T23:07:31.6783462-05:00 0HN820PBMCTFB:0000000D [INF] Executing endpoint '"AWEPP.Controllers.ExpensesController.GetAllExpenses (AWEPP)"' (500cc934)
+2024-11-10T23:07:31.7202272-05:00 0HN820PBMCTFB:0000000D [INF] Route matched with "{action = \"GetAllExpenses\", controller = \"Expenses\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AWEPP.Model.Expenses]]] GetAllExpenses()" on controller "AWEPP.Controllers.ExpensesController" ("AWEPP"). (122b2fdf)
+2024-11-10T23:07:35.7192804-05:00 0HN820PBMCTFB:0000000D [INF] Executed DbCommand ("143"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[Id], [e].[BalanceFee], [e].[CustomerId], [e].[DateEnd], [e].[DateExpense], [e].[DateStart], [e].[Description], [e].[IsDeleted], [e].[NumberFee], [e].[TotalExpense], [e].[TypeAccountsId], [e].[TypeExpensesId]
+FROM [Expensess] AS [e]
+WHERE [e].[IsDeleted] = CAST(0 AS bit)" (0723d8ff)
+2024-11-10T23:07:35.7621317-05:00 0HN820PBMCTFB:0000000D [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AWEPP.Model.Expenses, AWEPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-11-10T23:07:35.7890212-05:00 0HN820PBMCTFB:0000000D [INF] Executed action "AWEPP.Controllers.ExpensesController.GetAllExpenses (AWEPP)" in 4061.8574ms (afa2e885)
+2024-11-10T23:07:35.7897985-05:00 0HN820PBMCTFB:0000000D [INF] Executed endpoint '"AWEPP.Controllers.ExpensesController.GetAllExpenses (AWEPP)"' (99874f2b)
+2024-11-10T23:07:35.8001264-05:00 0HN820PBMCTFB:0000000D [INF] Request finished "HTTP/2" "GET" "https"://"localhost:39336""""/api/Expenses""" - 200 null "application/json; charset=utf-8" 4136.3906ms (74253ad3)
+2024-11-10T23:07:43.4494375-05:00 0HN820PBMCTFC:00000001 [INF] Request starting "HTTP/2" "POST" "https"://"localhost:39336""""/api/Expenses""" - "application/json" 1623 (d509f86a)
+2024-11-10T23:07:43.4636119-05:00 0HN820PBMCTFC:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2024-11-10T23:07:43.4646699-05:00 0HN820PBMCTFC:00000001 [INF] Executing endpoint '"AWEPP.Controllers.ExpensesController.CreateExpenses (AWEPP)"' (500cc934)
+2024-11-10T23:07:43.4796432-05:00 0HN820PBMCTFC:00000001 [INF] Route matched with "{action = \"CreateExpenses\", controller = \"Expenses\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateExpenses(AWEPP.Model.Expenses)" on controller "AWEPP.Controllers.ExpensesController" ("AWEPP"). (122b2fdf)
+2024-11-10T23:07:44.4389499-05:00 0HN820PBMCTFC:00000001 [INF] Executed DbCommand ("134"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (DbType = Int32), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Cities] ([City], [IsDeleted])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+INSERT INTO [Contacts] ([Contact], [IsDeleted])
+OUTPUT INSERTED.[Id]
+VALUES (@p2, @p3);
+MERGE [TypeAccesses] USING (
+VALUES (@p4, @p5, 0),
+(@p6, @p7, 1)) AS i ([IsDeleted], [Typeacces], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([IsDeleted], [Typeacces])
+VALUES (i.[IsDeleted], i.[Typeacces])
+OUTPUT INSERTED.[Id], i._Position;
+INSERT INTO [TypeExpenses] ([Expenses], [IsDeleted])
+OUTPUT INSERTED.[Id]
+VALUES (@p8, @p9);
+INSERT INTO [TypeIdentities] ([IsDeleted], [TipoIdenty])
+OUTPUT INSERTED.[Id]
+VALUES (@p10, @p11);
+INSERT INTO [TypeProducts] ([Description], [IsDeleted], [Product])
+OUTPUT INSERTED.[Id]
+VALUES (@p12, @p13, @p14);
+INSERT INTO [UserTypes] ([IsDeleted], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p15, @p16);" (0723d8ff)
+2024-11-10T23:07:44.5746412-05:00 0HN820PBMCTFC:00000001 [INF] Executed DbCommand ("97"ms) [Parameters=["@p17='?' (DbType = Boolean), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [TypeAccessUsers] ([IsDeleted], [TypeAccesId])
+OUTPUT INSERTED.[Id]
+VALUES (@p17, @p18);
+INSERT INTO [TypeAccounts] ([Accounts], [IsDeleted], [TypeproductsId])
+OUTPUT INSERTED.[Id]
+VALUES (@p19, @p20, @p21);" (0723d8ff)
+2024-11-10T23:07:44.6729007-05:00 0HN820PBMCTFC:00000001 [INF] Executed DbCommand ("95"ms) [Parameters=["@p22='?' (Size = 4000), @p23='?' (DbType = Boolean), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Size = 4000), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (DbType = Int32), @p30='?' (DbType = Int32), @p31='?' (Size = 4000), @p32='?' (DbType = Int32), @p33='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [IsDeleted], [Modified], [ModifiedBy], [Name], [Password], [PhoneNumber], [TypeAccesId], [TypeAccesUserId], [UserName], [UsertypeId], [date])
+OUTPUT INSERTED.[Id]
+VALUES (@p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33);" (0723d8ff)
+2024-11-10T23:07:44.7681827-05:00 0HN820PBMCTFC:00000001 [INF] Executed DbCommand ("93"ms) [Parameters=["@p34='?' (Size = 4000), @p35='?' (DbType = Int32), @p36='?' (Size = 4000), @p37='?' (DbType = Int32), @p38='?' (DbType = Boolean), @p39='?' (Size = 4000), @p40='?' (Size = 4000), @p41='?' (DbType = Int32), @p42='?' (DbType = Int32), @p43='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Adress], [CitiesId], [Contact], [ContactsId], [IsDeleted], [LastName], [Name], [NumIdenty], [TypeIdentyId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43);" (0723d8ff)
+2024-11-10T23:07:44.8663391-05:00 0HN820PBMCTFC:00000001 [INF] Executed DbCommand ("96"ms) [Parameters=["@p44='?' (Size = 4000), @p45='?' (DbType = Int32), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (Size = 4000), @p49='?' (Size = 4000), @p50='?' (DbType = Boolean), @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?' (DbType = Int32), @p54='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Expensess] ([BalanceFee], [CustomerId], [DateEnd], [DateExpense], [DateStart], [Description], [IsDeleted], [NumberFee], [TotalExpense], [TypeAccountsId], [TypeExpensesId])
+OUTPUT INSERTED.[Id]
+VALUES (@p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54);" (0723d8ff)
+2024-11-10T23:07:45.6396526-05:00 0HN820PBMCTFC:00000001 [INF] Fecha: 11/10/2024 11:07:45 PM, Acción: CreateExpense, Tabla: Expense, ID Registro: 1, Cambios: Expense 1 creado., Usuario: string
+ (bb47ee77)
+2024-11-10T23:07:45.7831528-05:00 0HN820PBMCTFC:00000001 [INF] Executed DbCommand ("97"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [Changes], [Date], [RecordId], [TableName], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2024-11-10T23:07:45.7906159-05:00 0HN820PBMCTFC:00000001 [INF] Executing "CreatedAtActionResult", writing value of type '"AWEPP.Model.Expenses"'. (605b4265)
+2024-11-10T23:07:45.8293658-05:00 0HN820PBMCTFC:00000001 [INF] Executed action "AWEPP.Controllers.ExpensesController.CreateExpenses (AWEPP)" in 2349.5603ms (afa2e885)
+2024-11-10T23:07:45.8294673-05:00 0HN820PBMCTFC:00000001 [INF] Executed endpoint '"AWEPP.Controllers.ExpensesController.CreateExpenses (AWEPP)"' (99874f2b)
+2024-11-10T23:07:45.8298033-05:00 0HN820PBMCTFC:00000001 [INF] Request finished "HTTP/2" "POST" "https"://"localhost:39336""""/api/Expenses""" - 201 null "application/json; charset=utf-8" 2380.4253ms (74253ad3)

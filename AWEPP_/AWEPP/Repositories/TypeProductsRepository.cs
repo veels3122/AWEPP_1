@@ -18,26 +18,26 @@ namespace AWEPP.Repositories
         // Método para crear un nuevo gasto
         public async Task CreateTypeProductsAsync(TypeProducts TypeProducts)
         {
-            await _context.TypeProductss.AddAsync(TypeProducts); // Añadir nuevo registro
+            await _context.TypeProducts.AddAsync(TypeProducts); // Añadir nuevo registro
             await _context.SaveChangesAsync(); // Guardar cambios
         }
         // Obtener todos los gastos que no están eliminados
         public async Task<IEnumerable<TypeProducts>> GetAllTypeProductsAsync()
         {
-            return await _context.TypeProductss
+            return await _context.TypeProducts
                 .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
         // Obtener gasto por su Id, excluyendo eliminados
         public async Task<TypeProducts> GetTypeProductsByIdAsync(int Id)
         {
-            return await _context.TypeProductss
+            return await _context.TypeProducts
                 .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
         }
         // Eliminar gasto de manera lógica (Soft Delete)
         public async Task SoftDeleteTypeProductsAsync(int Id)
         {
-            var TypeProducts = await _context.TypeProductss.FindAsync(Id);
+            var TypeProducts = await _context.TypeProducts.FindAsync(Id);
             if (TypeProducts != null)
             {
                 TypeProducts.IsDeleted = true; // Marcar como eliminado
@@ -49,7 +49,7 @@ namespace AWEPP.Repositories
         // Actualizar un gasto existente
         public async Task UpdateTypeProductsAsync(TypeProducts TypeProducts)
         {
-            var existingTypeProducts = await _context.TypeProductss.FindAsync(TypeProducts.Id);
+            var existingTypeProducts = await _context.TypeProducts.FindAsync(TypeProducts.Id);
             if (existingTypeProducts != null)
             {
                 // Actualizar campos

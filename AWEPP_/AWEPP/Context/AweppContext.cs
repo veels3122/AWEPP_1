@@ -22,13 +22,13 @@ namespace AWEPP.Context
         public DbSet<Cities> Cities { get; set; }
         public DbSet<Contacts> Contacts { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Expenses> Expensess { get; set; }
-        public DbSet<Products> Productss { get; set; }
-        public DbSet<Saving> Savingss { get; set; }
-        public DbSet<TypeAccounts> TypeAccountss { get; set; }
-        public DbSet<TypeExpenses> TypeExpensess { get; set; }
+        public DbSet<Products> Products { get; set; }
+        public DbSet<Saving> Savings { get; set; }
+        public DbSet<TypeAccounts> TypeAccounts { get; set; }
+        public DbSet<TypeExpenses> TypeExpenses { get; set; }
         public DbSet<TypeIdenty> TypeIdentities { get; set; }
-        public DbSet<TypeProducts> TypeProductss { get; set; }
+        public DbSet<TypeProducts> TypeProducts { get; set; }
+       public DbSet<Expenses> Expensess { get; set; }
         public DbSet<BankHistory> BankHistory { get; set; }
         public DbSet<CitiesHistory> CitiesHistory { get; set; }
         public DbSet<ContactsHistory> ContactsHistory { get; set; }
@@ -58,13 +58,13 @@ namespace AWEPP.Context
             modelBuilder.Entity<Cities>().HasKey(u => u.Id);
             modelBuilder.Entity<Contacts>().HasKey(u => u.Id);
             modelBuilder.Entity<Customer>().HasKey(u => u.Id);
-            modelBuilder.Entity<Expenses>().HasKey(u => u.Id);
             modelBuilder.Entity<Products>().HasKey(u => u.Id);
             modelBuilder.Entity<Saving>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeAccounts>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeExpenses>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeIdenty>().HasKey(u => u.Id);
             modelBuilder.Entity<TypeProducts>().HasKey(u => u.Id);
+            modelBuilder.Entity<Expenses>().HasKey(e => e.Id);
             modelBuilder.Entity<AuditLog>().Property(a => a.Date).HasColumnType("datetime").HasDefaultValueSql("GETDATE()");
 
 

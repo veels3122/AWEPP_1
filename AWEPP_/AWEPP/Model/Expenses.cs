@@ -16,7 +16,7 @@ namespace AWEPP.Model
         public required string BalanceFee { get; set; }
         public virtual required TypeExpenses TypeExpenses { get; set; }
         public virtual required TypeAccounts TypeAccounts { get; set; }
-        public virtual required TypeProducts TypeProducts { get; set; }
+        
         public virtual required Customer Customer { get; set; }
         public required bool IsDeleted { get; set; }
 
