@@ -16,26 +16,26 @@ namespace AWEPP.Repositories
 
         public async Task CreateProductsAsync(Products products)
         {
-            await _context.Products.AddAsync(products); // Añadir nuevo registro
+            await _context.Productss.AddAsync(products); // Añadir nuevo registro
             await _context.SaveChangesAsync(); // Guardar cambios
         }
 
         public async Task<IEnumerable<Products>> GetAllProductsAsync()
         {
-            return await _context.Products
+            return await _context.Productss
                 .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
 
         public async Task<Products> GetProductsByIdAsync(int Id)
         {
-            return await _context.Products
+            return await _context.Productss
                  .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
         }
 
         public async Task SoftDeleteProductsAsync(int Id)
         {
-            var expenses = await _context.Products.FindAsync(Id);
+            var expenses = await _context.Productss.FindAsync(Id);
             if (expenses != null)
             {
                 expenses.IsDeleted = true; // Marcar como eliminado
@@ -45,7 +45,7 @@ namespace AWEPP.Repositories
 
         public async Task UpdateProductsAsync(Products products)
         {
-            var existingProduct = await _context.Products.FindAsync(products.Id);
+            var existingProduct = await _context.Productss.FindAsync(products.Id);
             if (existingProduct != null)
             {
                 // Actualizar los campos necesarios
