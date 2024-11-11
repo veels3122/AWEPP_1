@@ -2,3 +2,5 @@ Fecha: 11/7/2024 4:32:44 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 
 Fecha: 11/7/2024 4:41:01 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 31, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
 Fecha: 11/6/2024 10:42:56 PM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 30, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
 Fecha: 11/7/2024 1:47:38 AM, Acción: SoftDeleteUser, Tabla: User, ID Registro: 32, Cambios: User Michael Mateo Melgarejo Uribe marcado como eliminado., Usuario: Michael Mateo Melgarejo Uribe
+Fecha: 11/10/2024 11:07:45 PM, Acción: CreateExpense, Tabla: Expense, ID Registro: 1, Cambios: Expense 1 creado., Usuario: string
+Fecha: 11/11/2024 12:25:21 AM, Acción: CreateProduct, Tabla: Product, ID Registro: 1, Cambios: product AWEPP.Model.Customer,string,string creado., Usuario: string

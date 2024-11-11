@@ -63,7 +63,6 @@ namespace AWEPP.Repositories
                 existingExpenses.BalanceFee = expenses.BalanceFee;
                 existingExpenses.TypeExpenses = expenses.TypeExpenses;
                 existingExpenses.TypeAccounts = expenses.TypeAccounts;
-                existingExpenses.TypeProducts = expenses.TypeProducts;
                 existingExpenses.Customer = expenses.Customer;
 
                 // Guardar cambios

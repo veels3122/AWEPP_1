@@ -16,26 +16,26 @@ namespace AWEPP.Repositories
         }
         public async Task CreateTypeExpensesAsync(TypeExpenses TypeExpenses)
         {
-            await _context.TypeExpensess.AddAsync(TypeExpenses); // Añadir nuevo registro
+            await _context.TypeExpenses.AddAsync(TypeExpenses); // Añadir nuevo registro
             await _context.SaveChangesAsync(); // Guardar cambios
         }
 
         public async Task<IEnumerable<TypeExpenses>> GetAllTypeExpensesAsync()
         {
-            return await _context.TypeExpensess
+            return await _context.TypeExpenses
                 .Where(s => !s.IsDeleted) // Excluir los eliminados
                 .ToListAsync();
         }
 
         public async Task<TypeExpenses> GetTypeExpensesByIdAsync(int Id)
         {
-            return await _context.TypeExpensess
+            return await _context.TypeExpenses
                 .FirstOrDefaultAsync(s => s.Id == Id && !s.IsDeleted);
         }
 
         public async Task SoftDeleteTypeExpensesAsync(int Id)
         {
-            var TypeExpenses = await _context.TypeExpensess.FindAsync(Id);
+            var TypeExpenses = await _context.TypeExpenses.FindAsync(Id);
             if (TypeExpenses != null)
             {
                 TypeExpenses.IsDeleted = true; // Marcar como eliminado
@@ -45,7 +45,7 @@ namespace AWEPP.Repositories
 
         public async Task UpdateTypeExpensesAsync(TypeExpenses TypeExpenses)
         {
-            var existingBank = await _context.TypeExpensess.FindAsync(TypeExpenses.Id);
+            var existingBank = await _context.TypeExpenses.FindAsync(TypeExpenses.Id);
             if (existingBank != null)
             {
                 // Actualizar campos

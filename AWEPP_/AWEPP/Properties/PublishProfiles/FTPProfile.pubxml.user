@@ -6,7 +6,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <LastFailureDetails />
-    <History>True|2024-11-09T20:06:26.9020553Z;False|2024-11-09T15:05:48.7681496-05:00;True|2024-11-07T02:10:07.5839546-05:00;False|2024-11-07T02:09:10.9178861-05:00;True|2024-11-07T01:43:55.5290346-05:00;True|2024-11-04T16:27:34.6912098-05:00;False|2024-11-04T16:23:34.1322479-05:00;False|2024-11-04T16:14:40.1984455-05:00;False|2024-11-04T16:11:56.2624855-05:00;False|2024-11-04T16:10:08.1092347-05:00;False|2024-11-04T16:08:09.5383470-05:00;True|2024-11-04T15:37:17.6510508-05:00;False|2024-11-04T15:34:49.4872527-05:00;False|2024-11-04T15:31:28.5820541-05:00;</History>
+    <History>True|2024-11-11T04:09:40.6814103Z;True|2024-11-09T15:06:26.9020553-05:00;False|2024-11-09T15:05:48.7681496-05:00;True|2024-11-07T02:10:07.5839546-05:00;False|2024-11-07T02:09:10.9178861-05:00;True|2024-11-07T01:43:55.5290346-05:00;True|2024-11-04T16:27:34.6912098-05:00;False|2024-11-04T16:23:34.1322479-05:00;False|2024-11-04T16:14:40.1984455-05:00;False|2024-11-04T16:11:56.2624855-05:00;False|2024-11-04T16:10:08.1092347-05:00;False|2024-11-04T16:08:09.5383470-05:00;True|2024-11-04T15:37:17.6510508-05:00;False|2024-11-04T15:34:49.4872527-05:00;False|2024-11-04T15:31:28.5820541-05:00;</History>
     <_PublishTargetUrl>ftp://AWEPP.somee.com/www.AWEPP.somee.com</_PublishTargetUrl>
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl2p0o0Id0kWcaLIfobOsHAAAAAACAAAAAAAQZgAAAAEAACAAAAD6O3MkMeqdLXrDOh+jCULIluDn5edtzxRK6vveu8zb9gAAAAAOgAAAAAIAACAAAAAPOgmTh9AhrMKMuZJ0/CvSYGmLWuADglgQt+Own1Y29yAAAABfwkPaW80FRbiUHF29KeI+wDeGiqRaXvSLVCqHqZPVTkAAAAAfTscM4uFKeYRME0Nc9ZTX+mjWPMl9HU6JOoUDv9k7YftD2XVvI7GX7MLCbzVRvCxbc4xG3A6FmeA5AdWQQf2k</EncryptedPassword>
   </PropertyGroup>
@@ -18,16 +18,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/07/2024 01:32:20</publishTime>
     </File>
     <File Include="AWEPP.deps.json">
-      <publishTime>11/09/2024 15:06:03</publishTime>
+      <publishTime>11/10/2024 23:09:08</publishTime>
     </File>
     <File Include="AWEPP.dll">
-      <publishTime>11/09/2024 15:05:57</publishTime>
+      <publishTime>11/10/2024 23:09:02</publishTime>
     </File>
     <File Include="AWEPP.exe">
-      <publishTime>11/09/2024 15:05:58</publishTime>
+      <publishTime>11/10/2024 23:09:02</publishTime>
     </File>
     <File Include="AWEPP.pdb">
-      <publishTime>11/09/2024 15:05:57</publishTime>
+      <publishTime>11/10/2024 23:09:02</publishTime>
     </File>
     <File Include="AWEPP.runtimeconfig.json">
       <publishTime>11/07/2024 02:08:41</publishTime>
@@ -201,7 +201,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2021 18:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/09/2024 15:06:03</publishTime>
+      <publishTime>11/10/2024 23:09:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

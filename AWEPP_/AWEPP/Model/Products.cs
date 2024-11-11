@@ -7,7 +7,7 @@ namespace AWEPP.Model
     {
         [Key]
         public int Id { get; set; }
-        public virtual required TypeAccounts TypeAccounts { get; set; }
+        
         public virtual required TypeProducts TypeProducts { get; set; }
         public virtual required Bank Bank { get; set; }
         public required string Account { get; set; }

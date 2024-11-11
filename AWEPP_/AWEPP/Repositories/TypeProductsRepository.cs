@@ -53,7 +53,7 @@ namespace AWEPP.Repositories
             if (existingTypeProducts != null)
             {
                 // Actualizar campos
-                existingTypeProducts.Product = TypeProducts.Product;
+                existingTypeProducts.Producd = TypeProducts.Producd;
                 existingTypeProducts.Description = TypeProducts.Description;
                 existingTypeProducts.IsDeleted = TypeProducts.IsDeleted;
 

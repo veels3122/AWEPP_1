@@ -4,6 +4,7 @@ using AWEPP.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AWEPP.Migrations
 {
     [DbContext(typeof(Aweppcontext))]
-    partial class AweppcontextModelSnapshot : ModelSnapshot
+    [Migration("20241111042615_cambio_2")]
+    partial class cambio_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -334,65 +337,6 @@ namespace AWEPP.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ExpensesHistory");
-                });
-
-            modelBuilder.Entity("AWEPP.Model.Products", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Account")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("BankId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DatePayment")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Debt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("NumberAccount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PartialBalance")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TotalBalance")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TypeProductsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BankId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("TypeProductsId");
-
-                    b.ToTable("Productss");
                 });
 
             modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
@@ -770,7 +714,7 @@ namespace AWEPP.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Producd")
+                    b.Property<int>("Product")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1210,33 +1154,6 @@ namespace AWEPP.Migrations
                     b.Navigation("TypeAccounts");
 
                     b.Navigation("TypeExpenses");
-                });
-
-            modelBuilder.Entity("AWEPP.Model.Products", b =>
-                {
-                    b.HasOne("AWEPP.Modelo.Bank", "Bank")
-                        .WithMany()
-                        .HasForeignKey("BankId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AWEPP.Model.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AWEPP.Model.TypeProducts", "TypeProducts")
-                        .WithMany()
-                        .HasForeignKey("TypeProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bank");
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("TypeProducts");
                 });
 
             modelBuilder.Entity("AWEPP.Model.SavingHistory", b =>

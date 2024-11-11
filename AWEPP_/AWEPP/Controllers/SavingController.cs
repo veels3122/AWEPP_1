@@ -55,7 +55,7 @@ namespace AWEPP.Controllers
                 Action = "CreateSavings",
                 TableName = "Saving",
                 RecordId = saving.Id.ToString(),
-                Changes = $"saving {saving.Bank},{saving.Customer},{saving.Products},{saving.Description} creado.",
+                Changes = $"saving {saving.Bank},{saving.Customer},{saving.Description} creado.",
                 UserName = saving.Description,
                 Date = DateTime.UtcNow.AddHours(-5)
             }); 
@@ -82,7 +82,7 @@ namespace AWEPP.Controllers
                 Action = "UpdateSavings",
                 TableName = "Saving",
                 RecordId = saving.Id.ToString(),
-                Changes = $"Saving {saving.Bank},{saving.Customer},{saving.Products},{saving.Description} actualizado.",
+                Changes = $"Saving {saving.Bank},{saving.Customer},{saving.Description} actualizado.",
                 UserName = saving.Description,
                 Date = DateTime.UtcNow.AddHours(-5)
             }); 
@@ -105,7 +105,7 @@ namespace AWEPP.Controllers
                 Action = "SoftSavings",
                 TableName = "Saving",
                 RecordId = saving.Id.ToString(),
-                Changes = $"Saving {saving.Bank},{saving.Customer},{saving.Products},{saving.Description} marca como eliminado.",
+                Changes = $"Saving {saving.Bank},{saving.Customer},{saving.Description} marca como eliminado.",
                 UserName = saving.Description,
                 Date = DateTime.UtcNow.AddHours(-5)
             });

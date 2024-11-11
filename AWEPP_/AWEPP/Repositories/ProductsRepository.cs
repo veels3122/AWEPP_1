@@ -49,7 +49,7 @@ namespace AWEPP.Repositories
             if (existingProduct != null)
             {
                 // Actualizar los campos necesarios
-                existingProduct.TypeAccounts = products.TypeAccounts;
+                
                 existingProduct.TypeProducts = products.TypeProducts;
                 existingProduct.Bank = products.Bank;
                 existingProduct.Account = products.Account;

@@ -4,6 +4,7 @@ using AWEPP.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AWEPP.Migrations
 {
     [DbContext(typeof(Aweppcontext))]
-    partial class AweppcontextModelSnapshot : ModelSnapshot
+    [Migration("20241111040242_completet")]
+    partial class completet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -381,6 +384,9 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TypeAccountsId")
+                        .HasColumnType("int");
+
                     b.Property<int>("TypeProductsId")
                         .HasColumnType("int");
 
@@ -390,9 +396,11 @@ namespace AWEPP.Migrations
 
                     b.HasIndex("CustomerId");
 
+                    b.HasIndex("TypeAccountsId");
+
                     b.HasIndex("TypeProductsId");
 
-                    b.ToTable("Productss");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
@@ -418,11 +426,16 @@ namespace AWEPP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
                     b.Property<string>("datemodified")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductsId");
 
                     b.ToTable("ProductsHistory");
                 });
@@ -770,12 +783,12 @@ namespace AWEPP.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Producd")
+                    b.Property<int>("Product")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TypeProductss");
+                    b.ToTable("TypeProducts");
                 });
 
             modelBuilder.Entity("AWEPP.Model.TypeProductsHistory", b =>
@@ -950,6 +963,9 @@ namespace AWEPP.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
                     b.Property<string>("SavingAmount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -977,6 +993,8 @@ namespace AWEPP.Migrations
                     b.HasIndex("BankId");
 
                     b.HasIndex("CustomerId");
+
+                    b.HasIndex("ProductsId");
 
                     b.HasIndex("TypeAccountsId");
 
@@ -1226,6 +1244,12 @@ namespace AWEPP.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("AWEPP.Model.TypeAccounts", "TypeAccounts")
+                        .WithMany()
+                        .HasForeignKey("TypeAccountsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("AWEPP.Model.TypeProducts", "TypeProducts")
                         .WithMany()
                         .HasForeignKey("TypeProductsId")
@@ -1236,7 +1260,20 @@ namespace AWEPP.Migrations
 
                     b.Navigation("Customer");
 
+                    b.Navigation("TypeAccounts");
+
                     b.Navigation("TypeProducts");
+                });
+
+            modelBuilder.Entity("AWEPP.Model.ProductsHistory", b =>
+                {
+                    b.HasOne("AWEPP.Model.Products", "Products")
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("AWEPP.Model.SavingHistory", b =>
@@ -1374,6 +1411,12 @@ namespace AWEPP.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("AWEPP.Model.Products", "Products")
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("AWEPP.Model.TypeAccounts", "TypeAccounts")
                         .WithMany()
                         .HasForeignKey("TypeAccountsId")
@@ -1389,6 +1432,8 @@ namespace AWEPP.Migrations
                     b.Navigation("Bank");
 
                     b.Navigation("Customer");
+
+                    b.Navigation("Products");
 
                     b.Navigation("TypeAccounts");
 

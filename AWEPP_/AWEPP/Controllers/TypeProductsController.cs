@@ -57,7 +57,7 @@ namespace AWEPP.Controllers
                 Action = "CreateTypeProducts",
                 TableName = "TypeProducts",
                 RecordId = TypeProducts.Id.ToString(),
-                Changes = $"TypeProducts {TypeProducts.Product},{TypeProducts.Description} creado.",
+                Changes = $"TypeProducts {TypeProducts.Producd},{TypeProducts.Description} creado.",
                 UserName = TypeProducts.Description,
                 Date = DateTime.UtcNow.AddHours(-5)
             });
@@ -83,7 +83,7 @@ namespace AWEPP.Controllers
                 Action = "UpdateTypeProducts",
                 TableName = "TypeProducts",
                 RecordId = TypeProducts.Id.ToString(),
-                Changes = $"TypeProducts {TypeProducts.Product},{TypeProducts.Description} actualizado.",
+                Changes = $"TypeProducts {TypeProducts.Producd},{TypeProducts.Description} actualizado.",
                 UserName = TypeProducts.Description,
                 Date = DateTime.UtcNow.AddHours(-5)
             });
@@ -106,7 +106,7 @@ namespace AWEPP.Controllers
                 Action = "SoftTypeProducts",
                 TableName = "TypeProducts",
                 RecordId = TypeProducts.Id.ToString(),
-                Changes = $"TypeProducts {TypeProducts.Product},{TypeProducts.Description} marca como eliminado.",
+                Changes = $"TypeProducts {TypeProducts.Producd},{TypeProducts.Description} marca como eliminado.",
                 UserName = TypeProducts.Description,
                 Date = DateTime.UtcNow.AddHours(-5)
             });
