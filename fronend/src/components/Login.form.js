@@ -5,7 +5,6 @@ import { Button } from "primereact/button";
 import { InputSwitch } from "primereact/inputswitch";
 import api from '../api';
 import { useForm } from "react-hook-form";
-// Importa los estilos de PrimeReact
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -14,17 +13,15 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, setValue, reset, formState: { errors, isDirty, isValid } } = useForm({ mode: "onChange" });
   
-  // Añadir estado para manejar el valor del InputSwitch y el mensaje de error
   const [rememberMe, setRememberMe] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    // Al cargar el componente, verifica si hay información guardada en localStorage
     const isCheckedStorage = localStorage.getItem("isChecked");
     const emailStorage = localStorage.getItem("email");
     
     if (isCheckedStorage === "true") {
-      setRememberMe(true); // Cambiar el estado del toggle
+      setRememberMe(true);
       setValue("email", emailStorage, { shouldDirty: true, shouldValidate: true });
       setValue("isChecked", true);
     }
@@ -33,7 +30,6 @@ const LoginForm = () => {
   const loginSubmit = async (formData) => {
     const { email, password } = formData;
 
-    // Almacenar email si el usuario ha activado el toggle "Recuérdame"
     if (rememberMe) {
       localStorage.setItem("email", email);
       localStorage.setItem("isChecked", "true");
@@ -42,27 +38,28 @@ const LoginForm = () => {
       localStorage.removeItem("isChecked");
     }
 
-    // Enviar las credenciales a la API de autenticación
     try {
-      const response = await api.post('/User/Login', 
-      {
-        email, 
-        password 
-      }
-    );
-  
-      // Verificar respuesta y redirigir en caso de éxito
-      if (response.status === 200) {
-        const data = response.data;;
-        
-        // Opcional: guarda el token en localStorage si es necesario
-        localStorage.setItem('token', data.token);
+      // Enviar las credenciales a la API de autenticación
+      const response = await api.post('/User/Login', { email, password });
 
-        // Redirige a la página principal
-        navigate("/principal");
-        reset();
+      if (response.status === 200) {
+        const loginData = response.data;
+
+        // Realizar una solicitud adicional para obtener los detalles del usuario
+        const userResponse = await api.get(`/User/${loginData.userId}`);
+        if (userResponse.status === 200) {
+          const userData = userResponse.data;
+
+          // Guardar los detalles completos del usuario en localStorage
+          localStorage.setItem('user', JSON.stringify(userData));
+          console.log('Detalles del usuario guardados:', userData);
+
+          navigate("/principal");
+          reset();
+        } else {
+          setErrorMessage('No se pudieron obtener los detalles del usuario.');
+        }
       } else {
-        // Maneja el error si el inicio de sesión falla
         const errorData = await response.json();
         setErrorMessage(errorData.message || 'Error de inicio de sesión. Verifica tus credenciales.');
       }
