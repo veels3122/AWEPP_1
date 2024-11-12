@@ -1,10 +1,10 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { InputSwitch } from "primereact/inputswitch";
+import api from '../api';
 import { useForm } from "react-hook-form";
-
 // Importa los estilos de PrimeReact
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
@@ -14,8 +14,9 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, setValue, reset, formState: { errors, isDirty, isValid } } = useForm({ mode: "onChange" });
   
-  // Añadir estado para manejar el valor del InputSwitch
+  // Añadir estado para manejar el valor del InputSwitch y el mensaje de error
   const [rememberMe, setRememberMe] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     // Al cargar el componente, verifica si hay información guardada en localStorage
@@ -29,8 +30,8 @@ const LoginForm = () => {
     }
   }, [setValue]);
 
-  const loginSubmit = (formData) => {
-    const { email } = formData;
+  const loginSubmit = async (formData) => {
+    const { email, password } = formData;
 
     // Almacenar email si el usuario ha activado el toggle "Recuérdame"
     if (rememberMe) {
@@ -41,18 +42,43 @@ const LoginForm = () => {
       localStorage.removeItem("isChecked");
     }
 
-    navigate("/principal");
-    reset();
+    // Enviar las credenciales a la API de autenticación
+    try {
+      const response = await api.post('/User/Login', 
+      {
+        email, 
+        password 
+      }
+    );
+  
+      // Verificar respuesta y redirigir en caso de éxito
+      if (response.status === 200) {
+        const data = response.data;;
+        
+        // Opcional: guarda el token en localStorage si es necesario
+        localStorage.setItem('token', data.token);
+
+        // Redirige a la página principal
+        navigate("/principal");
+        reset();
+      } else {
+        // Maneja el error si el inicio de sesión falla
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'Error de inicio de sesión. Verifica tus credenciales.');
+      }
+    } catch (error) {
+      console.error('Error en la solicitud:', error);
+      setErrorMessage('Error de inicio de sesión. Verifica tus credenciales.');
+    }
   };
 
-  // Manejador para el cambio del InputSwitch
   const handleRememberMeChange = (e) => {
     setRememberMe(e.value);
     setValue("isChecked", e.value);
   };
 
   return (
-    <div className="register-container"> {/* Usar el mismo estilo del registro */}
+    <div className="register-container"> 
       <h2>Iniciar Sesión</h2>
       <form autoComplete="off" onSubmit={handleSubmit(loginSubmit)}>
         <div className="form-group">
@@ -109,6 +135,7 @@ const LoginForm = () => {
             onClick={() => navigate("/register")}
           />
         </div>
+        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </form>
     </div>
   );

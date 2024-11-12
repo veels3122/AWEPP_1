@@ -4,7 +4,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { ProgressBar } from 'primereact/progressbar';
-import { FaTrashAlt } from 'react-icons/fa'; // Importar ícono de caneca roja
+import { FaTrashAlt } from 'react-icons/fa'; 
 import './Ahorros.css';
 
 const Ahorros = () => {

@@ -16,8 +16,11 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Layout from "./components/Layout";
 import Bienvenida from "./components/Bienvenida";
+import AdminDashboard from "./components/AdminDashboard";
+import ClientDashboard from "./components/ClientDashboard";
 
 function App() {
+  const role = localStorage.getItem('userRole');
   return (
     <Router>
       <Routes>
@@ -33,6 +36,9 @@ function App() {
         <Route path="/estadisticas" element={<Navigate to="/principal" />} /> 
         <Route path="/cuentas/:cuentaId" element={<Layout><CuentaDetalle /></Layout>} />
         <Route path="/Gastos/:GastoId" element={<Layout><GastoDetalle /></Layout>} />
+        {/* Rutas protegidas */}
+        {role === 'admin' && <Route path="/admin-dashboard" element={<AdminDashboard />} />}
+        {role === 'cliente' && <Route path="/client-dashboard" element={<ClientDashboard />} />}
       </Routes>
     </Router>
   );
