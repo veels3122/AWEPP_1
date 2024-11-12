@@ -121,11 +121,7 @@ const Register = () => {
         },
         "typeAccesUser": {
           "id": 0,
-          "typeAcces": {
-            "id": 0,
-            "typeacces": "string",
-            "isDeleted": false
-          },
+          "typeAccesUserss": 'Acceso estándar',
           "isDeleted": false
         },
         "isDeleted": false
